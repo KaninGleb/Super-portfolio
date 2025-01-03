@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
 export const Menu = () => {
+    // const headerLinks = [
+    //     {
+    //         name: 'home',
+    //         id: 'home',
+    //         href: ''
+    //     }
+    // ]
     return (
         <StyledMenu>
             <ul>
@@ -20,6 +27,7 @@ export const Menu = () => {
                     <select>
                         <option>EN</option>
                         <option>RU</option>
+                        <option>UA</option>
                     </select>
                 </li>
             </ul>
