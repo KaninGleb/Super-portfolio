@@ -30,7 +30,7 @@ export const Main = () => {
 
 const StyledMain = styled.div`
     min-height: 100vh;
-    background: #282c33;
+    background-color: #ff9dff;
 `
 
 const Photo = styled.img`

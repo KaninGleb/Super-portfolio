@@ -8,8 +8,8 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <SectionTitle>
-                <h2><span>#</span>skills</h2>
-                <Icon iconId='line' width='239' height='2' viewBox='0 0 239 2'/>
+                <span>#</span>skills
+                <Icon iconId='skillsLine' width='239' height='2' viewBox='0 0 239 2'/>
             </SectionTitle>
             <FlexWrapper justify='flex-end' wrap='wrap' gap='16px'>
                 <Skill title='Languages' description={['TypeScript', 'Lua', 'Python', 'JavaScript']}/>
@@ -23,5 +23,5 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    background-color: #282c33;
+    background-color: #a2fdfd;
 `

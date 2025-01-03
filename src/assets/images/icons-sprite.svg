@@ -5,7 +5,13 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M39 0H26V13H13H0V26V39V52H13H26V39H39H52V26V13V0H39ZM13 39H26V26H39V13H26V26H13V39Z" fill="white"/>
     </g>
 
-    <g id="line">
+    <!--Projects-->
+    <g id="projectsLine">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M511 1.5H0V0.5H511V1.5Z" fill="#C778DD" />
+    </g>
+
+    <!--Skills-->
+    <g id="skillsLine">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M239 1.5H0V0.5H239V1.5Z" fill="#C778DD" />
     </g>
 </svg>
