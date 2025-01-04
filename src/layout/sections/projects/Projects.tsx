@@ -36,6 +36,8 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-    min-height: 100vh;
+    //min-height: 100vh;
+    max-height: 518px;
+    height: 100%;
     background-color: #5f8881;
 `

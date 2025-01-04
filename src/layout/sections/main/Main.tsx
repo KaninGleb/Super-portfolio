@@ -29,8 +29,10 @@ export const Main = () => {
     );
 };
 
-const StyledMain = styled.div`
-    min-height: 100vh;
+const StyledMain = styled.section`
+    //min-height: 100vh;
+    max-height: 630px;
+    height: 100%;
     background-color: #8d556a;
 `
 
