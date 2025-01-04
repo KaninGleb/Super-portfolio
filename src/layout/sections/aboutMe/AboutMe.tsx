@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import aboutMePhoto from "../../../assets/images/about-me-photo.png";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
@@ -7,7 +8,11 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 export const AboutMe = () => {
     return (
         <StyledAboutMe>
+            <FlexWrapper>
                 <SectionTitle><span>#</span>about-me</SectionTitle>
+                <DecorativeLine width={'326px'} height={'2px'}/>
+            </FlexWrapper>
+
             <FlexWrapper>
                 <FlexWrapper>
                     <Paragraph>Hello, i’m Elias! <br/> <br/>

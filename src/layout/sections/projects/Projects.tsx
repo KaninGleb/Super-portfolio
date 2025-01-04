@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Project} from "./project/Project.tsx";
 import chertNodes from '../../../assets/images/projects/project-1.svg'
@@ -12,7 +12,8 @@ export const Projects = () => {
         <StyledProjects>
             <FlexWrapper align='center' gap='16px'>
                 <SectionTitle><span>#</span>projects</SectionTitle>
-                <Icon iconId="projectsLine" width='511' height='2' viewBox='0 0 511 2'/>
+                <DecorativeLine width={'511px'} height={'2px'}/>
+                {/*<Icon iconId="projectsLine" width='511' height='2' viewBox='0 0 511 2'/>*/}
                 <button>View all ~~&gt;</button>
             </FlexWrapper>
 

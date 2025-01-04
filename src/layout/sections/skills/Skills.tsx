@@ -1,16 +1,18 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
 import {Skill} from "./skill/Skill.tsx";
 
 export const Skills = () => {
     return (
         <StyledSkills>
-            <SectionTitle>
-                <span>#</span>skills
-                <Icon iconId='skillsLine' width='239' height='2' viewBox='0 0 239 2'/>
-            </SectionTitle>
+            <FlexWrapper>
+                <SectionTitle><span>#</span>skills</SectionTitle>
+                <DecorativeLine width={'239px'} height={'2px'}/>
+                {/*<Icon iconId='skillsLine' width='239' height='2' viewBox='0 0 239 2'/>*/}
+            </FlexWrapper>
+
             <FlexWrapper justify='flex-end' wrap='wrap' gap='16px'>
                 <Skill title='Languages' description={['TypeScript', 'Lua', 'Python', 'JavaScript']}/>
                 <Skill title='Databases' description={['SQLite', 'PostgreSQL', 'Mongo']}/>
