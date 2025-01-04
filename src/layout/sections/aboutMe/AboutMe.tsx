@@ -4,6 +4,13 @@ import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import aboutMePhoto from "../../../assets/images/about-me-photo.png";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Paragraph} from "../../../components/Paragraph.tsx";
+
+const text = {
+    aboutMeText: 'Hello, i’m Elias! ' +
+        'I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. ' +
+        'Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.',
+}
 
 export const AboutMe = () => {
     return (
@@ -15,13 +22,7 @@ export const AboutMe = () => {
 
             <FlexWrapper>
                 <FlexWrapper>
-                    <Paragraph>Hello, i’m Elias! <br/> <br/>
-                        I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from
-                        scratch and raise them into modern user-friendly web experiences. <br/> <br/>
-                        Transforming my creativity and knowledge into a websites has been my passion for over a year. I have
-                        been helping various clients to establish their presence online. I always strive to learn about the
-                        newest technologies and frameworks.
-                    </Paragraph>
+                    <Paragraph children={text.aboutMeText}/>
                 </FlexWrapper>
 
                 <Photo src={aboutMePhoto} width='339px' height='507px' alt=""/>
@@ -31,9 +32,5 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-    background-color: #ff76ff;
-`
-
-const Paragraph = styled.p`
-    
+    background-color: #425293;
 `
