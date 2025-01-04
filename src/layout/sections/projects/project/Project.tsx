@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {Link} from "../../../../components/Link.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 
 type ProjectPropsType = {
     title: string
@@ -13,8 +15,17 @@ export const Project = (props: ProjectPropsType) => {
 
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
-            <Link href={"#"}>Live &lt;~&gt;</Link>
-            <Link href={"#"}>Cached &gt;=</Link>
+            <FlexWrapper gap="16px">
+                <Link href={"#"}
+                        children={'Live <~>'}
+                        color={'#ffffff'}>
+                </Link>
+                <Link href={"#"}
+                        children={'Cached >='}
+                        color={'#abb2bf'}
+                        borderColor={'#abb2bf'}>
+                </Link>
+            </FlexWrapper>
         </StyledWork>
     );
 };
@@ -34,9 +45,5 @@ const Title = styled.h3`
 `
 
 const Text = styled.span`
-    
-`
-
-const Link = styled.a`
     
 `
