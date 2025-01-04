@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
-import {Skill} from "../skill/Skill.tsx";
+import {Skill} from "./skill/Skill.tsx";
 
 export const Skills = () => {
     return (
