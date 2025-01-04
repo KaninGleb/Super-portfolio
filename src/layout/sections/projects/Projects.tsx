@@ -3,6 +3,9 @@ import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Project} from "./project/Project.tsx";
+import chertNodes from '../../../assets/images/projects/project-1.svg'
+import protectX from '../../../assets/images/projects/project-2.svg'
+import kahoot from '../../../assets/images/projects/project-3.svg'
 
 export const Projects = () => {
     return (
@@ -13,10 +16,16 @@ export const Projects = () => {
                 <button>View all ~~&gt;</button>
             </FlexWrapper>
 
-            <FlexWrapper>
-                <Project title={'ChertNodes'} text={'Minecraft servers hosting '}/>
-                <Project title={'ProtectX'} text={'Discord anti-crash bot'}/>
-                <Project title={'Kahoot Answers Viewer'} text={'Get answers to your kahoot quiz'}/>
+            <FlexWrapper justify='space-around'>
+                <Project title={'ChertNodes'}
+                            text={'Minecraft servers hosting'}
+                            src={chertNodes}/>
+                <Project title={'ProtectX'}
+                            text={'Discord anti-crash bot'}
+                            src={protectX}/>
+                <Project title={'Kahoot Answers Viewer'}
+                            text={'Get answers to your kahoot quiz'}
+                            src={kahoot}/>
             </FlexWrapper>
         </StyledProjects>
     );

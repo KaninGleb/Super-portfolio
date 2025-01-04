@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {Menu} from "../../../../components/menu/Menu.tsx";
 
 type ProjectPropsType = {
     title: string
@@ -21,11 +20,13 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledWork = styled.div`
-    
+    max-width: 330px;
+    width: 100%;
 `
 
 const Image = styled.img`
-    
+    width: 100%;
+    height: 201px;
 `
 
 const Title = styled.h3`
