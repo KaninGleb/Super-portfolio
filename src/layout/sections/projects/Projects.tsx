@@ -18,13 +18,16 @@ export const Projects = () => {
             </FlexWrapper>
 
             <FlexWrapper justify='space-around'>
-                <Project title={'ChertNodes'}
+                <Project software={'HTML SCSS Python Flask'}
+                            title={'ChertNodes'}
                             text={'Minecraft servers hosting'}
                             src={chertNodes}/>
-                <Project title={'ProtectX'}
+                <Project software={'React Express Discord.js Node.js HTML SCSS Python Flask'}
+                            title={'ProtectX'}
                             text={'Discord anti-crash bot'}
                             src={protectX}/>
-                <Project title={'Kahoot Answers Viewer'}
+                <Project software={'CSS Express Node.js'}
+                            title={'Kahoot Answers Viewer'}
                             text={'Get answers to your kahoot quiz'}
                             src={kahoot}/>
             </FlexWrapper>
