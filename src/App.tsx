@@ -21,3 +21,8 @@ function App() {
 }
 
 export default App
+
+// const Container = styled.div`
+//     margin: auto;
+//     width: 1024px;
+// `
