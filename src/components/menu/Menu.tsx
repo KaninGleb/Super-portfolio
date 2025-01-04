@@ -7,13 +7,13 @@ type MenuPropsType = {
 export const Menu = (props: MenuPropsType) => {
     return (
         <StyledMenu>
-            {props.menuItems.map((item, index) => {
-                return (
+            <ul>
+                {props.menuItems.map((item, index) => (
                     <li key={index}>
-                        <a href=""><span>#</span>{item}</a>
+                        <a href={'#'}><span>#</span>{item}</a>
                     </li>
-                )
-            })}
+                ))}
+            </ul>
         </StyledMenu>
     );
 };
@@ -22,5 +22,6 @@ const StyledMenu = styled.nav`
     ul {
         display: flex;
         gap: 32px;
+        list-style-type: none;
     }
-`
+`;
