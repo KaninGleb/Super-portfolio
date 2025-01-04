@@ -31,7 +31,7 @@ export const Main = () => {
 
 const StyledMain = styled.div`
     min-height: 100vh;
-    background-color: #ff9dff;
+    background-color: #8d556a;
 `
 
 const MainTitle = styled.h1`
