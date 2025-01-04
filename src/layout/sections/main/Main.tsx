@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import photo from "../../../assets/images/MyImage.png"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Photo} from "../../../components/Photo.tsx";
+import photo from "../../../assets/images/MyImage.png"
 
 export const Main = () => {
     return (
@@ -12,7 +13,7 @@ export const Main = () => {
                     <button>Contact me!!</button>
                 </div>
                 <FlexWrapper direction='column'>
-                    <Photo src={photo} alt=""/>
+                    <Photo src={photo} width='457px' height='386px' alt=""/>
                     <PortfolioMessage>
                         <div></div>
                         Currently working on <span>Portfolio</span>
@@ -31,12 +32,6 @@ export const Main = () => {
 const StyledMain = styled.div`
     min-height: 100vh;
     background-color: #ff9dff;
-`
-
-const Photo = styled.img`
-    width: 457px;
-    height: 386px;
-    object-fit: cover;
 `
 
 const MainTitle = styled.h1`
