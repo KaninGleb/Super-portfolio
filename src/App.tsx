@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import './App.css'
 import {Header} from "./layout/header/Header.tsx";
 import {Main} from "./layout/sections/main/Main.tsx";
@@ -10,19 +11,36 @@ import {Contacts} from "./layout/sections/contacts/Contacts.tsx";
 function App() {
     return (
         <div className="App">
-            <Header/>
-            <Main/>
-            <Projects/>
-            <Skills/>
-            <AboutMe/>
-            <Contacts/>
+            <Container>
+                <Header/>
+            </Container>
+
+            <Container>
+                <Main/>
+            </Container>
+
+            <Container>
+                <Projects/>
+            </Container>
+
+            <Container>
+                <Skills/>
+            </Container>
+
+            <Container>
+                <AboutMe/>
+            </Container>
+
+            <Container>
+                <Contacts/>
+            </Container>
         </div>
     )
 }
 
 export default App
 
-// const Container = styled.div`
-//     margin: auto;
-//     width: 1024px;
-// `
+const Container = styled.div`
+    margin: auto;
+    width: 1024px;
+`
