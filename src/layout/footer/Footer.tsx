@@ -60,13 +60,6 @@ const StyledFooter = styled.footer`
         color: #abb2bf;
     }
 
-    p {
-        font-family: "Fira Code", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        color: #abb2bf;
-    }
-
     span {
         font-family: "Fira Code", sans-serif;
         font-weight: 400;
