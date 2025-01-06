@@ -13,9 +13,7 @@ function App() {
         <div className="App">
             <Header/>
 
-            <Container>
-                <Main/>
-            </Container>
+            <Main/>
 
             <Container>
                 <Projects/>
