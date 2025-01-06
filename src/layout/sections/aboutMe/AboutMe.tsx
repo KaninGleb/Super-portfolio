@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import {Container} from "../../../components/Container.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
+import {Paragraph} from "../../../components/Paragraph.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import aboutMePhoto from "../../../assets/images/about-me-photo.png";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Paragraph} from "../../../components/Paragraph.tsx";
 
 const text = {
     aboutMeText: 'Hello, i’m Elias! ' +
@@ -15,18 +16,19 @@ const text = {
 export const AboutMe = () => {
     return (
         <StyledAboutMe>
-            <FlexWrapper>
-                <SectionTitle><span>#</span>about-me</SectionTitle>
-                <DecorativeLine width={'326px'} height={'2px'}/>
-            </FlexWrapper>
-
-            <FlexWrapper>
+            <Container>
                 <FlexWrapper>
-                    <Paragraph children={text.aboutMeText}/>
+                    <SectionTitle><span>#</span>about-me</SectionTitle>
+                    <DecorativeLine width={'326px'} height={'2px'}/>
                 </FlexWrapper>
 
-                <Photo src={aboutMePhoto} width='339px' height='507px' alt=""/>
-            </FlexWrapper>
+                <FlexWrapper>
+                    <FlexWrapper>
+                        <Paragraph children={text.aboutMeText}/>
+                    </FlexWrapper>
+                    <Photo src={aboutMePhoto} width='339px' height='507px' alt=""/>
+                </FlexWrapper>
+            </Container>
         </StyledAboutMe>
     );
 };

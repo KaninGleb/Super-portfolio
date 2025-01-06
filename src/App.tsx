@@ -19,9 +19,7 @@ function App() {
 
             <Skills/>
 
-            <Container>
-                <AboutMe/>
-            </Container>
+            <AboutMe/>
 
             <Container>
                 <Contacts/>
