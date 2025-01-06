@@ -21,9 +21,7 @@ function App() {
 
             <AboutMe/>
 
-            <Container>
-                <Contacts/>
-            </Container>
+            <Contacts/>
 
             <Container>
                 <Footer/>
