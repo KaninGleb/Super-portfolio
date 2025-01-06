@@ -17,9 +17,7 @@ function App() {
 
             <Projects/>
 
-            <Container>
-                <Skills/>
-            </Container>
+            <Skills/>
 
             <Container>
                 <AboutMe/>
