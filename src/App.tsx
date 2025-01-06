@@ -11,9 +11,7 @@ import {Footer} from "./layout/footer/Footer.tsx";
 function App() {
     return (
         <div className="App">
-            <Container>
-                <Header/>
-            </Container>
+            <Header/>
 
             <Container>
                 <Main/>
