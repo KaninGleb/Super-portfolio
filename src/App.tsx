@@ -1,5 +1,4 @@
 import './App.css'
-import {Container} from "./components/Container.tsx";
 import {Header} from "./layout/header/Header.tsx";
 import {Main} from "./layout/sections/main/Main.tsx";
 import {Projects} from "./layout/sections/projects/Projects.tsx";
@@ -12,20 +11,12 @@ function App() {
     return (
         <div className="App">
             <Header/>
-
             <Main/>
-
             <Projects/>
-
             <Skills/>
-
             <AboutMe/>
-
             <Contacts/>
-
-            <Container>
-                <Footer/>
-            </Container>
+            <Footer/>
         </div>
     )
 }
