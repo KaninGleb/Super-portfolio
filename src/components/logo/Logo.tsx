@@ -19,4 +19,11 @@ const StyledLink = styled.a`
         width: 16px;
         height: 16px;
     }
+    
+    span {
+        font-family: "Fira Code", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+    }
 `
