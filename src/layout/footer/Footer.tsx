@@ -21,19 +21,19 @@ export const Footer = () => {
                     <SocialList>
                         <SocialItem>
                             <SocialLink>
-                                <Icon iconId=''/>
+                                <Icon iconId='git' width="21px" height="20px" viewBox="0 0 21 20"/>
                             </SocialLink>
                         </SocialItem>
 
                         <SocialItem>
                             <SocialLink>
-                                <Icon iconId=''/>
+                                <Icon iconId='figma' width="14px" height="20px" viewBox="0 0 14 20"/>
                             </SocialLink>
                         </SocialItem>
 
                         <SocialItem>
                             <SocialLink>
-                                <Icon iconId=''/>
+                                <Icon iconId='discord' width="25" height="20" viewBox="0 0 25 20"/>
                             </SocialLink>
                         </SocialItem>
                     </SocialList>
@@ -51,8 +51,6 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     background-color: #8d556a;
-    color: white;
-    padding: 20px;
     text-align: center;
 
     a {
@@ -93,6 +91,7 @@ const StyledFooter = styled.footer`
 
 const SocialList = styled.ul`
     display: flex;
+    gap: 8px;
 `
 
 const SocialItem = styled.li`

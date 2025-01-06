@@ -4,7 +4,7 @@ import {Icon} from "../icon/Icon.tsx";
 export const Logo = () => {
     return (
         <StyledLink href="">
-            <Icon iconId='defaultLogo'/>
+            <Icon iconId='defaultLogo' width='16px' height='17px'/>
             <span>Elias</span>
         </StyledLink>
     );
