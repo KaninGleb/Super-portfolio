@@ -9,5 +9,10 @@ export const theme = {
 
         primaryBorder: '#abb2bf',
         secondaryBorder: '#c778dd',
+    },
+
+    links: {
+        primaryLink: { href: "#", children: "Live <~>", color: "#ffffff" },
+        secondaryLink: { href: "#", children: "Cached >=", color: "#abb2bf", borderColor: "#abb2bf" },
     }
 }
