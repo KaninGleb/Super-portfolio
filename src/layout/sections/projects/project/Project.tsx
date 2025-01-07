@@ -2,11 +2,19 @@ import styled from "styled-components";
 import {Link} from "../../../../components/Link.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 
+type LinkPropsType = {
+    href: string;
+    children: string;
+    color: string;
+    borderColor?: string;
+};
+
 type ProjectPropsType = {
     src: string
     software: string
     title: string
     text: string
+    links: LinkPropsType[]
 }
 
 export const Project = (props: ProjectPropsType) => {
@@ -17,15 +25,15 @@ export const Project = (props: ProjectPropsType) => {
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
             <FlexWrapper gap="16px">
-                <Link href={"#"}
-                        children={'Live <~>'}
-                        color={'#ffffff'}>
-                </Link>
-                <Link href={"#"}
-                        children={'Cached >='}
-                        color={'#abb2bf'}
-                        borderColor={'#abb2bf'}>
-                </Link>
+                {props.links.map((link, index) => (
+                    <Link
+                        key={index}
+                        href={link.href}
+                        children={link.children}
+                        color={link.color}
+                        borderColor={link.borderColor}
+                    />
+                ))}
             </FlexWrapper>
         </StyledWork>
     );

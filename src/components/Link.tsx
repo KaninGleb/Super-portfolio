@@ -24,6 +24,6 @@ const StyledLink = styled.a<LinkPropsType>`
     
     border: 1px solid ${props => props.borderColor || '#c778dd'};
     padding: 8px 16px;
-    max-width: 119px;
+    max-width: 121px;
     height: 37px;
 `
