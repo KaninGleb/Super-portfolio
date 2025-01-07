@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {StyledHr} from "../../../../components/StyledHr.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 
 type SkillPropsType = {
@@ -40,13 +41,6 @@ const SkillTitle = styled.h2`
     font-weight: 600;
     font-size: 16px;
     color: #fff;
-`
-
-const StyledHr = styled.hr`
-    border: none;
-    height: 1px;
-    background-color: #abb2bf;
-    margin: 8px -8px;
 `
 
 const SkillDescription = styled.ul`
