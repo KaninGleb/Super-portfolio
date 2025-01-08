@@ -16,7 +16,7 @@ export const Skills = () => {
                     <DecorativeLine width={'239px'} height={'2px'}/>
                 </FlexWrapper>
 
-                <FlexWrapper gap='56px'>
+                <FlexWrapper gap='54px'>
                     <StyledPhoto src={groupOfImages} width='349px' height='282px' alt="Group of Images"/>
                     <SkillsWrapper>
                         <FlexWrapper justify='flex-end' wrap='wrap' gap='16px'>
