@@ -23,11 +23,6 @@ export const Main = () => {
                         </PortfolioMessage>
                     </FlexWrapper>
                 </FlexWrapper>
-
-                <FlexWrapper direction="column" align="flex-end">
-                    <blockquote>With great power comes great electricity bill</blockquote>
-                    <cite>- Dr. Who</cite>
-                </FlexWrapper>
             </Container>
         </StyledMain>
     );

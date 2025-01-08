@@ -1,6 +1,7 @@
 import './App.css'
 import {Header} from "./layout/header/Header.tsx";
 import {Main} from "./layout/sections/main/Main.tsx";
+import {Testimony} from "./layout/sections/testimony/Testimony.tsx";
 import {Projects} from "./layout/sections/projects/Projects.tsx";
 import {Skills} from "./layout/sections/skills/Skills.tsx";
 import {AboutMe} from "./layout/sections/aboutMe/AboutMe.tsx";
@@ -12,6 +13,7 @@ function App() {
         <div className="App">
             <Header/>
             <Main/>
+            <Testimony/>
             <Projects/>
             <Skills/>
             <AboutMe/>
