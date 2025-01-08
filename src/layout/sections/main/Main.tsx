@@ -1,24 +1,29 @@
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme.tsx";
+import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
-import {Container} from "../../../components/Container.tsx";
+import {Link} from "../../../components/Link.tsx";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align="center" justify="space-around">
-                    <div>
-                        <MainTitle>Elias is a <span>web designer</span> and <br/>
-                            <span>front-end</span> developer</MainTitle>
-                        <p>He crafts responsive websites where technologies meet creativity</p>
-                        <button>Contact me!!</button>
-                    </div>
+                <FlexWrapper align="center" justify="space-around" gap="30px">
+                    <TextWrapper direction='column' align='flex-start'>
+                        <MainTitle>Elias is a <span>web designer</span> and <span>front-end</span> developer</MainTitle>
+                        <Paragraph>He crafts responsive websites where technologies meet creativity</Paragraph>
+                        <Link href='#'
+                                children='Contact me!!'
+                                color={theme.colors.primaryText}
+                                borderColor={theme.colors.secondaryBorder}
+                                mWidth='150px'/>
+                    </TextWrapper>
                     <FlexWrapper direction='column'>
                         <Photo src={photo} width='457px' height='386px' alt=""/>
                         <PortfolioMessage>
-                            <div></div>
+                            <ColorBlock/>
                             Currently working on <span>Portfolio</span>
                         </PortfolioMessage>
                     </FlexWrapper>
@@ -31,25 +36,47 @@ export const Main = () => {
 const StyledMain = styled.section`
     max-height: 630px;
     height: 100%;
-    background-color: #8d556a;
+    margin-top: 62px;
+`
+
+const TextWrapper = styled(FlexWrapper)`
+    text-align: left;
 `
 
 const MainTitle = styled.h1`
-    font-family: "Fira Code", sans-serif;
     font-weight: 600;
     font-size: 32px;
-    color: #fff;
+    margin-bottom: 31px;
 
     span {
-        color: #c778dd;
+        color: ${theme.colors.secondaryText};
     }
 `
 
+const Paragraph = styled.p`
+    line-height: 1.5625;
+    color: ${theme.colors.primaryLightText};
+    margin-bottom: 25px;
+`
+
+const ColorBlock = styled.div`
+    background-color: ${theme.colors.secondaryText};
+    width: 16px;
+    height: 16px;
+`
+
 const PortfolioMessage = styled.span`
-    font-family: "Fira Code", sans-serif;
     font-weight: 500;
-    font-size: 16px;
     color: #abb2bf;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #abb2bf;
+    padding: 8px;
+    max-width: 402px;
+    width: 100%;
+    margin-left: 18px;
 
     span {
         font-weight: 600;
