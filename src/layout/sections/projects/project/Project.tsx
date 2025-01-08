@@ -67,13 +67,15 @@ const SizeWrapper = styled.div`
 `
 
 const MainSizeWrapper = styled(FlexWrapper)`
-    margin: 16px 8px 8px;
+    margin: 16px 6px 8px;
 `
 
 const Software = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    
+    color: ${theme.colors.primaryLightText};
 `
 
 const StyledHr = styled.hr`

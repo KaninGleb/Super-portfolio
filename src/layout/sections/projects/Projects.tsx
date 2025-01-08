@@ -15,8 +15,8 @@ const projects = {
         text: 'Minecraft servers hosting',
         src: chertNodes,
         links: [
-            { href: "#", children: "Live <~>", color: "#ffffff" },
-            { href: "#", children: "Cached >=", color: "#abb2bf", borderColor: "#abb2bf" },
+            {href: "#", children: "Live <~>", color: "#ffffff"},
+            {href: "#", children: "Cached >=", color: "#abb2bf", borderColor: "#abb2bf"},
         ],
     },
     protectX: {
@@ -25,7 +25,7 @@ const projects = {
         text: 'Discord anti-crash bot',
         src: protectX,
         links: [
-            { href: "#", children: "Live <~>", color: "#ffffff" },
+            {href: "#", children: "Live <~>", color: "#ffffff"},
         ],
     },
     kahoot: {
@@ -34,7 +34,7 @@ const projects = {
         text: 'Get answers to your kahoot quiz',
         src: kahoot,
         links: [
-            { href: "#", children: "Live <~>", color: "#ffffff" },
+            {href: "#", children: "Live <~>", color: "#ffffff"},
         ],
     },
 };
@@ -43,23 +43,27 @@ export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
-                <FlexWrapper align='center' gap='16px'>
-                    <SectionTitle><span>#</span>projects</SectionTitle>
-                    <DecorativeLine width={'511px'} height={'2px'}/>
-                    <button>View all ~~&gt;</button>
-                </FlexWrapper>
+                <FlexWrapper direction='column' gap='48px'>
+                    <FlexWrapper justify='space-between' align='center' gap='16px'>
+                        <FlexWrapper>
+                            <SectionTitle><span>#</span>projects</SectionTitle>
+                            <DecorativeLine width={'511px'} height={'2px'}/>
+                        </FlexWrapper>
+                        <ProjectsLink href="#">View all ~~&gt;</ProjectsLink>
+                    </FlexWrapper>
 
-                <FlexWrapper justify='space-between' gap='16px'>
-                    {Object.values(projects).map((project, index) => (
-                        <Project
-                            key={index}
-                            software={project.software}
-                            title={project.title}
-                            text={project.text}
-                            src={project.src}
-                            links={project.links}
-                        />
-                    ))}
+                    <FlexWrapper justify='space-between' gap='16px'>
+                        {Object.values(projects).map((project, index) => (
+                            <Project
+                                key={index}
+                                software={project.software}
+                                title={project.title}
+                                text={project.text}
+                                src={project.src}
+                                links={project.links}
+                            />
+                        ))}
+                    </FlexWrapper>
                 </FlexWrapper>
             </Container>
         </StyledProjects>
@@ -69,5 +73,9 @@ export const Projects = () => {
 const StyledProjects = styled.section`
     max-height: 518px;
     height: 100%;
-    background-color: #5f8881;
+    margin-bottom: 106px;
+`
+
+const ProjectsLink = styled.a`
+    font-weight: 500;
 `
