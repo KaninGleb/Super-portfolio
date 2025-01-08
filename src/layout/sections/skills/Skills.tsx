@@ -16,7 +16,7 @@ export const Skills = () => {
                     <DecorativeLine width={'239px'} height={'2px'}/>
                 </FlexWrapper>
 
-                <FlexWrapper gap='59px'>
+                <FlexWrapper gap='56px'>
                     <StyledPhoto src={groupOfImages} width='349px' height='282px' alt="Group of Images"/>
                     <SkillsWrapper>
                         <FlexWrapper justify='flex-end' wrap='wrap' gap='16px'>
@@ -26,12 +26,12 @@ export const Skills = () => {
                                     description={['SQLite', 'PostgreSQL', 'Mongo']}/>
                             <Skill title='Tools'
                                     maxWidth='196px'
-                                    description={['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git', 'Font Awesome']}/>
+                                    description={['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git Font Awesome']}/>
                             <Skill title='Other'
                                     description={['HTML', 'CSS', 'EJS', 'SCSS', 'REST', 'Jinja']}/>
                             <Skill title='Frameworks'
                                     maxWidth='196px'
-                                    description={['React', 'Vue', 'Disnake', 'Discord.js', 'Flask', 'Express.js']}/>
+                                    description={['React Vue', 'Disnake Discord.js', 'Flask Express.js']}/>
                         </FlexWrapper>
                     </SkillsWrapper>
                 </FlexWrapper>
@@ -41,8 +41,9 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    height: 365px;
-    background-color: #7e3f3e;
+    max-height: 365px;
+    height: 100%;
+    margin-bottom: 112px;
 `
 
 const SkillsWrapper = styled.div`
