@@ -36,7 +36,7 @@ export const Main = () => {
 const StyledMain = styled.section`
     max-height: 630px;
     height: 100%;
-    margin-top: 62px;
+    margin-bottom: 112px;
 `
 
 const TextWrapper = styled(FlexWrapper)`

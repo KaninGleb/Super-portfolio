@@ -30,6 +30,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     padding: 32px 0 8px;
+    margin-bottom: 62px;
 `;
 
 const LanguageSelect = styled.select`

@@ -21,7 +21,7 @@ export const Testimony = () => {
 
 const StyledTestimony = styled.section`
     font-size: 24px;
-    margin: 112px 0 74px;
+    margin-bottom: 74px;
 `
 
 const StyledQuote = styled.blockquote`
