@@ -12,7 +12,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper align='center' justify='space-between'>
+                <MarginWrapper align='center' justify='space-between'>
                     <Logo/>
                     <FlexWrapper gap='32px'>
                         <Menu menuItems={headerLinks}/>
@@ -22,16 +22,19 @@ export const Header = () => {
                             <option>UA</option>
                         </LanguageSelect>
                     </FlexWrapper>
-                </FlexWrapper>
+                </MarginWrapper>
             </Container>
         </StyledHeader>
     )
 }
 
 const StyledHeader = styled.header`
-    padding: 32px 0 8px;
     margin-bottom: 62px;
 `;
+
+const MarginWrapper = styled(FlexWrapper)`
+    padding: 32px 0 8px;
+`
 
 const LanguageSelect = styled.select`
     font-family: "Fira Code", sans-serif;
