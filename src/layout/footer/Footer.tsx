@@ -77,6 +77,10 @@ const LeftSection = styled.div`
     div {
         margin-bottom: 16px;
     }
+    
+    p {
+        color: ${theme.colors.primaryLightText};
+    }
 `
 
 const RightSection = styled(FlexWrapper)`
