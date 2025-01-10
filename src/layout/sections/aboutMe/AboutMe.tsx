@@ -20,18 +20,18 @@ export const AboutMe = () => {
         <StyledAboutMe>
             <Container>
                 <FlexWrapper gap='166px'>
-                    <FlexWrapper direction='column' gap='27px'>
+                    <LeftSection>
                         <StyledSectionTitle>
                             <SectionTitle><span>#</span>about-me</SectionTitle>
                             <DecorativeLine width={'326px'} height={'2px'}/>
                         </StyledSectionTitle>
                         <Paragraph children={text.aboutMeText}/>
                         <Link href={'#'} children={'Read more ->'} mWidth={'150px'}/>
-                    </FlexWrapper>
-                    <FlexWrapper direction={'column'}>
+                    </LeftSection>
+                    <RightSection>
                         <Photo src={aboutMePhoto} width='339px' height='507px' alt=""/>
                         <StyledBorder/>
-                    </FlexWrapper>
+                    </RightSection>
                 </FlexWrapper>
             </Container>
         </StyledAboutMe>
@@ -44,9 +44,20 @@ const StyledAboutMe = styled.section`
     margin-bottom: 112px;
 `
 
+const LeftSection = styled.div`
+    p {
+        margin-bottom: 35px;
+    }
+`
+
 const StyledSectionTitle = styled(FlexWrapper)`
-    width: 516px;
-    margin-bottom: 4px;
+    max-width: 516px;
+    width: 100%;
+    margin-bottom: 23px;
+`
+
+const RightSection = styled.div`
+    
 `
 
 const StyledBorder = styled.div`
