@@ -4,7 +4,6 @@ import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
-import {Link} from "../../../components/Link.tsx";
 
 export const Main = () => {
     return (
@@ -14,11 +13,7 @@ export const Main = () => {
                     <TextWrapper direction='column' align='flex-start'>
                         <MainTitle>Elias is a <span>web designer</span> and <span>front-end</span> developer</MainTitle>
                         <Paragraph>He crafts responsive websites where technologies meet creativity</Paragraph>
-                        <Link href='#'
-                                children='Contact me!!'
-                                color={theme.colors.primaryText}
-                                borderColor={theme.colors.secondaryBorder}
-                                mWidth='150px'/>
+                        <StyledBtn type='submit'>Contact me!!</StyledBtn>
                     </TextWrapper>
                     <FlexWrapper direction='column'>
                         <Photo src={photo} width='457px' height='386px' alt=""/>
@@ -57,6 +52,14 @@ const Paragraph = styled.p`
     line-height: 1.5625;
     color: ${theme.colors.primaryLightText};
     margin-bottom: 25px;
+`
+
+const StyledBtn = styled.button`
+    outline: 1px solid #c778dd;
+    padding: 8px 16px;
+    max-width: 148px;
+    width: 100%;
+    color: ${theme.colors.primaryText};
 `
 
 const ColorBlock = styled.div`
