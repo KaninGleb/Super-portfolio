@@ -25,19 +25,19 @@ export const Footer = () => {
                         <SocialList>
                             <SocialItem>
                                 <SocialLink>
-                                    <Icon iconId='git' width="21px" height="20px" viewBox="0 0 21 20"/>
+                                    <Icon iconId='git' width="32px" height="32px" viewBox="0 0 32 32"/>
                                 </SocialLink>
                             </SocialItem>
 
                             <SocialItem>
                                 <SocialLink>
-                                    <Icon iconId='figma' width="14px" height="20px" viewBox="0 0 14 20"/>
+                                    <Icon iconId='figma' width="32px" height="32px" viewBox="0 0 32 32"/>
                                 </SocialLink>
                             </SocialItem>
 
                             <SocialItem>
                                 <SocialLink>
-                                    <Icon iconId='discord' width="25" height="20" viewBox="0 0 25 20"/>
+                                    <Icon iconId='discord' width="32" height="32" viewBox="0 0 32 32"/>
                                 </SocialLink>
                             </SocialItem>
                         </SocialList>
@@ -84,7 +84,7 @@ const RightSection = styled(FlexWrapper)`
 
 const SocialList = styled.ul`
     display: flex;
-    gap: 23px;
+    gap: 8px;
 `
 
 const SocialItem = styled.li`

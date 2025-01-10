@@ -29,13 +29,13 @@ export const Contacts = () => {
                         <RightSection direction='column' gap='22px'>
                             <StyledTitle>Message me here</StyledTitle>
                             <ContactInfo>
-                                <FlexWrapper direction='column' gap='21px'>
+                                <FlexWrapper direction='column' gap='8px'>
                                     <ContactItem>
-                                        <Icon iconId={'discord'} width='25' height='20' viewBox='0 0 25 20'/>
+                                        <Icon iconId={'discord'} width='32px' height='32px' viewBox='0 0 32 32'/>
                                         !Elias#3519
                                     </ContactItem>
                                     <ContactItem>
-                                        <Icon iconId={'email'} width='23' height='17' viewBox='0 0 23 17'/>
+                                        <Icon iconId={'email'} width='32px' height='32px' viewBox='0 0 32 32'/>
                                         elias@elias.me
                                     </ContactItem>
                                 </FlexWrapper>
@@ -87,7 +87,7 @@ const ContactInfo = styled.ul`
 const ContactItem = styled.li`
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 5px;
     
     color: ${theme.colors.primaryLightText};
 `
