@@ -25,12 +25,12 @@ export const Skills = () => {
                             <Skill title='Databases'
                                     description={['SQLite', 'PostgreSQL', 'Mongo']}/>
                             <Skill title='Tools'
-                                    maxWidth='198px'
+                                    maxWidth='196px'
                                     description={['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git Font Awesome']}/>
                             <Skill title='Other'
                                     description={['HTML', 'CSS', 'EJS', 'SCSS', 'REST', 'Jinja']}/>
                             <Skill title='Frameworks'
-                                    maxWidth='198px'
+                                    maxWidth='196px'
                                     description={['React Vue', 'Disnake Discord.js', 'Flask Express.js']}/>
                         </FlexWrapper>
                     </SkillsWrapper>
