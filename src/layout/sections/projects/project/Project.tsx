@@ -50,7 +50,7 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledWork = styled.div`
-    border: 1px solid ${theme.colors.primaryBorder};
+    outline: 1px solid ${theme.colors.primaryBorder};
     max-width: 330px;
     width: 100%;
     height: 100%;
@@ -67,7 +67,7 @@ const SizeWrapper = styled.div`
 `
 
 const MainSizeWrapper = styled(FlexWrapper)`
-    margin: 16px 6px 8px;
+    margin: 16px 8px 8px;
 `
 
 const Software = styled.ul`

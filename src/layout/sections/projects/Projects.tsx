@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
@@ -15,7 +16,7 @@ const projects = {
         text: 'Minecraft servers hosting',
         src: chertNodes,
         links: [
-            {href: "#", children: "Live <~>", color: "#ffffff"},
+            {href: "#", children: "Live <~>", color: theme.colors.primaryBorder},
             {href: "#", children: "Cached >=", color: "#abb2bf", borderColor: "#abb2bf"},
         ],
     },
@@ -25,7 +26,7 @@ const projects = {
         text: 'Discord anti-crash bot',
         src: protectX,
         links: [
-            {href: "#", children: "Live <~>", color: "#ffffff"},
+            {href: "#", children: "Live <~>", color: theme.colors.primaryBorder},
         ],
     },
     kahoot: {
@@ -34,7 +35,7 @@ const projects = {
         text: 'Get answers to your kahoot quiz',
         src: kahoot,
         links: [
-            {href: "#", children: "Live <~>", color: "#ffffff"},
+            {href: "#", children: "Live <~>", color: theme.colors.primaryBorder},
         ],
     },
 };
