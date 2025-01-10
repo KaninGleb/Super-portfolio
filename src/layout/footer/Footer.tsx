@@ -8,9 +8,8 @@ import {Icon} from "../../components/icon/Icon.tsx";
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FooterHr/>
-            <Container>
-                <FlexWrapper justify="space-between">
+            <FooterContainer>
+                <BothSections justify="space-between">
                     <LeftSection>
                         <FlexWrapper gap='24px'>
                             <Logo/>
@@ -42,17 +41,19 @@ export const Footer = () => {
                             </SocialItem>
                         </SocialList>
                     </RightSection>
-
-                </FlexWrapper>
+                </BothSections>
                 <small>© Copyright 2022. Made by Elias</small>
-            </Container>
+            </FooterContainer>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
     text-align: center;
-
+    margin: 145px 0 32px;
+    border-top: 1px solid ${theme.colors.primaryBorder};
+    
+    
     h3 {
         font-weight: 500;
         font-size: 24px;
@@ -61,15 +62,15 @@ const StyledFooter = styled.footer`
     small {
         font-size: 16px;
         color: #abb2bf;
-        padding-bottom: 32px;
     }
 `;
 
-const FooterHr = styled.hr`
-    border: none;
-    background-color: ${theme.colors.primaryBorder};
-    height: 1px;
-    margin-bottom: 32px;
+const FooterContainer = styled(Container)`
+
+`
+
+const BothSections = styled(FlexWrapper)`
+    margin: 32px 0 48px;
 `
 
 const LeftSection = styled.div`
@@ -79,7 +80,7 @@ const LeftSection = styled.div`
 `
 
 const RightSection = styled(FlexWrapper)`
-    margin-bottom: 48px;
+    
 `
 
 const SocialList = styled.ul`
