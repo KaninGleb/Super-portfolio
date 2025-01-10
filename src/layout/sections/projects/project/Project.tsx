@@ -6,7 +6,7 @@ import {theme} from "../../../../styles/Theme.tsx";
 type LinkPropsType = {
     href: string;
     children: string;
-    color: string;
+    color?: string;
     borderColor?: string;
 };
 
@@ -81,7 +81,7 @@ const Software = styled.ul`
 const StyledHr = styled.hr`
     border: none;
     height: 1px;
-    background-color: #abb2bf;
+    background-color: ${theme.colors.primaryBorder};
     margin: 8px -8px;
 `
 

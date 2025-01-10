@@ -16,8 +16,8 @@ const projects = {
         text: 'Minecraft servers hosting',
         src: chertNodes,
         links: [
-            {href: "#", children: "Live <~>", color: theme.colors.primaryBorder},
-            {href: "#", children: "Cached >=", color: "#abb2bf", borderColor: "#abb2bf"},
+            {href: "#", children: "Live <~>"},
+            {href: "#", children: "Cached >=", color: theme.colors.primaryLightText, borderColor: theme.colors.primaryLightText},
         ],
     },
     protectX: {
@@ -26,7 +26,7 @@ const projects = {
         text: 'Discord anti-crash bot',
         src: protectX,
         links: [
-            {href: "#", children: "Live <~>", color: theme.colors.primaryBorder},
+            {href: "#", children: "Live <~>"},
         ],
     },
     kahoot: {
@@ -35,7 +35,7 @@ const projects = {
         text: 'Get answers to your kahoot quiz',
         src: kahoot,
         links: [
-            {href: "#", children: "Live <~>", color: theme.colors.primaryBorder},
+            {href: "#", children: "Live <~>"},
         ],
     },
 };
