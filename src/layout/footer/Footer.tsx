@@ -1,3 +1,4 @@
+import {theme} from "../../styles/Theme.tsx";
 import styled from "styled-components";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
@@ -7,18 +8,19 @@ import {Icon} from "../../components/icon/Icon.tsx";
 export const Footer = () => {
     return (
         <StyledFooter>
+            <FooterHr/>
             <Container>
                 <FlexWrapper justify="space-between">
-                    <FlexWrapper direction="column" gap='16px'>
+                    <LeftSection>
                         <FlexWrapper gap='24px'>
                             <Logo/>
                             <p>elias@elias-dev.ml</p>
                         </FlexWrapper>
 
                         <span>Web designer and front-end developer</span>
-                    </FlexWrapper>
+                    </LeftSection>
 
-                    <div>
+                    <RightSection direction='column' align='flex-start' gap='12px'>
                         <h3>Media</h3>
                         <SocialList>
                             <SocialItem>
@@ -39,7 +41,7 @@ export const Footer = () => {
                                 </SocialLink>
                             </SocialItem>
                         </SocialList>
-                    </div>
+                    </RightSection>
 
                 </FlexWrapper>
                 <small>© Copyright 2022. Made by Elias</small>
@@ -49,41 +51,39 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-    background-color: #8d556a;
     text-align: center;
 
-    a {
-        font-family: "Fira Code", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        color: #abb2bf;
-    }
-
-    span {
-        font-family: "Fira Code", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        color: #fff;
-    }
-
     h3 {
-        font-family: "Fira Code", sans-serif;
         font-weight: 500;
         font-size: 24px;
-        color: #fff;
     }
 
     small {
-        font-family: "Fira Code", sans-serif;
-        font-weight: 400;
         font-size: 16px;
         color: #abb2bf;
     }
 `;
 
+const FooterHr = styled.hr`
+    border: none;
+    background-color: ${theme.colors.primaryBorder};
+    height: 1px;
+    margin-bottom: 32px;
+`
+
+const LeftSection = styled.div`
+    div {
+        margin-bottom: 16px;
+    }
+`
+
+const RightSection = styled(FlexWrapper)`
+    margin-bottom: 48px;
+`
+
 const SocialList = styled.ul`
     display: flex;
-    gap: 8px;
+    gap: 23px;
 `
 
 const SocialItem = styled.li`
