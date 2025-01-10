@@ -6,7 +6,9 @@ type PhotoPropsType = {
 }
 
 export const Photo = styled.img<PhotoPropsType>`
-    width: ${props => props.width}
-    height: ${props => props.height}
+    max-width: ${props => props.width}
+    max-height: ${props => props.height}
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 `
