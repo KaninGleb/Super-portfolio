@@ -30,7 +30,11 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     button {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
         background-color: unset;
         border: none;
+        cursor: pointer;
     }
 `
