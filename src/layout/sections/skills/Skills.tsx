@@ -17,23 +17,26 @@ export const Skills = () => {
                 </FlexWrapper>
 
                 <FlexWrapper gap='59px'>
-                    <StyledPhoto src={groupOfImages} width='349px' height='282px' alt="Group of Images"/>
-                    <SkillsWrapper>
-                        <FlexWrapper justify='flex-end' wrap='wrap' gap='16px'>
-                            <Skill title='Languages'
+                    <StyledPhoto src={groupOfImages} width='348px' height='282px' alt="Group of Images"/>
+                        <SkillsWrapper direction='column' wrap='wrap-reverse' gap='16px'>
+                            <Skill order={5}
+                                    title='Languages'
                                     description={['TypeScript', 'Lua', 'Python', 'JavaScript']}/>
-                            <Skill title='Databases'
+                            <Skill order={3}
+                                    title='Databases'
                                     description={['SQLite', 'PostgreSQL', 'Mongo']}/>
-                            <Skill title='Tools'
+                            <Skill order={1}
+                                    title='Tools'
                                     maxWidth='196px'
                                     description={['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git Font Awesome']}/>
-                            <Skill title='Other'
+                            <Skill order={4}
+                                    title='Other'
                                     description={['HTML', 'CSS', 'EJS', 'SCSS', 'REST', 'Jinja']}/>
-                            <Skill title='Frameworks'
+                            <Skill order={2}
+                                    title='Frameworks'
                                     maxWidth='196px'
                                     description={['React Vue', 'Disnake Discord.js', 'Flask Express.js']}/>
-                        </FlexWrapper>
-                    </SkillsWrapper>
+                        </SkillsWrapper>
                 </FlexWrapper>
             </Container>
         </StyledSkills>
@@ -46,8 +49,9 @@ const StyledSkills = styled.section`
     margin-bottom: 112px;
 `
 
-const SkillsWrapper = styled.div`
-
+const SkillsWrapper = styled(FlexWrapper)`
+    margin-top: 43px;
+    max-height: 282px;
 `
 
 const StyledPhoto = styled(Photo)`

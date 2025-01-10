@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import {theme} from "../../../../styles/Theme.tsx";
 import {StyledHr} from "../../../../components/StyledHr.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import {theme} from "../../../../styles/Theme.tsx";
 
 type SkillPropsType = {
+    order?: number
     title: string
     description: string[]
     maxWidth?: string
@@ -11,7 +12,7 @@ type SkillPropsType = {
 
 export const Skill = (props: SkillPropsType) => {
     return (
-        <StyledSkill maxWidth={props.maxWidth}>
+        <StyledSkill order={props.order} maxWidth={props.maxWidth}>
             <SkillTitle>{props.title}</SkillTitle>
             <StyledHr/>
             <SkillDescription>
@@ -25,11 +26,11 @@ export const Skill = (props: SkillPropsType) => {
     );
 };
 
-const StyledSkill = styled.div<{ maxWidth?: string }>`
+const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
+    order: ${props => props.order};
     outline: 1px solid ${theme.colors.primaryBorder};
     padding: 8px;
     max-width: ${(props) => props.maxWidth || '178px'};
-    height: 100%;;
 `
 
 const SkillTitle = styled.h3`
