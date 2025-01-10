@@ -61,6 +61,7 @@ const StyledFooter = styled.footer`
     small {
         font-size: 16px;
         color: #abb2bf;
+        padding-bottom: 32px;
     }
 `;
 
