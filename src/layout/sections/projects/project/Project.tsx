@@ -60,6 +60,7 @@ const Image = styled.img`
     width: 100%;
     height: 201px;
     border-bottom: 1px solid ${theme.colors.primaryBorder};
+    object-fit: cover;
 `
 
 const SizeWrapper = styled.div`
