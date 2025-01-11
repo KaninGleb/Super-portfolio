@@ -3,7 +3,8 @@ import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {sections, SectionTitle} from "../../../components/SectionTitle.tsx";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
-import {Paragraph, textData} from "../../../components/Paragraph.tsx";
+import {Paragraph} from "../../../components/Paragraph.tsx";
+import {textData} from "../../textData.ts";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.tsx";
 

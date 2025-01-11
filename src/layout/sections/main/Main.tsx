@@ -2,7 +2,8 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Paragraph, textData} from "../../../components/Paragraph.tsx";
+import {Paragraph} from "../../../components/Paragraph.tsx";
+import {textData} from "../../textData.ts";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
 
