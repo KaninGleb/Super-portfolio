@@ -36,7 +36,7 @@ const QuotationMarkBefore = styled.img`
 const StyledQuote = styled.blockquote`
     font-weight: 500;
 
-    border: 1px solid ${theme.colors.primaryBorder};
+    border: 1px solid ${theme.colors.primaryOutline};
     padding: 32px;
     max-width: 714px;
     width: 100%;
@@ -52,7 +52,7 @@ const QuotationMarkAfter = styled.img`
 `
 
 const StyledCite = styled.cite`
-    border: 1px solid ${theme.colors.primaryBorder};
+    border: 1px solid ${theme.colors.primaryOutline};
     border-top: none;
     padding: 16px;
 `

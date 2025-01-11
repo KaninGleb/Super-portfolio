@@ -52,7 +52,7 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledWork = styled.div`
-    outline: 1px solid ${theme.colors.primaryBorder};
+    outline: 1px solid ${theme.colors.primaryOutline};
     max-width: 330px;
     width: 100%;
     height: 100%;
@@ -61,7 +61,7 @@ const StyledWork = styled.div`
 const Image = styled.img`
     width: 100%;
     height: 201px;
-    border-bottom: 1px solid ${theme.colors.primaryBorder};
+    border-bottom: 1px solid ${theme.colors.primaryOutline};
     object-fit: cover;
 `
 
@@ -84,7 +84,7 @@ const Software = styled.ul`
 const StyledHr = styled.hr`
     border: none;
     height: 1px;
-    background-color: ${theme.colors.primaryBorder};
+    background-color: ${theme.colors.primaryOutline};
     margin: 8px -8px;
 `
 

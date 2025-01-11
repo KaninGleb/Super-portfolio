@@ -28,7 +28,7 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
     order: ${props => props.order};
-    outline: 1px solid ${theme.colors.primaryBorder};
+    outline: 1px solid ${theme.colors.primaryOutline};
     padding: 8px;
     max-width: ${(props) => props.maxWidth || '178px'};
 `

@@ -55,7 +55,7 @@ const LeftSection = styled(FlexWrapper)`
 `
 
 const RightSection = styled(FlexWrapper)`
-    outline: 1px solid ${theme.colors.primaryBorder};
+    outline: 1px solid ${theme.colors.primaryOutline};
     max-width: 204px;
     width: 100%;
     padding: 16px;

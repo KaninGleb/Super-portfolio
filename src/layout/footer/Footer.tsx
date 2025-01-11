@@ -51,7 +51,7 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
     text-align: center;
     margin: 145px 0 32px;
-    border-top: 1px solid ${theme.colors.primaryBorder};
+    border-top: 1px solid ${theme.colors.primaryOutline};
     
     
     h3 {

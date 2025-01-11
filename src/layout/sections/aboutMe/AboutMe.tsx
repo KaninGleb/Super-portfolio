@@ -60,6 +60,6 @@ const RightSection = styled.div`
 const StyledBorder = styled.div`
     width: 271px;
     height: 1px;
-    background-color: ${theme.colors.secondaryBorder};
+    background-color: ${theme.colors.secondaryOutline};
     margin-left: 45px;
 `;
