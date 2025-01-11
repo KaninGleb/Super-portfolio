@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme.tsx";
 
 type MenuPropsType = {
-    menuItems: Array<string>
+    menuItems: Array<{ name: string, id: string }>
 }
 
 export const Menu = (props: MenuPropsType) => {
@@ -11,7 +11,7 @@ export const Menu = (props: MenuPropsType) => {
             <StyledUl>
                 {props.menuItems.map((item, index) => (
                     <li key={index}>
-                        <HeaderLink href={'#'}><span>#</span>{item}</HeaderLink>
+                        <HeaderLink href={`#${item.id}`}><span>#</span>{item.name}</HeaderLink>
                     </li>
                 ))}
             </StyledUl>

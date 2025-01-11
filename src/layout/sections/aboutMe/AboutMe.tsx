@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {sections, SectionTitle} from "../../../components/SectionTitle.tsx";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Paragraph} from "../../../components/Paragraph.tsx";
 import {Link} from "../../../components/Link.tsx";
@@ -22,7 +22,8 @@ export const AboutMe = () => {
                 <FlexWrapper gap='166px'>
                     <LeftSection>
                         <StyledSectionTitle>
-                            <SectionTitle><span>#</span>about-me</SectionTitle>
+                            {/*<SectionTitle><span>#</span>about-me</SectionTitle>*/}
+                            <SectionTitle section={sections.aboutMe}/>
                             <DecorativeLine width={'326px'} height={'2px'}/>
                         </StyledSectionTitle>
                         <Paragraph children={text.aboutMeText}/>

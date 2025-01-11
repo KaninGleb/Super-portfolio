@@ -6,7 +6,12 @@ import {Container} from "../../components/Container.tsx";
 import {theme} from "../../styles/Theme.tsx";
 import arrowClose from "../../assets/images/Lang-change-closed.svg";
 
-const headerLinks = ['home', 'works', 'about-me', 'contacts'];
+const headerLinks = [
+    { name: 'home', id: 'home'},
+    { name: 'works', id: 'works'},
+    { name: 'about-me', id: 'about-me'},
+    { name: 'contacts', id: 'contacts'},
+]
 
 export const Header = () => {
     return (

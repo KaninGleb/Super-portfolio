@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {sections, SectionTitle} from "../../../components/SectionTitle.tsx";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Photo} from "../../../components/Photo.tsx";
@@ -12,7 +12,8 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <FlexWrapper>
-                    <SectionTitle><span>#</span>skills</SectionTitle>
+                    {/*<SectionTitle><span>#</span>skills</SectionTitle>*/}
+                    <SectionTitle section={sections.skills}/>
                     <DecorativeLine width={'239px'} height={'2px'}/>
                 </FlexWrapper>
 
