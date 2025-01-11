@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Paragraph} from "../../../components/Paragraph.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
 
@@ -12,7 +13,7 @@ export const Main = () => {
                 <FlexWrapper align="center" justify="space-around" gap="30px">
                     <TextWrapper direction='column' align='flex-start'>
                         <MainTitle>Elias is a <span>web designer</span> and <span>front-end</span> developer</MainTitle>
-                        <Paragraph>He crafts responsive websites where technologies meet creativity</Paragraph>
+                        <StyledParagraph>He crafts responsive websites where technologies meet creativity</StyledParagraph>
                         <StyledBtn type='submit'>Contact me!!</StyledBtn>
                     </TextWrapper>
                     <FlexWrapper direction='column'>
@@ -48,7 +49,7 @@ const MainTitle = styled.h1`
     }
 `
 
-const Paragraph = styled.p`
+const StyledParagraph = styled(Paragraph)`
     line-height: 1.5625;
     color: ${theme.colors.primaryLightText};
     margin-bottom: 25px;

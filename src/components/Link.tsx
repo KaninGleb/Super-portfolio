@@ -20,9 +20,7 @@ export const Link = (props: LinkPropsType) => {
 const StyledLink = styled.a<LinkPropsType>`
     font-weight: 500;
     color: ${props => props.color || theme.colors.primaryText};
-    
     border: 1px solid ${props => props.borderColor || theme.colors.secondaryText};
-    padding: 8px 16px;
     max-width: ${props => props.mWidth || '121px'};
-    height: 37px;
+    padding: 8px 16px;
 `

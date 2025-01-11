@@ -10,9 +10,9 @@ import {Photo} from "../../../components/Photo.tsx";
 import aboutMePhoto from "../../../assets/images/about-me-photo.png";
 
 const text = {
-    aboutMeText: 'Hello, I’m Elias!\n\n' +
-        'I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.\n\n' +
-        'Transforming my creativity and knowledge into websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.',
+    paragraph1: 'Hello, i’m Elias!',
+    paragraph2: 'I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.',
+    paragraph3: 'Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.',
 }
 
 export const AboutMe = () => {
@@ -26,7 +26,9 @@ export const AboutMe = () => {
                             <SectionTitle section={sections.aboutMe}/>
                             <DecorativeLine width={'326px'} height={'2px'}/>
                         </StyledSectionTitle>
-                        <Paragraph children={text.aboutMeText}/>
+                        <Paragraph children={text.paragraph1}/>
+                        <Paragraph children={text.paragraph2}/>
+                        <Paragraph children={text.paragraph3}/>
                         <Link href={'#'} children={'Read more ->'} mWidth={'150px'}/>
                     </LeftSection>
                     <RightSection>
@@ -47,7 +49,7 @@ const StyledAboutMe = styled.section`
 
 const LeftSection = styled.div`
     p {
-        margin-bottom: 35px;
+        margin-bottom: 27px;
     }
 `
 

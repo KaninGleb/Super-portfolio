@@ -24,7 +24,7 @@ export const Contacts = () => {
 
                     <FlexWrapper justify='space-between'>
                         <LeftSection>
-                            <StyledParagraph children={text.contactsText} fontWidth='500'></StyledParagraph>
+                            <Paragraph children={text.contactsText} fontWeight='500'></Paragraph>
                         </LeftSection>
 
                         <RightSection direction='column' gap='22px'>
@@ -58,10 +58,6 @@ const StyledContacts = styled.section`
 const LeftSection = styled(FlexWrapper)`
     max-width: 505px;
     width: 100%;
-`
-
-const StyledParagraph = styled(Paragraph)`
-    font-weight: 500;
 `
 
 const RightSection = styled(FlexWrapper)`
