@@ -5,13 +5,13 @@ type LinkPropsType = {
     href: string
     color?: string
     children: string
-    borderColor?: string
+    outlineColor?: string
     mWidth?: string
 }
 
 export const Link = (props: LinkPropsType) => {
     return (
-        <StyledLink href={props.href} color={props.color} borderColor={props.borderColor} mWidth={props.mWidth}>
+        <StyledLink href={props.href} color={props.color} outlineColor={props.outlineColor} mWidth={props.mWidth}>
             {props.children}
         </StyledLink>
     );
@@ -20,7 +20,7 @@ export const Link = (props: LinkPropsType) => {
 const StyledLink = styled.a<LinkPropsType>`
     font-weight: 500;
     color: ${props => props.color || theme.colors.primaryText};
-    border: 1px solid ${props => props.borderColor || theme.colors.secondaryText};
-    max-width: ${props => props.mWidth || '121px'};
+    outline: 1px solid ${props => props.outlineColor || theme.colors.secondaryText};
+    max-width: ${props => props.mWidth || '109px'};
     padding: 8px 16px;
 `

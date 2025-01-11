@@ -23,7 +23,7 @@ export const AboutMe = () => {
                         <Paragraph children={textData.aboutMe.paragraph1}/>
                         <Paragraph children={textData.aboutMe.paragraph2}/>
                         <Paragraph children={textData.aboutMe.paragraph3}/>
-                        <Link href={'#'} children={'Read more ->'} mWidth={'150px'}/>
+                        <Link href={'#'} children={'Read more ->'} mWidth={'148px'}/>
                     </LeftSection>
                     <RightSection>
                         <Photo src={aboutMePhoto} width='339px' height='507px' alt=""/>

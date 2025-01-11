@@ -4,10 +4,11 @@ import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {theme} from "../../../../styles/Theme.tsx";
 
 type LinkPropsType = {
-    href: string;
-    children: string;
-    color?: string;
-    borderColor?: string;
+    href: string
+    children: string
+    color?: string
+    outlineColor?: string
+    mWidth?: string
 };
 
 type ProjectPropsType = {
@@ -39,7 +40,8 @@ export const Project = (props: ProjectPropsType) => {
                                 href={link.href}
                                 children={link.children}
                                 color={link.color}
-                                borderColor={link.borderColor}
+                                outlineColor={link.outlineColor}
+                                mWidth={link.mWidth}
                             />
                         ))}
                     </FlexWrapper>

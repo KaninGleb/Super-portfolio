@@ -18,7 +18,7 @@ const projects = {
         src: chertNodes,
         links: [
             {href: "#", children: "Live <~>"},
-            {href: "#", children: "Cached >=", color: theme.colors.primaryLightText, borderColor: theme.colors.primaryLightText},
+            {href: "#", children: "Cached >=", color: theme.colors.primaryLightText, outlineColor: theme.colors.primaryLightText, mWidth: "119px"},
         ],
     },
     protectX: {
