@@ -6,9 +6,9 @@ export const sections = {
         name: 'skills',
         symbol: '#'
     },
-    works: {
-        id: 'works',
-        name: 'works',
+    projects: {
+        id: 'projects',
+        name: 'projects',
         symbol: '#'
     },
     aboutMe: {

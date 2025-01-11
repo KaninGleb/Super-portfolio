@@ -48,7 +48,7 @@ export const Projects = () => {
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <FlexWrapper>
                             {/*<SectionTitle><span>#</span>projects</SectionTitle>*/}
-                            <SectionTitle section={sections.works}/>
+                            <SectionTitle section={sections.projects}/>
                             <DecorativeLine width={'511px'} height={'2px'}/>
                         </FlexWrapper>
                         <ProjectsLink href="#">View all ~~&gt;</ProjectsLink>
