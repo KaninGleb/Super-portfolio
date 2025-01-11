@@ -3,13 +3,9 @@ import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {sections, SectionTitle} from "../../../components/SectionTitle.tsx";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
-import {Paragraph} from "../../../components/Paragraph.tsx";
+import {Paragraph, textData} from "../../../components/Paragraph.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.tsx";
-
-const text = {
-    contactsText: 'I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me'
-}
 
 export const Contacts = () => {
     return (
@@ -24,10 +20,10 @@ export const Contacts = () => {
 
                     <FlexWrapper justify='space-between'>
                         <LeftSection>
-                            <Paragraph children={text.contactsText} fontWeight='500'></Paragraph>
+                            <Paragraph children={textData.contacts.paragraph} fontWeight='500'></Paragraph>
                         </LeftSection>
 
-                        <RightSection direction='column' gap='22px'>
+                        <RightSection direction='column' gap='16px'>
                             <StyledTitle>Message me here</StyledTitle>
                             <ContactInfo>
                                 <FlexWrapper direction='column' gap='8px'>
@@ -50,8 +46,6 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-    max-height: 228px;
-    height: 100%;
     margin-bottom: 145px;
 `
 
@@ -61,14 +55,10 @@ const LeftSection = styled(FlexWrapper)`
 `
 
 const RightSection = styled(FlexWrapper)`
+    outline: 1px solid ${theme.colors.primaryBorder};
     max-width: 204px;
     width: 100%;
-    max-height: 141px;
-    height: 100%;
-
     padding: 16px;
-
-    border: 1px solid ${theme.colors.primaryBorder};
 `
 
 const StyledTitle = styled.h3`
@@ -85,6 +75,5 @@ const ContactItem = styled.li`
     display: flex;
     align-items: center;
     gap: 5px;
-    
     color: ${theme.colors.primaryLightText};
 `
