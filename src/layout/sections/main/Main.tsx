@@ -6,6 +6,10 @@ import {Paragraph} from "../../../components/Paragraph.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
 
+const text = {
+    paragraph: 'He crafts responsive websites where technologies meet creativity',
+}
+
 export const Main = () => {
     return (
         <StyledMain>
@@ -13,7 +17,7 @@ export const Main = () => {
                 <FlexWrapper align="center" justify="space-around" gap="30px">
                     <TextWrapper direction='column' align='flex-start'>
                         <MainTitle>Elias is a <span>web designer</span> and <span>front-end</span> developer</MainTitle>
-                        <StyledParagraph>He crafts responsive websites where technologies meet creativity</StyledParagraph>
+                        <Paragraph children={text.paragraph}/>
                         <StyledBtn type='submit'>Contact me!!</StyledBtn>
                     </TextWrapper>
                     <FlexWrapper direction='column'>
@@ -37,6 +41,10 @@ const StyledMain = styled.section`
 
 const TextWrapper = styled(FlexWrapper)`
     text-align: left;
+    p {
+        margin-bottom: 25px;
+        line-height: 1.5625;
+    }
 `
 
 const MainTitle = styled.h1`
@@ -47,12 +55,6 @@ const MainTitle = styled.h1`
     span {
         color: ${theme.colors.secondaryText};
     }
-`
-
-const StyledParagraph = styled(Paragraph)`
-    line-height: 1.5625;
-    color: ${theme.colors.primaryLightText};
-    margin-bottom: 25px;
 `
 
 const StyledBtn = styled.button`
