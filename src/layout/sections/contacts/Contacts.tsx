@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {sections, SectionTitle} from "../../../components/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Paragraph} from "../../../components/Paragraph.tsx";
-import {textData} from "../../textData.ts";
+import {sectionsData, textData} from "../../../data/appData.ts";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.tsx";
 
@@ -14,8 +14,7 @@ export const Contacts = () => {
             <Container>
                 <FlexWrapper direction='column' gap='45px'>
                     <FlexWrapper>
-                        {/*<SectionTitle><span>#</span>contacts</SectionTitle>*/}
-                        <SectionTitle section={sections.contacts}/>
+                        <SectionTitle section={sectionsData.contacts}/>
                         <DecorativeLine width={'127px'} height={'2px'}/>
                     </FlexWrapper>
 

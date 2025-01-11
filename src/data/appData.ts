@@ -11,3 +11,26 @@ export const textData = {
         paragraph: 'I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me'
     },
 }
+
+export const sectionsData = {
+    skills: {
+        id: 'skills',
+        name: 'skills',
+        symbol: '#'
+    },
+    projects: {
+        id: 'projects',
+        name: 'projects',
+        symbol: '#'
+    },
+    aboutMe: {
+        id: 'about-me',
+        name: 'about-me',
+        symbol: '#'
+    },
+    contacts: {
+        id: 'contacts',
+        name: 'contacts',
+        symbol: '#'
+    }
+};

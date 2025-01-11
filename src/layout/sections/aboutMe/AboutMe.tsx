@@ -2,10 +2,10 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {sections, SectionTitle} from "../../../components/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {sectionsData, textData} from "../../../data/appData.ts";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Paragraph} from "../../../components/Paragraph.tsx";
-import {textData} from "../../textData.ts";
 import aboutMePhoto from "../../../assets/images/about-me-photo.png";
 import {Link} from "../../../components/Link.tsx";
 import {Photo} from "../../../components/Photo.tsx";
@@ -17,8 +17,7 @@ export const AboutMe = () => {
                 <FlexWrapper gap='166px'>
                     <LeftSection>
                         <StyledSectionTitle>
-                            {/*<SectionTitle><span>#</span>about-me</SectionTitle>*/}
-                            <SectionTitle section={sections.aboutMe}/>
+                            <SectionTitle section={sectionsData.aboutMe}/>
                             <DecorativeLine width={'326px'} height={'2px'}/>
                         </StyledSectionTitle>
                         <Paragraph children={textData.aboutMe.paragraph1}/>

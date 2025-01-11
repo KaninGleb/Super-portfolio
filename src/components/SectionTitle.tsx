@@ -1,28 +1,5 @@
 import styled from "styled-components";
 
-export const sections = {
-    skills: {
-        id: 'skills',
-        name: 'skills',
-        symbol: '#'
-    },
-    projects: {
-        id: 'projects',
-        name: 'projects',
-        symbol: '#'
-    },
-    aboutMe: {
-        id: 'about-me',
-        name: 'about-me',
-        symbol: '#'
-    },
-    contacts: {
-        id: 'contacts',
-        name: 'contacts',
-        symbol: '#'
-    }
-};
-
 type SectionTitlePropsType = {
     section: {
         id: string;

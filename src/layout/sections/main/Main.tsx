@@ -3,7 +3,7 @@ import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Paragraph} from "../../../components/Paragraph.tsx";
-import {textData} from "../../textData.ts";
+import {textData} from "../../../data/appData.ts";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
 
