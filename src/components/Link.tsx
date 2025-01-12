@@ -20,7 +20,14 @@ export const Link = (props: LinkPropsType) => {
 const StyledLink = styled.a<LinkPropsType>`
     font-weight: 500;
     color: ${props => props.color || theme.colors.primaryText};
-    outline: 1px solid ${props => props.outlineColor || theme.colors.secondaryText};
+    outline: 1px solid ${props => props.outlineColor || theme.colors.secondaryOutline};
     max-width: ${props => props.mWidth || '109px'};
     padding: 8px 16px;
+    transition: .15s;
+    
+    &:hover {
+        background-color: ${props =>
+            props.outlineColor === theme.colors.primaryOutline ? theme.colors.secondaryHover : theme.colors.primaryHover};
+        scale: 1.03;
+    }
 `
