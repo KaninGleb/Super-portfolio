@@ -10,9 +10,9 @@ export const Menu = (props: MenuPropsType) => {
         <StyledMenu>
             <StyledUl>
                 {props.menuItems.map((item, index) => (
-                    <li key={index}>
+                    <ListItem key={index}>
                         <HeaderLink href={`#${item.id}`}><span>#</span>{item.name}</HeaderLink>
-                    </li>
+                    </ListItem>
                 ))}
             </StyledUl>
         </StyledMenu>
@@ -20,12 +20,19 @@ export const Menu = (props: MenuPropsType) => {
 };
 
 const StyledMenu = styled.nav`
-
+    
 `;
 
 const StyledUl = styled.ul`
     display: flex;
     gap: 32px;
+`
+
+const ListItem = styled.li`
+    border-bottom: 2px solid transparent;
+    &:hover {
+        border-bottom: 2px solid ${theme.colors.primaryOutline};
+    }
 `
 
 const HeaderLink = styled.a`

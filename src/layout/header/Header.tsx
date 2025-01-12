@@ -8,7 +8,7 @@ import arrowClose from "../../assets/images/Lang-change-closed.svg";
 
 const headerLinks = [
     { name: 'home', id: 'home'},
-    { name: 'works', id: 'works'},
+    { name: 'works', id: 'projects'},
     { name: 'about-me', id: 'about-me'},
     { name: 'contacts', id: 'contacts'},
 ]
