@@ -17,8 +17,8 @@ export const Icon = (props: IconPropsType) => {
 };
 
 const StyledSvg = styled.svg`
-    transition: 0.2s ease;
-    &:hover {
-        scale: 1.15;
-    }
+    //transition: 0.2s ease;
+    //&:hover {
+    //    scale: 1.15;
+    //}
 `
