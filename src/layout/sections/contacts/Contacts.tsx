@@ -5,8 +5,8 @@ import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Paragraph} from "../../../components/Paragraph.tsx";
 import {sectionsData, textData} from "../../../data/appData.ts";
-import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../styles/Theme.tsx";
+import {SocialList} from "../../../components/SocialList.tsx";
 
 export const Contacts = () => {
     return (
@@ -25,18 +25,22 @@ export const Contacts = () => {
 
                         <RightSection direction='column' gap='16px'>
                             <StyledTitle>Message me here</StyledTitle>
-                            <ContactInfo>
-                                <FlexWrapper direction='column' gap='8px'>
-                                    <ContactItem>
-                                        <Icon iconId={'discord'} width='32px' height='32px' viewBox='0 0 32 32'/>
-                                        !Elias#3519
-                                    </ContactItem>
-                                    <ContactItem>
-                                        <Icon iconId={'email'} width='32px' height='32px' viewBox='0 0 32 32'/>
-                                        elias@elias.me
-                                    </ContactItem>
-                                </FlexWrapper>
-                            </ContactInfo>
+                            <SocialList
+                                iconIds={['discord', 'email']}
+                                iconsTitles={['!Elias#3519', 'elias@elias.me']}
+                            />
+                            {/*<ContactInfo>*/}
+                            {/*    <FlexWrapper direction='column' gap='8px'>*/}
+                            {/*        <ContactItem>*/}
+                            {/*            <Icon iconId={'discord'} width='32px' height='32px' viewBox='0 0 32 32'/>*/}
+                            {/*            !Elias#3519*/}
+                            {/*        </ContactItem>*/}
+                            {/*        <ContactItem>*/}
+                            {/*            <Icon iconId={'email'} width='32px' height='32px' viewBox='0 0 32 32'/>*/}
+                            {/*            elias@elias.me*/}
+                            {/*        </ContactItem>*/}
+                            {/*    </FlexWrapper>*/}
+                            {/*</ContactInfo>*/}
                         </RightSection>
                     </FlexWrapper>
                 </FlexWrapper>
@@ -66,14 +70,14 @@ const StyledTitle = styled.h3`
     font-size: 16px;
 `
 
-const ContactInfo = styled.ul`
-    display: flex;
-    flex-direction: column;
-`
-
-const ContactItem = styled.li`
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: ${theme.colors.primaryLightText};
-`
+// const ContactInfo = styled.ul`
+//     display: flex;
+//     flex-direction: column;
+// `
+//
+// const ContactItem = styled.li`
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+//     color: ${theme.colors.primaryLightText};
+// `
