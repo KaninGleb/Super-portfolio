@@ -1,4 +1,5 @@
 import './App.css'
+import {Media} from "./layout/media/Media.tsx";
 import {Header} from "./layout/header/Header.tsx";
 import {Main} from "./layout/sections/main/Main.tsx";
 import {Testimony} from "./layout/sections/testimony/Testimony.tsx";
@@ -11,6 +12,7 @@ import {Footer} from "./layout/footer/Footer.tsx";
 function App() {
     return (
         <div className="App">
+            <Media/>
             <Header/>
             <Main/>
             <Testimony/>
