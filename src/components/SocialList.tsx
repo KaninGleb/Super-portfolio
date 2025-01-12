@@ -14,23 +14,22 @@ type SocialListPropsType = {
     showIcon?: boolean
     iconsTitles?: string[]
     iconSize?: string
-    display?: boolean
+    displayFlex?: boolean
     direction?: string
     gap?: string
 }
 
 type FlexPropsType = {
-    display?: boolean
+    displayFlex?: boolean
     direction?: string
     gap?: string
 }
 
 export const SocialList = (props: SocialListPropsType) => {
     return (
-        <StyledSocialList display={props.display}
+        <StyledSocialList displayFlex={props.displayFlex}
                             direction={props.direction}
-                            gap={props.gap}
-        >
+                            gap={props.gap}>
             {props.iconIds.map((itemId, index) => {
                 const socialItem = socialData.find(item => item.id === itemId);
                 const title = props.iconsTitles ? props.iconsTitles[index] : ''
@@ -45,7 +44,6 @@ export const SocialList = (props: SocialListPropsType) => {
                                         width={props.iconSize || '32'}
                                         height={props.iconSize || '32'}
                                         viewBox={`0 0 32 32`}
-                                        // viewBox={`0 0 ${props.iconSize || '32'} ${props.iconSize || '32'}`}
                                 />
                             )}
                             <IconTitle>{title}</IconTitle>
@@ -58,7 +56,7 @@ export const SocialList = (props: SocialListPropsType) => {
 };
 
 const StyledSocialList = styled.ul<FlexPropsType>`
-    display: ${props => props.display ? 'flex' : ''};
+    display: ${props => props.displayFlex ? 'flex' : ''};
     flex-direction: ${props => props.direction};
     gap: ${props => props.gap || ''};
 `
@@ -84,8 +82,5 @@ const SocialLink = styled.a`
 const IconTitle = styled.span`
     display: flex;
     align-items: center;
-    font-family: "Fira Code", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
     color: ${theme.colors.primaryLightText};
 `

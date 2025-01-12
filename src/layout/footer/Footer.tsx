@@ -21,7 +21,7 @@ export const Footer = () => {
 
                     <RightSection direction='column' align='flex-start' gap='12px'>
                         <h3>Media</h3>
-                        <SocialList display={true}
+                        <SocialList displayFlex={true}
                                     gap={'8px'}
                                     iconIds={['git', 'figma', 'discord']}
                                     showIcon={true}

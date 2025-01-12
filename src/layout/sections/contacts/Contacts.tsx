@@ -25,10 +25,9 @@ export const Contacts = () => {
 
                         <RightSection direction='column' gap='16px'>
                             <StyledTitle>Message me here</StyledTitle>
-                            <SocialList
-                                iconIds={['discord', 'email']}
-                                showIcon={true}
-                                iconsTitles={['!Elias#3519', 'elias@elias.me']}
+                            <SocialList iconIds={['discord', 'email']}
+                                        showIcon={true}
+                                        iconsTitles={['!Elias#3519', 'elias@elias.me']}
                             />
                             {/*<ContactInfo>*/}
                             {/*    <FlexWrapper direction='column' gap='8px'>*/}
