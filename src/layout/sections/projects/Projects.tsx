@@ -18,7 +18,7 @@ const projects = {
         src: chertNodes,
         links: [
             {href: "#", children: "Live <~>"},
-            {href: "#", children: "Cached >=", color: theme.colors.primaryLightText, outlineColor: theme.colors.primaryLightText, mWidth: "119px"},
+            {href: "#", children: "Cached >=", color: theme.colors.primaryLightText, outlineColor: theme.colors.primaryOutline, mWidth: "119px"},
         ],
     },
     protectX: {
@@ -80,4 +80,10 @@ const StyledProjects = styled.section`
 
 const ProjectsLink = styled.a`
     font-weight: 500;
+    transition: .15s;
+
+    &:hover {
+        scale: 1.03;
+        font-weight: 600;
+    }
 `
