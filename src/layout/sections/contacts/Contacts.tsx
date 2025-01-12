@@ -70,15 +70,3 @@ const StyledTitle = styled.h3`
     font-weight: 600;
     font-size: 16px;
 `
-
-// const ContactInfo = styled.ul`
-//     display: flex;
-//     flex-direction: column;
-// `
-//
-// const ContactItem = styled.li`
-//     display: flex;
-//     align-items: center;
-//     gap: 5px;
-//     color: ${theme.colors.primaryLightText};
-// `

@@ -64,13 +64,12 @@ const StyledSocialList = styled.ul<FlexPropsType>`
 `
 
 const SocialItem = styled.li`
-    
+    max-height: 32px;
 `
 
 const SocialLink = styled.a`
     display: inline-flex;
     align-items: center;
-    gap: 5px;
     
     transition: 0.2s ease;
     &:hover {
