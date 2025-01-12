@@ -60,6 +60,12 @@ const StyledBtn = styled.button`
     max-width: 148px;
     width: 100%;
     color: ${theme.colors.primaryText};
+    transition: .15s;
+
+    &:hover {
+        background-color: ${theme.colors.primaryHover};
+        scale: 1.05;
+    }
 `
 
 const ColorBlock = styled.div`
