@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme.tsx";
 import {StyledHr} from "../../../../components/StyledHr.tsx";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 
 type SkillPropsType = {
     order?: number
@@ -16,11 +15,9 @@ export const Skill = (props: SkillPropsType) => {
             <SkillTitle>{props.title}</SkillTitle>
             <StyledHr/>
             <SkillDescription>
-                <FlexWrapper gap='8px' wrap='wrap'>
-                    {props.description.map((desc, index) => (
-                        <FlexItem  key={index}>{desc}</FlexItem >
-                    ))}
-                </FlexWrapper>
+                {props.description.map((desc, index) => (
+                    <FlexItem key={index}>{desc}</FlexItem>
+                ))}
             </SkillDescription>
         </StyledSkill>
     );
@@ -40,6 +37,7 @@ const SkillTitle = styled.h3`
 const SkillDescription = styled.ul`
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
 `
 const FlexItem = styled.li`
     color: ${theme.colors.primaryLightText};
