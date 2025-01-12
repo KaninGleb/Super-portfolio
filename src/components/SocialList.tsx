@@ -11,6 +11,7 @@ export const socialData = [
 
 type SocialListPropsType = {
     iconIds: string[]
+    showIcon?: boolean
     iconsTitles?: string[]
     iconSize?: string
     display?: boolean
@@ -37,12 +38,14 @@ export const SocialList = (props: SocialListPropsType) => {
                 return socialItem && (
                     <SocialItem key={itemId}>
                         <SocialLink href={socialItem.href} target='_blank'>
+                            {props.showIcon && (
                             <Icon iconId={socialItem.id}
                                     width={props.iconSize || '32'}
                                     height={props.iconSize || '32'}
                                     viewBox={`0 0 32 32`}
                                     // viewBox={`0 0 ${props.iconSize || '32'} ${props.iconSize || '32'}`}
                             />
+                            )}
                             {title && <IconTitle>{title}</IconTitle>}
                         </SocialLink>
                     </SocialItem>

@@ -4,7 +4,6 @@ import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {Logo} from "../../components/logo/Logo.tsx";
 import {SocialList} from "../../components/SocialList.tsx";
-// import {Icon} from "../../components/icon/Icon.tsx";
 
 export const Footer = () => {
     return (
@@ -14,7 +13,7 @@ export const Footer = () => {
                     <LeftSection>
                         <FlexWrapper gap='24px'>
                             <Logo/>
-                            <p>elias@elias-dev.ml</p>
+                            <SocialList iconIds={['email']} iconsTitles={['elias@elias-dev.ml']}/>
                         </FlexWrapper>
 
                         <span>Web designer and front-end developer</span>
@@ -24,7 +23,9 @@ export const Footer = () => {
                         <h3>Media</h3>
                         <SocialList display={true}
                                     gap={'8px'}
-                                    iconIds={['git', 'figma', 'discord']}/>
+                                    iconIds={['git', 'figma', 'discord']}
+                                    showIcon={true}
+                        />
                     </RightSection>
                 </BothSections>
                 <small>© Copyright 2022. Made by Elias</small>

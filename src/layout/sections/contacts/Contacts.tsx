@@ -27,6 +27,7 @@ export const Contacts = () => {
                             <StyledTitle>Message me here</StyledTitle>
                             <SocialList
                                 iconIds={['discord', 'email']}
+                                showIcon={true}
                                 iconsTitles={['!Elias#3519', 'elias@elias.me']}
                             />
                             {/*<ContactInfo>*/}
