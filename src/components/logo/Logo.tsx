@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
+import {shakeAnimation} from "../../animations/animations.ts";
 
 export const Logo = () => {
     return (
@@ -14,6 +15,7 @@ const StyledLink = styled.a`
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: .2s;
     
     img {
         width: 16px;
@@ -25,5 +27,9 @@ const StyledLink = styled.a`
         font-weight: 500;
         font-size: 16px;
         color: #fff;
+    }
+    
+    &:hover {
+        animation: ${shakeAnimation} 0.5s ease-in-out;
     }
 `
