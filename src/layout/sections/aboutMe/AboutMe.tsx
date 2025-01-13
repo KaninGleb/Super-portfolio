@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
@@ -27,7 +26,7 @@ export const AboutMe = () => {
                     </LeftSection>
                     <RightSection>
                         <Photo src={aboutMePhoto} width='339px' height='507px' alt=""/>
-                        <StyledBorder/>
+                        <DecorativeLine width={'80%'} height={'1.5px'} marginL={'45px'}/>
                     </RightSection>
                 </FlexWrapper>
             </Container>
@@ -56,10 +55,3 @@ const StyledSectionTitle = styled(FlexWrapper)`
 const RightSection = styled.div`
     
 `
-
-const StyledBorder = styled.div`
-    width: 271px;
-    height: 1px;
-    background-color: ${theme.colors.secondaryOutline};
-    margin-left: 45px;
-`;
