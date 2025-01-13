@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Link} from "../../../../components/Link.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {theme} from "../../../../styles/Theme.tsx";
+import {gradientAnimation, shakeAnimation} from "../../../../animations/animations.ts";
 
 type LinkPropsType = {
     href: string
@@ -63,31 +64,7 @@ const Overlay = styled.div`
     opacity: 0;
     transition: opacity 0.3s ease;
 
-    animation: gradientAnimation 3s infinite;
-
-    @keyframes gradientAnimation {
-        0% {
-            background: rgba(199, 120, 221, 0.5);
-            box-shadow:
-                    0 -150px 70px -120px rgba(171, 178, 191, 0.5) inset,
-                    0 -220px 70px -120px rgba(199, 120, 221, 0.3) inset,
-                    0 -280px 70px -120px rgba(171, 178, 191, 0.3) inset;
-        }
-        50% {
-            background: rgba(128, 0, 128, 0.5);
-            box-shadow:
-                    0 -140px 70px -120px rgba(186, 85, 211, 0.5) inset,
-                    0 -210px 70px -120px rgba(0, 128, 128, 0.5) inset,
-                    0 -280px 70px -120px rgba(128, 0, 128, 0.3) inset;
-        }
-        100% {
-            background: rgba(199, 120, 221, 0.5);
-            box-shadow:
-                    0 -150px 70px -120px rgba(171, 178, 191, 0.5) inset,
-                    0 -220px 70px -120px rgba(199, 120, 221, 0.3) inset,
-                    0 -280px 70px -120px rgba(171, 178, 191, 0.3) inset;
-        }
-    }
+    animation: ${gradientAnimation} 3s infinite;
 `
 
 const StyledWork = styled.div`
@@ -96,7 +73,8 @@ const StyledWork = styled.div`
     width: 100%;
     height: 100%;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-
+    cursor: default;
+    
     &:hover {
         transform: scale(1.02);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -141,15 +119,7 @@ const Software = styled.ul`
     }
 
     li:hover {
-        animation: shake 0.5s ease-in-out;
-    }
-
-    @keyframes shake {
-        0% { transform: translate(0, 1px); }
-        25% { transform: translate(0, -1px); }
-        50% { transform: translate(0, 1px); }
-        75% { transform: translate(0, -1px); }
-        100% { transform: translate(0, 0); }
+        animation: ${shakeAnimation} 0.5s ease-in-out;
     }
 `;
 
