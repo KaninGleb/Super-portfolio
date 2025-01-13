@@ -36,7 +36,7 @@ export const Skills = () => {
                             <Skill order={2}
                                     title='Frameworks'
                                     maxWidth='196px'
-                                    description={['React Vue', 'Disnake Discord.js', 'Flask Express.js']}/>
+                                    description={['React', 'Vue', 'Disnake', 'Discord.js', 'Flask', 'Express.js']}/>
                         </SkillsWrapper>
                 </FlexWrapper>
             </Container>
