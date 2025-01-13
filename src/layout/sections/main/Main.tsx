@@ -6,6 +6,7 @@ import {Paragraph} from "../../../components/Paragraph.tsx";
 import {textData} from "../../../data/appData.ts";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
+import {btnAnimation} from "../../../animations/animations.ts";
 
 export const Main = () => {
     return (
@@ -61,10 +62,13 @@ const StyledBtn = styled.button`
     width: 100%;
     color: ${theme.colors.primaryText};
     transition: .15s;
-
+    animation: ${btnAnimation} 5s infinite;
+    animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    
     &:hover {
         background-color: ${theme.colors.primaryHover};
         scale: 1.05;
+        animation-play-state: paused;
     }
 `
 

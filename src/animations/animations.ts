@@ -41,3 +41,23 @@ export const pulseLinkAnimation = (outlineColor: string) => keyframes`
         outline-color: ${outlineColor};
     }
 `
+
+export const btnAnimation = keyframes`
+    0% {
+        outline-width: 5px;
+        outline-color: ${theme.colors.primaryAnim};
+        white-space: nowrap;
+    }
+    50% {
+        outline-width: 1px;
+        outline-color: ${theme.colors.primaryLightAnim};
+        color: ${theme.colors.primaryLightText};
+        font-weight: 700;
+        scale: 1.1;
+    }
+    100% {
+        outline-width: 5px;
+        outline-color: ${theme.colors.primaryAnim};
+        white-space: nowrap;
+    }
+`
