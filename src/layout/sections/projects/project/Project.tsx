@@ -133,9 +133,26 @@ const Software = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    
     color: ${theme.colors.primaryLightText};
-`
+    cursor: default;
+
+    li {
+        transition: transform 0.2s;
+    }
+
+    li:hover {
+        animation: shake 0.5s ease-in-out;
+    }
+
+    @keyframes shake {
+        0% { transform: translate(0, 1px); }
+        25% { transform: translate(0, -1px); }
+        50% { transform: translate(0, 1px); }
+        75% { transform: translate(0, -1px); }
+        100% { transform: translate(0, 0); }
+    }
+`;
+
 
 const StyledHr = styled.hr`
     border: none;
