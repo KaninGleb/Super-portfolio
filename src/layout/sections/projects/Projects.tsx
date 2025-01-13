@@ -80,10 +80,12 @@ const StyledProjects = styled.section`
 
 const ProjectsLink = styled.a`
     font-weight: 500;
+    border-bottom: 2px solid transparent;
     transition: .15s;
 
     &:hover {
         scale: 1.03;
         font-weight: 600;
+        border-bottom: 2px solid ${theme.colors.primaryLightText};
     }
 `

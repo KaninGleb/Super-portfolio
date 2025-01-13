@@ -115,7 +115,7 @@ const Software = styled.ul`
     cursor: default;
 
     li {
-        transition: transform 0.2s;
+        transition: 0.2s;
     }
 
     li:hover {
@@ -134,8 +134,18 @@ const StyledHr = styled.hr`
 const Title = styled.h3`
     font-weight: 500;
     font-size: 24px;
+    transition: 0.2s;
+
+    &:hover {
+        animation: ${shakeAnimation} 0.5s ease-in-out;
+    }
 `
 
 const Text = styled.span`
     color: ${theme.colors.primaryLightText};
+    transition: 0.2s;
+    
+    &:hover {
+        animation: ${shakeAnimation} 0.5s ease-in-out;
+    }
 `
