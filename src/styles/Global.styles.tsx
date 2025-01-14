@@ -42,4 +42,14 @@ export const GlobalStyles = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
+    
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation: none !important;
+            transition: none !important;
+            scroll-behavior: auto !important;
+        }
+    }
 `
