@@ -28,4 +28,5 @@ const StyledMedia = styled.div`
     position: fixed;
     top: 0;
     left: 17px;
+    z-index: 2;
 `

@@ -21,7 +21,7 @@ export const Menu = (props: MenuPropsType) => {
 
 const StyledMenu = styled.nav`
     
-`;
+`
 
 const StyledUl = styled.ul`
     display: flex;
@@ -29,6 +29,7 @@ const StyledUl = styled.ul`
 `
 
 const ListItem = styled.li`
+    position: relative;
     border-bottom: 2px solid transparent;
     &:hover {
         border-bottom: 2px solid ${theme.colors.primaryOutline};
@@ -36,6 +37,8 @@ const ListItem = styled.li`
 `
 
 const HeaderLink = styled.a`
+    display: inline-block;
+    padding: 12px 0;
     span {
         color: ${theme.colors.secondaryText};
     }
