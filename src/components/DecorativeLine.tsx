@@ -1,5 +1,6 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
+import {pulseAnimation} from "../animations/animations.ts";
 
 type DecorativeLinePropsType = {
     width: string
@@ -8,23 +9,11 @@ type DecorativeLinePropsType = {
     marginL?: string
 }
 
-export const pulseLineAnimation = keyframes`
-    0% {
-        background-color: ${theme.colors.primaryLightAnim};
-    }
-    50% {
-        background-color: ${theme.colors.primaryAnim};
-    }
-    100% {
-        background-color: ${theme.colors.primaryLightAnim};
-    }
-`;
-
 export const DecorativeLine = (props: DecorativeLinePropsType) => {
     return (
         <LineContainer width={props.width} height={props.height} bgColor={props.bgColor} marginL={props.marginL}/>
     );
-};
+}
 
 const LineContainer = styled.div<DecorativeLinePropsType>`
     display: flex;
@@ -35,7 +24,7 @@ const LineContainer = styled.div<DecorativeLinePropsType>`
         width: ${props => props.width};
         height: ${props => props.height};
         background-color: ${props => props.bgColor || theme.colors.secondaryOutline};
-        animation: ${pulseLineAnimation} 2s infinite;
+        animation: ${pulseAnimation} 2s infinite;
         margin-left: ${props => props.marginL || '16px'};
     }
-`;
+`

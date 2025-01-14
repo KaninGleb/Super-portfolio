@@ -39,7 +39,7 @@ const projects = {
             {href: "#", children: "Live <~>"},
         ],
     },
-};
+}
 
 export const Projects = () => {
     return (
@@ -70,7 +70,7 @@ export const Projects = () => {
             </Container>
         </StyledProjects>
     );
-};
+}
 
 const StyledProjects = styled.section`
     max-height: 518px;

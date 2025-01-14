@@ -7,6 +7,7 @@ import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import groupOfImages from "../../../assets/images/skills/skills-group.svg"
+import {pulseAnimation} from "../../../animations/animations.ts";
 
 export const Skills = () => {
     return (
@@ -58,4 +59,5 @@ const SkillsWrapper = styled(FlexWrapper)`
 const StyledPhoto = styled(Photo)`
     margin-top: 12px;
     margin-left: 32px;
+    animation: ${pulseAnimation} 2s infinite;
 `

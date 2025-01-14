@@ -10,7 +10,7 @@ type LinkPropsType = {
     color?: string
     outlineColor?: string
     mWidth?: string
-};
+}
 
 type ProjectPropsType = {
     src: string
@@ -53,7 +53,7 @@ export const Project = (props: ProjectPropsType) => {
             </SizeWrapper>
         </StyledWork>
     );
-};
+}
 
 const Overlay = styled.div`
     position: absolute;
@@ -121,8 +121,7 @@ const Software = styled.ul`
     li:hover {
         animation: ${shakeAnimation} 0.5s ease-in-out;
     }
-`;
-
+`
 
 const StyledHr = styled.hr`
     border: none;
