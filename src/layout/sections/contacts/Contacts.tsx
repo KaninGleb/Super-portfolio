@@ -28,6 +28,7 @@ export const Contacts = () => {
                             <SocialList iconIds={['discord', 'email']}
                                         showIcon={true}
                                         iconsTitles={['!Elias#3519', 'elias@elias.me']}
+                                        gapBetween={'5px'}
                             />
                             {/*<ContactInfo>*/}
                             {/*    <FlexWrapper direction='column' gap='8px'>*/}

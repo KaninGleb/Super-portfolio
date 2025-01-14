@@ -17,12 +17,17 @@ type SocialListPropsType = {
     displayFlex?: boolean
     direction?: string
     gap?: string
+    gapBetween?: string
 }
 
 type FlexPropsType = {
     displayFlex?: boolean
     direction?: string
     gap?: string
+}
+
+type StyledIconPropsType = {
+    gapBetween?: string
 }
 
 export const SocialList = (props: SocialListPropsType) => {
@@ -38,7 +43,8 @@ export const SocialList = (props: SocialListPropsType) => {
                     <SocialItem key={itemId}>
                         <SocialLink href={socialItem.href}
                                     target='_blank'
-                                    aria-label={socialItem.areaLabel}>
+                                    aria-label={socialItem.areaLabel}
+                                    gapBetween={props.gapBetween}>
                             {props.showIcon && (
                                 <Icon iconId={socialItem.id}
                                         width={props.iconSize || '32'}
@@ -65,9 +71,10 @@ const SocialItem = styled.li`
     max-height: 32px;
 `
 
-const SocialLink = styled.a`
+const SocialLink = styled.a<StyledIconPropsType>`
     display: inline-flex;
     align-items: center;
+    gap: ${props => props.gapBetween};
     
     transition: 0.2s ease;
     &:hover {
