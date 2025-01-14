@@ -40,7 +40,7 @@ export const Header = () => {
                     <Logo />
                     <FlexWrapper gap='32px'>
                         <Menu menuItems={headerLinks} />
-                        <LanguageSelect aria-label='Language change'>
+                        <LanguageSelect isScrolled={isScrolled} aria-label='Language change'>
                             <option>EN</option>
                             <option>RU</option>
                             <option>UA</option>
@@ -66,7 +66,7 @@ const MarginWrapper = styled(FlexWrapper)<StyledHeaderProps>`
     transition: padding 0.3s ease;
 `
 
-const LanguageSelect = styled.select`
+const LanguageSelect = styled.select<StyledHeaderProps>`
     font-family: inherit;
     font-weight: 600;
     font-size: inherit;
@@ -87,10 +87,11 @@ const LanguageSelect = styled.select`
 
     option {
         color: ${theme.colors.primaryLightText};
+        background-color: ${({ isScrolled }) => (isScrolled ? theme.colors.primaryBg : theme.colors.secondaryBg)};
+        
     }
 
     &:focus-visible {
         outline: none;
-        background-color: ${theme.colors.primaryBg};
     }
 `
