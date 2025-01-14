@@ -28,8 +28,9 @@ const StyledTestimony = styled.section`
 
 const QuotationMarkBefore = styled.img`
     position: relative;
-    top: -80px;
+    top: -14px;
     left: 55px;
+    max-height: 30px;
     z-index: 1;
 `
 
@@ -47,8 +48,9 @@ const StyledQuote = styled.blockquote`
 
 const QuotationMarkAfter = styled.img`
     position: relative;
-    top: 14px;
+    top: 80px;
     right: 55px;
+    max-height: 30px;
 `
 
 const StyledCite = styled.cite`
