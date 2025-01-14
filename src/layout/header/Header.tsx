@@ -21,7 +21,7 @@ export const Header = () => {
                     <Logo/>
                     <FlexWrapper gap='32px'>
                         <Menu menuItems={headerLinks}/>
-                        <LanguageSelect>
+                        <LanguageSelect aria-label='Language change'>
                             <option>EN</option>
                             <option>RU</option>
                             <option>UA</option>
@@ -42,15 +42,15 @@ const MarginWrapper = styled(FlexWrapper)`
 `
 
 const LanguageSelect = styled.select`
-    font-family: "Fira Code", sans-serif;
+    font-family: inherit;
     font-weight: 600;
-    font-size: 16px;
+    font-size: inherit;
     
     border: none;
     background-color: transparent;
     color: ${theme.colors.primaryLightText};
     
-    appearance: none;
+    //appearance: none;
     background-image: url(${arrowClose});
     background-repeat: no-repeat;
     background-position: right 10px center;
