@@ -21,9 +21,13 @@ export const theme = {
         secondaryLightAnim: 'rgba(171, 178, 191, 0.5)',
     },
 
-
     links: {
         primaryLink: { href: "#", children: "Live <~>", color: "#ffffff" },
         secondaryLink: { href: "#", children: "Cached >=", color: "#abb2bf", borderColor: "#abb2bf" },
-    }
+    },
+
+    media: {
+        tablet: 'screen and (max-width: 768px)',
+        mobile: 'screen and (max-width: 576px)',
+    },
 }
