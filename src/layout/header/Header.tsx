@@ -8,8 +8,8 @@ import {theme} from "../../styles/Theme.tsx";
 import arrowClose from "../../assets/images/Lang-change-closed.svg";
 
 const headerLinks = [
-    { name: 'home', id: 'home'},
-    { name: 'works', id: 'projects'},
+    { name: 'home', id: ''},
+    { name: 'projects', id: 'projects'},
     { name: 'about-me', id: 'about-me'},
     { name: 'contacts', id: 'contacts'},
 ]
