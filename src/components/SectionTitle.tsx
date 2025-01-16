@@ -25,6 +25,7 @@ const StyledSectionTitle = styled.h2<{lineW: string}>`
     font-size: 32px;
     color: #fff;
     position: relative;
+    scroll-margin-top: 75px;
     
     span {
         color: #c778dd;
