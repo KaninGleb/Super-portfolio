@@ -33,12 +33,18 @@ export const shakeAnimation = keyframes`
 export const pulseLinkAnimation = (outlineColor: string) => keyframes`
     0% {
         outline-color: ${outlineColor};
+        box-shadow: 0 0 8px rgba(199, 120, 221, 1);
+        
     }
     50% {
         outline-color: ${outlineColor === theme.colors.primaryOutline ? theme.colors.secondaryLightAnim : theme.colors.primaryLightAnim};
+        box-shadow: 0 0 5px rgba(199, 120, 221, 0.5);
+        
     }
     100% {
         outline-color: ${outlineColor};
+        box-shadow: 0 0 8px rgba(199, 120, 221, 1);
+        
     }
 `
 
@@ -65,6 +71,23 @@ export const btnAnimation = keyframes`
 export const pulseAnimation = keyframes`
     0% {
         opacity: 1;
+        box-shadow: 0 0 15px rgba(199, 120, 221, 1);
+
+    }
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 5px rgba(199, 120, 221, 0.5);
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 15px rgba(199, 120, 221, 1);
+    }
+`
+
+export const imagePulseAnimation = keyframes`
+    0% {
+        opacity: 1;
+
     }
     50% {
         opacity: 0.5;
