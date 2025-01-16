@@ -38,6 +38,7 @@ const StyledMain = styled.section`
 `
 
 const TextWrapper = styled(FlexWrapper)`
+    margin: 74px 0 auto;
     text-align: left;
     p {
         margin-bottom: 25px;

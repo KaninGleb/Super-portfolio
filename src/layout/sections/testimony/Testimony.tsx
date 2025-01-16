@@ -29,7 +29,7 @@ const StyledTestimony = styled.section`
 const QuotationMarkBefore = styled.img`
     position: relative;
     top: -14px;
-    left: 55px;
+    left: 50px;
     max-height: 30px;
     z-index: 1;
 `
@@ -37,7 +37,7 @@ const QuotationMarkBefore = styled.img`
 const StyledQuote = styled.blockquote`
     font-weight: 500;
 
-    border: 1px solid ${theme.colors.primaryOutline};
+    outline: 1px solid ${theme.colors.primaryOutline};
     padding: 32px;
     max-width: 714px;
     width: 100%;
@@ -49,7 +49,7 @@ const StyledQuote = styled.blockquote`
 const QuotationMarkAfter = styled.img`
     position: relative;
     top: 80px;
-    right: 55px;
+    right: 60px;
     max-height: 30px;
 `
 

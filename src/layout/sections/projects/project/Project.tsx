@@ -97,6 +97,15 @@ const Image = styled.img`
     height: 100%;
     border-bottom: 1px solid ${theme.colors.primaryOutline};
     object-fit: cover;
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     background-color: ${theme.colors.primaryOutline};
+    //     bottom: 0;
+    //     width: 100%;
+    //     height: 2px;
+    // }
 `
 
 const SizeWrapper = styled.div`
