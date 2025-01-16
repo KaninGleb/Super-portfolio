@@ -10,6 +10,7 @@ import arrowClose from "../../assets/images/Lang-change-closed.svg";
 const headerLinks = [
     { name: 'home', id: ''},
     { name: 'projects', id: 'projects'},
+    { name: 'skills', id: 'skills'},
     { name: 'about-me', id: 'about-me'},
     { name: 'contacts', id: 'contacts'},
 ]
