@@ -31,7 +31,6 @@ const QuotationMarkBefore = styled.img`
     top: -14px;
     left: 50px;
     max-height: 30px;
-    z-index: 1;
 `
 
 const StyledQuote = styled.blockquote`
@@ -44,6 +43,7 @@ const StyledQuote = styled.blockquote`
     max-height: 95px;
     height: 100%;
     position: relative;
+    z-index: -1;
 `
 
 const QuotationMarkAfter = styled.img`

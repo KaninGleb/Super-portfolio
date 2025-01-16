@@ -1,11 +1,11 @@
 import {useEffect, useState} from "react";
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
-import {Menu} from "../../components/menu/Menu.tsx";
+import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {Container} from "../../components/Container.tsx";
 import {theme} from "../../styles/Theme.tsx";
-import arrowClose from "../../assets/images/Lang-change-closed.svg";
+import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
 
 const headerLinks = [
     { name: 'home', id: ''},
@@ -40,12 +40,8 @@ export const Header = () => {
                 <MarginWrapper align='center' justify='space-between' isScrolled={isScrolled}>
                     <Logo />
                     <FlexWrapper gap='32px'>
-                        <Menu menuItems={headerLinks} />
-                        <LanguageSelect isScrolled={isScrolled} aria-label='Language change'>
-                            <option>EN</option>
-                            <option>RU</option>
-                            <option>UA</option>
-                        </LanguageSelect>
+                        <HeaderMenu menuItems={headerLinks}/>
+                        <MobileMenu menuItems={headerLinks}/>
                     </FlexWrapper>
                 </MarginWrapper>
             </Container>
@@ -65,34 +61,8 @@ const StyledHeader = styled.header<StyledHeaderProps>`
 const MarginWrapper = styled(FlexWrapper)<StyledHeaderProps>`
     padding: ${({ isScrolled }) => (isScrolled ? '0' : '18px 0 8px')};
     transition: padding 0.3s ease;
-`
 
-const LanguageSelect = styled.select<StyledHeaderProps>`
-    font-family: inherit;
-    font-weight: 600;
-    font-size: inherit;
-    cursor: pointer;
-    
-    border: none;
-    background-color: transparent;
-    color: ${theme.colors.primaryLightText};
-    
-    background-image: url(${arrowClose});
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 10px;
-    
-    &:hover {
-        color: ${theme.colors.primaryText};
-    }
-
-    option {
-        color: ${theme.colors.primaryLightText};
-        background-color: ${({ isScrolled }) => (isScrolled ? theme.colors.primaryBg : theme.colors.secondaryBg)};
-        
-    }
-
-    &:focus-visible {
-        outline: none;
+    @media ${theme.media.tablet} {
+        padding: ${({ isScrolled }) => (isScrolled ? '15px 0' : '18px 0 8px')};
     }
 `

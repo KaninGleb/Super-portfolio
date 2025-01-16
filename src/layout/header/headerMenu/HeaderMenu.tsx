@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { theme } from "../../styles/Theme.tsx";
+import { theme } from "../../../styles/Theme.tsx";
 
 type MenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
 }
 
-export const Menu = (props: MenuPropsType) => {
+export const HeaderMenu = (props: MenuPropsType) => {
     return (
-        <StyledMenu>
+        <StyledHeaderMenu>
             <StyledUl>
                 {props.menuItems.map((item, index) => (
                     <ListItem key={index}>
@@ -16,12 +16,21 @@ export const Menu = (props: MenuPropsType) => {
                         </HeaderLink>
                     </ListItem>
                 ))}
+                <LanguageSelect aria-label='Language change'>
+                    <option>EN</option>
+                    <option>RU</option>
+                    <option>UA</option>
+                </LanguageSelect>
             </StyledUl>
-        </StyledMenu>
+        </StyledHeaderMenu>
     )
 }
 
-const StyledMenu = styled.nav``
+const StyledHeaderMenu = styled.nav`
+    @media ${theme.media.tablet} {
+        display: none;
+    }
+`
 
 const StyledUl = styled.ul`
     display: flex;
@@ -66,5 +75,33 @@ const HeaderLink = styled.a`
         &::after {
             transform: scaleX(1);
         }
+    }
+`
+
+const LanguageSelect = styled.select`
+    font-family: inherit;
+    font-weight: 600;
+    font-size: inherit;
+    cursor: pointer;
+    
+    border: none;
+    background-color: transparent;
+    color: ${theme.colors.primaryLightText};
+    
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    
+    &:hover {
+        color: ${theme.colors.primaryText};
+    }
+
+    option {
+        color: ${theme.colors.primaryLightText};
+        background-color: ${theme.colors.primaryBg};
+    }
+
+    &:focus-visible {
+        outline: none;
     }
 `
