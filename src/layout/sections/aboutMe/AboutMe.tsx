@@ -16,8 +16,7 @@ export const AboutMe = () => {
                 <FlexWrapper gap='166px'>
                     <LeftSection>
                         <StyledSectionTitle>
-                            <SectionTitle section={sectionsData.aboutMe}/>
-                            <DecorativeLine width={'326px'} height={'2px'}/>
+                            <SectionTitle section={sectionsData.aboutMe} lineW={'326px'}/>
                         </StyledSectionTitle>
                         <Paragraph children={textData.aboutMe.paragraph1}/>
                         <Paragraph children={textData.aboutMe.paragraph2}/>

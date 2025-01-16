@@ -4,7 +4,6 @@ import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {sectionsData} from "../../../data/appData.ts";
-import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Project} from "./project/Project.tsx";
 import chertNodes from '../../../assets/images/projects/project-1.svg'
 import protectX from '../../../assets/images/projects/project-2.svg'
@@ -48,8 +47,7 @@ export const Projects = () => {
                 <FlexWrapper direction='column' gap='48px'>
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <FlexWrapper>
-                            <SectionTitle section={sectionsData.projects}/>
-                            <DecorativeLine width={'511px'} height={'2px'}/>
+                            <SectionTitle section={sectionsData.projects} lineW={'511px'}/>
                         </FlexWrapper>
                         <ProjectsLink href="#">View all ~~&gt;</ProjectsLink>
                     </FlexWrapper>

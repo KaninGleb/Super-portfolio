@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Paragraph} from "../../../components/Paragraph.tsx";
 import {sectionsData, textData} from "../../../data/appData.ts";
 import {theme} from "../../../styles/Theme.tsx";
@@ -14,8 +13,7 @@ export const Contacts = () => {
             <Container>
                 <FlexWrapper direction='column' gap='45px'>
                     <FlexWrapper>
-                        <SectionTitle section={sectionsData.contacts}/>
-                        <DecorativeLine width={'127px'} height={'2px'}/>
+                        <SectionTitle section={sectionsData.contacts} lineW={'127px'}/>
                     </FlexWrapper>
 
                     <FlexWrapper justify='space-between'>

@@ -3,19 +3,17 @@ import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {sectionsData} from "../../../data/appData.ts";
-import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import groupOfImages from "../../../assets/images/skills/skills-group.svg"
-import {pulseAnimation} from "../../../animations/animations.ts";
+import {imagePulseAnimation} from "../../../animations/animations.ts";
 
 export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
                 <FlexWrapper>
-                    <SectionTitle section={sectionsData.skills}/>
-                    <DecorativeLine width={'239px'} height={'2px'}/>
+                    <SectionTitle section={sectionsData.skills} lineW={'239px'}/>
                 </FlexWrapper>
 
                 <FlexWrapper gap='59px'>
@@ -59,5 +57,5 @@ const SkillsWrapper = styled(FlexWrapper)`
 const StyledPhoto = styled(Photo)`
     margin-top: 12px;
     margin-left: 32px;
-    animation: ${pulseAnimation} 2s infinite;
+    animation: ${imagePulseAnimation} 2s infinite;
 `
