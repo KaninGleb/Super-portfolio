@@ -110,7 +110,7 @@ const MainSizeWrapper = styled(FlexWrapper)`
 const Software = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px 8px;
     color: ${theme.colors.primaryLightText};
     cursor: default;
 

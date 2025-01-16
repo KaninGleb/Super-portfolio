@@ -18,12 +18,15 @@ export const Contacts = () => {
 
                     <FlexWrapper justify='space-between'>
                         <LeftSection>
-                            <Paragraph children={textData.contacts.paragraph} fontWeight='500'></Paragraph>
+                            <Paragraph children={textData.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}></Paragraph>
                         </LeftSection>
 
                         <RightSection direction='column' gap='16px'>
                             <StyledTitle>Message me here</StyledTitle>
-                            <SocialList iconIds={['discord', 'email']}
+                            <SocialList displayFlex={true}
+                                        direction={'column'}
+                                        gap='8px'
+                                        iconIds={['discord', 'email']}
                                         showIcon={true}
                                         iconsTitles={['!Elias#3519', 'elias@elias.me']}
                                         gapBetween={'5px'}
@@ -45,8 +48,8 @@ export const Contacts = () => {
                 </FlexWrapper>
             </Container>
         </StyledContacts>
-    );
-};
+    )
+}
 
 const StyledContacts = styled.section`
     margin-bottom: 145px;
