@@ -3,7 +3,7 @@ import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import quotationMark from "../../../assets/images/quotation-mark.svg"
-import {font, FontPropsType} from "../../../styles/CommonFont.tsx";
+import {font} from "../../../styles/CommonFont.tsx";
 
 export const Testimony = () => {
     return (
@@ -12,8 +12,8 @@ export const Testimony = () => {
                 <FlexWrapper justify="center">
                     <StyledFlexWrapper direction="column" align="flex-end">
                         <QuotationMarkBefore src={quotationMark} alt="Quotation mark before"/>
-                        <StyledQuote weight={500} Fmax={24} Fmin={10}>With great power comes great electricity bill</StyledQuote>
-                        <StyledCite weight={500} Fmax={24} Fmin={10}>- Dr. Who</StyledCite>
+                        <StyledQuote>With great power comes great electricity bill</StyledQuote>
+                        <StyledCite>- Dr. Who</StyledCite>
                         <QuotationMarkAfter src={quotationMark} alt="Quotation mark after"/>
                     </StyledFlexWrapper>
                 </FlexWrapper>
@@ -37,8 +37,8 @@ const QuotationMarkBefore = styled.img`
     max-height: 30px;
 `
 
-const StyledQuote = styled.blockquote<FontPropsType>`
-    ${font};
+const StyledQuote = styled.blockquote`
+    ${font({weight:500, Fmax: 24, Fmin:10})};
     border: 1px solid ${theme.colors.primaryOutline};
     padding: 32px;
     max-width: 714px;
@@ -67,8 +67,8 @@ const QuotationMarkAfter = styled.img`
     max-height: 30px;
 `
 
-const StyledCite = styled.cite<FontPropsType>`
-    ${font};
+const StyledCite = styled.cite`
+    ${font({weight:500, Fmax: 24, Fmin:10})};
     border: 1px solid ${theme.colors.primaryOutline};
     border-top: none;
     padding: 16px;
