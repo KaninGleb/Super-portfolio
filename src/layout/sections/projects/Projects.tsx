@@ -47,7 +47,7 @@ export const Projects = () => {
                 <FlexWrapper direction='column' gap='48px'>
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <FlexWrapper>
-                            <SectionTitle section={sectionsData.projects} lineW={'511px'}/>
+                            <SectionTitle section={sectionsData.projects}/>
                         </FlexWrapper>
                         <ProjectsLink href="#">View all ~~&gt;</ProjectsLink>
                     </FlexWrapper>

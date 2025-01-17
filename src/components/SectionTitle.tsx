@@ -8,19 +8,20 @@ type SectionTitlePropsType = {
         id: string
         name: string
         symbol: string
+        Wmin: number
+        Wmax: number
     }
-    lineW: string
 }
 
 export const SectionTitle = (props: SectionTitlePropsType) => {
     return (
-        <StyledSectionTitle id={props.section.id} lineW={props.lineW}>
+        <StyledSectionTitle id={props.section.id} Wmin={props.section.Wmin} Wmax={props.section.Wmax}>
             <span>{props.section.symbol}</span>{props.section.name}
         </StyledSectionTitle>
     )
 }
 
-const StyledSectionTitle = styled.h2<{lineW: string}>`
+const StyledSectionTitle = styled.h2<{Wmin: number, Wmax: number}>`
     ${font({weight: 500, Fmax: 32, Fmin: 26})};
     color: #fff;
     position: relative;
@@ -39,8 +40,11 @@ const StyledSectionTitle = styled.h2<{lineW: string}>`
         position: absolute;
         top: 50%;
         left: 110%;
-        width: ${props => props.lineW};
-
+        
+        width: clamp(${props => props.Wmin}px,
+        calc((100vw - 375px) / (1024 - 375) * (${props => props.Wmax} - ${props => props.Wmin}) + ${props => props.Wmin}px),
+        ${props => props.Wmax}px);
+        
         animation: ${pulseAnimation} 2s infinite;
         box-shadow: 0 0 5px rgba(199, 120, 221, 1);
     }
