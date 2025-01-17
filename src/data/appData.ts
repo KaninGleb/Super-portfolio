@@ -13,24 +13,32 @@ export const textData = {
 }
 
 export const sectionsData = {
-    skills: {
-        id: 'skills',
-        name: 'skills',
-        symbol: '#'
-    },
     projects: {
         id: 'projects',
         name: 'projects',
-        symbol: '#'
+        symbol: '#',
+        Wmin: 30,
+        Wmax: 510,
+    },
+    skills: {
+        id: 'skills',
+        name: 'skills',
+        symbol: '#',
+        Wmin: 127,
+        Wmax: 239,
     },
     aboutMe: {
         id: 'about-me',
         name: 'about-me',
-        symbol: '#'
+        symbol: '#',
+        Wmin: 127,
+        Wmax: 326,
     },
     contacts: {
         id: 'contacts',
         name: 'contacts',
-        symbol: '#'
+        symbol: '#',
+        Wmin: 127,
+        Wmax: 127,
     }
 };
