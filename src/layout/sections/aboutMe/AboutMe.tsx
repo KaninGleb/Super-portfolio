@@ -34,8 +34,6 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-    max-height: 508px;
-    height: 100%;
     margin-bottom: 112px;
 `
 

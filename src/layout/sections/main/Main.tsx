@@ -32,8 +32,6 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-    max-height: 630px;
-    height: 100%;
     margin-bottom: 112px;
 `
 

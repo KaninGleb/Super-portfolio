@@ -71,8 +71,6 @@ export const Projects = () => {
 }
 
 const StyledProjects = styled.section`
-    max-height: 518px;
-    height: 100%;
     margin-bottom: 106px;
 `
 

@@ -44,8 +44,6 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    max-height: 365px;
-    height: 100%;
     margin-bottom: 112px;
 `
 
