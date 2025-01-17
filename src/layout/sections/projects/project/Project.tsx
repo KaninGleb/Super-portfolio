@@ -69,7 +69,8 @@ const Overlay = styled.div`
 
 const StyledWork = styled.div`
     outline: 1px solid ${theme.colors.primaryOutline};
-    max-width: 330px;
+    min-width: 330px;
+    max-width: 490px;
     width: 100%;
     height: 100%;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
@@ -83,6 +84,12 @@ const StyledWork = styled.div`
         ${Overlay} {
             opacity: 1;
         }
+    }
+
+    @media ${theme.media.width1044} {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 `
 

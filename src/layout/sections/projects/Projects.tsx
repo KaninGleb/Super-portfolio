@@ -52,7 +52,7 @@ export const Projects = () => {
                         <ProjectsLink href="#">View all ~~&gt;</ProjectsLink>
                     </FlexWrapper>
 
-                    <FlexWrapper justify='space-between' gap='16px'>
+                    <StyledFlexWrapper gap='16px'>
                         {Object.values(projects).map((project, index) => (
                             <Project
                                 key={index}
@@ -63,7 +63,7 @@ export const Projects = () => {
                                 links={project.links}
                             />
                         ))}
-                    </FlexWrapper>
+                    </StyledFlexWrapper>
                 </FlexWrapper>
             </Container>
         </StyledProjects>
@@ -83,5 +83,12 @@ const ProjectsLink = styled.a`
         scale: 1.03;
         font-weight: 600;
         border-bottom: 2px solid ${theme.colors.primaryLightText};
+    }
+`
+
+const StyledFlexWrapper = styled(FlexWrapper)`
+    @media ${theme.media.width1044} {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 `

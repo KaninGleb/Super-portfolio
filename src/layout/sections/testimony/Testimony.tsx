@@ -38,7 +38,7 @@ const QuotationMarkBefore = styled.img`
 `
 
 const StyledQuote = styled.blockquote`
-    ${font({weight:500, Fmax: 24, Fmin:10})};
+    ${font({weight:500, Fmax: 24, Fmin:16})};
     border: 1px solid ${theme.colors.primaryOutline};
     padding: 32px;
     max-width: 714px;
@@ -68,7 +68,7 @@ const QuotationMarkAfter = styled.img`
 `
 
 const StyledCite = styled.cite`
-    ${font({weight:500, Fmax: 24, Fmin:10})};
+    ${font({weight:500, Fmax: 24, Fmin:16})};
     border: 1px solid ${theme.colors.primaryOutline};
     border-top: none;
     padding: 16px;

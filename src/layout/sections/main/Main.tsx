@@ -7,32 +7,40 @@ import {textData} from "../../../data/appData.ts";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
 import {btnAnimation} from "../../../animations/animations.ts";
+import {font} from "../../../styles/CommonFont.tsx";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align="center" justify="space-around" gap="30px">
+                <StyledFlexWrapper align="center" justify="space-around" gap="30px">
                     <TextWrapper direction='column' align='flex-start'>
                         <MainTitle>Elias is a <span>web designer</span> and <span>front-end</span> developer</MainTitle>
                         <Paragraph children={textData.main.paragraph}/>
                         <StyledBtn type='submit'>Contact me!!</StyledBtn>
                     </TextWrapper>
                     <FlexWrapper direction='column'>
-                        <Photo src={photo} width='457px' height='386px' alt=""/>
+                        <Photo src={photo} width={'458px'} alt="Main photo"/>
                         <PortfolioMessage>
                             <ColorBlock/>
                             Currently working on <span>Portfolio</span>
                         </PortfolioMessage>
                     </FlexWrapper>
-                </FlexWrapper>
+                </StyledFlexWrapper>
             </Container>
         </StyledMain>
-    );
-};
+    )
+}
 
 const StyledMain = styled.section`
     margin-bottom: 112px;
+`
+
+const StyledFlexWrapper = styled(FlexWrapper)`
+    @media ${theme.media.width1044} {
+        display: flex;
+        flex-wrap: wrap;
+    }
 `
 
 const TextWrapper = styled(FlexWrapper)`
@@ -45,8 +53,7 @@ const TextWrapper = styled(FlexWrapper)`
 `
 
 const MainTitle = styled.h1`
-    font-weight: 600;
-    font-size: 32px;
+    ${font({weight:500, Fmax: 32, Fmin:24})};
     margin-bottom: 31px;
 
     span {

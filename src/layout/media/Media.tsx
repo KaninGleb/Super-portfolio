@@ -29,4 +29,8 @@ const StyledMedia = styled.div`
     top: 0;
     left: 17px;
     z-index: 2;
+    
+    @media ${theme.media.mediaOff} {
+        display: none;
+    }
 `
