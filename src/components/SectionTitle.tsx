@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
 import {pulseAnimation} from "../animations/animations.ts";
+import {font} from "../styles/CommonFont.tsx";
 
 type SectionTitlePropsType = {
     section: {
@@ -20,9 +21,7 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
 }
 
 const StyledSectionTitle = styled.h2<{lineW: string}>`
-    font-family: "Fira Code", sans-serif;
-    font-weight: 500;
-    font-size: 32px;
+    ${font({weight: 500, Fmax: 32, Fmin: 26})};
     color: #fff;
     position: relative;
     scroll-margin-top: 75px;

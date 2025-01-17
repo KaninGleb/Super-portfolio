@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
+import {font} from "../styles/CommonFont.tsx";
 
 type ParagraphPropsType = {
     children: string
@@ -12,16 +13,12 @@ export const Paragraph = (props: ParagraphPropsType) => {
         <StyledParagraph fontWeight={props.fontWeight} lineHeight={props.lineHeight}>
             {props.children}
         </StyledParagraph>
-        // <StyledParagraph fontWeight={props.fontWeight}>
-        //     {props.children.split('\n').map((text, index) => (
-        //         <span key={index}>{text}<br/></span>
-        //     ))}
-        // </StyledParagraph>
-    );
-};
+    )
+}
 
 const StyledParagraph = styled.p<ParagraphPropsType>`
     line-height: ${props => props.lineHeight || '1.625'};
     font-weight: ${props => props.fontWeight || '400'};
     color: ${theme.colors.primaryLightText};
+    ${font({weight:500, Fmax: 16, Fmin:14, color:theme.colors.primaryLightText})};
 `
