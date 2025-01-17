@@ -27,6 +27,8 @@ export const theme = {
     },
 
     media: {
+        mediaOff: 'screen and (max-width: 1144px)',
+        width1044: 'screen and (max-width: 1044px)',
         tablet: 'screen and (max-width: 768px)',
         mobile: 'screen and (max-width: 576px)',
     },
