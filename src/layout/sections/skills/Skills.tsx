@@ -18,7 +18,7 @@ export const Skills = () => {
                 </FlexWrapper>
 
                 <StyledFlexWrapper gap='59px'>
-                    <StyledPhoto src={groupOfImages} width='348px' height='282px' alt="Group of Images"/>
+                    <StyledPhoto src={groupOfImages} alt="Group of Images"/>
                         <SkillsWrapper direction='column' wrap='wrap-reverse' gap='16px'>
                             <Skill order={5}
                                     title='Languages'
@@ -80,6 +80,8 @@ const StyledFlexWrapper = styled(FlexWrapper)`
 const StyledPhoto = styled(Photo)`
     margin-top: 12px;
     margin-left: 32px;
+    width: 390px;
+    object-fit: contain;
     animation: ${imagePulseAnimation} 2s infinite;
     
     @media ${theme.media.width1044} {
