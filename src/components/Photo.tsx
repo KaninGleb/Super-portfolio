@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 type PhotoPropsType = {
-    Wmin: number; // Минимальная ширина в пикселях
-    Wmax: number;
+    Wmin?: number; // Минимальная ширина в пикселях
+    Wmax?: number;
 }
 
 export const Photo = styled.img<PhotoPropsType>`

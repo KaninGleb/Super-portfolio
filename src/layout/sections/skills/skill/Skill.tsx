@@ -34,6 +34,18 @@ const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
     &:hover {
         scale: 1.02;
     }
+    
+    @media ${theme.media.width1044} {
+        display: block;
+        flex-direction: column;
+        height: max-content;
+    }
+    
+    @media ${theme.media.mobile} {
+        flex-grow: 1;
+        max-width: unset;
+        gap: 12px;
+    }
 `
 
 const SkillTitle = styled.h3`
