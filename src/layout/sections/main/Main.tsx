@@ -6,6 +6,8 @@ import {Paragraph} from "../../../components/Paragraph.tsx";
 import {textData} from "../../../data/appData.ts";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
+import logo from "../../../assets/images/main-pseudo/logo-outline.svg"
+import dotsForMain from "../../../assets/images/main-pseudo/dots-main-photo.svg"
 import {btnAnimation} from "../../../animations/animations.ts";
 import {font} from "../../../styles/CommonFont.tsx";
 
@@ -19,13 +21,13 @@ export const Main = () => {
                         <Paragraph children={textData.main.paragraph}/>
                         <StyledBtn type='submit'>Contact me!!</StyledBtn>
                     </TextWrapper>
-                    <FlexWrapper direction='column'>
-                        <Photo src={photo} width={'458px'} alt="Main photo"/>
+                    <PhotoWrapper direction='column'>
+                        <Photo src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
                         <PortfolioMessage>
                             <ColorBlock/>
                             Currently working on <span>Portfolio</span>
                         </PortfolioMessage>
-                    </FlexWrapper>
+                    </PhotoWrapper>
                 </StyledFlexWrapper>
             </Container>
         </StyledMain>
@@ -49,6 +51,40 @@ const TextWrapper = styled(FlexWrapper)`
     p {
         margin-bottom: 25px;
         line-height: 1.5625;
+    }
+`
+
+const PhotoWrapper = styled(FlexWrapper)`
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url("${logo}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 84px;
+        left: calc(32% - (clamp(55px, calc((100vw - 100px) * (155 - 55) / (1024 - 100) + 55px), 155px)));
+        width: clamp(55px, calc((100vw - 155px) * (155 - 55) / (1024 - 155) + 55px), 155px);
+        min-width: 84px;
+        height: auto;
+        aspect-ratio: 1/1;
+        z-index: 0;
+    }
+    
+    &::after {
+        content: "";
+        background-image: url("${dotsForMain}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 100px;
+        right: 16px;
+        width: clamp(55px, calc((100vw - 84px) * (84 - 55) / (1024 - 84) + 55px), 84px);
+        min-width: 56px;
+        height: auto;
+        aspect-ratio: 1/1;
+        z-index: 1;
     }
 `
 
