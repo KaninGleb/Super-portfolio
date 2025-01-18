@@ -9,7 +9,6 @@ import photo from "../../../assets/images/MyImage.png"
 import logo from "../../../assets/images/main-pseudo/logo-outline.svg"
 import dotsForMain from "../../../assets/images/main-pseudo/dots-main-photo.svg"
 import {btnAnimation} from "../../../animations/animations.ts";
-import {font} from "../../../styles/CommonFont.tsx";
 
 export const Main = () => {
     return (
@@ -17,15 +16,17 @@ export const Main = () => {
             <Container>
                 <StyledFlexWrapper align="center" justify="space-around" gap="30px">
                     <TextWrapper direction='column' align='flex-start'>
-                        <MainTitle>Elias is a <span>web designer</span> and <span>front-end</span> developer</MainTitle>
-                        <Paragraph children={textData.main.paragraph}/>
+                        <MainTitle>Elias is a <span>web designer</span> and <span>front-end developer</span></MainTitle>
+                        <Paragraph children={textData.main.paragraph} fontWeight={'400'}/>
                         <StyledBtn type='submit'>Contact me!!</StyledBtn>
                     </TextWrapper>
                     <PhotoWrapper direction='column'>
                         <Photo src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
                         <PortfolioMessage>
                             <ColorBlock/>
-                            Currently working on <span>Portfolio</span>
+                            <MessageTextWrapper>
+                                Currently working on <span>Portfolio</span>
+                            </MessageTextWrapper>
                         </PortfolioMessage>
                     </PhotoWrapper>
                 </StyledFlexWrapper>
@@ -36,12 +37,17 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     margin-bottom: 112px;
+    
+    @media ${theme.media.mobile} {
+        margin-bottom: 70px;
+    }
 `
 
 const StyledFlexWrapper = styled(FlexWrapper)`
-    @media ${theme.media.width1044} {
-        display: flex;
+    @media ${theme.media.tablet} {
+        //display: flex;
         flex-wrap: wrap;
+        gap: 0;
     }
 `
 
@@ -51,6 +57,10 @@ const TextWrapper = styled(FlexWrapper)`
     p {
         margin-bottom: 25px;
         line-height: 1.5625;
+    }
+
+    @media ${theme.media.tablet} {
+        margin: 0;
     }
 `
 
@@ -78,7 +88,7 @@ const PhotoWrapper = styled(FlexWrapper)`
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        bottom: 100px;
+        top: clamp(165px, calc((100vw - 84px) * (246 - 165) / (1024 - 84) + 165px), 246px);
         right: 16px;
         width: clamp(55px, calc((100vw - 84px) * (84 - 55) / (1024 - 84) + 55px), 84px);
         min-width: 56px;
@@ -89,8 +99,9 @@ const PhotoWrapper = styled(FlexWrapper)`
 `
 
 const MainTitle = styled.h1`
-    ${font({weight:500, Fmax: 32, Fmin:24})};
-    margin-bottom: 31px;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
 
     span {
         color: ${theme.colors.secondaryText};
@@ -112,6 +123,10 @@ const StyledBtn = styled.button`
         scale: 1.05;
         animation-play-state: paused;
     }
+    
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
 
 const ColorBlock = styled.div`
@@ -120,7 +135,15 @@ const ColorBlock = styled.div`
     height: 16px;
 `
 
-const PortfolioMessage = styled.span`
+const MessageTextWrapper = styled.div`
+    @media ${theme.media.mobile} {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+`
+
+const PortfolioMessage = styled.div`
     font-weight: 500;
     color: #abb2bf;
 
@@ -132,9 +155,17 @@ const PortfolioMessage = styled.span`
     max-width: 402px;
     width: 100%;
     margin-left: 18px;
-
+    flex-wrap: wrap;
+    
     span {
         font-weight: 600;
         color: #ffffff;
+    }
+    
+    @media screen and (max-width: 950px) {
+        margin: 0 auto;
+    }
+    
+    @media ${theme.media.mobile} {
     }
 `

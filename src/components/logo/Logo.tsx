@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
 import {shakeAnimation} from "../../animations/animations.ts";
+import {theme} from "../../styles/Theme.tsx";
 
 export const Logo = () => {
     return (
@@ -31,5 +32,11 @@ const StyledLink = styled.a`
     
     &:hover {
         animation: ${shakeAnimation} 0.5s ease-in-out;
+    }
+    
+    @media ${theme.media.tablet} {
+        &:hover {
+            
+        }
     }
 `

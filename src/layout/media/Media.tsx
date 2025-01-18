@@ -28,7 +28,7 @@ const StyledMedia = styled.div`
     position: fixed;
     top: 0;
     left: 17px;
-    z-index: 2;
+    z-index: 3;
     
     @media ${theme.media.mediaOff} {
         display: none;

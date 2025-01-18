@@ -54,8 +54,12 @@ const StyledHeader = styled.header<StyledHeaderProps>`
     position: sticky;
     top: 0;
     background-color: ${({ isScrolled }) => (isScrolled ? theme.colors.secondaryBg : theme.colors.primaryBg)};
-    z-index: 1;
+    z-index: 2;
     transition: background-color 0.3s ease;
+    
+    @media ${theme.media.mobile} {
+        margin-bottom: 34px;
+    }
 `
 
 const MarginWrapper = styled(FlexWrapper)<StyledHeaderProps>`

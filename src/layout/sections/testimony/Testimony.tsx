@@ -25,6 +25,10 @@ export const Testimony = () => {
 const StyledTestimony = styled.section`
     font-size: 24px;
     margin-bottom: 74px;
+    
+    @media ${theme.media.mobile} {
+        margin-bottom: 50px;
+    }
 `
 const StyledFlexWrapper = styled(FlexWrapper)`
     position: relative;
@@ -43,16 +47,25 @@ const StyledQuote = styled.blockquote`
     padding: 32px;
     max-width: 714px;
     width: 100%;
-    //position: relative;
-    //z-index: -1;
     
     &::before {
-        content: url("${quotationMark}");
+        content: "";
+        background-image: url("${quotationMark}");
+        background-size: contain;
+        background-repeat: no-repeat;
         position: absolute;
+        max-width: 42px;
+        width: 100%;
+        height: 100%;
         top: -14px;
         left: 10px;
         max-height: 30px;
         z-index: 1;
+    }
+    
+    @media ${theme.media.tablet} {
+        padding: 26px;
+        line-height: 1.625;
     }
 `
 
@@ -70,10 +83,20 @@ const StyledCite = styled.cite`
     padding: 16px;
 
     &::before {
-        content: url("${quotationMark}");
+        content: "";
+        background-image: url("${quotationMark}");
+        background-size: contain;
+        background-repeat: no-repeat;
         position: absolute;
+        max-width: 42px;
+        width: 100%;
+        height: 100%;
         top: 80px;
         right: 12px;
         max-height: 30px;
+    }
+
+    @media ${theme.media.tablet} {
+        padding: 14px;
     }
 `
