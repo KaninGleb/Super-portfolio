@@ -8,6 +8,7 @@ import {Project} from "./project/Project.tsx";
 import chertNodes from '../../../assets/images/projects/project-1.svg'
 import protectX from '../../../assets/images/projects/project-2.svg'
 import kahoot from '../../../assets/images/projects/project-3.svg'
+import {font} from "../../../styles/CommonFont.tsx";
 
 const projects = {
     chertNodes: {
@@ -44,7 +45,7 @@ export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
-                <FlexWrapper direction='column' gap='48px'>
+                <MainWrapper direction='column' gap='48px'>
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <FlexWrapper>
                             <SectionTitle section={sectionsData.projects}/>
@@ -64,7 +65,7 @@ export const Projects = () => {
                             />
                         ))}
                     </StyledFlexWrapper>
-                </FlexWrapper>
+                </MainWrapper>
             </Container>
         </StyledProjects>
     );
@@ -72,9 +73,20 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     margin-bottom: 106px;
+    
+    @media ${theme.media.mobile} {
+        margin-bottom: 70px;
+    }
+`
+
+const MainWrapper = styled(FlexWrapper)`
+    @media ${theme.media.tablet} {
+        gap: 25px;
+    }
 `
 
 const ProjectsLink = styled.a`
+    // ${font({weight: 500, Fmax: 16, Fmin: 14})};
     font-weight: 500;
     border-bottom: 2px solid transparent;
     transition: .15s;
