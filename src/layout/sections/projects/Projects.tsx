@@ -74,7 +74,7 @@ export const Projects = () => {
 const StyledProjects = styled.section`
     margin-bottom: 106px;
     
-    @media ${theme.media.mobile} {
+    @media ${theme.media.tablet} {
         margin-bottom: 70px;
     }
 `

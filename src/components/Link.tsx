@@ -19,6 +19,7 @@ export const Link = (props: LinkPropsType) => {
 };
 
 const StyledLink = styled.a<LinkPropsType>`
+    display: inline-block;
     font-weight: 500;
     color: ${props => props.color || theme.colors.primaryText};
     outline: 1px solid ${props => props.outlineColor || theme.colors.secondaryOutline};

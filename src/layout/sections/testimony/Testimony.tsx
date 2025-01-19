@@ -86,8 +86,13 @@ const StyledQuote = styled.blockquote`
     }
     
     @media ${theme.media.tablet} {
+        max-width: fit-content;
         padding: 26px;
         line-height: 1.625;
+    }
+
+    @media ${theme.media.mobile} {
+        padding: 15px;
     }
 `
 

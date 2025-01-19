@@ -38,7 +38,7 @@ export const Main = () => {
 const StyledMain = styled.section`
     margin-bottom: 112px;
     
-    @media ${theme.media.mobile} {
+    @media ${theme.media.tablet} {
         margin-bottom: 70px;
     }
 `

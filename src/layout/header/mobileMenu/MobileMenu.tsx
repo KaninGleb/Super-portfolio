@@ -9,11 +9,11 @@ type MenuPropsType = {
 export const MobileMenu = (props: MenuPropsType) => {
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
+            <BurgerButton isOpen={true}>
                 <span></span>
             </BurgerButton>
 
-            <MobileMenuPopup isOpen={false}>
+            <MobileMenuPopup isOpen={true}>
                 <StyledUl>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
