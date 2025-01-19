@@ -58,12 +58,21 @@ const SkillTitle = styled.h3`
     &:hover {
         animation: ${shakeAnimation} 0.5s ease-in-out;
     }
+
+    @media ${theme.media.tablet} {
+        font-size: 20px;
+        font-weight: 500;
+    }
 `
 
 const SkillDescription = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+
+    @media ${theme.media.tablet} {
+        font-size: 18px;
+    }
 `
 
 const FlexItem = styled.li`

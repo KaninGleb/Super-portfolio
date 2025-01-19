@@ -64,11 +64,8 @@ const SkillsWrapper = styled(FlexWrapper)`
     max-height: 282px;
 
     @media ${theme.media.tablet} {
-        
-        
         flex-direction: row;
         flex-wrap: wrap;
-        //justify-content: center;
         margin-top: 25px;
         max-height: unset;
         
