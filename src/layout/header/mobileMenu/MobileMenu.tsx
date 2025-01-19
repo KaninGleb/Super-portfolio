@@ -1,6 +1,8 @@
 import styled, {css} from "styled-components";
 import { theme } from "../../../styles/Theme.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
+import {font} from "../../../styles/CommonFont.tsx";
+import {Logo} from "../../../components/logo/Logo.tsx";
 
 type MenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
@@ -14,6 +16,7 @@ export const MobileMenu = (props: MenuPropsType) => {
             </BurgerButton>
 
             <MobileMenuPopup isOpen={true}>
+                <StyledLogo/>
                 <StyledUl>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
@@ -27,19 +30,29 @@ export const MobileMenu = (props: MenuPropsType) => {
                         <option>RU</option>
                         <option>UA</option>
                     </LanguageSelect>
-                    <SocialList iconIds={['git', 'discord', 'figma']} showIcon={true}/>
                 </StyledUl>
+                    <StyledSocialList displayFlex={true}
+                                gap={'8px'}
+                                iconIds={['git', 'discord', 'figma']}
+                                showIcon={true}
+                                iconSize={'64px'}
+                    />
             </MobileMenuPopup>
         </StyledMobileMenu>
     )
 }
 
 const StyledMobileMenu = styled.nav`
+    ${font({Fmin: 16, Fmax: 32})}
+
     display: none;
-    
     @media ${theme.media.tablet} {
         display: block;
     }
+`
+
+const StyledLogo = styled(Logo)`
+    margin: 18px auto 8px 16px;
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -51,18 +64,25 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     z-index: 99999;
     background-color: rgba(31, 31, 32, 0.9);
     display: none;
-    
+
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 24px;
+
+        @media ${theme.media.mobile} {
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 107px;
+
+
+            ul + ul {
+                margin: 0 auto;
+            }
+        }
     `}
-    
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-    }
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -118,7 +138,19 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 
 const StyledUl = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    @media ${theme.media.tablet} {
+        align-items: center;
+    }
+`
 
+const StyledSocialList = styled(SocialList)`
+    @media ${theme.media.mobile} {
+        height: 64px;
+    }
 `
 
 const ListItem = styled.li`
@@ -187,5 +219,10 @@ const LanguageSelect = styled.select`
 
     &:focus-visible {
         outline: none;
+    }
+    
+    @media ${theme.media.tablet} {
+        margin-left: 14px;
+        width: fit-content;
     }
 `
