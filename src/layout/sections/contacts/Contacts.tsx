@@ -11,12 +11,12 @@ export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
-                <FlexWrapper direction='column' gap='45px'>
+                <ContentFlexWrapper direction='column' gap='45px'>
                     <FlexWrapper>
-                        <SectionTitle section={sectionsData.contacts} lineW={'127px'}/>
+                        <SectionTitle section={sectionsData.contacts}/>
                     </FlexWrapper>
 
-                    <FlexWrapper justify='space-between'>
+                    <StyledFlexWrapper justify='space-between'>
                         <LeftSection>
                             <Paragraph children={textData.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}></Paragraph>
                         </LeftSection>
@@ -44,15 +44,28 @@ export const Contacts = () => {
                             {/*    </FlexWrapper>*/}
                             {/*</ContactInfo>*/}
                         </RightSection>
-                    </FlexWrapper>
-                </FlexWrapper>
+                    </StyledFlexWrapper>
+                </ContentFlexWrapper>
             </Container>
         </StyledContacts>
     )
 }
 
 const StyledContacts = styled.section`
-    margin-bottom: 145px;
+    
+`
+
+const ContentFlexWrapper = styled(FlexWrapper)`
+    @media ${theme.media.tablet} {
+        gap: 30px;
+    }
+`
+
+const StyledFlexWrapper = styled(FlexWrapper)`
+    @media ${theme.media.tablet} {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 `
 
 const LeftSection = styled(FlexWrapper)`
