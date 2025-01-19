@@ -52,14 +52,23 @@ const StyledSkills = styled.section`
     }
 `
 
+const StyledFlexWrapper = styled(FlexWrapper)`
+    @media ${theme.media.width1044} {
+        justify-content: flex-end;
+        gap: 0;
+    }
+`
+
 const SkillsWrapper = styled(FlexWrapper)`
     margin-top: 42px;
     max-height: 282px;
 
-    @media ${theme.media.width1044} {
+    @media ${theme.media.tablet} {
+        
+        
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        //justify-content: center;
         margin-top: 25px;
         max-height: unset;
         
@@ -68,12 +77,6 @@ const SkillsWrapper = styled(FlexWrapper)`
         & > div:nth-child(3) { order: 3; }
         & > div:nth-child(2) { order: 4; }
         & > div:nth-child(5) { order: 5; }
-    }
-`
-
-const StyledFlexWrapper = styled(FlexWrapper)`
-    @media ${theme.media.width1044} {
-        gap: 0;
     }
 `
 

@@ -41,10 +41,13 @@ const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
         height: max-content;
     }
     
-    @media ${theme.media.mobile} {
-        flex-grow: 1;
+    @media ${theme.media.tablet} {
         max-width: unset;
         gap: 12px;
+    }
+
+    @media ${theme.media.mobile} {
+        flex-grow: 1;
     }
 `
 
