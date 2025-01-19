@@ -22,6 +22,7 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
 }
 
 const StyledSectionTitle = styled.h2<{Wmin: number, Wmax: number}>`
+    display: inline-block;
     ${font({weight: 500, Fmax: 32, Fmin: 26})};
     color: #fff;
     position: relative;
