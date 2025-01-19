@@ -4,6 +4,7 @@ import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import quotationMark from "../../../assets/images/quotation-mark.svg"
 import {font} from "../../../styles/CommonFont.tsx";
+import pseudo from "../../../assets/images/sections-pseudo/pseudo-right-1.svg"
 
 export const Testimony = () => {
     return (
@@ -19,17 +20,38 @@ export const Testimony = () => {
                 </FlexWrapper>
             </Container>
         </StyledTestimony>
-    );
-};
+    )
+}
 
 const StyledTestimony = styled.section`
     font-size: 24px;
     margin-bottom: 74px;
+    position: relative;
+    //overflow: hidden;
+    
+    &::after {
+        content: "";
+        background-image: url("${pseudo}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        right: -9px;
+        width: 91px;
+        height: 91px;
+    }
+    
+    @media ${theme.media.width1044} {
+        &::after {
+            display: none;
+        }
+    }
     
     @media ${theme.media.mobile} {
         margin-bottom: 50px;
     }
 `
+
 const StyledFlexWrapper = styled(FlexWrapper)`
     position: relative;
 `
