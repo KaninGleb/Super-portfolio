@@ -44,9 +44,6 @@ const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
     @media ${theme.media.tablet} {
         max-width: unset;
         gap: 12px;
-    }
-
-    @media ${theme.media.mobile} {
         flex-grow: 1;
     }
 `
