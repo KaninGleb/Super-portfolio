@@ -100,7 +100,10 @@ const ProjectsLink = styled.a`
 
 const StyledFlexWrapper = styled(FlexWrapper)`
     @media ${theme.media.width1044} {
-        flex-wrap: wrap;
         justify-content: center;
+    }
+
+    @media ${theme.media.tablet} {
+        flex-wrap: wrap;
     }
 `

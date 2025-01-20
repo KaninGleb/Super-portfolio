@@ -89,13 +89,20 @@ const StyledWork = styled.div`
     @media ${theme.media.width1044} {
         display: flex;
         flex-direction: column;
+        //flex-grow: 1;
         flex: 1;
+        min-width: 230px;
+        max-width: unset;
+        
+    }
+    
+    @media ${theme.media.mobile} {
+        max-width: unset;
     }
 `
 
 const StyledImageWrapper = styled.div`
     width: 100%;
-    height: 201px;
     position: relative;
 `
 
