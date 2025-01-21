@@ -37,7 +37,7 @@ export const Project = (props: ProjectPropsType) => {
                 <MainSizeWrapper direction="column" gap='16px'>
                     <Title>{props.title}</Title>
                     <Text>{props.text}</Text>
-                    <FlexWrapper gap="16px">
+                    <ButtonsFlexWrapper>
                         {props.links.map((link, index) => (
                             <Link
                                 key={index}
@@ -48,7 +48,7 @@ export const Project = (props: ProjectPropsType) => {
                                 mWidth={link.mWidth}
                             />
                         ))}
-                    </FlexWrapper>
+                    </ButtonsFlexWrapper>
                 </MainSizeWrapper>
             </SizeWrapper>
         </StyledWork>
@@ -169,5 +169,13 @@ const Text = styled.span`
     
     &:hover {
         animation: ${shakeAnimation} 0.5s ease-in-out;
+    }
+`
+
+const ButtonsFlexWrapper = styled(FlexWrapper)`
+    gap: 16px;
+    
+    @media ${theme.media.width1044} {
+        flex-wrap: wrap;
     }
 `
