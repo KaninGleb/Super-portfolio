@@ -68,6 +68,25 @@ export const btnAnimation = keyframes`
     }
 `
 
+export const cvBtnAnimation = keyframes`
+    0% {
+        outline-width: 5px;
+        outline-color: ${theme.colors.secondaryBg};
+        white-space: nowrap;
+    }
+    50% {
+        outline-width: 1px;
+        outline-color: ${theme.colors.primaryLightAnim};
+        font-weight: 700;
+        scale: 1.1;
+    }
+    100% {
+        outline-width: 5px;
+        outline-color: ${theme.colors.primaryBg};
+        white-space: nowrap;
+    }
+`
+
 export const pulseAnimation = keyframes`
     0% {
         opacity: 1;
