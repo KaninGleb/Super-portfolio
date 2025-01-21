@@ -17,15 +17,15 @@ export const AboutMe = () => {
     return (
         <StyledAboutMe>
             <Container>
-                        <StyledSectionTitle>
-                            <SectionTitle section={sectionsData.aboutMe}/>
-                        </StyledSectionTitle>
+                <StyledSectionTitle>
+                    <SectionTitle section={sectionsData.aboutMe}/>
+                </StyledSectionTitle>
                 <StyledFlexWrapper gap='166px'>
                     <LeftSection>
                         <Paragraph children={textData.aboutMe.paragraph1}/>
                         <Paragraph children={textData.aboutMe.paragraph2}/>
                         <Paragraph children={textData.aboutMe.paragraph3}/>
-                        <Link href={'#'} children={'Read more ->'} mWidth={'148px'}/>
+                        <Link to="/about" children={'Read more ->'} mWidth={'148px'}/>
                     </LeftSection>
                     <RightSection>
                         <StyledPhoto src={aboutMePhoto} Wmax={338} Wmin={250} alt="About Me Photo"/>

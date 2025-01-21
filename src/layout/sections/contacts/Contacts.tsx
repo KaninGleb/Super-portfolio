@@ -6,6 +6,7 @@ import {Paragraph} from "../../../components/Paragraph.tsx";
 import {sectionsData, textData} from "../../../data/appData.ts";
 import {theme} from "../../../styles/Theme.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
+import {Link} from "../../../components/Link.tsx";
 
 export const Contacts = () => {
     return (
@@ -17,8 +18,9 @@ export const Contacts = () => {
                     </FlexWrapper>
 
                     <StyledFlexWrapper justify='space-between'>
-                        <LeftSection>
+                        <LeftSection direction='column' gap='20px'>
                             <Paragraph children={textData.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}></Paragraph>
+                            <Link to="/contacts" children={'Read more ->'} mWidth={'148px'}/>
                         </LeftSection>
 
                         <RightSection direction='column' gap='16px'>

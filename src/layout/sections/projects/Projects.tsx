@@ -9,6 +9,7 @@ import chertNodes from '../../../assets/images/projects/project-1.svg'
 import protectX from '../../../assets/images/projects/project-2.svg'
 import kahoot from '../../../assets/images/projects/project-3.svg'
 import {font} from "../../../styles/CommonFont.tsx";
+import {Link} from "react-router-dom";
 
 const projects = {
     chertNodes: {
@@ -50,7 +51,7 @@ export const Projects = () => {
                         <FlexWrapper>
                             <SectionTitle section={sectionsData.projects}/>
                         </FlexWrapper>
-                        <ProjectsLink href="#">View all ~~&gt;</ProjectsLink>
+                        <ProjectsLink to="/projects">View all ~~&gt;</ProjectsLink>
                     </FlexWrapper>
 
                     <StyledFlexWrapper gap='16px'>
@@ -85,7 +86,7 @@ const MainWrapper = styled(FlexWrapper)`
     }
 `
 
-const ProjectsLink = styled.a`
+const ProjectsLink = styled(Link)`
     // ${font({weight: 500, Fmax: 16, Fmin: 14})};
     font-weight: 500;
     border-bottom: 2px solid transparent;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 import {theme} from "../styles/Theme.tsx";
 import {pulseLinkAnimation} from "../animations/animations.ts";
 
 type LinkPropsType = {
-    href: string
+    to?: string
     color?: string
     children: string
     outlineColor?: string
@@ -12,13 +13,16 @@ type LinkPropsType = {
 
 export const Link = (props: LinkPropsType) => {
     return (
-        <StyledLink href={props.href} color={props.color} outlineColor={props.outlineColor} mWidth={props.mWidth}>
+        <StyledLink to={props.to}
+                    color={props.color}
+                    outlineColor={props.outlineColor}
+                    mWidth={props.mWidth}>
             {props.children}
         </StyledLink>
-    );
-};
+    )
+}
 
-const StyledLink = styled.a<LinkPropsType>`
+const StyledLink = styled(RouterLink)<LinkPropsType>`
     display: inline-block;
     font-weight: 500;
     color: ${props => props.color || theme.colors.primaryText};
@@ -34,4 +38,4 @@ const StyledLink = styled.a<LinkPropsType>`
                 props.outlineColor === theme.colors.primaryOutline ? theme.colors.secondaryHover : theme.colors.primaryHover};
         transform: scale(1.03);
     }
-`;
+`

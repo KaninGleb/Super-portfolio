@@ -1,27 +1,22 @@
 import './App.css'
-import {Media} from "./layout/media/Media.tsx";
-import {Header} from "./layout/header/Header.tsx";
-import {Main} from "./layout/sections/main/Main.tsx";
-import {Testimony} from "./layout/sections/testimony/Testimony.tsx";
-import {Projects} from "./layout/sections/projects/Projects.tsx";
-import {Skills} from "./layout/sections/skills/Skills.tsx";
-import {AboutMe} from "./layout/sections/aboutMe/AboutMe.tsx";
-import {Contacts} from "./layout/sections/contacts/Contacts.tsx";
-import {Footer} from "./layout/footer/Footer.tsx";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HomePage} from "./layout/home/HomePage.tsx";
+import {ProjectsPage} from "./layout/projectsPage/ProjectsPage.tsx";
+import {AboutMePage} from "./layout/aboutMePage/AboutMePage.tsx";
+import {ContactsPage} from "./layout/contactsPage/ContactsPage.tsx";
 
 function App() {
     return (
-        <div className="App">
-            <Media/>
-            <Header/>
-            <Main/>
-            <Testimony/>
-            <Projects/>
-            <Skills/>
-            <AboutMe/>
-            <Contacts/>
-            <Footer/>
-        </div>
+        <Router>
+            <div className="App">
+                <Routes>
+                    <Route path="/" element={<HomePage/>}/>
+                    <Route path="/projects" element={<ProjectsPage/>}/>
+                    <Route path="/about" element={<AboutMePage/>}/>
+                    <Route path="/contacts" element={<ContactsPage/>}/>
+                </Routes>
+            </div>
+        </Router>
     )
 }
 
