@@ -4,7 +4,8 @@ import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import quotationMark from "../../../assets/images/quotation-mark.svg"
 import {font} from "../../../styles/CommonFont.tsx";
-import pseudo from "../../../assets/images/sections-pseudo/pseudo-right-1.svg"
+import pseudoBgR from "../../../assets/images/sections-pseudo/background-preudo-right.svg"
+import {imagePulseAnimation} from "../../../animations/animations.ts";
 
 export const Testimony = () => {
     return (
@@ -29,17 +30,18 @@ const StyledTestimony = styled.section`
     
     &::after {
         content: "";
-        background-image: url("${pseudo}");
+        background-image: url("${pseudoBgR}");
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        top: 0;
-        right: -9px;
-        width: 91px;
-        height: 91px;
+        top: 14px;
+        right: -90px;
+        width: 170px;
+        height: 1720px;
+        animation: ${imagePulseAnimation} 2s infinite;
     }
-    
-    @media ${theme.media.width1044} {
+        
+    @media ${theme.media.bgPseudoOff} {
         &::after {
             display: none;
         }

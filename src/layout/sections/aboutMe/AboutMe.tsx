@@ -8,9 +8,10 @@ import aboutMePhoto from "../../../assets/images/about-me-photo.png";
 import {Link} from "../../../components/Link.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import {theme} from "../../../styles/Theme.tsx";
-import {pulseAnimation} from "../../../animations/animations.ts";
+import {imagePulseAnimation, pulseAnimation} from "../../../animations/animations.ts";
 import dots1 from "../../../assets/images/about-me-photo-pseudo/pseudo-1.svg";
 import dots2 from "../../../assets/images/about-me-photo-pseudo/pseudo-2.svg";
+import pseudoBgL from "../../../assets/images/sections-pseudo/background-pseudo-left.svg"
 
 export const AboutMe = () => {
     return (
@@ -37,6 +38,26 @@ export const AboutMe = () => {
 
 const StyledAboutMe = styled.section`
     margin-bottom: 112px;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url("${pseudoBgL}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 134px;
+        left: 0px;
+        width: 160px;
+        height: 680px;
+        animation: ${imagePulseAnimation} 2s infinite;
+    }
+
+    @media ${theme.media.bgPseudoOff} {
+        &::before {
+            display: none;
+        }
+    }
     
     @media ${theme.media.tablet} {
         margin-bottom: 70px;
