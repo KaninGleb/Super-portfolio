@@ -5,6 +5,7 @@ import {Logo} from "../../../components/logo/Logo.tsx";
 
 type MenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
+    isScrolled: boolean
 }
 
 export const MobileMenu = (props: MenuPropsType) => {
@@ -15,7 +16,7 @@ export const MobileMenu = (props: MenuPropsType) => {
             </BurgerButton>
 
             <MobileMenuPopup isOpen={true}>
-                <StyledLogo/>
+                <StyledLogo isOpen={true}/>
                 <StyledUl>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
@@ -139,6 +140,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
                 width: 24px;
         `}
         }
+    }
+    
+    @media ${theme.media.tablet} {
+        top: 16px;
     }
 `
 

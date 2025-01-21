@@ -41,7 +41,7 @@ export const Header = () => {
                     <Logo />
                     <FlexWrapper gap='32px'>
                         <HeaderMenu menuItems={headerLinks}/>
-                        <MobileMenu menuItems={headerLinks}/>
+                        <MobileMenu menuItems={headerLinks} isScrolled={isScrolled}/>
                     </FlexWrapper>
                 </MarginWrapper>
             </Container>

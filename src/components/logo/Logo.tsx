@@ -1,18 +1,22 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
 import {shakeAnimation} from "../../animations/animations.ts";
 import {theme} from "../../styles/Theme.tsx";
 
-export const Logo = () => {
+type LogoPropsType = {
+    isOpen?: boolean
+}
+
+export const Logo = ({ isOpen = false }: LogoPropsType) => {
     return (
-        <StyledLink href="">
+        <StyledLink isOpen={isOpen} href="">
             <Icon iconId='defaultLogo' width='16px' height='17px'/>
             <span>Elias</span>
         </StyledLink>
-    );
-};
+    )
+}
 
-const StyledLink = styled.a`
+const StyledLink = styled.a<{ isOpen: boolean }>`
     display: flex;
     align-items: center;
     gap: 8px;
@@ -34,13 +38,11 @@ const StyledLink = styled.a`
         animation: ${shakeAnimation} 0.5s ease-in-out;
     }
     
-    @media ${theme.media.tablet} {
-        position: absolute;
-        top: 22px;
-        left: 16px;
-
-        &:hover {
-            
+    ${props => props.isOpen && css`
+        @media ${theme.media.tablet} {
+            position: absolute;
+            top: 18px;
+            left: 16px;
         }
-    }
+    `}
 `
