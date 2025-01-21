@@ -9,26 +9,25 @@ import {Link} from "../../../components/Link.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import {theme} from "../../../styles/Theme.tsx";
 import {pulseAnimation} from "../../../animations/animations.ts";
+import dots1 from "../../../assets/images/about-me-photo-pseudo/pseudo-1.svg";
+import dots2 from "../../../assets/images/about-me-photo-pseudo/pseudo-2.svg";
 
 export const AboutMe = () => {
     return (
         <StyledAboutMe>
             <Container>
-                <StyledFlexWrapper gap='166px'>
-                    <LeftSection>
                         <StyledSectionTitle>
                             <SectionTitle section={sectionsData.aboutMe}/>
                         </StyledSectionTitle>
-                        <TabletPhotoWrapper>
-                            <TabletStyledPhoto src={aboutMePhoto} Wmax={338} Wmin={200} alt="About Me Photo"/>
-                        </TabletPhotoWrapper>
+                <StyledFlexWrapper gap='166px'>
+                    <LeftSection>
                         <Paragraph children={textData.aboutMe.paragraph1}/>
                         <Paragraph children={textData.aboutMe.paragraph2}/>
                         <Paragraph children={textData.aboutMe.paragraph3}/>
                         <Link href={'#'} children={'Read more ->'} mWidth={'148px'}/>
                     </LeftSection>
                     <RightSection>
-                        <StyledPhoto src={aboutMePhoto} Wmax={338} alt="About Me Photo"/>
+                        <StyledPhoto src={aboutMePhoto} Wmax={338} Wmin={250} alt="About Me Photo"/>
                     </RightSection>
                 </StyledFlexWrapper>
             </Container>
@@ -61,66 +60,18 @@ const LeftSection = styled.div`
     }
 `
 
-// const StyledSectionTitle = styled(SectionTitle)`
-//     //margin-bottom: 23px;
-// `
-
 const StyledSectionTitle = styled(FlexWrapper)`
-    max-width: 516px;
-    width: 100%;
     margin-bottom: 22px;
-    
+
     @media ${theme.media.tablet} {
         margin-bottom: unset;
-    }
-`
-
-const TabletPhotoWrapper = styled.div`
-    display: none;
-    position: relative;
-    height: fit-content;
-
-    &::after {
-        content: '';
-        display: inline-block;
-        height: 2px;
-        max-width: 270px;
-        width: 100%;
-        background-color: ${theme.colors.secondaryOutline};
-        box-shadow: 0 0 5px rgba(199, 120, 221, 1);
-        animation: ${pulseAnimation} 2s infinite;
-        z-index: 1;
-
-        position: absolute;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    @media ${theme.media.tablet} {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
-    }
-    
-    @media ${theme.media.mobile} {
-        &::after {
-            max-width: 200px;
-            width: 100%;
-        }
-    }
-`
-
-const TabletStyledPhoto = styled(Photo)`
-    display: none;
-    @media ${theme.media.tablet} {
-        display: block;
     }
 `
 
 const RightSection = styled.div`
     position: relative;
     height: fit-content;
+    transform: translateY(-70px);
 
     &::after {
         content: '';
@@ -130,7 +81,7 @@ const RightSection = styled.div`
         background-color: ${theme.colors.secondaryOutline};
         box-shadow: 0 0 5px rgba(199, 120, 221, 1);
         animation: ${pulseAnimation} 2s infinite;
-        
+
         position: absolute;
         bottom: -1px;
         left: 50%;
@@ -139,14 +90,57 @@ const RightSection = styled.div`
     }
     
     @media ${theme.media.tablet} {
-        display: none;
+        margin: 0 auto;
+        transform: translateY(0px);
+    }
+
+    @media ${theme.media.mobile} {
+        &::after {
+            width: 220px;
+            transform: translateX(-45%);
+        }
     }
 `
 
 const StyledPhoto = styled(Photo)`
     display: block;
-
+    position: relative;
+    
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     background-image: url("${dots2}");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     top: 0px;
+    //     left: 0px;
+    //
+    //     width: 84px;
+    //     height: 84px;
+    //     box-shadow: 0 0 5px rgba(199, 120, 221, 1);
+    //     animation: ${pulseAnimation} 2s infinite;
+    //     transform: translateX(-50%);
+    //     z-index: 999;
+    // }
+    //
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     background-image: url("${dots1}");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     top: 0px;
+    //     left: 0px;
+    //
+    //     width: 84px;
+    //     height: 84px;
+    //     box-shadow: 0 0 5px rgba(199, 120, 221, 1);
+    //     animation: ${pulseAnimation} 2s infinite;
+    //     transform: translateX(-50%);
+    //     z-index: 999;
+    // }
+    
     @media ${theme.media.tablet} {
-        display: none;
+        
     }
 `
