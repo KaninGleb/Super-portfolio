@@ -16,11 +16,12 @@ export const HeaderMenu = (props: MenuPropsType) => {
                         </HeaderLink>
                     </ListItem>
                 ))}
-                <LanguageSelect aria-label='Language change'>
-                    <option>EN</option>
-                    <option>RU</option>
-                    <option>UA</option>
-                </LanguageSelect>
+                <ListItem>
+                    <LanguageSelect aria-label='Language change'>
+                        <option>EN</option>
+                        <option>RU</option>
+                    </LanguageSelect>
+                </ListItem>
             </StyledUl>
         </StyledHeaderMenu>
     )
@@ -39,11 +40,11 @@ const StyledUl = styled.ul`
 
 const ListItem = styled.li`
     position: relative;
+    padding: 12px 0;
 `
 
 const HeaderLink = styled.a`
     display: inline-block;
-    padding: 12px 0;
     position: relative;
     transition: color 0.3s ease;
     
@@ -81,7 +82,7 @@ const HeaderLink = styled.a`
 const LanguageSelect = styled.select`
     font-family: inherit;
     font-weight: 600;
-    font-size: inherit;
+    font-size: 16px;
     cursor: pointer;
     
     border: none;
@@ -103,5 +104,14 @@ const LanguageSelect = styled.select`
 
     &:focus-visible {
         outline: none;
+    }
+    
+    @media ${theme.media.tablet} {
+        color: ${theme.colors.primaryBg}; /* Замените someNewColor на нужный цвет */
+
+        option {
+            color: ${theme.colors.primaryText}; /* Замените на нужный цвет для опций */
+            background-color: ${theme.colors.primaryBg}; /* Замените на нужный цвет фона для опций */
+        }
     }
 `

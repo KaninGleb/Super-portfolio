@@ -24,11 +24,12 @@ export const MobileMenu = (props: MenuPropsType) => {
                             </HeaderLink>
                         </ListItem>
                     ))}
-                    <LanguageSelect aria-label='Language change'>
-                        <option>EN</option>
-                        <option>RU</option>
-                        <option>UA</option>
-                    </LanguageSelect>
+                    <ListItem>
+                        <LanguageSelect aria-label='Language change'>
+                            <option>EN</option>
+                            <option>RU</option>
+                        </LanguageSelect>
+                    </ListItem>
                 </StyledUl>
                     <StyledSocialList displayFlex={true}
                                 gap={'8px'}
