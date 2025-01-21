@@ -1,26 +1,34 @@
 import styled, {css} from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
-import {shakeAnimation} from "../../animations/animations.ts";
 import {theme} from "../../styles/Theme.tsx";
+import {Link, useLocation} from "react-router-dom";
 
 type LogoPropsType = {
     isOpen?: boolean
 }
 
 export const Logo = ({ isOpen = false }: LogoPropsType) => {
+    const location = useLocation();
+
+    const handleClick = () => {
+        if (location.pathname === "/") {
+            window.location.reload();
+        }
+    };
+
     return (
-        <StyledLink isOpen={isOpen} href="">
+        <StyledLink to={"/"} isOpen={isOpen} onClick={handleClick}>
             <Icon iconId='defaultLogo' width='16px' height='17px'/>
             <span>Elias</span>
         </StyledLink>
     )
 }
 
-const StyledLink = styled.a<{ isOpen: boolean }>`
+const StyledLink = styled(Link)<{ isOpen: boolean }>`
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: .2s;
+    transition: .2s ease;
     
     img {
         width: 16px;
@@ -35,7 +43,7 @@ const StyledLink = styled.a<{ isOpen: boolean }>`
     }
     
     &:hover {
-        animation: ${shakeAnimation} 0.5s ease-in-out;
+        transform: translateY(-3px);
     }
     
     ${props => props.isOpen && css`
