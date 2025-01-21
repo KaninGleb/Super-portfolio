@@ -69,6 +69,10 @@ const StyledSocialList = styled.ul<FlexPropsType>`
 
 const SocialItem = styled.li`
     max-height: 32px;
+    
+    @media ${theme.media.tablet} {
+        max-height: 64px;
+    }
 `
 
 const SocialLink = styled.a<StyledIconPropsType>`

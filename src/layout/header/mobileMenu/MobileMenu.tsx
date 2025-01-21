@@ -1,7 +1,6 @@
 import styled, {css} from "styled-components";
 import { theme } from "../../../styles/Theme.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
-import {font} from "../../../styles/CommonFont.tsx";
 import {Logo} from "../../../components/logo/Logo.tsx";
 
 type MenuPropsType = {
@@ -11,11 +10,11 @@ type MenuPropsType = {
 export const MobileMenu = (props: MenuPropsType) => {
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
+            <BurgerButton isOpen={true}>
                 <span></span>
             </BurgerButton>
 
-            <MobileMenuPopup isOpen={false}>
+            <MobileMenuPopup isOpen={true}>
                 <StyledLogo/>
                 <StyledUl>
                     {props.menuItems.map((item, index) => (
@@ -43,16 +42,21 @@ export const MobileMenu = (props: MenuPropsType) => {
 }
 
 const StyledMobileMenu = styled.nav`
-    ${font({Fmin: 16, Fmax: 32})}
-
+    font-size: 26px;
     display: none;
+    position: relative;
+    
     @media ${theme.media.tablet} {
         display: block;
+    }
+
+    @media ${theme.media.mobile} {
+        font-size: 32px;
     }
 `
 
 const StyledLogo = styled(Logo)`
-    margin: 18px auto 8px 16px;
+    
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -70,14 +74,14 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 24px;
+        gap: 40px;
 
         @media ${theme.media.mobile} {
-            justify-content: flex-start;
             align-items: flex-start;
-            gap: 107px;
-
-
+            text-align: left;
+            gap: 110px;
+            padding: 16px;
+            
             ul + ul {
                 margin: 0 auto;
             }
@@ -87,8 +91,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
-    top: 15px;
-    right: 15px;
+    top: 22px;
+    right: 22px;
     width: 24px;
     height: 24px;
     z-index: 9999999;
@@ -138,12 +142,21 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 
 const StyledUl = styled.ul`
+        
     display: flex;
     flex-direction: column;
     gap: 24px;
     
+    li {
+        max-height: 64px;
+    }
+    
     @media ${theme.media.tablet} {
         align-items: center;
+    }
+
+    @media ${theme.media.mobile} {
+        align-items: flex-start;
     }
 `
 
@@ -224,5 +237,9 @@ const LanguageSelect = styled.select`
     @media ${theme.media.tablet} {
         margin-left: 14px;
         width: fit-content;
+    }
+
+    @media ${theme.media.mobile} {
+        margin-left: unset;
     }
 `
