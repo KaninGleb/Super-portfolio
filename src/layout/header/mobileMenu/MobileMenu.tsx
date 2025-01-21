@@ -2,6 +2,7 @@ import styled, {css} from "styled-components";
 import { theme } from "../../../styles/Theme.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
 import {Logo} from "../../../components/logo/Logo.tsx";
+import {useState} from "react";
 
 type MenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
@@ -9,14 +10,16 @@ type MenuPropsType = {
 }
 
 export const MobileMenu = (props: MenuPropsType) => {
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const onBurgerBtnClick = () => { setMenuIsOpen( !menuIsOpen ) };
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={menuIsOpen} onClick={ onBurgerBtnClick }>
                 <span></span>
             </BurgerButton>
 
-            <MobileMenuPopup isOpen={true}>
-                <StyledLogo isOpen={true}/>
+            <MobileMenuPopup isOpen={menuIsOpen} onClick={ ()=>{setMenuIsOpen(false)} }>
+                <StyledLogo isOpen={menuIsOpen}/>
                 <StyledUl>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
