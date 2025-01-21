@@ -1,3 +1,9 @@
+import {theme} from "../styles/Theme.tsx";
+import chertNodes from "../assets/images/projects/project-1.svg";
+import protectX from "../assets/images/projects/project-2.svg";
+import kahoot from "../assets/images/projects/project-3.svg";
+
+
 export const textData = {
     main: {
         paragraph: 'He crafts responsive websites where technologies meet creativity',
@@ -40,5 +46,73 @@ export const sectionsData = {
         symbol: '#',
         Wmin: 127,
         Wmax: 127,
-    }
-};
+    },
+    allProjects: {
+        id: 'projects',
+        name: 'complete-apps',
+        symbol: '#',
+    },
+    headerProjects: {
+        name: 'projects',
+        symbol: '/',
+    },
+}
+
+export const projectsData = {
+    chertNodes: {
+        software: ['HTML', 'SCSS', 'Python', 'Flask'],
+        title: 'ChertNodes',
+        text: 'Minecraft servers hosting',
+        src: chertNodes,
+        links: [
+            {href: "#", children: "Live <~>"},
+            {href: "#", children: "Cached >=", color: theme.colors.primaryLightText, outlineColor: theme.colors.primaryOutline, mWidth: "119px"},
+        ],
+    },
+    protectX: {
+        software: ['React', 'Express', 'Discord.js', 'Node.js', 'HTML', 'SCSS', 'Python', 'Flask'],
+        title: 'ProtectX',
+        text: 'Discord anti-crash bot',
+        src: protectX,
+        links: [
+            {href: "#", children: "Live <~>"},
+        ],
+    },
+    kahoot: {
+        software: ['CSS', 'Express', 'Node.js'],
+        title: 'Kahoot Answers Viewer',
+        text: 'Get answers to your kahoot quiz',
+        src: kahoot,
+        links: [
+            {href: "#", children: "Live <~>"},
+        ],
+    },
+    chertNodes2: {
+        software: ['HTML', 'SCSS', 'Python', 'Flask'],
+        title: 'ChertNodes',
+        text: 'Minecraft servers hosting',
+        src: chertNodes,
+        links: [
+            {href: "#", children: "Live <~>"},
+            {href: "#", children: "Cached >=", color: theme.colors.primaryLightText, outlineColor: theme.colors.primaryOutline, mWidth: "119px"},
+        ],
+    },
+    protectX2: {
+        software: ['React', 'Express', 'Discord.js', 'Node.js', 'HTML', 'SCSS', 'Python', 'Flask'],
+        title: 'ProtectX',
+        text: 'Discord anti-crash bot',
+        src: protectX,
+        links: [
+            {href: "#", children: "Live <~>"},
+        ],
+    },
+    kahoot2: {
+        software: ['CSS', 'Express', 'Node.js'],
+        title: 'Kahoot Answers Viewer',
+        text: 'Get answers to your kahoot quiz',
+        src: kahoot,
+        links: [
+            {href: "#", children: "Live <~>"},
+        ],
+    },
+}
