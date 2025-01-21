@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
-import {pulseAnimation} from "../animations/animations.ts";
+import {imagePulseAnimation, pulseAnimation} from "../animations/animations.ts";
 import {font} from "../styles/CommonFont.tsx";
 
 type SectionTitlePropsType = {
@@ -30,6 +30,7 @@ const StyledSectionTitle = styled.h2<{Wmin?: number, Wmax?: number}>`
     
     span {
         color: #c778dd;
+        animation: ${imagePulseAnimation} 2s infinite;
     }
     
     &::after {
