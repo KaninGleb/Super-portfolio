@@ -5,11 +5,11 @@ import {font} from "../styles/CommonFont.tsx";
 
 type SectionTitlePropsType = {
     section: {
-        id: string
+        id?: string
         name: string
         symbol: string
-        Wmin: number
-        Wmax: number
+        Wmin?: number
+        Wmax?: number
     }
 }
 
@@ -21,7 +21,7 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
     )
 }
 
-const StyledSectionTitle = styled.h2<{Wmin: number, Wmax: number}>`
+const StyledSectionTitle = styled.h2<{Wmin?: number, Wmax?: number}>`
     display: inline-block;
     ${font({weight: 500, Fmax: 32, Fmin: 26})};
     color: #fff;

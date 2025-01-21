@@ -6,6 +6,7 @@ type ParagraphPropsType = {
     children: string
     fontWeight?: string
     lineHeight?: string
+    color?: string
 }
 
 export const Paragraph = (props: ParagraphPropsType) => {
@@ -19,6 +20,6 @@ export const Paragraph = (props: ParagraphPropsType) => {
 const StyledParagraph = styled.p<ParagraphPropsType>`
     line-height: ${props => props.lineHeight || '1.625'};
     font-weight: ${props => props.fontWeight || '400'};
-    color: ${theme.colors.primaryLightText};
+    color: ${props => props.color || theme.colors.primaryLightText};
 `
     // ${font({weight:500, Fmax: 16, Fmin:14, color:theme.colors.primaryLightText});

@@ -1,8 +1,16 @@
+import {Media} from "../media/Media.tsx";
+import {Header} from "../header/Header.tsx";
+import {TitleSection} from "./allProjects/TitleSection.tsx";
+import {AllProjects} from "./allProjects/AllProjects.tsx";
+
 
 export const ProjectsPage = () => {
     return (
         <div>
-            <h2 style={{ fontSize: '100px', textAlign: "center"}}>Projects Page</h2>
+            <Media/>
+            <Header/>
+            <TitleSection/>
+            <AllProjects/>
         </div>
     )
 }

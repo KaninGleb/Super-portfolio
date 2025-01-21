@@ -18,11 +18,12 @@ type ProjectPropsType = {
     title: string
     text: string
     links: LinkPropsType[]
+    mWidth?: string
 }
 
 export const Project = (props: ProjectPropsType) => {
     return (
-        <StyledWork>
+        <StyledWork mWidth={props.mWidth}>
             <StyledImageWrapper>
                 <Image src={props.src} alt=""/>
                 <Overlay/>
@@ -41,7 +42,6 @@ export const Project = (props: ProjectPropsType) => {
                         {props.links.map((link, index) => (
                             <Link
                                 key={index}
-                                href={link.href}
                                 children={link.children}
                                 color={link.color}
                                 outlineColor={link.outlineColor}
@@ -67,10 +67,10 @@ const Overlay = styled.div`
     animation: ${gradientAnimation} 3s infinite;
 `
 
-const StyledWork = styled.div`
+const StyledWork = styled.div<{mWidth?: string}>`
     outline: 1px solid ${theme.colors.primaryOutline};
     min-width: 330px;
-    max-width: 490px;
+    max-width: ${props => props.mWidth || '490px'};
     width: 100%;
     height: 100%;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;

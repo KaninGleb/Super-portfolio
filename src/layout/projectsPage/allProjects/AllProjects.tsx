@@ -4,24 +4,21 @@ import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {projectsData, sectionsData} from "../../../data/appData.ts";
-import {Project} from "./project/Project.tsx";
-import {font} from "../../../styles/CommonFont.tsx";
-import {Link} from "react-router-dom";
+import {Project} from "../../sections/projects/project/Project.tsx";
 
-export const Projects = () => {
+export const AllProjects = () => {
     return (
-        <StyledProjects>
+        <StyledAllProjects>
             <Container>
                 <MainWrapper direction='column' gap='48px'>
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <FlexWrapper>
-                            <SectionTitle section={sectionsData.projects}/>
+                            <SectionTitle section={sectionsData.allProjects}/>
                         </FlexWrapper>
-                        <ProjectsLink to="/projects">View all ~~&gt;</ProjectsLink>
                     </FlexWrapper>
 
-                    <StyledFlexWrapper gap='16px'>
-                        {Object.values(projectsData).slice(0, 3).map((project, index) => (
+                    <StyledFlexWrapper wrap='wrap' gap='16px'>
+                        {Object.values(projectsData).map((project, index) => (
                             <Project
                                 key={index}
                                 software={project.software}
@@ -29,16 +26,17 @@ export const Projects = () => {
                                 text={project.text}
                                 src={project.src}
                                 links={project.links}
+                                mWidth={'330px'}
                             />
                         ))}
                     </StyledFlexWrapper>
                 </MainWrapper>
             </Container>
-        </StyledProjects>
+        </StyledAllProjects>
     );
 }
 
-const StyledProjects = styled.section`
+const StyledAllProjects = styled.section`
     margin-bottom: 106px;
     
     @media ${theme.media.tablet} {
@@ -49,19 +47,6 @@ const StyledProjects = styled.section`
 const MainWrapper = styled(FlexWrapper)`
     @media ${theme.media.tablet} {
         gap: 25px;
-    }
-`
-
-const ProjectsLink = styled(Link)`
-    // ${font({weight: 500, Fmax: 16, Fmin: 14})};
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    transition: .15s;
-
-    &:hover {
-        scale: 1.03;
-        font-weight: 600;
-        border-bottom: 2px solid ${theme.colors.primaryLightText};
     }
 `
 
