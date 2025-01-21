@@ -10,9 +10,9 @@ type FlexWrapperPropsType = {
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     display: flex;
-    flex-direction: ${props => props.direction || 'row'};
-    justify-content: ${props => props.justify || 'flex-start'};
-    align-items: ${props => props.align || 'stretch'};
-    flex-wrap: ${props => props.wrap || 'nowrap'};
-    gap: ${props => props.gap || '0'};
+    flex-direction: ${props => props.direction || undefined};
+    justify-content: ${props => props.justify || undefined};
+    align-items: ${props => props.align || undefined};
+    flex-wrap: ${props => props.wrap || undefined};
+    gap: ${props => props.gap || undefined};
 `
