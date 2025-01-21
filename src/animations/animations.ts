@@ -73,17 +73,19 @@ export const cvBtnAnimation = keyframes`
         outline-width: 5px;
         outline-color: ${theme.colors.secondaryBg};
         white-space: nowrap;
+        font-weight: 700;
     }
     50% {
         outline-width: 1px;
         outline-color: ${theme.colors.primaryLightAnim};
-        font-weight: 700;
+        font-weight: 500;
         scale: 1.1;
     }
     100% {
         outline-width: 5px;
-        outline-color: ${theme.colors.primaryBg};
+        outline-color: ${theme.colors.secondaryText};
         white-space: nowrap;
+        font-weight: 700;
     }
 `
 
