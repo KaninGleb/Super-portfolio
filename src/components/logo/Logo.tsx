@@ -35,6 +35,10 @@ const StyledLink = styled.a`
     }
     
     @media ${theme.media.tablet} {
+        position: absolute;
+        top: 22px;
+        left: 16px;
+
         &:hover {
             
         }
