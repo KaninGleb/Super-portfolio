@@ -1,10 +1,10 @@
-import {useEffect, useState} from "react";
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme.tsx";
+import {Container} from "../../../components/Container.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {useEffect, useState} from "react";
 import {Logo} from "../../../components/logo/Logo.tsx";
 import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Container} from "../../../components/Container.tsx";
-import {theme} from "../../../styles/Theme.tsx";
 import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
 
 const headerLinks = [
