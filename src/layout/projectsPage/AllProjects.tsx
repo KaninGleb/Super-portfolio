@@ -5,6 +5,9 @@ import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {projectsData, sectionsData} from "../../data/appData.ts";
 import {Project} from "../homePage/sections/projects/project/Project.tsx";
+import bgLeft from "../../assets/images/background/projects-page-bg-pseudo-left.svg";
+import bgRight from "../../assets/images/background/projects-page-bg-pseudo-right.svg";
+import {imagePulseAnimation} from "../../animations/animations.ts";
 
 export const AllProjects = () => {
     return (
@@ -38,6 +41,40 @@ export const AllProjects = () => {
 
 const StyledAllProjects = styled.section`
     margin-bottom: 106px;
+    position: relative;
+    overflow-x: clip;
+
+    &::before {
+        content: "";
+        background-image: url("${bgLeft}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 142px;
+        left: 0;
+        width: 170px;
+        height: 1720px;
+        animation: ${imagePulseAnimation} 2s infinite;
+    }
+
+    &::after {
+        content: "";
+        background-image: url("${bgRight}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        right: -60px;
+        width: 170px;
+        height: 1720px;
+        animation: ${imagePulseAnimation} 2s infinite;
+    }
+
+    @media ${theme.media.extraPageBgPseudoOff} {
+        &::before, &::after {
+            display: none;
+        }
+    }
     
     @media ${theme.media.tablet} {
         margin-bottom: 70px;
