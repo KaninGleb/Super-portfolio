@@ -54,12 +54,6 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
     
-    //@media (hover: none) {
-    //    * {
-    //        pointer-events: auto;
-    //    }
-    //}
-    
     @media (max-width: 768px) {
         * {
             animation: none !important;
@@ -68,7 +62,6 @@ export const GlobalStyles = createGlobalStyle`
         a:hover, button:hover {
             transition: none !important;
             transform: none !important;
-            background-color: inherit !important;
             scale: none !important;
             border-bottom: none !important;
         }
@@ -76,7 +69,6 @@ export const GlobalStyles = createGlobalStyle`
             transition: none !important;
             animation: none !important;
             transform: none !important;
-            
         }
     }
 `
