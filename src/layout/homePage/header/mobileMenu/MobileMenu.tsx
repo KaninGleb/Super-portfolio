@@ -252,6 +252,20 @@ const HeaderLink = styled.a`
             transform: scaleX(1);
         }
     }
+    
+    @media ${theme.media.tablet} {
+        &:hover {
+            color: ${theme.colors.primaryLightText};
+
+            span {
+                font-weight: inherit;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
 `
 
 const LanguageSelect = styled.select`
