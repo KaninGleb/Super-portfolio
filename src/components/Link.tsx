@@ -38,4 +38,10 @@ const StyledLink = styled(RouterLink)<LinkPropsType>`
                 props.outlineColor === theme.colors.primaryOutline ? theme.colors.secondaryHover : theme.colors.primaryHover};
         transform: scale(1.03);
     }
+    
+    @media ${theme.media.tablet} {
+        &:hover {
+            background-color: inherit;
+        }
+    }
 `

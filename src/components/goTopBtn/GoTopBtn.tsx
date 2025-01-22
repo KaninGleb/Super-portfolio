@@ -2,6 +2,7 @@ import {animateScroll as scroll} from 'react-scroll'
 import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
 import {useEffect, useState} from "react";
+import {theme} from "../../styles/Theme.tsx";
 
 export const GoTopBtn = () => {
 
@@ -21,7 +22,7 @@ export const GoTopBtn = () => {
         <>
             {showBtn && (
                 <div>
-                    <StyledGoTopBtn onClick={() => {
+                    <StyledGoTopBtn className={'bg-media-off'} onClick={() => {
                         scroll.scrollToTop({
                             duration: 1,
                             smooth: "easeInOutQuint"
@@ -49,5 +50,12 @@ const StyledGoTopBtn = styled.button`
     &:hover {
         background-color: rgba(0, 0, 0, 0.5);
         scale: 1.1;
+    }
+    
+    @media ${theme.media.tablet} { 
+        &:hover {
+            background-color: inherit;
+            scale: none;
+        }
     }
 `
