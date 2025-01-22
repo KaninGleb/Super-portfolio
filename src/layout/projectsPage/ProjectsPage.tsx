@@ -1,9 +1,9 @@
-import {Media} from "../media/Media.tsx";
-import {Header} from "../header/Header.tsx";
+import {Media} from "../homePage/media/Media.tsx";
+import {Header} from "../homePage/header/Header.tsx";
 import {TitleSection} from "./TitleSection.tsx";
 import {AllProjects} from "./AllProjects.tsx";
 import {SmallProjects} from "./SmallProjects.tsx";
-import {Footer} from "../footer/Footer.tsx";
+import {Footer} from "../homePage/footer/Footer.tsx";
 
 
 export const ProjectsPage = () => {

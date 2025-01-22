@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import {theme} from "../../../styles/Theme.tsx";
-import {Container} from "../../../components/Container.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import quotationMark from "../../../assets/images/quotation-mark.svg"
-import {font} from "../../../styles/CommonFont.tsx";
-import pseudoBgR from "../../../assets/images/sections-pseudo/background-preudo-right.svg"
-import {imagePulseAnimation} from "../../../animations/animations.ts";
+import {theme} from "../../../../styles/Theme.tsx";
+import {Container} from "../../../../components/Container.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import quotationMark from "../../../../assets/images/quotation-mark.svg"
+import {font} from "../../../../styles/CommonFont.tsx";
+import pseudoBgR from "../../../../assets/images/sections-pseudo/background-preudo-right.svg"
+import {imagePulseAnimation} from "../../../../animations/animations.ts";
 
 export const Testimony = () => {
     return (

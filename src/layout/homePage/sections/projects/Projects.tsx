@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import {theme} from "../../../styles/Theme.tsx";
-import {Container} from "../../../components/Container.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {projectsData, sectionsData} from "../../../data/appData.ts";
+import {theme} from "../../../../styles/Theme.tsx";
+import {Container} from "../../../../components/Container.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {SectionTitle} from "../../../../components/SectionTitle.tsx";
+import {projectsData, sectionsData} from "../../../../data/appData.ts";
 import {Project} from "./project/Project.tsx";
-import {font} from "../../../styles/CommonFont.tsx";
+import {font} from "../../../../styles/CommonFont.tsx";
 import {Link} from "react-router-dom";
 
 export const Projects = () => {

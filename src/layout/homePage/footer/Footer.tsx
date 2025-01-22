@@ -1,10 +1,10 @@
-import {theme} from "../../styles/Theme.tsx";
+import {theme} from "../../../styles/Theme.tsx";
 import styled from "styled-components";
-import {Container} from "../../components/Container.tsx";
-import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {Logo} from "../../components/logo/Logo.tsx";
-import {SocialList} from "../../components/SocialList.tsx";
-import {font} from "../../styles/CommonFont.tsx";
+import {Container} from "../../../components/Container.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Logo} from "../../../components/logo/Logo.tsx";
+import {SocialList} from "../../../components/SocialList.tsx";
+import {font} from "../../../styles/CommonFont.tsx";
 
 export const Footer = () => {
     return (

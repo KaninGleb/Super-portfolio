@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import {Container} from "../../../components/Container.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {sectionsData} from "../../../data/appData.ts";
+import {Container} from "../../../../components/Container.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {SectionTitle} from "../../../../components/SectionTitle.tsx";
+import {sectionsData} from "../../../../data/appData.ts";
 import {Skill} from "./skill/Skill.tsx";
-import {Photo} from "../../../components/Photo.tsx";
-import groupOfImages from "../../../assets/images/skills/skills-group.svg"
-import {imagePulseAnimation} from "../../../animations/animations.ts";
-import {theme} from "../../../styles/Theme.tsx";
+import {Photo} from "../../../../components/Photo.tsx";
+import groupOfImages from "../../../../assets/images/skills/skills-group.svg"
+import {imagePulseAnimation} from "../../../../animations/animations.ts";
+import {theme} from "../../../../styles/Theme.tsx";
 
 export const Skills = () => {
     return (

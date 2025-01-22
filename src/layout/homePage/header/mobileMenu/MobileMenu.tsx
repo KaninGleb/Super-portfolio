@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
-import { theme } from "../../../styles/Theme.tsx";
-import {SocialList} from "../../../components/SocialList.tsx";
-import {Logo} from "../../../components/logo/Logo.tsx";
+import { theme } from "../../../../styles/Theme.tsx";
+import {SocialList} from "../../../../components/SocialList.tsx";
+import {Logo} from "../../../../components/logo/Logo.tsx";
 import {useEffect, useState} from "react";
 
 type MenuPropsType = {

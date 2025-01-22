@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {theme} from "../../../../styles/Theme.tsx";
-import {StyledHr} from "../../../../components/StyledHr.tsx";
-import {shakeAnimation} from "../../../../animations/animations.ts";
+import {theme} from "../../../../../styles/Theme.tsx";
+import {StyledHr} from "../../../../../components/StyledHr.tsx";
+import {shakeAnimation} from "../../../../../animations/animations.ts";
 
 type SkillPropsType = {
     order?: number

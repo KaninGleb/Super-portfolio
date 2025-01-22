@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import {Link} from "../../../../components/Link.tsx";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import {theme} from "../../../../styles/Theme.tsx";
-import {gradientAnimation, shakeAnimation} from "../../../../animations/animations.ts";
+import {Link} from "../../../../../components/Link.tsx";
+import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
+import {theme} from "../../../../../styles/Theme.tsx";
+import {gradientAnimation, shakeAnimation} from "../../../../../animations/animations.ts";
 
 type LinkPropsType = {
     href: string

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {DecorativeLine} from "../../components/DecorativeLine.tsx";
-import {SocialList} from "../../components/SocialList.tsx";
-import {theme} from "../../styles/Theme.tsx";
+import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
+import {SocialList} from "../../../components/SocialList.tsx";
+import {theme} from "../../../styles/Theme.tsx";
 
 export const Media = () => {
     return (

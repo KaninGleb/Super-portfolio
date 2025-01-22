@@ -4,7 +4,7 @@ import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {projectsData, sectionsData} from "../../data/appData.ts";
-import {Project} from "../sections/projects/project/Project.tsx";
+import {Project} from "../homePage/sections/projects/project/Project.tsx";
 
 export const AllProjects = () => {
     return (
