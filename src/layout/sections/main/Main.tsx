@@ -3,13 +3,14 @@ import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Paragraph} from "../../../components/Paragraph.tsx";
+import {ContactBtn} from "../../../components/ContactBtn.tsx";
+import {CVBtn} from "../../../components/CVBtn.tsx";
+import CV from "../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf"
 import {textData} from "../../../data/appData.ts";
 import {Photo} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
 import logo from "../../../assets/images/main-pseudo/logo-outline.svg"
 import dotsForMain from "../../../assets/images/main-pseudo/dots-main-photo.svg"
-import {btnAnimation, cvBtnAnimation} from "../../../animations/animations.ts";
-import CV from "../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf"
 
 export const Main = () => {
     return (
@@ -20,8 +21,8 @@ export const Main = () => {
                         <MainTitle>Elias is a <span>web designer</span> and <span>front-end developer</span></MainTitle>
                         <Paragraph children={textData.main.paragraph} fontWeight={'400'}/>
                         <FlexWrapper gap={'20px'}>
-                            <StyledBtn type='submit'>Contact me!!</StyledBtn>
-                            <StyledCVBtn type='submit' href={CV} download>Download CV</StyledCVBtn>
+                            <ContactBtn type='submit'>Contact me!!</ContactBtn>
+                            <CVBtn type='submit' href={CV} download>Download CV</CVBtn>
                         </FlexWrapper>
                     </TextWrapper>
                     <PhotoWrapper direction='column'>
@@ -108,48 +109,6 @@ const MainTitle = styled.h2`
 
     span {
         color: ${theme.colors.secondaryText};
-    }
-`
-
-const StyledBtn = styled.button`
-    outline: 1px solid #c778dd;
-    padding: 8px 16px;
-    max-width: 148px;
-    width: 100%;
-    color: ${theme.colors.primaryText};
-    transition: .15s;
-    animation: ${btnAnimation} 5s infinite;
-    animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    
-    &:hover {
-        background-color: ${theme.colors.primaryHover};
-        scale: 1.05;
-    }
-    
-    @media ${theme.media.tablet} {
-        display: none;
-    }
-`
-
-const StyledCVBtn = styled.a`
-    outline: 1px solid ${theme.colors.secondaryOutline};
-    padding: 8px 16px;
-    max-width: 148px;
-    width: 100%;
-    color: ${theme.colors.primaryBg};
-    background-color: ${theme.colors.secondaryOutline};
-    transition: .15s;
-    animation: ${cvBtnAnimation} 5s infinite;
-    animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-
-    &:hover {
-        background-color: ${theme.colors.secondaryHover};
-        color: ${theme.colors.primaryText};
-        scale: 1.05;
-    }
-
-    @media ${theme.media.tablet} {
-        display: none;
     }
 `
 
