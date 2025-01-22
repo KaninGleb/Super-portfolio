@@ -4,10 +4,12 @@ import {HomePage} from "./layout/homePage/HomePage.tsx";
 import {ProjectsPage} from "./layout/projectsPage/ProjectsPage.tsx";
 import {AboutMePage} from "./layout/aboutMePage/AboutMePage.tsx";
 import {ContactsPage} from "./layout/contactsPage/ContactsPage.tsx";
+import {ScrollToTop} from "./common/ScrollToTop.tsx";
 
 function App() {
     return (
         <Router>
+            <ScrollToTop/>
             <div className="App">
                 <Routes>
                     <Route path="/" element={<HomePage/>}/>
