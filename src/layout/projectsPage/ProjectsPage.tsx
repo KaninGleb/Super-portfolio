@@ -1,7 +1,8 @@
 import {Media} from "../media/Media.tsx";
 import {Header} from "../header/Header.tsx";
-import {TitleSection} from "./allProjects/TitleSection.tsx";
-import {AllProjects} from "./allProjects/AllProjects.tsx";
+import {TitleSection} from "./TitleSection.tsx";
+import {AllProjects} from "./AllProjects.tsx";
+import {SmallProjects} from "./SmallProjects.tsx";
 
 
 export const ProjectsPage = () => {
@@ -11,6 +12,7 @@ export const ProjectsPage = () => {
             <Header/>
             <TitleSection/>
             <AllProjects/>
+            <SmallProjects/>
         </div>
     )
 }

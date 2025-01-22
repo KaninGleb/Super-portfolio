@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import {theme} from "../../../styles/Theme.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {sectionsData} from "../../../data/appData.ts";
-import {Container} from "../../../components/Container.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Paragraph} from "../../../components/Paragraph.tsx";
+import {theme} from "../../styles/Theme.tsx";
+import {SectionTitle} from "../../components/SectionTitle.tsx";
+import {sectionsData} from "../../data/appData.ts";
+import {Container} from "../../components/Container.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {Paragraph} from "../../components/Paragraph.tsx";
 
 export const TitleSection = () => {
     return (
