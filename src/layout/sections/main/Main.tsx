@@ -7,7 +7,7 @@ import {ContactBtn} from "../../../components/ContactBtn.tsx";
 import {CVBtn} from "../../../components/CVBtn.tsx";
 import CV from "../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf"
 import {textData} from "../../../data/appData.ts";
-import {Photo} from "../../../components/Photo.tsx";
+import {MyPhoto} from "../../../components/Photo.tsx";
 import photo from "../../../assets/images/MyImage.png"
 import logo from "../../../assets/images/main-pseudo/logo-outline.svg"
 import dotsForMain from "../../../assets/images/main-pseudo/dots-main-photo.svg"
@@ -26,7 +26,7 @@ export const Main = () => {
                         </FlexWrapper>
                     </TextWrapper>
                     <PhotoWrapper direction='column'>
-                        <Photo src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
+                        <MyPhoto src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
                         <PortfolioMessage>
                             <ColorBlock/>
                             <MessageTextWrapper>
