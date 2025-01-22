@@ -1,17 +1,16 @@
 import styled from "styled-components";
-import dots1 from "../../../assets/images/about-me-photo-pseudo/pseudo-1.svg";
-import dots2 from "../../../assets/images/about-me-photo-pseudo/pseudo-2.svg";
-import pseudoBgL from "../../../../assets/images/sections-pseudo/background-pseudo-left.svg"
+import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {Photo} from "../../../../components/Photo.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {Link} from "../../../../components/Link.tsx";
 import {sectionsData, textData} from "../../../../data/appData.ts";
-import aboutMePhoto from "../../../../assets/images/about-me-photo.png"
 import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
-import {theme} from "../../../../styles/Theme.tsx";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import {Photo} from "../../../../components/Photo.tsx";
+import pseudoBgL from "../../../../assets/images/sections-pseudo/background-pseudo-left.svg"
+import aboutMePhoto from "../../../../assets/images/about-me-photo.png"
+import bothPseudo from "../../../../assets/images/about-me-photo-pseudo/both-pseudo.svg";
 
 export const AboutMe = () => {
     return (
@@ -47,7 +46,7 @@ const StyledAboutMe = styled.section`
         background-repeat: no-repeat;
         position: absolute;
         top: 134px;
-        left: 0px;
+        left: 0;
         width: 160px;
         height: 680px;
         animation: ${imagePulseAnimation} 2s infinite;
@@ -77,7 +76,7 @@ const StyledFlexWrapper = styled(FlexWrapper)`
 
 const LeftSection = styled.div`
     p {
-        margin-bottom: 27px;
+        margin-bottom: 28px;
     }
 `
 
@@ -109,6 +108,21 @@ const RightSection = styled.div`
         transform: translateX(-50%);
         z-index: 1;
     }
+
+    &::before {
+        content: "";
+        position: absolute;
+            background-image: url("${bothPseudo}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 60px;
+        left: -5px;
+
+        width: 328px;
+        height: 276px;
+        animation: ${imagePulseAnimation} 2s infinite;
+        z-index: 999;
+    }
     
     @media ${theme.media.tablet} {
         margin: 0 auto;
@@ -126,40 +140,6 @@ const RightSection = styled.div`
 const StyledPhoto = styled(Photo)`
     display: block;
     position: relative;
-    
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     background-image: url("${dots2}");
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     top: 0px;
-    //     left: 0px;
-    //
-    //     width: 84px;
-    //     height: 84px;
-    //     box-shadow: 0 0 5px rgba(199, 120, 221, 1);
-    //     animation: ${pulseAnimation} 2s infinite;
-    //     transform: translateX(-50%);
-    //     z-index: 999;
-    // }
-    //
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     background-image: url("${dots1}");
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     top: 0px;
-    //     left: 0px;
-    //
-    //     width: 84px;
-    //     height: 84px;
-    //     box-shadow: 0 0 5px rgba(199, 120, 221, 1);
-    //     animation: ${pulseAnimation} 2s infinite;
-    //     transform: translateX(-50%);
-    //     z-index: 999;
-    // }
     
     @media ${theme.media.tablet} {
         
