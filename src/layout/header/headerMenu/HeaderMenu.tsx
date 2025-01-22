@@ -35,18 +35,20 @@ const StyledHeaderMenu = styled.nav`
 
 const StyledUl = styled.ul`
     display: flex;
+    align-items: center;
     gap: 32px;
 `
 
 const ListItem = styled.li`
     position: relative;
-    padding: 12px 0;
 `
 
 const HeaderLink = styled.a`
     display: inline-block;
     position: relative;
     transition: color 0.3s ease;
+    padding: 12px 0;
+    
     
     span {
         color: ${theme.colors.secondaryText};
@@ -107,11 +109,11 @@ const LanguageSelect = styled.select`
     }
     
     @media ${theme.media.tablet} {
-        color: ${theme.colors.primaryBg}; /* Замените someNewColor на нужный цвет */
+        color: ${theme.colors.primaryBg};
 
         option {
-            color: ${theme.colors.primaryText}; /* Замените на нужный цвет для опций */
-            background-color: ${theme.colors.primaryBg}; /* Замените на нужный цвет фона для опций */
+            color: ${theme.colors.primaryText};
+            background-color: ${theme.colors.primaryBg};
         }
     }
 `
