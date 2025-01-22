@@ -53,4 +53,30 @@ export const GlobalStyles = createGlobalStyle`
             scroll-behavior: auto !important;
         }
     }
+    
+    //@media (hover: none) {
+    //    * {
+    //        pointer-events: auto;
+    //    }
+    //}
+    
+    @media (max-width: 768px) {
+        * {
+            animation: none !important;
+            transition: none !important;
+        }
+        a:hover, button:hover {
+            transition: none !important;
+            transform: none !important;
+            background-color: inherit !important;
+            scale: none !important;
+            border-bottom: none !important;
+        }
+        *:hover {
+            transition: none !important;
+            animation: none !important;
+            transform: none !important;
+            
+        }
+    }
 `

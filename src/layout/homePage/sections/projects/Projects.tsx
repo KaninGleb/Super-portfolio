@@ -63,6 +63,12 @@ const ProjectsLink = styled(Link)`
         font-weight: 600;
         border-bottom: 2px solid ${theme.colors.primaryLightText};
     }
+    
+    @media ${theme.media.tablet} {
+        &:hover {
+            font-weight: 500;
+        }
+    }
 `
 
 const StyledFlexWrapper = styled(FlexWrapper)`

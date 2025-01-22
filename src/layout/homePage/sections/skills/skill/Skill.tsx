@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../../../../styles/Theme.tsx";
 import {StyledHr} from "../../../../../components/StyledHr.tsx";
-import {shakeAnimation} from "../../../../../animations/animations.ts";
 
 type SkillPropsType = {
     order?: number
@@ -21,8 +20,8 @@ export const Skill = (props: SkillPropsType) => {
                 ))}
             </SkillDescription>
         </StyledSkill>
-    );
-};
+    )
+}
 
 const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
     order: ${props => props.order};
@@ -52,9 +51,6 @@ const SkillTitle = styled.h3`
     display: inline-block;
     font-size: 16px;
     transition: animation 0.5s ease-in-out;
-    &:hover {
-        animation: ${shakeAnimation} 0.5s ease-in-out;
-    }
 
     @media ${theme.media.tablet} {
         font-size: 20px;
@@ -74,7 +70,4 @@ const SkillDescription = styled.ul`
 
 const FlexItem = styled.li`
     color: ${theme.colors.primaryLightText};
-    &:hover {
-        animation: ${shakeAnimation} 0.5s ease-in-out;
-    }
-`;
+`

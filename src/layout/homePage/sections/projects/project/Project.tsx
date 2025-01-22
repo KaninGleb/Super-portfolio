@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {Link} from "../../../../../components/Link.tsx";
 import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
 import {theme} from "../../../../../styles/Theme.tsx";
-import {gradientAnimation, shakeAnimation} from "../../../../../animations/animations.ts";
+import {gradientAnimation} from "../../../../../animations/animations.ts";
 
 type LinkPropsType = {
     href: string
@@ -135,14 +135,6 @@ const Software = styled.ul`
     gap: 16px 8px;
     color: ${theme.colors.primaryLightText};
     cursor: default;
-
-    li {
-        transition: 0.2s;
-    }
-
-    li:hover {
-        animation: ${shakeAnimation} 0.5s ease-in-out;
-    }
 `
 
 const StyledHr = styled.hr`
@@ -156,19 +148,11 @@ const Title = styled.h3`
     font-weight: 500;
     font-size: 24px;
     transition: 0.2s;
-
-    &:hover {
-        animation: ${shakeAnimation} 0.5s ease-in-out;
-    }
 `
 
 const Text = styled.span`
     color: ${theme.colors.primaryLightText};
     transition: 0.2s;
-    
-    &:hover {
-        animation: ${shakeAnimation} 0.5s ease-in-out;
-    }
 `
 
 const ButtonsFlexWrapper = styled(FlexWrapper)`

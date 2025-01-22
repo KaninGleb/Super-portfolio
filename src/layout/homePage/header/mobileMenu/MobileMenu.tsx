@@ -3,6 +3,9 @@ import { theme } from "../../../../styles/Theme.tsx";
 import {SocialList} from "../../../../components/SocialList.tsx";
 import {Logo} from "../../../../components/logo/Logo.tsx";
 import {useEffect, useState} from "react";
+import {ContactBtn} from "../../../../components/ContactBtn.tsx";
+import {CVBtn} from "../../../../components/CVBtn.tsx";
+import CV from "../../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf";
 
 type MenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
@@ -40,6 +43,10 @@ export const MobileMenu = (props: MenuPropsType) => {
                             </HeaderLink>
                         </ListItem>
                     ))}
+                    <ListItem>
+                        <StyledContactBtn type='submit'>Contact me!!</StyledContactBtn>
+                        <StyledCVBtn type='submit' href={CV} download>Download CV</StyledCVBtn>
+                    </ListItem>
                     <ListItem onClick={ (e)=>e.stopPropagation() }>
                         <LanguageSelect aria-label='Language change' >
                             <option>EN</option>
@@ -168,9 +175,9 @@ const StyledUl = styled.ul`
     flex-direction: column;
     gap: 24px;
     
-    li {
-        max-height: 64px;
-    }
+    //li {
+    //    max-height: 64px;
+    //}
     
     @media ${theme.media.tablet} {
         align-items: center;
@@ -189,6 +196,25 @@ const StyledSocialList = styled(SocialList)`
 
 const ListItem = styled.li`
     position: relative;
+`
+
+const StyledContactBtn = styled(ContactBtn)`
+    font-size: 24px;
+    max-width: 300px;
+    margin: 5px 0 10px;
+    
+    @media ${theme.media.tablet} {
+        display: block;
+    }
+`
+
+const StyledCVBtn = styled(CVBtn)`
+    font-size: 24px;
+    max-width: 300px;
+    margin-bottom: 20px;
+    @media ${theme.media.tablet} {
+        display: block;
+    }
 `
 
 const HeaderLink = styled.a`
