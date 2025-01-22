@@ -1,16 +1,17 @@
 import styled from "styled-components";
+import {theme} from "../../../../styles/Theme.tsx";
+import {Container} from "../../../../components/Container.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {Paragraph} from "../../../../components/Paragraph.tsx";
+import {textData} from "../../../../data/appData.ts";
+import {ContactBtn} from "../../../../components/ContactBtn.tsx";
+import {CVBtn} from "../../../../components/CVBtn.tsx";
 import CV from "../../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf"
+import {MyPhoto} from "../../../../components/Photo.tsx";
 import photo from "../../../../assets/images/MyImage.png"
 import logo from "../../../../assets/images/main-pseudo/logo-outline.svg"
 import dotsForMain from "../../../../assets/images/main-pseudo/dots-main-photo.svg"
-import {Container} from "../../../../components/Container.tsx";
-import {Paragraph} from "../../../../components/Paragraph.tsx";
-import {textData} from "../../../../data/appData.ts";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import {ContactBtn} from "../../../../components/ContactBtn.tsx";
-import {CVBtn} from "../../../../components/CVBtn.tsx";
-import {MyPhoto} from "../../../../components/Photo.tsx";
-import {theme} from "../../../../styles/Theme.tsx";
+import {imagePulseAnimation} from "../../../../animations/animations.ts";
 
 export const Main = () => {
     return (
@@ -84,6 +85,7 @@ const PhotoWrapper = styled(FlexWrapper)`
         height: auto;
         aspect-ratio: 1/1;
         z-index: 0;
+        animation: ${imagePulseAnimation} 2s infinite;
     }
     
     &::after {
@@ -99,6 +101,7 @@ const PhotoWrapper = styled(FlexWrapper)`
         height: auto;
         aspect-ratio: 1/1;
         z-index: 1;
+        animation: ${imagePulseAnimation} 2s infinite;
     }
 `
 
