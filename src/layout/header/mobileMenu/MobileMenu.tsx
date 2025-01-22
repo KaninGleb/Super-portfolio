@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 import { theme } from "../../../styles/Theme.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
 import {Logo} from "../../../components/logo/Logo.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 type MenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
@@ -12,6 +12,18 @@ type MenuPropsType = {
 export const MobileMenu = (props: MenuPropsType) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const onBurgerBtnClick = () => { setMenuIsOpen( !menuIsOpen ) };
+    useEffect(() => {
+        if (menuIsOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [menuIsOpen]);
+
     return (
         <StyledMobileMenu>
             <BurgerButton isOpen={menuIsOpen} onClick={ onBurgerBtnClick }>
@@ -28,8 +40,8 @@ export const MobileMenu = (props: MenuPropsType) => {
                             </HeaderLink>
                         </ListItem>
                     ))}
-                    <ListItem>
-                        <LanguageSelect aria-label='Language change'>
+                    <ListItem onClick={ (e)=>e.stopPropagation() }>
+                        <LanguageSelect aria-label='Language change' >
                             <option>EN</option>
                             <option>RU</option>
                         </LanguageSelect>
