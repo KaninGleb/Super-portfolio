@@ -26,7 +26,7 @@ export const AllProjects = () => {
                                 text={project.text}
                                 src={project.src}
                                 links={project.links}
-                                mWidth={'330px'}
+                                maxWidth={'330px'}
                             />
                         ))}
                     </StyledFlexWrapper>

@@ -18,12 +18,12 @@ type ProjectPropsType = {
     title: string
     text: string
     links: LinkPropsType[]
-    mWidth?: string
+    maxWidth?: string
 }
 
 export const Project = (props: ProjectPropsType) => {
     return (
-        <StyledWork mWidth={props.mWidth}>
+        <StyledWork maxWidth={props.maxWidth}>
             <StyledImageWrapper>
                 <Image src={props.src} alt=""/>
                 <Overlay/>
@@ -67,10 +67,10 @@ const Overlay = styled.div`
     animation: ${gradientAnimation} 3s infinite;
 `
 
-const StyledWork = styled.div<{mWidth?: string}>`
+const StyledWork = styled.div<{maxWidth?: string}>`
     outline: 1px solid ${theme.colors.primaryOutline};
     min-width: 330px;
-    max-width: ${props => props.mWidth || '490px'};
+    max-width: ${props => props.maxWidth || '490px'};
     width: 100%;
     height: 100%;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
@@ -89,9 +89,8 @@ const StyledWork = styled.div<{mWidth?: string}>`
     @media ${theme.media.width1044} {
         display: flex;
         flex-direction: column;
-        //flex-grow: 1;
         flex: 1;
-        min-width: 230px;
+        min-width: 238px;
         max-width: unset;
         
     }
