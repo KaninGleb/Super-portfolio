@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import {Container} from "../../../components/Container.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {Paragraph} from "../../../components/Paragraph.tsx";
-import {sectionsData, textData} from "../../../data/appData.ts";
-import {theme} from "../../../styles/Theme.tsx";
-import {SocialList} from "../../../components/SocialList.tsx";
-import {Link} from "../../../components/Link.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {Container} from "../../../../components/Container.tsx";
+import {SectionTitle} from "../../../../components/SectionTitle.tsx";
+import {Paragraph} from "../../../../components/Paragraph.tsx";
+import {Link} from "../../../../components/Link.tsx";
+import {sectionsData, textData} from "../../../../data/appData.ts";
+import {SocialList} from "../../../../components/SocialList.tsx";
+import {theme} from "../../../../styles/Theme.tsx";
 
 export const Contacts = () => {
     return (

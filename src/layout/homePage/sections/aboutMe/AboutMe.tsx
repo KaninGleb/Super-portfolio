@@ -1,17 +1,17 @@
 import styled from "styled-components";
-import {Container} from "../../../components/Container.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {sectionsData, textData} from "../../../data/appData.ts";
-import {Paragraph} from "../../../components/Paragraph.tsx";
-import aboutMePhoto from "../../../assets/images/about-me-photo.png";
-import {Link} from "../../../components/Link.tsx";
-import {Photo} from "../../../components/Photo.tsx";
-import {theme} from "../../../styles/Theme.tsx";
-import {imagePulseAnimation, pulseAnimation} from "../../../animations/animations.ts";
 import dots1 from "../../../assets/images/about-me-photo-pseudo/pseudo-1.svg";
 import dots2 from "../../../assets/images/about-me-photo-pseudo/pseudo-2.svg";
-import pseudoBgL from "../../../assets/images/sections-pseudo/background-pseudo-left.svg"
+import pseudoBgL from "../../../../assets/images/sections-pseudo/background-pseudo-left.svg"
+import {Container} from "../../../../components/Container.tsx";
+import {SectionTitle} from "../../../../components/SectionTitle.tsx";
+import {Paragraph} from "../../../../components/Paragraph.tsx";
+import {Link} from "../../../../components/Link.tsx";
+import {sectionsData, textData} from "../../../../data/appData.ts";
+import aboutMePhoto from "../../../../assets/images/about-me-photo.png"
+import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
+import {theme} from "../../../../styles/Theme.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {Photo} from "../../../../components/Photo.tsx";
 
 export const AboutMe = () => {
     return (
