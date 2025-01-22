@@ -22,5 +22,6 @@ export const Photo = styled.img<PhotoPropsType>`
     calc((100vw - 360px) / (1024 - 360) * (${props => props.Wmax} - ${props => props.Wmin}) + ${props => props.Wmin}px),
     ${props => props.Wmax}px);
     object-fit: cover;
+    height: auto;
     z-index: 1;
 `
