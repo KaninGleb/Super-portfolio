@@ -117,20 +117,21 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     width: 24px;
     height: 24px;
     z-index: 9999999;
-    
-    span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background-color: ${theme.colors.primaryOutline};
-        position: absolute;
-        left: 0;
-        bottom: 12px;
 
-        ${props => props.isOpen && css<{ isOpen: boolean }>`
-            background-color: rgba(255, 255, 255, 0);
-        `}
+    span {
+        // display: block;
+        // width: 24px;
+        // height: 2px;
+        // background-color: ${theme.colors.primaryOutline};
+        // position: absolute;
+        // left: 0;
+        // bottom: 12px;
+        // transition: background-color 0.3s ease, transform 0.3s ease;
+        // ${props => props.isOpen && css<{ isOpen: boolean }>`}
+        //     background-color: rgba(255, 255, 255, 0);
+        // `}
         
+
         &::before {
             content: '';
             display: block;
@@ -138,13 +139,14 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             height: 2px;
             background-color: ${theme.colors.primaryOutline};
             position: absolute;
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(-45deg) translateY(0);
-        `}
+            `}
         }
-        
+
         &::after {
             content: '';
             display: block;
@@ -152,15 +154,17 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             height: 2px;
             background-color: ${theme.colors.primaryOutline};
             position: absolute;
-            transform: translateY(10px);
+            right: 0;
+            transform: translateY(4px);
+            transition: transform 0.3s ease, width 0.2s ease;
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(45deg) translateY(0);
                 width: 24px;
-        `}
+            `}
         }
     }
-    
+
     @media ${theme.media.tablet} {
         top: 16px;
     }
