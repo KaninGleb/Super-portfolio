@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.primaryText};
-        min-width: 360px;
+        min-width: 330px;
     }
     
     a {
