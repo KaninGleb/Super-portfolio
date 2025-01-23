@@ -7,6 +7,7 @@ import {ContactBtn} from "../ContactBtn.tsx";
 import {CVBtn} from "../CVBtn.tsx";
 import CV from "../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf";
 import {Link} from "react-router-dom";
+import {Modal} from "../Modal.tsx";
 
 type RouterMobileMenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
@@ -28,6 +29,12 @@ export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
         };
     }, [menuIsOpen]);
 
+    const [isModalVisible, setModalVisible] = useState(false);
+
+    const handleToggleModal = () => {
+        setModalVisible(!isModalVisible);
+    };
+
     return (
         <StyledRouterMobileMenu>
             <BurgerButton isOpen={menuIsOpen} onClick={ onBurgerBtnClick }>
@@ -45,7 +52,7 @@ export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
                         </ListItem>
                     ))}
                     <ListItem>
-                        <StyledContactBtn type='submit'>Contact me!!</StyledContactBtn>
+                        <StyledContactBtn type='button' onClick={handleToggleModal}>Contact me!!</StyledContactBtn>
                         <StyledCVBtn type='submit' href={CV} download>Download CV</StyledCVBtn>
                     </ListItem>
                     <ListItem onClick={ (e)=>e.stopPropagation() }>
@@ -62,6 +69,7 @@ export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
                                     iconSize={'64px'}
                 />
             </MobileMenuPopup>
+            <Modal isVisible={isModalVisible} onClose={handleToggleModal} />
         </StyledRouterMobileMenu>
     )
 }

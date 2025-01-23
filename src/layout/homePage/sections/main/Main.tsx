@@ -1,19 +1,27 @@
 import styled from "styled-components";
+import { useState } from "react";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {textData} from "../../../../data/appData.ts";
-import {ContactBtn} from "../../../../components/ContactBtn.tsx";
+import {ContactBtn} from "../../../../components/ContactBtn.tsx"; // Adjust the import path
 import {CVBtn} from "../../../../components/CVBtn.tsx";
 import CV from "../../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf"
 import {MyPhoto} from "../../../../components/Photo.tsx";
 import photo from "../../../../assets/images/MyImage.png"
 import logo from "../../../../assets/images/main-pseudo/logo-outline.svg"
 import dotsForMain from "../../../../assets/images/main-pseudo/dots-main-photo.svg"
+import {Modal} from "../../../../components/Modal.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
 
 export const Main = () => {
+    const [isModalVisible, setModalVisible] = useState(false);
+
+    const handleToggleModal = () => {
+        setModalVisible(!isModalVisible);
+    };
+
     return (
         <StyledMain>
             <Container>
@@ -22,7 +30,7 @@ export const Main = () => {
                         <MainTitle>Elias is a <span>web designer</span> and <span>front-end developer</span></MainTitle>
                         <Paragraph children={textData.main.paragraph} fontWeight={'400'}/>
                         <FlexWrapper gap={'20px'}>
-                            <ContactBtn type='submit'>Contact me!!</ContactBtn>
+                            <ContactBtn type='button' onClick={handleToggleModal}>Contact me!!</ContactBtn>
                             <CVBtn type='submit' href={CV} download>Download CV</CVBtn>
                         </FlexWrapper>
                     </TextWrapper>
@@ -37,9 +45,10 @@ export const Main = () => {
                     </PhotoWrapper>
                 </StyledFlexWrapper>
             </Container>
+            <Modal isVisible={isModalVisible} onClose={handleToggleModal} />
         </StyledMain>
-    )
-}
+    );
+};
 
 const StyledMain = styled.section`
     margin-bottom: 112px;
