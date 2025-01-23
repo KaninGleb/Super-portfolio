@@ -16,7 +16,7 @@ export const headerLinks = [
 export const routerLinksData = [
     { name: 'home', id: ''},
     { name: 'projects', id: 'projects'},
-    { name: 'skills', id: 'about-me'},
+    // { name: 'skills', id: 'about-me'},
     { name: 'about-me', id: 'about-me'},
     { name: 'contacts', id: 'contacts'},
 ]
