@@ -90,9 +90,12 @@ const ContentFlexWrapper = styled(FlexWrapper)`
 `
 
 const StyledFlexWrapper = styled(FlexWrapper)`
+    gap: 30px;
+    
+    
     @media ${theme.media.tablet} {
         flex-wrap: wrap;
-        gap: 30px;
+        
     }
 `
 
@@ -102,6 +105,19 @@ const LeftSection = styled(FlexWrapper)`
 `
 
 const RightSection = styled(FlexWrapper)`
+    @media ${theme.media.contactsWrap} {
+        flex-wrap: wrap-reverse;
+        justify-content: flex-end;
+    }
+
+    @media ${theme.media.tablet} {
+        flex-wrap: unset;
+        justify-content: unset;
+    }
+
+    @media ${theme.media.mobile} {
+        flex-direction: column-reverse;
+    }
 `
 
 const SupportWrapper = styled(FlexWrapper)`
