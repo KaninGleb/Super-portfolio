@@ -5,8 +5,8 @@ import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {projectsData, sectionsData} from "../../data/appData.ts";
 import {Project} from "../homePage/sections/projects/project/Project.tsx";
-import bgLeft from "../../assets/images/background/projects-page-bg-pseudo-left.svg";
-import bgRight from "../../assets/images/background/projects-page-bg-pseudo-right.svg";
+import bgLeft from "../../assets/images/background/projects-page/projects-page-bg-pseudo-left.svg";
+import bgRight from "../../assets/images/background/projects-page/projects-page-bg-pseudo-right.svg";
 import {imagePulseAnimation} from "../../animations/animations.ts";
 
 export const AllProjects = () => {
