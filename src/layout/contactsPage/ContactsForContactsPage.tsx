@@ -5,6 +5,10 @@ import {Paragraph} from "../../components/Paragraph.tsx";
 import {SocialList} from "../../components/SocialList.tsx";
 import {theme} from "../../styles/Theme.tsx";
 import {textData} from "../../data/appData.ts";
+import bgLeft from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-left.svg";
+import bgRight from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-right.svg";
+
+import {imagePulseAnimation} from "../../animations/animations.ts";
 
 
 export const ContactsForContactsPage = () => {
@@ -43,6 +47,40 @@ export const ContactsForContactsPage = () => {
 
 const StyledContactsForContactsPage = styled.section`
     margin-bottom: 24px;
+    position: relative;
+    overflow-x: clip;
+
+    &::before {
+        content: "";
+        background-image: url("${bgLeft}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 160px;
+        left: 0;
+        width: 160px;
+        height: 976px;
+        animation: ${imagePulseAnimation} 2s infinite;
+    }
+
+    &::after {
+        content: "";
+        background-image: url("${bgRight}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        right: -90px;
+        width: 170px;
+        height: 1240px;
+        animation: ${imagePulseAnimation} 2s infinite;
+    }
+
+    @media ${theme.media.bgPseudoOff} {
+        &::before, &::after {
+            display: none;
+        }
+    }
 `
 
 const ContentFlexWrapper = styled(FlexWrapper)`
