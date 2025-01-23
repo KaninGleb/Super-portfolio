@@ -1,14 +1,16 @@
 import {theme} from "../../../styles/Theme.tsx";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Logo} from "../../../components/logo/Logo.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
 import {font} from "../../../styles/CommonFont.tsx";
 
-export const Footer = () => {
+type FooterType = {isAbsolute?: boolean};
+
+export const Footer = (props:FooterType) => {
     return (
-        <StyledFooter>
+        <StyledFooter isAbsolute={props.isAbsolute}>
             <FooterContainer>
                 <BothSections justify="space-between">
                     <LeftSection>
@@ -35,11 +37,17 @@ export const Footer = () => {
     )
 }
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled.footer<FooterType>`
     text-align: center;
     margin: 145px 0 32px;
     border-top: 1px solid ${theme.colors.primaryOutline};
-    
+
+    ${props => props.isAbsolute && css`
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    `
+    }
     h3 {
         font-weight: 500;
         font-size: 24px;
@@ -86,16 +94,3 @@ const LeftSection = styled.div`
 const RightSection = styled(FlexWrapper)`
 
 `
-
-// const SocialList = styled.ul`
-//     display: flex;
-//     gap: 8px;
-// `
-
-// const SocialItem = styled.li`
-//
-// `
-//
-// const SocialLink = styled.a`
-//     display: inline-block;
-// `
