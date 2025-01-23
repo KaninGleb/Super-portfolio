@@ -6,16 +6,9 @@ import {useEffect, useState} from "react";
 import {Logo} from "../../../components/logo/Logo.tsx";
 import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
 import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
+import {headerLinks} from "../../../data/appData.ts";
 
-const headerLinks = [
-    { name: 'home', id: ''},
-    { name: 'projects', id: 'projects'},
-    { name: 'skills', id: 'skills'},
-    { name: 'about-me', id: 'about-me'},
-    { name: 'contacts', id: 'contacts'},
-]
-
-type StyledHeaderProps = {
+type HeaderPropsType = {
     isScrolled: boolean;
 }
 
@@ -49,7 +42,7 @@ export const Header = () => {
     )
 }
 
-const StyledHeader = styled.header<StyledHeaderProps>`
+const StyledHeader = styled.header<HeaderPropsType>`
     margin-bottom: 62px;
     position: sticky;
     top: 0;
@@ -62,7 +55,7 @@ const StyledHeader = styled.header<StyledHeaderProps>`
     }
 `
 
-const MarginWrapper = styled(FlexWrapper)<StyledHeaderProps>`
+const MarginWrapper = styled(FlexWrapper)<HeaderPropsType>`
     padding: ${({ isScrolled }) => (isScrolled ? '0' : '18px 0 8px')};
     transition: padding 0.3s ease;
 
