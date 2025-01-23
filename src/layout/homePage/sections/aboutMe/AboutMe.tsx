@@ -24,7 +24,7 @@ export const AboutMe = () => {
                         <Paragraph children={textData.aboutMe.paragraph1}/>
                         <Paragraph children={textData.aboutMe.paragraph2}/>
                         <Paragraph children={textData.aboutMe.paragraph3}/>
-                        <Link to="/about" children={'Read more ->'} mWidth={'148px'}/>
+                        <Link to="/about-me" children={'Read more ->'} mWidth={'148px'}/>
                     </LeftSection>
                     <RightSection>
                         <StyledPhoto src={aboutMePhoto} Wmax={338} Wmin={250} alt="About Me Photo"/>
