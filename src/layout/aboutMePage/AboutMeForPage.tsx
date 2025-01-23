@@ -31,8 +31,9 @@ export const AboutMeForPage = () => {
 }
 
 const StyledAboutMeForPage = styled.section`
-    margin-bottom: 112px;
+    margin-bottom: 42px;
     position: relative;
+    overflow-x: clip;
 
     &::before {
         content: "";
@@ -64,10 +65,6 @@ const StyledAboutMeForPage = styled.section`
         &::before, &::after {
             display: none;
         }
-    }
-    
-    @media ${theme.media.tablet} {
-        margin-bottom: 70px;
     }
 `
 

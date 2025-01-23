@@ -31,4 +31,8 @@ export const TitleSection = (props: TitleSectionPropsType) => {
 
 const StyledTitleSection = styled.section`
     margin-bottom: 68px;
+    
+    @media ${theme.media.tablet} {
+        margin-bottom: 40px;
+    }
 `
