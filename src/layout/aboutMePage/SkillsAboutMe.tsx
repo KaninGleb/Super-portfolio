@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import {theme} from "../styles/Theme.tsx";
-import {Container} from "../components/Container.tsx";
-import {FlexWrapper} from "../components/FlexWrapper.tsx";
-import {SectionTitle} from "../components/SectionTitle.tsx";
-import {sectionsData, skillsData} from "../data/appData.ts";
-import {Skill} from "./homePage/sections/skills/skill/Skill.tsx";
+import {theme} from "../../styles/Theme.tsx";
+import {Container} from "../../components/Container.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {SectionTitle} from "../../components/SectionTitle.tsx";
+import {sectionsData, skillsData} from "../../data/appData.ts";
+import {Skill} from "../homePage/sections/skills/skill/Skill.tsx";
 
 export const SkillsAboutMe = () => {
     return (

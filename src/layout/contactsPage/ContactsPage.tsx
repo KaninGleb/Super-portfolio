@@ -1,8 +1,15 @@
+import {Media} from "../homePage/media/Media.tsx";
+import {Header} from "../homePage/header/Header.tsx";
+import {sectionsData} from "../../data/appData.ts";
+import {TitleSection} from "../projectsPage/TitleSection.tsx";
 
 export const ContactsPage = () => {
     return (
         <div>
-            <h2 style={{fontSize: '100px', textAlign: "center"}}>Contacts Page</h2>
+            <Media/>
+            <Header/>
+            <TitleSection section={sectionsData.contactsPage.contacts}/>
+
         </div>
     )
 }
