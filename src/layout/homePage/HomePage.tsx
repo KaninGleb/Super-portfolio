@@ -1,5 +1,5 @@
 import {Media} from "./media/Media.tsx";
-import {Header} from "./header/Header.tsx";
+import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {Main} from "./sections/main/Main.tsx";
 import {Testimony} from "./sections/testimony/Testimony.tsx";
 import {Projects} from "./sections/projects/Projects.tsx";
@@ -13,7 +13,7 @@ export const HomePage = () => {
     return (
         <div>
             <Media/>
-            <Header/>
+            <RouterHeader/>
             <Main/>
             <Testimony/>
             <Projects/>

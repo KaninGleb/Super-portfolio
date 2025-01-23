@@ -1,20 +1,26 @@
+import styled from "styled-components";
 import {Media} from "../homePage/media/Media.tsx";
-import {Header} from "../homePage/header/Header.tsx";
-import {sectionsData} from "../../data/appData.ts";
+import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
+import {sectionsData} from "../../data/appData.ts";
 import {ContactsForContactsPage} from "./ContactsForContactsPage.tsx";
 import {AllMedia} from "./AllMedia.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";
 
 export const ContactsPage = () => {
     return (
-        <div>
+        <StyledDiv>
             <Media/>
-            <Header/>
+            <RouterHeader/>
             <TitleSection section={sectionsData.contactsPage.contacts}/>
             <ContactsForContactsPage/>
             <AllMedia/>
-            <Footer/>
-        </div>
+            <Footer isAbsolute={true}/>
+        </StyledDiv>
     )
 }
+
+const StyledDiv = styled.div`
+    position: relative;
+    min-height: 100vh;
+`
