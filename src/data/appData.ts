@@ -207,3 +207,28 @@ export const smallProjectsData = {
         ]
     },
 }
+
+export const skillsData = [
+    {
+        title: 'Languages',
+        description: ['TypeScript', 'Lua', 'Python', 'JavaScript']
+    },
+    {
+        title: 'Other',
+        description: ['HTML', 'CSS', 'EJS', 'SCSS', 'REST', 'Jinja']
+    },
+    {
+        title: 'Tools',
+        description: ['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git Font Awesome'],
+        maxWidth: '196px',
+    },
+    {
+        title: 'Databases',
+        description: ['SQLite', 'PostgreSQL', 'Mongo']
+    },
+    {
+        title: 'Frameworks',
+        maxWidth: '196px',
+        description: ['React', 'Vue', 'Disnake', 'Discord.js', 'Flask', 'Express.js']
+    },
+]
