@@ -16,6 +16,7 @@ type SocialListPropsType = {
     iconSize?: string
     displayFlex?: boolean
     direction?: string
+    wrap?: string
     gap?: string
     gapBetween?: string
 }
@@ -23,6 +24,7 @@ type SocialListPropsType = {
 type FlexPropsType = {
     displayFlex?: boolean
     direction?: string
+    wrap?: string
     gap?: string
 }
 
@@ -34,6 +36,7 @@ export const SocialList = (props: SocialListPropsType) => {
     return (
         <StyledSocialList displayFlex={props.displayFlex}
                             direction={props.direction}
+                            wrap={props.wrap}
                             gap={props.gap}>
             {props.iconIds.map((itemId, index) => {
                 const socialItem = socialData.find(item => item.id === itemId);
@@ -63,8 +66,9 @@ export const SocialList = (props: SocialListPropsType) => {
 
 const StyledSocialList = styled.ul<FlexPropsType>`
     display: ${props => props.displayFlex ? 'flex' : ''};
-    flex-direction: ${props => props.direction};
-    gap: ${props => props.gap || ''};
+    flex-direction: ${props => props.direction || undefined};
+    flex-wrap: ${props => props.wrap || undefined};
+    gap: ${props => props.gap || undefined};
 `
 
 const SocialItem = styled.li`
