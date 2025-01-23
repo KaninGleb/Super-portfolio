@@ -4,6 +4,7 @@ import {TitleSection} from "../projectsPage/TitleSection.tsx";
 import {sectionsData} from "../../data/appData.ts";
 import {AboutMeForPage} from "./AboutMeForPage.tsx";
 import {SkillsAboutMe} from "../SkillsAboutMe.tsx";
+import {MyFunFacts} from "./MyFunFacts/MyFunFacts.tsx";
 
 export const AboutMePage = () => {
     return (
@@ -13,7 +14,7 @@ export const AboutMePage = () => {
             <TitleSection section={sectionsData.aboutMePage.aboutMe}/>
             <AboutMeForPage/>
             <SkillsAboutMe/>
-
+            <MyFunFacts/>
         </div>
     )
 }
