@@ -1,5 +1,5 @@
 import {Media} from "../homePage/media/Media.tsx";
-import {Header} from "../homePage/header/Header.tsx";
+import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {TitleSection} from "./TitleSection.tsx";
 import {AllProjects} from "./AllProjects.tsx";
 import {SmallProjects} from "./SmallProjects.tsx";
@@ -12,7 +12,7 @@ export const ProjectsPage = () => {
     return (
         <div>
             <Media/>
-            <Header/>
+            <RouterHeader/>
             <TitleSection section={sectionsData.headerProjects}/>
             <AllProjects/>
             <SmallProjects/>
