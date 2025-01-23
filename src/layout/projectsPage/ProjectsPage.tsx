@@ -4,6 +4,7 @@ import {TitleSection} from "./TitleSection.tsx";
 import {AllProjects} from "./AllProjects.tsx";
 import {SmallProjects} from "./SmallProjects.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";
+import {sectionsData} from "../../data/appData.ts";
 
 
 export const ProjectsPage = () => {
@@ -11,7 +12,7 @@ export const ProjectsPage = () => {
         <div>
             <Media/>
             <Header/>
-            <TitleSection/>
+            <TitleSection section={sectionsData.headerProjects}/>
             <AllProjects/>
             <SmallProjects/>
             <Footer/>
