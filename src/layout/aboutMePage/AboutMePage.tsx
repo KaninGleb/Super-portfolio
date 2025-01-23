@@ -5,6 +5,7 @@ import {sectionsData} from "../../data/appData.ts";
 import {AboutMeForPage} from "./AboutMeForPage.tsx";
 import {SkillsAboutMe} from "../SkillsAboutMe.tsx";
 import {MyFunFacts} from "./MyFunFacts/MyFunFacts.tsx";
+import {Footer} from "../homePage/footer/Footer.tsx";
 
 export const AboutMePage = () => {
     return (
@@ -15,6 +16,7 @@ export const AboutMePage = () => {
             <AboutMeForPage/>
             <SkillsAboutMe/>
             <MyFunFacts/>
+            <Footer/>
         </div>
     )
 }
