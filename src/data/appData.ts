@@ -5,6 +5,14 @@ import kahoot from "../assets/images/projects/project-3.svg";
 import kotikBot from "../assets/images/projects/project-4.svg";
 import portfolio from "../assets/images/projects/project-5.svg";
 
+export const routerLinksData = [
+    { name: 'home', id: ''},
+    { name: 'projects', id: 'projects'},
+    { name: 'skills', id: 'about-me'},
+    { name: 'about-me', id: 'about-me'},
+    { name: 'contacts', id: 'contacts'},
+]
+
 export const textData = {
     main: {
         paragraph: 'He crafts responsive websites where technologies meet creativity',
