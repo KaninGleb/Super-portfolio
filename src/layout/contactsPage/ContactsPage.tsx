@@ -3,6 +3,7 @@ import {Header} from "../homePage/header/Header.tsx";
 import {sectionsData} from "../../data/appData.ts";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
 import {ContactsForContactsPage} from "./ContactsForContactsPage.tsx";
+import {AllMedia} from "./AllMedia.tsx";
 
 export const ContactsPage = () => {
     return (
@@ -11,6 +12,7 @@ export const ContactsPage = () => {
             <Header/>
             <TitleSection section={sectionsData.contactsPage.contacts}/>
             <ContactsForContactsPage/>
+            <AllMedia/>
         </div>
     )
 }
