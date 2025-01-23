@@ -35,7 +35,7 @@ export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
             </BurgerButton>
 
             <MobileMenuPopup isOpen={menuIsOpen} onClick={ ()=>{setMenuIsOpen(false)} }>
-                <StyledLogo isOpen={menuIsOpen}/>
+                <Logo isOpen={menuIsOpen}/>
                 <StyledUl>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
@@ -56,10 +56,10 @@ export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
                     </ListItem>
                 </StyledUl>
                 <StyledSocialList displayFlex={true}
-                                  gap={'8px'}
-                                  iconIds={['git', 'discord', 'figma']}
-                                  showIcon={true}
-                                  iconSize={'64px'}
+                                    gap={'8px'}
+                                    iconIds={['git', 'discord', 'figma']}
+                                    showIcon={true}
+                                    iconSize={'64px'}
                 />
             </MobileMenuPopup>
         </StyledRouterMobileMenu>
@@ -78,10 +78,6 @@ const StyledRouterMobileMenu = styled.nav`
     @media ${theme.media.mobile} {
         font-size: 32px;
     }
-`
-
-const StyledLogo = styled(Logo)`
-    
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -104,7 +100,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
         @media ${theme.media.mobile} {
             align-items: flex-start;
             text-align: left;
-            gap: 110px;
+            gap: unset;
             padding: 16px;
             
             ul + ul {
@@ -171,7 +167,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 
 const StyledUl = styled.ul`
-        
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -181,7 +176,14 @@ const StyledUl = styled.ul`
     }
 
     @media ${theme.media.mobile} {
+        display: block;
         align-items: flex-start;
+        margin-top: 96px;
+        
+        li {
+            padding: 0;
+            margin-bottom: 32px;
+        }
     }
 `
 
@@ -262,6 +264,10 @@ const HeaderLink = styled(Link)`
                 display: none;
             }
         }
+    }
+
+    @media ${theme.media.mobile} {
+        padding: 0;
     }
 `
 
