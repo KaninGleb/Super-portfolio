@@ -56,10 +56,39 @@ export const sectionsData = {
     headerProjects: {
         name: 'projects',
         symbol: '/',
+        description: 'List of my projects',
     },
     smallProjects: {
         name: 'small-projects',
         symbol: '#',
+    },
+
+    aboutMePage: {
+        aboutMe: {
+            name: 'about-me',
+            symbol: '/',
+            description: 'Who am i?',
+        },
+        skills: {
+            name: 'skills',
+            symbol: '#',
+        },
+        myFunFacts: {
+            name: 'my-fun-facts',
+            symbol: '#',
+        },
+    },
+
+    contactsPage: {
+        contacts: {
+            name: 'contacts',
+            symbol: '/',
+            description: 'Who am i?',
+        },
+        allMedia: {
+            name: 'all-media',
+            symbol: '#',
+        },
     }
 }
 
