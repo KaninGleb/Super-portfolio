@@ -232,3 +232,27 @@ export const skillsData = [
         description: ['React', 'Vue', 'Disnake', 'Discord.js', 'Flask', 'Express.js']
     },
 ]
+
+export const factsData = [
+    {
+        fact: 'I like winter more than summer',
+    },
+    {
+        fact: 'I often bike with my friends',
+    },
+    {
+        fact: `I like <span>pizza</span> and <span>pasta</span>`,
+    },
+    {
+        fact: 'I was in <span>Egypt</span>, <span>Poland</span> and <span>Turkey</span>',
+    },
+    {
+        fact: 'My favorite movie is <span>The Green Mile</span>',
+    },
+    {
+        fact: 'I am still in school',
+    },
+    {
+        fact: 'I don’t have any siblings',
+    },
+]
