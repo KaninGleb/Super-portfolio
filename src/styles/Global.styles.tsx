@@ -57,18 +57,18 @@ export const GlobalStyles = createGlobalStyle`
     @media (max-width: 768px) {
         * {
             animation: none !important;
-            transition: none !important;
+            //transition: none !important;
         }
         a:hover, button:hover {
-            transition: none !important;
-            transform: none !important;
+            //transition: none !important;
+            //transform: none !important;
             scale: none !important;
             border-bottom: none !important;
         }
         *:hover {
-            transition: none !important;
+            //transition: none !important;
             animation: none !important;
-            transform: none !important;
+            //transform: none !important;
         }
     }
 `
