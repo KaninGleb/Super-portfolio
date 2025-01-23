@@ -6,9 +6,10 @@ import {Photo} from "../../components/Photo.tsx";
 import {Paragraph} from "../../components/Paragraph.tsx";
 import {textData} from "../../data/appData.ts";
 import {imagePulseAnimation, pulseAnimation} from "../../animations/animations.ts";
-import pseudoBgL from "../../assets/images/sections-pseudo/background-pseudo-left.svg"
 import aboutMePhoto from "../../assets/images/about-me-photo.png"
 import bothPseudo from "../../assets/images/about-me-photo-pseudo/both-pseudo.svg";
+import bgLeft from "../../assets/images/background/about-me-page/about-me-page-bg-pseudo-left.svg"
+import bgRight from "../../assets/images/background/about-me-page/about-me-page-bg-pseudo-right.svg"
 
 export const AboutMeForPage = () => {
     return (
@@ -35,19 +36,32 @@ const StyledAboutMeForPage = styled.section`
 
     &::before {
         content: "";
-        background-image: url("${pseudoBgL}");
+        background-image: url("${bgLeft}");
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        top: 134px;
+        top: 202px;
         left: 0;
         width: 160px;
-        height: 680px;
+        height: 976px;
+        animation: ${imagePulseAnimation} 2s infinite;
+    }
+
+    &::after {
+        content: "";
+        background-image: url("${bgRight}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        right: -90px;
+        width: 170px;
+        height: 1240px;
         animation: ${imagePulseAnimation} 2s infinite;
     }
 
     @media ${theme.media.bgPseudoOff} {
-        &::before {
+        &::before, &::after {
             display: none;
         }
     }
