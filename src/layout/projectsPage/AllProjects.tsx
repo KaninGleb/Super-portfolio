@@ -64,9 +64,9 @@ const StyledAllProjects = styled.section`
         background-repeat: no-repeat;
         position: absolute;
         top: 0;
-        right: -60px;
+        right: -90px;
         width: 170px;
-        height: 1720px;
+        height: 1240px;
         animation: ${imagePulseAnimation} 2s infinite;
     }
 
