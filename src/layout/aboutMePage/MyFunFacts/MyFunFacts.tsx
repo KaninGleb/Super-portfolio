@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import {factsData, sectionsData} from "../../../data/appData.ts";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {factsData, sectionsData} from "../../../data/appData.ts";
 import {Fact} from "./Fact/Fact.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import image from "../../../assets/images/my-fun-facts-image.svg";
-import {theme} from "../../../styles/Theme.tsx";
+import {imagePulseAnimation} from "../../../animations/animations.ts";
 
 export const MyFunFacts = () => {
     return (
@@ -20,7 +21,7 @@ export const MyFunFacts = () => {
                         ))}
                     </FactsSection>
                     <PhotoSection>
-                        <Photo src={image} Wmin={150} Wmax={202} alt={'My fan facts image'}/>
+                        <StyledPhoto src={image} Wmin={150} Wmax={202} alt={'My fan facts image'}/>
                     </PhotoSection>
                 </SectionWrapper>
             </Container>
@@ -55,4 +56,8 @@ const PhotoSection = styled.div`
     @media ${theme.media.width1044} {
         display: none;
     }
+`
+
+const StyledPhoto = styled(Photo)`
+    animation: ${imagePulseAnimation} 2s infinite;
 `
