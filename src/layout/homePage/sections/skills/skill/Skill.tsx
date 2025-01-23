@@ -29,6 +29,7 @@ const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
     padding: 8px;
     max-width: ${(props) => props.maxWidth || '178px'};
     transition: .3s;
+    height: fit-content;
     
     &:hover {
         scale: 1.02;
