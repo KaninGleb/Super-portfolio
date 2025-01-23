@@ -5,6 +5,7 @@ import {AllProjects} from "./AllProjects.tsx";
 import {SmallProjects} from "./SmallProjects.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";
 import {sectionsData} from "../../data/appData.ts";
+import {GoTopBtn} from "../../components/goTopBtn/GoTopBtn.tsx";
 
 
 export const ProjectsPage = () => {
@@ -16,6 +17,7 @@ export const ProjectsPage = () => {
             <AllProjects/>
             <SmallProjects/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     )
 }

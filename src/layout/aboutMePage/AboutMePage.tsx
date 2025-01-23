@@ -6,6 +6,7 @@ import {AboutMeForPage} from "./AboutMeForPage.tsx";
 import {SkillsAboutMe} from "../SkillsAboutMe.tsx";
 import {MyFunFacts} from "./MyFunFacts/MyFunFacts.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";
+import {GoTopBtn} from "../../components/goTopBtn/GoTopBtn.tsx";
 
 export const AboutMePage = () => {
     return (
@@ -17,6 +18,7 @@ export const AboutMePage = () => {
             <SkillsAboutMe/>
             <MyFunFacts/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     )
 }
