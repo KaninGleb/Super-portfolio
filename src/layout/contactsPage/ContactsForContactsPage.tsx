@@ -5,8 +5,8 @@ import {Paragraph} from "../../components/Paragraph.tsx";
 import {SocialList} from "../../components/SocialList.tsx";
 import {theme} from "../../styles/Theme.tsx";
 import {textData} from "../../data/appData.ts";
-import bgLeft from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-left.svg";
-import bgRight from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-right.svg";
+import bgLeft from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-left-short.svg";
+import bgRight from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-right-short.svg";
 
 import {imagePulseAnimation} from "../../animations/animations.ts";
 
@@ -58,8 +58,8 @@ const StyledContactsForContactsPage = styled.section`
         position: absolute;
         top: 160px;
         left: 0;
-        width: 160px;
-        height: 976px;
+        width: 110px;
+        height: 50px;
         animation: ${imagePulseAnimation} 2s infinite;
     }
 
@@ -71,8 +71,8 @@ const StyledContactsForContactsPage = styled.section`
         position: absolute;
         top: 0;
         right: -90px;
-        width: 170px;
-        height: 1240px;
+        width: 156px;
+        height: 156px;
         animation: ${imagePulseAnimation} 2s infinite;
     }
 
