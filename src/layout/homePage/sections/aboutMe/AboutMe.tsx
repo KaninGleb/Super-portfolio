@@ -118,7 +118,7 @@ const RightSection = styled.div`
         top: 60px;
         left: -5px;
 
-        width: 328px;
+        width: clamp(250px, calc((100vw - 328px) * (328 - 250) / (1024 - 328) + 250px), 328px);
         height: 276px;
         animation: ${imagePulseAnimation} 2s infinite;
         z-index: 999;
