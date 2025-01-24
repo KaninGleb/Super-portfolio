@@ -1,8 +1,8 @@
-import { animateScroll as scroll } from 'react-scroll';
-import styled, { keyframes } from 'styled-components';
-import { Icon } from '../icon/Icon.tsx';
-import { useEffect, useState } from 'react';
-import { theme } from '../../styles/Theme.tsx';
+import {animateScroll as scroll} from 'react-scroll';
+import styled, {keyframes} from 'styled-components';
+import {theme} from '../../styles/Theme.tsx';
+import {Icon} from '../icon/Icon.tsx';
+import {useEffect, useState} from 'react';
 
 export const GoTopBtn = () => {
     const [showBtn, setShowBtn] = useState(false);
@@ -28,6 +28,7 @@ export const GoTopBtn = () => {
     }, [lastScrollY]);
 
     return (
+        // <div style={{  transition: `0.7s ease-in-out`,  transform: `translateY(${!showBtn ? '100px' : '-20px'})` }}>
         <>
             {showBtn && (
                 <StyledGoTopBtn onClick={() => {
@@ -40,6 +41,7 @@ export const GoTopBtn = () => {
                 </StyledGoTopBtn>
             )}
         </>
+        // </div>
     )
 }
 
