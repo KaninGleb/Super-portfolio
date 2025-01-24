@@ -78,6 +78,10 @@ const HeaderLink = styled(Link)`
 
         &::after {
             transform: scaleX(1);
+            
+            @media ${theme.media.tablet} {
+                transform: scaleX(0);
+            }
         }
     }
 `
