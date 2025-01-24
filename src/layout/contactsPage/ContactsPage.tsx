@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "../homePage/media/Media.tsx";
 import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
@@ -12,6 +13,7 @@ export const ContactsPage = () => {
     return (
         <StyledDiv>
             <GrowWrapper>
+                <ScrollFillBar/>
                 <Media/>
                 <RouterHeader/>
                 <TitleSection section={sectionsData.contactsPage.contacts}/>

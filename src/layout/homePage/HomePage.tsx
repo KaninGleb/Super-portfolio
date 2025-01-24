@@ -1,3 +1,4 @@
+import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "./media/Media.tsx";
 import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {Main} from "./sections/main/Main.tsx";
@@ -9,9 +10,11 @@ import {Contacts} from "./sections/contacts/Contacts.tsx";
 import {Footer} from "./footer/Footer.tsx";
 import {GoTopBtn} from "../../components/goTopBtn/GoTopBtn.tsx";
 
+
 export const HomePage = () => {
     return (
         <div>
+            <ScrollFillBar/>
             <Media/>
             <RouterHeader/>
             <Main/>

@@ -1,3 +1,4 @@
+import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "../homePage/media/Media.tsx";
 import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
@@ -11,6 +12,7 @@ import {GoTopBtn} from "../../components/goTopBtn/GoTopBtn.tsx";
 export const AboutMePage = () => {
     return (
         <div>
+            <ScrollFillBar/>
             <Media/>
             <RouterHeader/>
             <TitleSection section={sectionsData.aboutMePage.aboutMe}/>
