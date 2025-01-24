@@ -65,9 +65,9 @@ const StyledFooter = styled.footer<FooterType>`
         }
     }
     
-    @media (max-height: 898px) or (max-width: 1000px){
-        position: static;
-    }
+    //@media (max-height: 898px) or (max-width: 1000px){
+    //    position: static;
+    //}
 `
 
 const FooterContainer = styled(Container)`

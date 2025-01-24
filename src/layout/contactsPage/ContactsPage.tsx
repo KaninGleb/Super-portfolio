@@ -6,21 +6,33 @@ import {sectionsData} from "../../data/appData.ts";
 import {ContactsForContactsPage} from "./ContactsForContactsPage.tsx";
 import {AllMedia} from "./AllMedia.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 
 export const ContactsPage = () => {
     return (
         <StyledDiv>
-            <Media/>
-            <RouterHeader/>
-            <TitleSection section={sectionsData.contactsPage.contacts}/>
-            <ContactsForContactsPage/>
-            <AllMedia/>
-            <Footer isAbsolute={true}/>
+            <GrowWrapper>
+                <Media/>
+                <RouterHeader/>
+                <TitleSection section={sectionsData.contactsPage.contacts}/>
+                <ContactsForContactsPage/>
+                <AllMedia/>
+            </GrowWrapper>
+            <Footer/>
         </StyledDiv>
     )
 }
 
 const StyledDiv = styled.div`
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    
+    //position: relative;
+`
+
+const GrowWrapper = styled(FlexWrapper)`
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 `
