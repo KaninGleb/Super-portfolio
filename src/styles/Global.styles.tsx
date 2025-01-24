@@ -43,6 +43,18 @@ export const GlobalStyles = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
+
+    // input:-webkit-autofill,
+    // input:-webkit-autofill:hover,
+    // input:-webkit-autofill:focus,
+    // input:-webkit-autofill:active {
+    //     -webkit-box-shadow: 0 0 0 30px ${theme.colors.primaryBg} inset !important;
+    //     color: white !important;
+    // }
+    //
+    // input:-webkit-autofill:focus-within {
+    //     color: white !important;
+    // }
     
     @media (prefers-reduced-motion: reduce) {
         *,
