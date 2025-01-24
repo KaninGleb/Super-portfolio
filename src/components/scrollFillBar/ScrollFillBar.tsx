@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import {theme} from "../../styles/Theme.tsx";
+import { motion } from 'framer-motion';
+import { theme } from "../../styles/Theme.tsx";
 
-interface ScrollFillProps {
+type ScrollFillProps = {
     width: number
 }
 
 export const ScrollFillBar: React.FC = () => {
-    const [scrollPercent, setScrollPercent] = useState<number>(0); // Указываем тип состояния
+    const [scrollPercent, setScrollPercent] = useState<number>(0);
 
     const handleScroll = () => {
         const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPosition = window.scrollY;
-        const percent = (scrollPosition / totalHeight) * 100;
+        const screenWidth = window.innerWidth;
+        const percent = (scrollPosition / totalHeight) * screenWidth;
         setScrollPercent(percent);
     };
 
@@ -23,7 +25,12 @@ export const ScrollFillBar: React.FC = () => {
 
     return (
         <ScrollBarContainer>
-            <ScrollFill width={scrollPercent} />
+            <AnimatedScrollFill
+                width={scrollPercent}
+                initial={{ width: 0 }}
+                animate={{ width: scrollPercent }}
+                transition={{ duration: 0.2 }}
+            />
         </ScrollBarContainer>
     )
 }
@@ -37,8 +44,7 @@ const ScrollBarContainer = styled.div`
     z-index: 10;
 `
 
-const ScrollFill = styled.div<ScrollFillProps>`
+const AnimatedScrollFill = styled(motion.div)<ScrollFillProps>`
     height: 100%;
     background: ${theme.colors.secondaryOutline};
-    width: ${(props) => props.width}%;
 `
