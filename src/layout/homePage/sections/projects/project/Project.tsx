@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import {Link} from "../../../../../components/Link.tsx";
-import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
 import {theme} from "../../../../../styles/Theme.tsx";
-import {gradientAnimation} from "../../../../../animations/animations.ts";
+import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
+import {Link} from "../../../../../components/Link.tsx";
+import {motion} from "framer-motion";
+import {useState} from "react";
 
 type LinkPropsType = {
     href: string
@@ -22,12 +23,26 @@ type ProjectPropsType = {
 }
 
 export const Project = (props: ProjectPropsType) => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <StyledWork maxWidth={props.maxWidth}>
-            <StyledImageWrapper>
+            <ImageWrapper href={'#'}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+            >
                 <Image src={props.src} alt=""/>
-                <Overlay/>
-            </StyledImageWrapper>
+                <ImageLink
+                    initial={{opacity: 0, scale: 0}}
+                    animate={isHovered ? {opacity: 1, scale: 1} : {opacity: 0, scale: 0}}
+                    transition={{
+                        duration: 0.1,
+                        scale: {type: "spring", bounce: 0.5},
+                    }}
+                >
+                    View
+                </ImageLink>
+            </ImageWrapper>
             <SizeWrapper>
                 <Software>
                     {props.software.map((software, index) => (
@@ -52,22 +67,10 @@ export const Project = (props: ProjectPropsType) => {
                 </MainSizeWrapper>
             </SizeWrapper>
         </StyledWork>
-    );
+    )
 }
 
-const Overlay = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-
-    animation: ${gradientAnimation} 3s infinite;
-`
-
-const StyledWork = styled.div<{maxWidth?: string}>`
+const StyledWork = styled.div<{ maxWidth?: string }>`
     outline: 1px solid ${theme.colors.primaryOutline};
     min-width: 330px;
     max-width: ${props => props.maxWidth || '490px'};
@@ -75,15 +78,11 @@ const StyledWork = styled.div<{maxWidth?: string}>`
     height: 100%;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     cursor: default;
-    
+
     &:hover {
         transform: scale(1.02);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         background-color: rgba(40, 44, 51, 0.1);
-
-        ${Overlay} {
-            opacity: 1;
-        }
     }
 
     @media ${theme.media.width1044} {
@@ -92,17 +91,11 @@ const StyledWork = styled.div<{maxWidth?: string}>`
         flex: 1;
         min-width: 238px;
         max-width: unset;
-        
     }
-    
+
     @media ${theme.media.mobile} {
         max-width: unset;
     }
-`
-
-const StyledImageWrapper = styled.div`
-    width: 100%;
-    position: relative;
 `
 
 const Image = styled.img`
@@ -110,15 +103,39 @@ const Image = styled.img`
     height: 100%;
     border-bottom: 1px solid ${theme.colors.primaryOutline};
     object-fit: cover;
+`
 
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     background-color: ${theme.colors.primaryOutline};
-    //     bottom: 0;
-    //     width: 100%;
-    //     height: 2px;
-    // }
+const ImageLink = styled(motion.a)`
+    font-size: 22px;
+    background-color: ${theme.colors.secondaryText};
+    padding: 8px 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+`
+
+const ImageWrapper = styled.a`
+    display: inline-block;
+    position: relative;
+    transition: transform 2s, background-color 2s, backdrop-filter 2s;
+
+    &:hover {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 7px;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+        }
+    }
+
+    &:hover ${ImageLink} {
+        opacity: 1;
+    }
 `
 
 const SizeWrapper = styled.div`
@@ -157,7 +174,7 @@ const Text = styled.span`
 
 const ButtonsFlexWrapper = styled(FlexWrapper)`
     gap: 16px;
-    
+
     @media ${theme.media.width1044} {
         flex-wrap: wrap;
     }
