@@ -42,16 +42,6 @@ export const Project = (props: ProjectPropsType) => {
                 >
                     View
                 </ImageLink>
-                {/*<ImageLink*/}
-                {/*    initial={{ opacity: 0, scale: 0, transform: 'translate(-50%, -50%)' }}*/}
-                {/*    animate={isHovered ? { opacity: 1, scale: 1, transform: 'translate(-50%, -50%)' } : { opacity: 0, scale: 0, transform: 'translate(-50%, -50%)' }}*/}
-                {/*    transition={{*/}
-                {/*        duration: 0.1,*/}
-                {/*        scale: { type: "spring", bounce: 0.5 },*/}
-                {/*    }}*/}
-                {/*>*/}
-                {/*    View*/}
-                {/*</ImageLink>*/}
             </ImageWrapper>
             <SizeWrapper>
                 <Software>
@@ -118,8 +108,6 @@ const Image = styled.img`
 const ImageLink = styled(motion.a)`
     font-size: 22px;
     position: absolute;
-    left: 50%;
-    top: 50%;
     border-radius: 8px;
     padding: 12px 0;
     background-color: rgba(199, 120, 221, 0.8);
@@ -134,7 +122,10 @@ const ImageLink = styled(motion.a)`
 `
 
 const ImageWrapper = styled.a`
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     position: relative;
     transition: transform 2s, background-color 2s, backdrop-filter 2s;
     
@@ -145,7 +136,7 @@ const ImageWrapper = styled.a`
             top: 0;
             left: 0;
             right: 0;
-            bottom: 7px;
+            bottom: 2px;
             background-color: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(4px);
         }
