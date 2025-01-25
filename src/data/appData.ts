@@ -16,7 +16,6 @@ export const headerLinks = [
 export const routerLinksData = [
     { name: 'home', id: ''},
     { name: 'projects', id: 'projects'},
-    // { name: 'skills', id: 'about-me'},
     { name: 'about-me', id: 'about-me'},
     { name: 'contacts', id: 'contacts'},
 ]
@@ -36,47 +35,49 @@ export const textData = {
 }
 
 export const sectionsData = {
-    projects: {
-        id: 'projects',
-        name: 'projects',
-        symbol: '#',
-        Wmin: 30,
-        Wmax: 510,
-    },
-    skills: {
-        id: 'skills',
-        name: 'skills',
-        symbol: '#',
-        Wmin: 127,
-        Wmax: 239,
-    },
-    aboutMe: {
-        id: 'about-me',
-        name: 'about-me',
-        symbol: '#',
-        Wmin: 127,
-        Wmax: 326,
-    },
-    contacts: {
-        id: 'contacts',
-        name: 'contacts',
-        symbol: '#',
-        Wmin: 127,
-        Wmax: 127,
-    },
-    allProjects: {
-        id: 'projects',
-        name: 'complete-apps',
-        symbol: '#',
-    },
-    headerProjects: {
-        name: 'projects',
-        symbol: '/',
-        description: 'List of my projects',
-    },
-    smallProjects: {
-        name: 'small-projects',
-        symbol: '#',
+    homePage: {
+        projects: {
+            id: 'projects',
+            name: 'projects',
+            symbol: '#',
+            Wmin: 30,
+            Wmax: 510,
+        },
+        skills: {
+            id: 'skills',
+            name: 'skills',
+            symbol: '#',
+            Wmin: 127,
+            Wmax: 239,
+        },
+        aboutMe: {
+            id: 'about-me',
+            name: 'about-me',
+            symbol: '#',
+            Wmin: 127,
+            Wmax: 326,
+        },
+        contacts: {
+            id: 'contacts',
+            name: 'contacts',
+            symbol: '#',
+            Wmin: 127,
+            Wmax: 127,
+        },
+        allProjects: {
+            id: 'projects',
+            name: 'complete-apps',
+            symbol: '#',
+        },
+        headerProjects: {
+            name: 'projects',
+            symbol: '/',
+            description: 'List of my projects',
+        },
+        smallProjects: {
+            name: 'small-projects',
+            symbol: '#',
+        },
     },
 
     aboutMePage: {
@@ -225,28 +226,11 @@ export const smallProjectsData = {
 }
 
 export const skillsData = [
-    {
-        title: 'Languages',
-        description: ['TypeScript', 'Lua', 'Python', 'JavaScript']
-    },
-    {
-        title: 'Other',
-        description: ['HTML', 'CSS', 'EJS', 'SCSS', 'REST', 'Jinja']
-    },
-    {
-        title: 'Tools',
-        description: ['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git Font Awesome'],
-        maxWidth: '196px',
-    },
-    {
-        title: 'Databases',
-        description: ['SQLite', 'PostgreSQL', 'Mongo']
-    },
-    {
-        title: 'Frameworks',
-        maxWidth: '196px',
-        description: ['React', 'Vue', 'Disnake', 'Discord.js', 'Flask', 'Express.js']
-    },
+    { order: 5, title: 'Languages', description: ['TypeScript', 'Lua', 'Python', 'JavaScript'] },
+    { order: 3, title: 'Databases', description: ['SQLite', 'PostgreSQL', 'Mongo'] },
+    { order: 1, title: 'Tools', maxWidth: '196px', description: ['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git', 'Font Awesome'] },
+    { order: 4, title: 'Other', description: ['HTML', 'CSS', 'EJS', 'SCSS', 'REST', 'Jinja'] },
+    { order: 2, title: 'Frameworks', maxWidth: '196px', description: ['React', 'Vue', 'Disnake', 'Discord.js', 'Flask', 'Express.js'] },
 ]
 
 export const factsData = [
