@@ -5,7 +5,6 @@ import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {projectsData, sectionsData} from "../../../../data/appData.ts";
 import {Project} from "./project/Project.tsx";
-import {font} from "../../../../styles/CommonFont.tsx";
 import {Link} from "react-router-dom";
 
 export const Projects = () => {
@@ -15,7 +14,7 @@ export const Projects = () => {
                 <MainWrapper direction='column' gap='48px'>
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <FlexWrapper>
-                            <SectionTitle section={sectionsData.projects}/>
+                            <SectionTitle section={sectionsData.homePage.projects}/>
                         </FlexWrapper>
                         <ProjectsLink to="/projects">View all ~~&gt;</ProjectsLink>
                     </FlexWrapper>
@@ -35,7 +34,7 @@ export const Projects = () => {
                 </MainWrapper>
             </Container>
         </StyledProjects>
-    );
+    )
 }
 
 const StyledProjects = styled.section`
@@ -53,10 +52,10 @@ const MainWrapper = styled(FlexWrapper)`
 `
 
 const ProjectsLink = styled(Link)`
-    // ${font({weight: 500, Fmax: 16, Fmin: 14})};
     font-weight: 500;
+    padding: 5px;
     border-bottom: 2px solid transparent;
-    transition: .15s;
+    transition: .2s;
 
     &:hover {
         scale: 1.03;
