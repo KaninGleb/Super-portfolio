@@ -17,13 +17,13 @@ export const AboutMe = () => {
         <StyledAboutMe>
             <Container>
                 <StyledSectionTitle>
-                    <SectionTitle section={sectionsData.aboutMe}/>
+                    <SectionTitle section={sectionsData.homePage.aboutMe}/>
                 </StyledSectionTitle>
                 <StyledFlexWrapper gap='166px'>
                     <LeftSection>
-                        <Paragraph children={textData.aboutMe.paragraph1}/>
-                        <Paragraph children={textData.aboutMe.paragraph2}/>
-                        <Paragraph children={textData.aboutMe.paragraph3}/>
+                        {Object.values(textData.aboutMe).map((paragraph, index) => (
+                            <Paragraph key={index} children={paragraph}/>
+                        ))}
                         <Link to="/about-me" children={'Read more ->'} mWidth={'148px'}/>
                     </LeftSection>
                     <RightSection>
