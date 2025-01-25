@@ -13,7 +13,7 @@ export const SmallProjects = () => {
                 <MainWrapper direction='column' gap='48px'>
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <FlexWrapper>
-                            <SectionTitle section={sectionsData.smallProjects}/>
+                            <SectionTitle section={sectionsData.projectsPage.smallProjects}/>
                         </FlexWrapper>
                     </FlexWrapper>
 
@@ -47,11 +47,9 @@ const MainWrapper = styled(FlexWrapper)`
 
 const StyledFlexWrapper = styled(FlexWrapper)`
     @media ${theme.media.width1044} {
-        //justify-content: center;
     }
 
     @media ${theme.media.tablet} {
         justify-content: center;
-        //flex-wrap: wrap;
     }
 `

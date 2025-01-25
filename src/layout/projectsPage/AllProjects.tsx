@@ -16,7 +16,7 @@ export const AllProjects = () => {
                 <MainWrapper direction='column' gap='48px'>
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <FlexWrapper>
-                            <SectionTitle section={sectionsData.allProjects}/>
+                            <SectionTitle section={sectionsData.projectsPage.allProjects}/>
                         </FlexWrapper>
                     </FlexWrapper>
 

@@ -15,7 +15,7 @@ export const ProjectsPage = () => {
             <ScrollFillBar/>
             <Media/>
             <RouterHeader/>
-            <TitleSection section={sectionsData.headerProjects}/>
+            <TitleSection section={sectionsData.projectsPage.headerProjects}/>
             <AllProjects/>
             <SmallProjects/>
             <Footer/>
