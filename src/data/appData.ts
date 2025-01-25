@@ -64,6 +64,9 @@ export const sectionsData = {
             Wmin: 127,
             Wmax: 127,
         },
+    },
+
+    projectsPage: {
         allProjects: {
             id: 'projects',
             name: 'complete-apps',
