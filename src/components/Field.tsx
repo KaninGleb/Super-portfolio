@@ -2,16 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
 
-export const TextField: React.FC<{
-    id: string,
-    labelText: string,
-    type: 'text' | 'email',
+export const Field: React.FC<{
+    id: string
+    labelText: string
+    type: 'text' | 'email' | 'textarea'
     placeholder: string
-    }> = ({labelText, type, id, placeholder}) => {
+    name: string
+    }> = ({labelText, type, id, placeholder, name}) => {
 
     return (
         <StyledTextField className='text-field'>
-            <input type={type} id={id} placeholder={placeholder}/>
+            <input required type={type} id={id} placeholder={placeholder} name={name}/>
             <label htmlFor={id}>{labelText}</label>
         </StyledTextField>
     )

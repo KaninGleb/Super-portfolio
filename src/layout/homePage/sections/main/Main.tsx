@@ -12,7 +12,7 @@ import {MyPhoto} from "../../../../components/Photo.tsx";
 import photo from "../../../../assets/images/MyImage.png"
 import logo from "../../../../assets/images/main-pseudo/logo-outline.svg"
 import dotsForMain from "../../../../assets/images/main-pseudo/dots-main-photo.svg"
-import {Modal} from "../../../../components/Modal.tsx";
+import {Modal} from "../../../../components/modal/Modal.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
 
 export const Main = () => {

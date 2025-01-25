@@ -6,11 +6,12 @@ export const TextAreaField: React.FC<{
     id: string,
     labelText: string,
     placeholder: string
-    }> = ({labelText, id, placeholder}) => {
+    name: string
+    }> = ({labelText, id, placeholder, name}) => {
 
     return (
         <StyledTextAreaField>
-            <textarea id={id} placeholder={placeholder}/>
+            <textarea required id={id} placeholder={placeholder} name={name}/>
             <label htmlFor={id}>{labelText}</label>
         </StyledTextAreaField>
     )
