@@ -6,7 +6,7 @@ import {Container} from "../../components/Container.tsx";
 import {font} from "../../styles/CommonFont.tsx";
 
 export const NotFoundPage404 = () => {
-    const [countdown, setCountdown] = useState(5555);
+    const [countdown, setCountdown] = useState(3);
     const [redirect, setRedirect] = useState(false);
 
     useEffect(() => {
