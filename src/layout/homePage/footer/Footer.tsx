@@ -18,7 +18,6 @@ export const Footer = (props:FooterType) => {
                             <Logo/>
                             <SocialList iconIds={['email']} iconsTitles={['elias@elias-dev.ml']}/>
                         </FlexWrapper>
-
                         <span>Web designer and front-end developer</span>
                     </LeftSection>
 
@@ -64,10 +63,6 @@ const StyledFooter = styled.footer<FooterType>`
             ${font({weight: 400, color: theme.colors.primaryLightText, Fmax: 16, Fmin: 14})};
         }
     }
-    
-    //@media (max-height: 898px) or (max-width: 1000px){
-    //    position: static;
-    //}
 `
 
 const FooterContainer = styled(Container)`
