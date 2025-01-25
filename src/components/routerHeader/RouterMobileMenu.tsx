@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import { theme } from "../../styles/Theme.tsx";
+import {theme} from "../../styles/Theme.tsx";
 import {SocialList} from "../SocialList.tsx";
 import {Logo} from "../logo/Logo.tsx";
 import {useEffect, useState} from "react";
@@ -127,19 +127,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     z-index: 9999999;
 
     span {
-        // display: block;
-        // width: 24px;
-        // height: 2px;
-        // background-color: ${theme.colors.primaryOutline};
-        // position: absolute;
-        // left: 0;
-        // bottom: 12px;
-        // transition: background-color 0.3s ease, transform 0.3s ease;
-        // ${props => props.isOpen && css<{ isOpen: boolean }>`}
-        //     background-color: rgba(255, 255, 255, 0);
-        // `}
-        
-
         &::before {
             content: '';
             display: block;
@@ -212,7 +199,7 @@ const ListItem = styled.li`
 const StyledContactBtn = styled(ContactBtn)`
     font-size: 24px;
     max-width: 300px;
-    margin: 5px 0 10px;
+    margin-bottom: 20px;
     
     @media ${theme.media.tablet} {
         display: block;
@@ -223,6 +210,7 @@ const StyledCVBtn = styled(CVBtn)`
     font-size: 24px;
     max-width: 300px;
     margin-bottom: 20px;
+    
     @media ${theme.media.tablet} {
         display: block;
     }
