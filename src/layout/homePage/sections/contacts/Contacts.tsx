@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {Link} from "../../../../components/Link.tsx";
 import {sectionsData, textData} from "../../../../data/appData.ts";
 import {SocialList} from "../../../../components/SocialList.tsx";
-import {theme} from "../../../../styles/Theme.tsx";
 
 export const Contacts = () => {
     return (
@@ -14,7 +14,7 @@ export const Contacts = () => {
             <Container>
                 <ContentFlexWrapper direction='column' gap='45px'>
                     <FlexWrapper>
-                        <SectionTitle section={sectionsData.contacts}/>
+                        <SectionTitle section={sectionsData.homePage.contacts}/>
                     </FlexWrapper>
 
                     <StyledFlexWrapper justify='space-between'>
@@ -33,18 +33,6 @@ export const Contacts = () => {
                                         iconsTitles={['!Elias#3519', 'elias@elias.me']}
                                         gapBetween={'5px'}
                             />
-                            {/*<ContactInfo>*/}
-                            {/*    <FlexWrapper direction='column' gap='8px'>*/}
-                            {/*        <ContactItem>*/}
-                            {/*            <Icon iconId={'discord'} width='32px' height='32px' viewBox='0 0 32 32'/>*/}
-                            {/*            !Elias#3519*/}
-                            {/*        </ContactItem>*/}
-                            {/*        <ContactItem>*/}
-                            {/*            <Icon iconId={'email'} width='32px' height='32px' viewBox='0 0 32 32'/>*/}
-                            {/*            elias@elias.me*/}
-                            {/*        </ContactItem>*/}
-                            {/*    </FlexWrapper>*/}
-                            {/*</ContactInfo>*/}
                         </RightSection>
                     </StyledFlexWrapper>
                 </ContentFlexWrapper>
