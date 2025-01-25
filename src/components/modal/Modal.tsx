@@ -5,6 +5,7 @@ import {theme} from "../../styles/Theme.tsx";
 import {FlexWrapper} from "../FlexWrapper.tsx";
 import {Field} from "../Field.tsx";
 import {TextAreaField} from "../TextAreaField.tsx";
+import {font} from "../../styles/CommonFont.tsx";
 
 interface ModalProps {
     isVisible: boolean;
@@ -120,7 +121,12 @@ const ModalContent = styled.form`
 const ContactTitle = styled.h3`
     text-align: center;
     padding: 5px;
+    ${font({weight: 500, Fmax: 24, Fmin: 22})}
     font-weight: 500;
+
+    @media ${theme.media.mobile} {
+        padding: 0;
+    }
 `
 
 const InputsWrapper = styled(FlexWrapper)`
