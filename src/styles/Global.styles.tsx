@@ -55,6 +55,26 @@ export const GlobalStyles = createGlobalStyle`
     // input:-webkit-autofill:focus-within {
     //     color: white !important;
     // }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        //background: linear-gradient(
+        //        top,
+        //        rgb(255 255 255 / 0%) 0%,
+        //        rgb(0 174 255 / 4%) 50%,
+        //        rgb(255 255 255 / 0%) 51%,
+        //        rgb(0 174 255 / 3%) 100%
+        //);
+        //border: 0;
+        box-shadow: 0 0 0 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: ${theme.colors.primaryText};
     
     @media (prefers-reduced-motion: reduce) {
         *,
