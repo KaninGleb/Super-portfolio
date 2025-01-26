@@ -46,6 +46,10 @@ const StyledLink = styled(Link)<{ isOpen: boolean }>`
         font-size: 16px;
         color: #fff;
     }
+
+    div:nth-child(2) {
+        display: flex;
+    }
     
     &:hover {
         transform: translateY(-3px);
