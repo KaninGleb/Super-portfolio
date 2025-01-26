@@ -259,3 +259,10 @@ export const factsData = [
         fact: 'I don’t have any siblings',
     },
 ]
+
+export const socialData = [
+    { id: 'git', href: "https://github.com/", areaLabel: 'Link to GitHub'},
+    { id: 'figma', href: "https://www.figma.com/", areaLabel: 'Link to Figma'},
+    { id: 'discord', href: "https://discord.com/", areaLabel: 'Link to Discord'},
+    { id: 'email', href: "https://mail.google.com/", areaLabel: 'Link to Gmail'},
+]

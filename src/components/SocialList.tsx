@@ -2,13 +2,7 @@ import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 import {theme} from "../styles/Theme.tsx";
 import {Icon} from "./icon/Icon.tsx";
-
-export const socialData = [
-    { id: 'git', href: "https://github.com/", areaLabel: 'Link to GitHub'},
-    { id: 'figma', href: "https://www.figma.com/", areaLabel: 'Link to Figma'},
-    { id: 'discord', href: "https://discord.com/", areaLabel: 'Link to Discord'},
-    { id: 'email', href: "https://mail.google.com/", areaLabel: 'Link to Gmail'},
-]
+import {socialData} from "../data/appData.ts";
 
 type SocialListPropsType = {
     iconIds: string[]
