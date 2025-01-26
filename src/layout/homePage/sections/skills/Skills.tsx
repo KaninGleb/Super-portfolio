@@ -8,17 +8,18 @@ import {Skill} from "./skill/Skill.tsx";
 import {Photo} from "../../../../components/Photo.tsx";
 import groupOfImages from "../../../../assets/images/skills/skills-group.svg"
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
+import {Fade} from "react-awesome-reveal";
 
 export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
-                <FlexWrapper>
-                    <SectionTitle section={sectionsData.homePage.skills}/>
-                </FlexWrapper>
-
+                <SectionTitle section={sectionsData.homePage.skills}/>
                 <StyledFlexWrapper gap='59px'>
-                    <StyledPhoto src={groupOfImages} alt="Group of Images"/>
+                    <Fade direction={'left'}>
+                        <StyledPhoto src={groupOfImages} Wmin={350} Wmax={350} alt="Group of Images"/>
+                    </Fade>
+                    <Fade direction={'right'}>
                         <SkillsWrapper direction='column' wrap='wrap-reverse' gap='16px'>
                             {skillsData.map((skill) => (
                                 <Skill
@@ -30,6 +31,7 @@ export const Skills = () => {
                                 />
                             ))}
                         </SkillsWrapper>
+                    </Fade>
                 </StyledFlexWrapper>
             </Container>
         </StyledSkills>
@@ -38,9 +40,12 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
     margin-bottom: 112px;
+    padding-bottom: 2px;
+    overflow: hidden;
 
     @media ${theme.media.width1044} {
         margin-bottom: 70px;
+        padding-bottom: 2px;
     }
 `
 
@@ -72,7 +77,6 @@ const SkillsWrapper = styled(FlexWrapper)`
 const StyledPhoto = styled(Photo)`
     margin-top: 12px;
     margin-left: 32px;
-    width: 390px;
     object-fit: contain;
     animation: ${imagePulseAnimation} 2s infinite;
     
