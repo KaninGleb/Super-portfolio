@@ -6,9 +6,9 @@ import {FlexWrapper} from "../FlexWrapper.tsx";
 import {Field} from "../Field.tsx";
 import {TextAreaField} from "../TextAreaField.tsx";
 import {font} from "../../styles/CommonFont.tsx";
-import {Fade} from "react-awesome-reveal";
+import {modalFadeInUp} from "../../animations/animations.ts";
 
-interface ModalProps {
+type ModalProps = {
     isVisible: boolean;
     onClose: () => void;
 }
@@ -50,44 +50,42 @@ export const Modal: React.FC<ModalProps> = ({isVisible, onClose}) => {
 
     return (
         <ModalOverlay onClick={onClose}>
-            <FadeWrapper direction={'up'} duration={400}>
-                <ModalContent
-                    onClick={(e) => e.stopPropagation()}
-                    ref={form} onSubmit={sendEmail}
-                >
-                    <ContactTitle>Contact me</ContactTitle>
-                    <InputsWrapper>
-                        <Field
-                            id='name'
-                            type='text'
-                            labelText='Name'
-                            placeholder={'Name'}
-                            name={'user_name'}
-                        />
-                        <Field
-                            id='email'
-                            type='email'
-                            labelText='Email'
-                            placeholder={'Email'}
-                            name={'user_email'}
-                        />
-                    </InputsWrapper>
+            <ModalContent
+                onClick={(e) => e.stopPropagation()}
+                ref={form} onSubmit={sendEmail}
+            >
+                <ContactTitle>Contact me</ContactTitle>
+                <InputsWrapper>
                     <Field
-                        id='title'
+                        id='name'
                         type='text'
-                        labelText='Title'
-                        placeholder={'Title'}
-                        name={'subject'}
+                        labelText='Name'
+                        placeholder={'Name'}
+                        name={'user_name'}
                     />
-                    <TextAreaField
-                        id='message'
-                        labelText='Message'
-                        placeholder={'Message'}
-                        name={'message'}
+                    <Field
+                        id='email'
+                        type='email'
+                        labelText='Email'
+                        placeholder={'Email'}
+                        name={'user_email'}
                     />
-                    <SendButton type="submit">Send message</SendButton>
-                </ModalContent>
-            </FadeWrapper>
+                </InputsWrapper>
+                <Field
+                    id='title'
+                    type='text'
+                    labelText='Title'
+                    placeholder={'Title'}
+                    name={'subject'}
+                />
+                <TextAreaField
+                    id='message'
+                    labelText='Message'
+                    placeholder={'Message'}
+                    name={'message'}
+                />
+                <SendButton type="submit">Send message</SendButton>
+            </ModalContent>
         </ModalOverlay>
     )
 }
@@ -113,12 +111,6 @@ const ModalOverlay = styled.div`
     }
 `
 
-const FadeWrapper = styled(Fade)`
-    @media ${theme.media.mobile} {
-        width: 100%;
-    }
-`
-
 const ModalContent = styled.form`
     display: flex;
     flex-direction: column;
@@ -128,6 +120,7 @@ const ModalContent = styled.form`
     border-radius: 8px;
     max-width: 570px;
     width: 100%;
+    animation: ${modalFadeInUp} .4s forwards;
     
     @media ${theme.media.mobile} {
         padding: 20px;
