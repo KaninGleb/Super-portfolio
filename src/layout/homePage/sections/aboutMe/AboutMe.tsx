@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
@@ -7,7 +8,7 @@ import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {Link} from "../../../../components/Link.tsx";
 import {sectionsData, textData} from "../../../../data/appData.ts";
-import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
+import {fadeBgLeft, imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
 import pseudoBgL from "../../../../assets/images/sections-pseudo/background-pseudo-left.svg"
 import aboutMePhoto from "../../../../assets/images/about-me-photo.png"
 import bothPseudo from "../../../../assets/images/about-me-photo-pseudo/both-pseudo.svg";
@@ -21,12 +22,14 @@ export const AboutMe = () => {
                 </StyledSectionTitle>
                 <StyledFlexWrapper gap='166px'>
                     <LeftSection>
-                        {Object.values(textData.aboutMe).map((paragraph, index) => (
-                            <Paragraph key={index} children={paragraph}/>
-                        ))}
-                        <Link to="/about-me" children={'Read more ->'} mWidth={'148px'}/>
+                        <Fade direction={'up'} cascade damping={.1}>
+                            {Object.values(textData.aboutMe).map((paragraph, index) => (
+                                <Paragraph key={index} children={paragraph}/>
+                            ))}
+                            <Link to="/about-me" children={'Read more ->'} mWidth={'148px'}/>
+                        </Fade>
                     </LeftSection>
-                    <RightSection>
+                    <RightSection direction={'right'}>
                         <StyledPhoto src={aboutMePhoto} Wmax={338} Wmin={250} alt="About Me Photo"/>
                     </RightSection>
                 </StyledFlexWrapper>
@@ -38,6 +41,7 @@ export const AboutMe = () => {
 const StyledAboutMe = styled.section`
     margin-bottom: 112px;
     position: relative;
+    overflow: hidden;
 
     &::before {
         content: "";
@@ -50,14 +54,17 @@ const StyledAboutMe = styled.section`
         width: 160px;
         height: 680px;
         animation: ${imagePulseAnimation} 2s infinite;
+        animation: ${fadeBgLeft} 30s linear;
     }
 
     @media ${theme.media.bgPseudoOff} {
+        padding-bottom: 2px;
+
         &::before {
             display: none;
         }
     }
-    
+
     @media ${theme.media.tablet} {
         margin-bottom: 70px;
     }
@@ -88,7 +95,7 @@ const StyledSectionTitle = styled(FlexWrapper)`
     }
 `
 
-const RightSection = styled.div`
+const RightSection = styled(Fade)`
     position: relative;
     height: fit-content;
     transform: translateY(-70px);
@@ -112,7 +119,7 @@ const RightSection = styled.div`
     &::before {
         content: "";
         position: absolute;
-            background-image: url("${bothPseudo}");
+        background-image: url("${bothPseudo}");
         background-size: contain;
         background-repeat: no-repeat;
         top: 60px;
@@ -123,7 +130,7 @@ const RightSection = styled.div`
         animation: ${imagePulseAnimation} 2s infinite;
         z-index: 999;
     }
-    
+
     @media ${theme.media.tablet} {
         margin: 0 auto;
         transform: translateY(0px);
@@ -140,8 +147,8 @@ const RightSection = styled.div`
 const StyledPhoto = styled(Photo)`
     display: block;
     position: relative;
-    
+
     @media ${theme.media.tablet} {
-        
+
     }
 `
