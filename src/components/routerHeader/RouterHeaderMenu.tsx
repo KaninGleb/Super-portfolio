@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {Link} from "react-router-dom";
-import { theme } from "../../styles/Theme.tsx";
+import {theme} from "../../styles/Theme.tsx";
 
 type RouterHeaderMenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
@@ -12,16 +13,20 @@ export const RouterHeaderMenu = (props: RouterHeaderMenuPropsType) => {
             <StyledUl>
                 {props.menuItems.map((item, index) => (
                     <ListItem key={index}>
-                        <HeaderLink to={`/${item.id}`}>
-                            <span>#</span>{item.name}
-                        </HeaderLink>
+                        <Fade delay={index * 100} direction={'down'}>
+                            <HeaderLink to={`/${item.id}`}>
+                                <span>#</span>{item.name}
+                            </HeaderLink>
+                        </Fade>
                     </ListItem>
                 ))}
                 <ListItem>
-                    <LanguageSelect aria-label='Language change'>
-                        <option>EN</option>
-                        <option>RU</option>
-                    </LanguageSelect>
+                    <Fade delay={props.menuItems.length * 100} direction={'down'}>
+                        <LanguageSelect aria-label='Language change'>
+                            <option>EN</option>
+                            <option>RU</option>
+                        </LanguageSelect>
+                    </Fade>
                 </ListItem>
             </StyledUl>
         </StyledRouterHeaderMenu>
@@ -49,7 +54,6 @@ const HeaderLink = styled(Link)`
     position: relative;
     transition: color 0.3s ease;
     padding: 12px 0;
-    
     
     span {
         color: ${theme.colors.secondaryText};
