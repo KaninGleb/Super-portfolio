@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
 import {theme} from "../../../styles/Theme.tsx";
+import {Fade} from "react-awesome-reveal";
 
 export const Media = () => {
     return (
@@ -18,15 +19,23 @@ export const Media = () => {
                 Проведение каркасных макетов, Прототипирование, Графический дизайн, Анимация, Препроцессоры CSS (Sass, Less), TypeScript,
                 Фреймворки фронтенда, Код-ревью, Интервью, Собеседование, Мок-собеседование
             </HeaderSEO>
-            <DecorativeLine width={'2px'}
-                            height={'191px'}
-                            bgColor={theme.colors.primaryOutline}
-                            marginL={'0'}/>
-            <SocialList displayFlex={true}
-                        direction={'column'}
-                        gap={'8px'}
-                        iconIds={['git', 'discord', 'figma']}
-                        showIcon={true} />
+            <Fade direction={'down'} duration={1300}>
+                <DecorativeLine
+                    width={'2px'}
+                    height={'191px'}
+                    bgColor={theme.colors.primaryOutline}
+                    marginL={'0'}
+                />
+            </Fade>
+            <Fade direction={'down'} duration={1250}>
+                <SocialList
+                    displayFlex={true}
+                    direction={'column'}
+                    gap={'8px'}
+                    iconIds={['git', 'discord', 'figma']}
+                    showIcon={true}
+                />
+            </Fade>
         </StyledMedia>
     )
 }
