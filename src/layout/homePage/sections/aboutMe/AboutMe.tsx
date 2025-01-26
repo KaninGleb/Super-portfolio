@@ -40,6 +40,7 @@ export const AboutMe = () => {
 
 const StyledAboutMe = styled.section`
     margin-bottom: 112px;
+    padding-bottom: 2px;
     position: relative;
     overflow: hidden;
 
@@ -54,7 +55,7 @@ const StyledAboutMe = styled.section`
         width: 160px;
         height: 680px;
         animation: ${imagePulseAnimation} 2s infinite;
-        animation: ${fadeBgLeft} 30s linear;
+        animation: ${fadeBgLeft} 30s infinite;
     }
 
     @media ${theme.media.bgPseudoOff} {
