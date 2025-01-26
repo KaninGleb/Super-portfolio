@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
@@ -16,19 +17,20 @@ export const SmallProjects = () => {
                             <SectionTitle section={sectionsData.projectsPage.smallProjects}/>
                         </FlexWrapper>
                     </FlexWrapper>
-
-                    <StyledFlexWrapper wrap='wrap' gap='16px'>
-                        {Object.values(smallProjectsData).map((project, index) => (
-                            <SmallProject
-                                key={index}
-                                software={project.software}
-                                title={project.title}
-                                text={project.text}
-                                links={project.links}
-                                maxWidth={'330px'}
-                            />
-                        ))}
-                    </StyledFlexWrapper>
+                    <Fade direction={'left'}>
+                        <StyledFlexWrapper wrap='wrap' gap='16px'>
+                            {Object.values(smallProjectsData).map((project, index) => (
+                                <SmallProject
+                                    key={index}
+                                    software={project.software}
+                                    title={project.title}
+                                    text={project.text}
+                                    links={project.links}
+                                    maxWidth={'330px'}
+                                />
+                            ))}
+                        </StyledFlexWrapper>
+                    </Fade>
                 </MainWrapper>
             </Container>
         </StyledSmallProjects>
