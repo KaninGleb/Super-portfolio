@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { useState } from "react";
+import {Fade, Zoom} from "react-awesome-reveal";
+import {useState} from "react";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
@@ -26,32 +27,39 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <StyledFlexWrapper align="center" justify="space-around" gap="30px">
-                    <TextWrapper direction='column' align='flex-start'>
-                        <MainTitle>Elias is a <span>web designer</span> and <span>front-end developer</span></MainTitle>
-                        <Paragraph children={textData.main.paragraph} fontWeight={'400'}/>
-                        <FlexWrapper gap={'20px'}>
-                            <ContactBtn type='button' onClick={handleToggleModal}>Contact me!!</ContactBtn>
-                            <CVBtn type='submit' href={CV} download>Download CV</CVBtn>
-                        </FlexWrapper>
-                    </TextWrapper>
-                    <PhotoWrapper direction='column'>
-                        <MyPhoto src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
-                        <PortfolioMessage>
-                            <ColorBlock/>
-                            <MessageTextWrapper>
-                                Currently working on <span>Portfolio</span>
-                            </MessageTextWrapper>
-                        </PortfolioMessage>
-                    </PhotoWrapper>
+                        <TextWrapper direction='column' align='flex-start'>
+                            <Fade direction={'down'} cascade damping={0.2}>
+                                <MainTitle>Elias is a <span>web designer</span> and <span>front-end developer</span></MainTitle>
+                                <Paragraph children={textData.main.paragraph} fontWeight={'400'}/>
+                            </Fade>
+                            <Zoom>
+                                <FlexWrapper gap={'20px'}>
+                                    <ContactBtn type='button' onClick={handleToggleModal}>Contact me!!</ContactBtn>
+                                    <CVBtn type='submit' href={CV} download>Download CV</CVBtn>
+                                </FlexWrapper>
+                            </Zoom>
+                        </TextWrapper>
+                    <Fade direction="right">
+                        <PhotoWrapper direction='column'>
+                            <MyPhoto src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
+                            <PortfolioMessage>
+                                <ColorBlock/>
+                                <MessageTextWrapper>
+                                    Currently working on <span>Portfolio</span>
+                                </MessageTextWrapper>
+                            </PortfolioMessage>
+                        </PhotoWrapper>
+                    </Fade>
                 </StyledFlexWrapper>
             </Container>
-            <Modal isVisible={isModalVisible} onClose={handleToggleModal} />
+            <Modal isVisible={isModalVisible} onClose={handleToggleModal}/>
         </StyledMain>
-    );
-};
+    )
+}
 
 const StyledMain = styled.section`
     margin-bottom: 112px;
+    overflow: hidden;
     
     @media ${theme.media.tablet} {
         margin-bottom: 70px;
