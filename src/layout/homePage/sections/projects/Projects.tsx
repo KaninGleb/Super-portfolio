@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
@@ -13,24 +14,25 @@ export const Projects = () => {
             <Container>
                 <MainWrapper direction='column' gap='48px'>
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
-                        <FlexWrapper>
-                            <SectionTitle section={sectionsData.homePage.projects}/>
-                        </FlexWrapper>
-                        <ProjectsLink to="/projects">View all ~~&gt;</ProjectsLink>
+                        <SectionTitle section={sectionsData.homePage.projects}/>
+                        <Fade direction={'up'} duration={800}>
+                            <ProjectsLink to="/projects">View all ~~&gt;</ProjectsLink>
+                        </Fade>
                     </FlexWrapper>
-
-                    <StyledFlexWrapper gap='16px'>
-                        {Object.values(projectsData).slice(0, 3).map((project, index) => (
-                            <Project
-                                key={index}
-                                software={project.software}
-                                title={project.title}
-                                text={project.text}
-                                src={project.src}
-                                links={project.links}
-                            />
-                        ))}
-                    </StyledFlexWrapper>
+                    <Fade direction={'left'} duration={1200}>
+                        <StyledFlexWrapper gap='16px'>
+                            {Object.values(projectsData).slice(0, 3).map((project, index) => (
+                                <Project
+                                    key={index}
+                                    software={project.software}
+                                    title={project.title}
+                                    text={project.text}
+                                    src={project.src}
+                                    links={project.links}
+                                />
+                            ))}
+                        </StyledFlexWrapper>
+                    </Fade>
                 </MainWrapper>
             </Container>
         </StyledProjects>
