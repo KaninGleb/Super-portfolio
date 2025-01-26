@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
@@ -14,29 +15,26 @@ export const AllProjects = () => {
         <StyledAllProjects>
             <Container>
                 <MainWrapper direction='column' gap='48px'>
-                    <FlexWrapper justify='space-between' align='center' gap='16px'>
-                        <FlexWrapper>
-                            <SectionTitle section={sectionsData.projectsPage.allProjects}/>
-                        </FlexWrapper>
-                    </FlexWrapper>
-
-                    <StyledFlexWrapper wrap='wrap' gap='16px'>
-                        {Object.values(projectsData).map((project, index) => (
-                            <Project
-                                key={index}
-                                software={project.software}
-                                title={project.title}
-                                text={project.text}
-                                src={project.src}
-                                links={project.links}
-                                maxWidth={'330px'}
-                            />
-                        ))}
-                    </StyledFlexWrapper>
+                    <SectionTitle section={sectionsData.projectsPage.allProjects}/>
+                    <Fade direction={'left'} duration={1200}>
+                        <StyledFlexWrapper wrap='wrap' gap='16px'>
+                            {Object.values(projectsData).slice(0, 5).map((project, index) => (
+                                <Project
+                                    key={index}
+                                    software={project.software}
+                                    title={project.title}
+                                    text={project.text}
+                                    src={project.src}
+                                    links={project.links}
+                                    maxWidth={'330px'}
+                                />
+                            ))}
+                        </StyledFlexWrapper>
+                    </Fade>
                 </MainWrapper>
             </Container>
         </StyledAllProjects>
-    );
+    )
 }
 
 const StyledAllProjects = styled.section`
