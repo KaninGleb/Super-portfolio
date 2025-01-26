@@ -8,6 +8,7 @@ import {Fact} from "./Fact/Fact.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import image from "../../../assets/images/my-fun-facts-image.svg";
 import {imagePulseAnimation} from "../../../animations/animations.ts";
+import {Fade} from "react-awesome-reveal";
 
 export const MyFunFacts = () => {
     return (
@@ -17,11 +18,15 @@ export const MyFunFacts = () => {
                 <SectionWrapper gap={'136px'}>
                     <FactsSection>
                         {factsData.map((fact, index) => (
-                            <Fact key={index} fact={fact.fact}/>
+                            <FadeWrapper key={index} delay={index * 100} direction={'up'} duration={600}>
+                                <Fact key={index} fact={fact.fact}/>
+                            </FadeWrapper>
                         ))}
                     </FactsSection>
                     <PhotoSection>
-                        <StyledPhoto src={image} Wmin={150} Wmax={202} alt={'My fan facts image'}/>
+                        <Fade direction={'right'} duration={800}>
+                            <StyledPhoto src={image} Wmin={150} Wmax={202} alt={'My fan facts image'}/>
+                        </Fade>
                     </PhotoSection>
                 </SectionWrapper>
             </Container>
@@ -48,6 +53,14 @@ const FactsSection = styled.ul`
     flex-wrap: wrap;
     align-content: center;
     gap: 16px;
+`
+
+const FadeWrapper = styled(Fade)`
+    @media ${theme.media.tablet} {
+        display: flex;
+        flex-grow: 1;
+    }
+    
 `
 
 const PhotoSection = styled.div`
