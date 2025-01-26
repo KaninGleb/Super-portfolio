@@ -4,6 +4,7 @@ import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {Paragraph} from "../../components/Paragraph.tsx";
+import {Fade} from "react-awesome-reveal";
 
 type TitleSectionPropsType = {
     section: {
@@ -22,7 +23,9 @@ export const TitleSection = (props: TitleSectionPropsType) => {
             <Container>
                 <FlexWrapper direction={'column'} gap={'14px'}>
                     <SectionTitle section={props.section}/>
-                    <Paragraph color={theme.colors.primaryText}>{props.section.description}</Paragraph>
+                    <Fade direction={'up'}>
+                        <Paragraph color={theme.colors.primaryText}>{props.section.description}</Paragraph>
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </StyledTitleSection>
