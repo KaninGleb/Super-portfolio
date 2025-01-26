@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../styles/Theme.tsx";
 import {imagePulseAnimation, pulseAnimation} from "../animations/animations.ts";
 import {font} from "../styles/CommonFont.tsx";
@@ -15,9 +16,12 @@ type SectionTitlePropsType = {
 
 export const SectionTitle = (props: SectionTitlePropsType) => {
     return (
-        <StyledSectionTitle id={props.section.id} Wmin={props.section.Wmin} Wmax={props.section.Wmax}>
-            <span>{props.section.symbol}</span>{props.section.name}
-        </StyledSectionTitle>
+        <Fade direction={'up'} duration={800}>
+            <StyledSectionTitle id={props.section.id} Wmin={props.section.Wmin} Wmax={props.section.Wmax}>
+                <span>{props.section.symbol}</span>{props.section.name}
+            </StyledSectionTitle>
+        </Fade>
+
     )
 }
 
