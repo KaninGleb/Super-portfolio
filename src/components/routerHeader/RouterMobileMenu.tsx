@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../styles/Theme.tsx";
 import {SocialList} from "../SocialList.tsx";
 import {Logo} from "../logo/Logo.tsx";
@@ -46,20 +47,26 @@ export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
                 <StyledUl>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
-                            <HeaderLink to={`/${item.id}`}>
-                                <span>#</span>{item.name}
-                            </HeaderLink>
+                            <Fade delay={index * 100} direction={'down'} duration={600}>
+                                <HeaderLink to={`/${item.id}`}>
+                                    <span>#</span>{item.name}
+                                </HeaderLink>
+                            </Fade>
                         </ListItem>
                     ))}
                     <ListItem>
-                        <StyledContactBtn type='button' onClick={handleToggleModal}>Contact me!!</StyledContactBtn>
-                        <StyledCVBtn type='submit' href={CV} download>Download CV</StyledCVBtn>
+                        <Fade delay={props.menuItems.length * 100} direction={'down'}>
+                            <StyledContactBtn type='button' onClick={handleToggleModal}>Contact me!!</StyledContactBtn>
+                            <StyledCVBtn type='submit' href={CV} download>Download CV</StyledCVBtn>
+                        </Fade>
                     </ListItem>
                     <ListItem onClick={ (e)=>e.stopPropagation() }>
-                        <LanguageSelect aria-label='Language change' >
-                            <option>EN</option>
-                            <option>RU</option>
-                        </LanguageSelect>
+                        <Fade delay={(props.menuItems.length + 1) * 100} direction={'down'}>
+                            <LanguageSelect aria-label='Language change'>
+                                <option>EN</option>
+                                <option>RU</option>
+                            </LanguageSelect>
+                        </Fade>
                     </ListItem>
                 </StyledUl>
                 <StyledSocialList displayFlex={true}
