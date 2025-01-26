@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../styles/Theme.tsx";
 import {Icon} from "./icon/Icon.tsx";
 
@@ -34,35 +35,40 @@ type StyledIconPropsType = {
 
 export const SocialList = (props: SocialListPropsType) => {
     return (
-        <StyledSocialList displayFlex={props.displayFlex}
-                            direction={props.direction}
-                            wrap={props.wrap}
-                            gap={props.gap}>
+        <StyledSocialList
+            displayFlex={props.displayFlex}
+            direction={props.direction}
+            wrap={props.wrap}
+            gap={props.gap}
+        >
             {props.iconIds.map((itemId, index) => {
                 const socialItem = socialData.find(item => item.id === itemId);
-                const title = props.iconsTitles ? props.iconsTitles[index] : ''
+                const title = props.iconsTitles ? props.iconsTitles[index] : '';
 
                 return socialItem && (
-                    <SocialItem key={itemId}>
-                        <SocialLink href={socialItem.href}
-                                    target='_blank'
-                                    aria-label={socialItem.areaLabel}
-                                    gapBetween={props.gapBetween}>
-                            {props.showIcon && (
-                                <Icon iconId={socialItem.id}
+                    <Fade key={itemId} direction={'up'} delay={index * 100} cascade damping={.2}>
+                        <SocialItem>
+                            <SocialLink href={socialItem.href}
+                                        target='_blank'
+                                        aria-label={socialItem.areaLabel}
+                                        gapBetween={props.gapBetween}>
+                                {props.showIcon && (
+                                    <Icon
+                                        iconId={socialItem.id}
                                         width={props.iconSize || '32'}
                                         height={props.iconSize || '32'}
                                         viewBox={`0 0 32 32`}
-                                />
-                            )}
-                            <IconTitle>{title}</IconTitle>
-                        </SocialLink>
-                    </SocialItem>
+                                    />
+                                )}
+                                <IconTitle>{title}</IconTitle>
+                            </SocialLink>
+                        </SocialItem>
+                    </Fade>
                 )
             })}
         </StyledSocialList>
-    );
-};
+    )
+}
 
 const StyledSocialList = styled.ul<FlexPropsType>`
     display: ${props => props.displayFlex ? 'flex' : ''};
