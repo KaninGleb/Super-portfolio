@@ -1,22 +1,23 @@
 import styled from "styled-components";
+import {Zoom} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import quotationMark from "../../../../assets/images/quotation-mark.svg"
 import {font} from "../../../../styles/CommonFont.tsx";
 import pseudoBgR from "../../../../assets/images/sections-pseudo/background-preudo-right.svg"
-import {imagePulseAnimation} from "../../../../animations/animations.ts";
+import {fadeBgRight, imagePulseAnimation} from "../../../../animations/animations.ts";
 
 export const Testimony = () => {
     return (
         <StyledTestimony>
             <Container>
-                <FlexWrapper justify="center">
+                <ZoomFlexWrapper>
                     <StyledFlexWrapper direction="column" align="flex-end">
                         <StyledQuote>With great power comes great electricity bill</StyledQuote>
                         <StyledCite>- Dr. Who</StyledCite>
                     </StyledFlexWrapper>
-                </FlexWrapper>
+                </ZoomFlexWrapper>
             </Container>
         </StyledTestimony>
     )
@@ -39,8 +40,9 @@ const StyledTestimony = styled.section`
         width: 170px;
         height: 1720px;
         animation: ${imagePulseAnimation} 2s infinite;
+        animation: ${fadeBgRight} 30s linear;
     }
-        
+    
     @media ${theme.media.bgPseudoOff} {
         &::after {
             display: none;
@@ -50,6 +52,11 @@ const StyledTestimony = styled.section`
     @media ${theme.media.mobile} {
         margin-bottom: 50px;
     }
+`
+
+const ZoomFlexWrapper = styled(Zoom)`
+    display: flex;
+    justify-content: center;
 `
 
 const StyledFlexWrapper = styled(FlexWrapper)`
