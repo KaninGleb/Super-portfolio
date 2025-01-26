@@ -6,6 +6,7 @@ import {FlexWrapper} from "../FlexWrapper.tsx";
 import {Field} from "../Field.tsx";
 import {TextAreaField} from "../TextAreaField.tsx";
 import {font} from "../../styles/CommonFont.tsx";
+import {Fade} from "react-awesome-reveal";
 
 interface ModalProps {
     isVisible: boolean;
@@ -49,6 +50,7 @@ export const Modal: React.FC<ModalProps> = ({isVisible, onClose}) => {
 
     return (
         <ModalOverlay onClick={onClose}>
+            <Fade direction={'up'} duration={400}>
             <ModalContent onClick={(e) => e.stopPropagation()}
                             ref={form} onSubmit={sendEmail}>
                 <ContactTitle>Contact me</ContactTitle>
@@ -79,6 +81,7 @@ export const Modal: React.FC<ModalProps> = ({isVisible, onClose}) => {
                 />
                 <SendButton type="submit">Send message</SendButton>
             </ModalContent>
+            </Fade>
         </ModalOverlay>
     )
 }
