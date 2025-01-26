@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
@@ -13,27 +14,29 @@ export const Contacts = () => {
         <StyledContacts>
             <Container>
                 <ContentFlexWrapper direction='column' gap='45px'>
-                    <FlexWrapper>
-                        <SectionTitle section={sectionsData.homePage.contacts}/>
-                    </FlexWrapper>
-
+                    <SectionTitle section={sectionsData.homePage.contacts}/>
                     <StyledFlexWrapper justify='space-between'>
                         <LeftSection direction='column' gap='20px'>
-                            <Paragraph children={textData.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}></Paragraph>
-                            <Link to="/contacts" children={'Read more ->'} mWidth={'148px'}/>
+                            <Fade direction={'up'} cascade damping={.2}>
+                                <Paragraph children={textData.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}></Paragraph>
+                                <Link to="/contacts" children={'Read more ->'} mWidth={'148px'}/>
+                            </Fade>
                         </LeftSection>
-
-                        <RightSection direction='column' gap='16px'>
-                            <StyledTitle>Message me here</StyledTitle>
-                            <SocialList displayFlex={true}
-                                        direction={'column'}
-                                        gap='8px'
-                                        iconIds={['discord', 'email']}
-                                        showIcon={true}
-                                        iconsTitles={['!Elias#3519', 'elias@elias.me']}
-                                        gapBetween={'5px'}
-                            />
-                        </RightSection>
+                        <Fade direction={'right'}>
+                            <RightSection direction='column' gap='16px'>
+                                <Fade direction={'up'}>
+                                    <StyledTitle>Message me here</StyledTitle>
+                                </Fade>
+                                <SocialList displayFlex={true}
+                                            direction={'column'}
+                                            gap='8px'
+                                            iconIds={['discord', 'email']}
+                                            showIcon={true}
+                                            iconsTitles={['!Elias#3519', 'elias@elias.me']}
+                                            gapBetween={'5px'}
+                                />
+                            </RightSection>
+                        </Fade>
                     </StyledFlexWrapper>
                 </ContentFlexWrapper>
             </Container>
@@ -42,7 +45,9 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.section`
-    
+    overflow: hidden
+;
+    padding-bottom: 2px;
 `
 
 const ContentFlexWrapper = styled(FlexWrapper)`
