@@ -10,6 +10,7 @@ import aboutMePhoto from "../../assets/images/about-me-photo.png"
 import bothPseudo from "../../assets/images/about-me-photo-pseudo/both-pseudo.svg";
 import bgLeft from "../../assets/images/background/about-me-page/about-me-page-bg-pseudo-left.svg"
 import bgRight from "../../assets/images/background/about-me-page/about-me-page-bg-pseudo-right.svg"
+import {Fade} from "react-awesome-reveal";
 
 export const AboutMeForPage = () => {
     return (
@@ -17,11 +18,13 @@ export const AboutMeForPage = () => {
             <Container>
                 <StyledFlexWrapper gap='166px'>
                     <LeftSection>
-                        <Paragraph children={textData.aboutMe.paragraph1}/>
-                        <Paragraph children={textData.aboutMe.paragraph2}/>
-                        <Paragraph children={textData.aboutMe.paragraph3}/>
+                        <Fade direction={'up'} cascade damping={.1}>
+                            {Object.values(textData.aboutMe).map((paragraph, index) => (
+                                <Paragraph key={index} children={paragraph}/>
+                            ))}
+                        </Fade>
                     </LeftSection>
-                    <RightSection>
+                    <RightSection direction={'right'}>
                         <StyledPhoto src={aboutMePhoto} Wmax={338} Wmin={250} alt="About Me Photo"/>
                     </RightSection>
                 </StyledFlexWrapper>
@@ -89,7 +92,7 @@ const LeftSection = styled.div`
     }
 `
 
-const RightSection = styled.div`
+const RightSection = styled(Fade)`
     position: relative;
     height: fit-content;
     transform: translateY(-70px);
