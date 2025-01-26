@@ -8,7 +8,7 @@ import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {Link} from "../../../../components/Link.tsx";
 import {sectionsData, textData} from "../../../../data/appData.ts";
-import {fadeBgLeft, imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
+import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
 import pseudoBgL from "../../../../assets/images/sections-pseudo/background-pseudo-left.svg"
 import aboutMePhoto from "../../../../assets/images/about-me-photo.png"
 import bothPseudo from "../../../../assets/images/about-me-photo-pseudo/both-pseudo.svg";
@@ -55,7 +55,6 @@ const StyledAboutMe = styled.section`
         width: 160px;
         height: 680px;
         animation: ${imagePulseAnimation} 2s infinite;
-        animation: ${fadeBgLeft} 30s infinite;
     }
 
     @media ${theme.media.bgPseudoOff} {

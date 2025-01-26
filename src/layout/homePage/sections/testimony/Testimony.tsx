@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import quotationMark from "../../../../assets/images/quotation-mark.svg"
 import {font} from "../../../../styles/CommonFont.tsx";
 import pseudoBgR from "../../../../assets/images/sections-pseudo/background-preudo-right.svg"
-import {fadeBgRight, imagePulseAnimation} from "../../../../animations/animations.ts";
+import {imagePulseAnimation} from "../../../../animations/animations.ts";
 
 export const Testimony = () => {
     return (
@@ -40,7 +40,6 @@ const StyledTestimony = styled.section`
         width: 170px;
         height: 1720px;
         animation: ${imagePulseAnimation} 2s infinite;
-        animation: ${fadeBgRight} 30s linear;
     }
     
     @media ${theme.media.bgPseudoOff} {
