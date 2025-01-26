@@ -117,3 +117,29 @@ export const imagePulseAnimation = keyframes`
         opacity: 1;
     }
 `
+
+export const fadeBgRight = keyframes`
+    from {
+        transform: translateX(80px);
+    }
+    50% {
+        transform: translateX(0);
+        
+    }
+    to {
+        transform: translateX(80px);
+    }
+`
+
+export const fadeBgLeft = keyframes`
+    from {
+        transform: translateX(-80px);
+    }
+    50% {
+        transform: translateX(0);
+        
+    }
+    to {
+        transform: translateX(-80px);
+    }
+`
