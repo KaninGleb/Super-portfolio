@@ -60,6 +60,7 @@ export const Main = () => {
 const StyledMain = styled.section`
     margin-bottom: 112px;
     overflow: hidden;
+    padding-bottom: 4px;
     
     @media ${theme.media.tablet} {
         margin-bottom: 70px;
@@ -167,8 +168,5 @@ const PortfolioMessage = styled.div`
     
     @media screen and (max-width: 950px) {
         margin: 0 auto;
-    }
-    
-    @media ${theme.media.mobile} {
     }
 `

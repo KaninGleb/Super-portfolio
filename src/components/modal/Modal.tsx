@@ -50,38 +50,44 @@ export const Modal: React.FC<ModalProps> = ({isVisible, onClose}) => {
 
     return (
         <ModalOverlay onClick={onClose}>
-            <Fade direction={'up'} duration={400}>
-            <ModalContent onClick={(e) => e.stopPropagation()}
-                            ref={form} onSubmit={sendEmail}>
-                <ContactTitle>Contact me</ContactTitle>
-                <InputsWrapper>
-                    <Field id='name'
+            <FadeWrapper direction={'up'} duration={400}>
+                <ModalContent
+                    onClick={(e) => e.stopPropagation()}
+                    ref={form} onSubmit={sendEmail}
+                >
+                    <ContactTitle>Contact me</ContactTitle>
+                    <InputsWrapper>
+                        <Field
+                            id='name'
                             type='text'
                             labelText='Name'
                             placeholder={'Name'}
                             name={'user_name'}
-                    />
-                    <Field id='email'
+                        />
+                        <Field
+                            id='email'
                             type='email'
                             labelText='Email'
                             placeholder={'Email'}
                             name={'user_email'}
-                    />
-                </InputsWrapper>
-                <Field id='title'
+                        />
+                    </InputsWrapper>
+                    <Field
+                        id='title'
                         type='text'
                         labelText='Title'
                         placeholder={'Title'}
                         name={'subject'}
-                />
-                <TextAreaField id='message'
-                                labelText='Message'
-                                placeholder={'Message'}
-                                name={'message'}
-                />
-                <SendButton type="submit">Send message</SendButton>
-            </ModalContent>
-            </Fade>
+                    />
+                    <TextAreaField
+                        id='message'
+                        labelText='Message'
+                        placeholder={'Message'}
+                        name={'message'}
+                    />
+                    <SendButton type="submit">Send message</SendButton>
+                </ModalContent>
+            </FadeWrapper>
         </ModalOverlay>
     )
 }
@@ -107,6 +113,12 @@ const ModalOverlay = styled.div`
     }
 `
 
+const FadeWrapper = styled(Fade)`
+    @media ${theme.media.mobile} {
+        width: 100%;
+    }
+`
+
 const ModalContent = styled.form`
     display: flex;
     flex-direction: column;
@@ -116,6 +128,7 @@ const ModalContent = styled.form`
     border-radius: 8px;
     max-width: 570px;
     width: 100%;
+    
     @media ${theme.media.mobile} {
         padding: 20px;
     }
