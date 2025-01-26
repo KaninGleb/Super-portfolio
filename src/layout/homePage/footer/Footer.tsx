@@ -1,28 +1,31 @@
+import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../styles/Theme.tsx";
-import styled, {css} from "styled-components";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Logo} from "../../../components/logo/Logo.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
 import {font} from "../../../styles/CommonFont.tsx";
 
-type FooterType = {isAbsolute?: boolean};
-
-export const Footer = (props:FooterType) => {
+export const Footer = () => {
     return (
-        <StyledFooter isAbsolute={props.isAbsolute}>
+        <StyledFooter>
             <FooterContainer>
                 <BothSections justify="space-between">
                     <LeftSection>
-                        <FlexWrapper gap='24px'>
+                        <StyledFlexWrapper gap='24px'>
                             <Logo/>
                             <SocialList iconIds={['email']} iconsTitles={['elias@elias-dev.ml']}/>
-                        </FlexWrapper>
-                        <span>Web designer and front-end developer</span>
+                        </StyledFlexWrapper>
+                        <Fade direction={'up'}>
+                            <span>Web designer and front-end developer</span>
+                        </Fade>
                     </LeftSection>
 
                     <RightSection direction='column' align='flex-start' gap='12px'>
-                        <h3>Media</h3>
+                        <Fade direction={'up'}>
+                            <h3>Media</h3>
+                        </Fade>
                         <SocialList displayFlex={true}
                                     gap={'8px'}
                                     iconIds={['git', 'figma', 'discord']}
@@ -30,23 +33,19 @@ export const Footer = (props:FooterType) => {
                         />
                     </RightSection>
                 </BothSections>
-                <small>© Copyright 2022. Made by Elias</small>
+                <Fade direction={'up'}>
+                    <small>© Copyright 2022. Made by Elias</small>
+                </Fade>
             </FooterContainer>
         </StyledFooter>
     )
 }
 
-const StyledFooter = styled.footer<FooterType>`
+const StyledFooter = styled.footer`
     text-align: center;
     margin: 145px 0 32px;
     border-top: 1px solid ${theme.colors.primaryOutline};
-
-    ${props => props.isAbsolute && css`
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    `
-    }
+    
     h3 {
         font-weight: 500;
         font-size: 24px;
@@ -81,9 +80,6 @@ const BothSections = styled(FlexWrapper)`
 
 const LeftSection = styled.div`
     text-align: left;
-    div {
-        margin-bottom: 16px;
-    }
 
     p {
         color: ${theme.colors.primaryLightText};
@@ -92,4 +88,8 @@ const LeftSection = styled.div`
 
 const RightSection = styled(FlexWrapper)`
 
+`
+
+const StyledFlexWrapper = styled(FlexWrapper)`
+    margin-bottom: 16px;
 `
