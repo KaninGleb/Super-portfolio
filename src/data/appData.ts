@@ -1,9 +1,9 @@
 import {theme} from "../styles/Theme.tsx";
-import chertNodes from "../assets/images/projects/project-1.svg";
-import protectX from "../assets/images/projects/project-2.svg";
-import kahoot from "../assets/images/projects/project-3.svg";
-import kotikBot from "../assets/images/projects/project-4.svg";
-import portfolio from "../assets/images/projects/project-5.svg";
+import chertNodes from "../assets/images/section-images/projects/project-1.svg";
+import protectX from "../assets/images/section-images/projects/project-2.svg";
+import kahoot from "../assets/images/section-images/projects/project-3.svg";
+import kotikBot from "../assets/images/section-images/projects/project-4.svg";
+import portfolio from "../assets/images/section-images/projects/project-5.svg";
 
 export const headerLinks = [
     { name: 'home', id: ''},

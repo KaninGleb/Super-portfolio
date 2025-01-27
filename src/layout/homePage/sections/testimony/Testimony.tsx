@@ -3,10 +3,10 @@ import {Zoom} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import quotationMark from "../../../../assets/images/quotation-mark.svg"
 import {font} from "../../../../styles/CommonFont.tsx";
-import pseudoBgR from "../../../../assets/images/sections-pseudo/background-preudo-right.svg"
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
+import quotationMark from "../../../../assets/images/sections-pseudo/testimony-pseudo/quotation-mark.svg"
+import pseudoBgR from "../../../../assets/images/background/home-page/home-page-bg-pseudo-right.svg"
 
 export const Testimony = () => {
     return (

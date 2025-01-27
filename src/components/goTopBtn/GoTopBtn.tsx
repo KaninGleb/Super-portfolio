@@ -1,8 +1,9 @@
+import styled from 'styled-components';
+import {useEffect, useState} from 'react';
 import {animateScroll as scroll} from 'react-scroll';
-import styled, {keyframes} from 'styled-components';
 import {theme} from '../../styles/Theme.tsx';
 import {Icon} from '../icon/Icon.tsx';
-import {useEffect, useState} from 'react';
+import {GoTopBtnSlideIn} from "../../animations/animations.ts";
 
 export const GoTopBtn = () => {
     const [showBtn, setShowBtn] = useState(false);
@@ -28,33 +29,22 @@ export const GoTopBtn = () => {
     }, [lastScrollY]);
 
     return (
-        // <div style={{  transition: `0.7s ease-in-out`,  transform: `translateY(${!showBtn ? '100px' : '-20px'})` }}>
-        <>
-            {showBtn && (
-                <StyledGoTopBtn onClick={() => {
-                    scroll.scrollToTop({
-                        duration: 1,
-                        smooth: 'easeInOutQuint',
-                    });
-                }}>
-                    <Icon iconId={'arrowGoToTop'} height={'15'} width={'16'} viewBox={'0 0 16 15'} />
-                </StyledGoTopBtn>
-            )}
-        </>
-        // </div>
+        showBtn && (
+            <StyledGoTopBtn
+                onClick={() => { scroll.scrollToTop({
+                    duration: 1,
+                    smooth: 'easeInOutQuint',
+                })
+            }}>
+                <Icon
+                    iconId={'arrowGoToTop'}
+                    height={'15'}
+                    width={'16'}
+                    viewBox={'0 0 16 15'}/>
+            </StyledGoTopBtn>
+        )
     )
 }
-
-const slideIn = keyframes`
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-`
 
 const StyledGoTopBtn = styled.button`
     background-color: rgba(0, 0, 0, 0.3);
@@ -66,7 +56,7 @@ const StyledGoTopBtn = styled.button`
     height: 50px;
     border-radius: 50%;
     transition: 0.2s ease-in-out;
-    animation: ${slideIn} 0.5s forwards;
+    animation: ${GoTopBtnSlideIn} 0.5s forwards;
 
     &:hover {
         background-color: rgba(0, 0, 0, 0.5);

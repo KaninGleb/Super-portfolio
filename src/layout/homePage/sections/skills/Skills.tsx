@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
@@ -6,9 +7,8 @@ import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {sectionsData, skillsData} from "../../../../data/appData.ts";
 import {Skill} from "./skill/Skill.tsx";
 import {Photo} from "../../../../components/Photo.tsx";
-import groupOfImages from "../../../../assets/images/skills/skills-group.svg"
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
-import {Fade} from "react-awesome-reveal";
+import groupOfImages from "../../../../assets/images/section-images/skills/skills-images-group.svg"
 
 export const Skills = () => {
     return (

@@ -152,3 +152,14 @@ export const modalFadeInUp = keyframes`
         transform: translateY(0);
     }
 `
+
+export const GoTopBtnSlideIn = keyframes`
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
@@ -6,11 +7,10 @@ import {Photo} from "../../components/Photo.tsx";
 import {Paragraph} from "../../components/Paragraph.tsx";
 import {textData} from "../../data/appData.ts";
 import {imagePulseAnimation, pulseAnimation} from "../../animations/animations.ts";
-import aboutMePhoto from "../../assets/images/about-me-photo.png"
-import bothPseudo from "../../assets/images/about-me-photo-pseudo/both-pseudo.svg";
+import aboutMePhoto from "../../assets/images/section-images/about-me/about-me-my-photo.png"
+import bothPseudo from "../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg";
 import bgLeft from "../../assets/images/background/about-me-page/about-me-page-bg-pseudo-left.svg"
 import bgRight from "../../assets/images/background/about-me-page/about-me-page-bg-pseudo-right.svg"
-import {Fade} from "react-awesome-reveal";
 
 export const AboutMeForPage = () => {
     return (

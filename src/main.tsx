@@ -10,5 +10,5 @@ createRoot(document.getElementById('root')!).render(
         <GlobalStyles/>
         <App/>
         <SpeedInsights/>
-    </StrictMode>,
+    </StrictMode>
 )

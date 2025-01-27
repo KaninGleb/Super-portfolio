@@ -6,9 +6,9 @@ import {Paragraph} from "../../components/Paragraph.tsx";
 import {SocialList} from "../../components/SocialList.tsx";
 import {theme} from "../../styles/Theme.tsx";
 import {textData} from "../../data/appData.ts";
+import {imagePulseAnimation} from "../../animations/animations.ts";
 import bgLeft from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-left-short.svg";
 import bgRight from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-right-short.svg";
-import {imagePulseAnimation} from "../../animations/animations.ts";
 
 
 export const ContactsForContactsPage = () => {

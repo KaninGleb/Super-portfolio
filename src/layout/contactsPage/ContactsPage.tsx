@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "../homePage/media/Media.tsx";
 import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
@@ -7,7 +8,6 @@ import {sectionsData} from "../../data/appData.ts";
 import {ContactsForContactsPage} from "./ContactsForContactsPage.tsx";
 import {AllMedia} from "./AllMedia.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";
-import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 
 export const ContactsPage = () => {
     return (

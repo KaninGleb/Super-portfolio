@@ -9,9 +9,9 @@ import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {Link} from "../../../../components/Link.tsx";
 import {sectionsData, textData} from "../../../../data/appData.ts";
 import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
-import pseudoBgL from "../../../../assets/images/sections-pseudo/background-pseudo-left.svg"
-import aboutMePhoto from "../../../../assets/images/about-me-photo.png"
-import bothPseudo from "../../../../assets/images/about-me-photo-pseudo/both-pseudo.svg";
+import aboutMePhoto from "../../../../assets/images/section-images/about-me/about-me-my-photo.png"
+import bothPseudo from "../../../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg";
+import pseudoBgL from "../../../../assets/images/background/home-page/home-page-bg-pseudo-left.svg"
 
 export const AboutMe = () => {
     return (

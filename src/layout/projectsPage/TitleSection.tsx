@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../styles/Theme.tsx";
-import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {Paragraph} from "../../components/Paragraph.tsx";
-import {Fade} from "react-awesome-reveal";
 
 type TitleSectionPropsType = {
     section: {

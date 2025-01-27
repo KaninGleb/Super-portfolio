@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
-// import {font} from "../styles/CommonFont.tsx";
 
 type ParagraphPropsType = {
     children: string
@@ -22,4 +21,3 @@ const StyledParagraph = styled.p<ParagraphPropsType>`
     font-weight: ${props => props.fontWeight || '400'};
     color: ${props => props.color || theme.colors.primaryLightText};
 `
-    // ${font({weight:500, Fmax: 16, Fmin:14, color:theme.colors.primaryLightText});

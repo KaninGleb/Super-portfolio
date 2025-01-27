@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
@@ -6,9 +7,8 @@ import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {factsData, sectionsData} from "../../../data/appData.ts";
 import {Fact} from "./Fact/Fact.tsx";
 import {Photo} from "../../../components/Photo.tsx";
-import image from "../../../assets/images/my-fun-facts-image.svg";
 import {imagePulseAnimation} from "../../../animations/animations.ts";
-import {Fade} from "react-awesome-reveal";
+import image from "../../../assets/images/section-images/my-fun-facts/my-fun-facts-images-group.svg";
 
 export const MyFunFacts = () => {
     return (

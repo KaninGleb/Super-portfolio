@@ -1,20 +1,20 @@
 import styled from "styled-components";
-import {Fade, Zoom} from "react-awesome-reveal";
 import {useState} from "react";
+import {Fade, Zoom} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {textData} from "../../../../data/appData.ts";
-import {ContactBtn} from "../../../../components/ContactBtn.tsx"; // Adjust the import path
+import {ContactBtn} from "../../../../components/ContactBtn.tsx";
 import {CVBtn} from "../../../../components/CVBtn.tsx";
-import CV from "../../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf"
 import {MyPhoto} from "../../../../components/Photo.tsx";
-import photo from "../../../../assets/images/MyImage.png"
-import logo from "../../../../assets/images/main-pseudo/logo-outline.svg"
-import dotsForMain from "../../../../assets/images/main-pseudo/dots-main-photo.svg"
 import {Modal} from "../../../../components/modal/Modal.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
+import photo from "../../../../assets/images/section-images/main/main-my-photo.png"
+import logo from "../../../../assets/images/sections-pseudo/main-pseudo/logo-outline.svg"
+import dotsForMain from "../../../../assets/images/sections-pseudo/main-pseudo/dots-main-photo.svg"
+import CV from "../../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf"
 
 export const Main = () => {
     const [isModalVisible, setModalVisible] = useState(false);
