@@ -55,7 +55,6 @@ export const GlobalStyles = createGlobalStyle`
         box-shadow: 0 0 0 1000px transparent inset;
         transition: background-color 5000s ease-in-out 0s;
         -webkit-text-fill-color: ${theme.colors.primaryText};
-        -webkit-text-emphasis-color: yellow;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -65,24 +64,6 @@ export const GlobalStyles = createGlobalStyle`
             animation: none !important;
             transition: none !important;
             scroll-behavior: auto !important;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        * {
-            animation: none !important;
-            //transition: none !important;
-        }
-        a:hover, button:hover {
-            //transition: none !important;
-            //transform: none !important;
-            scale: none !important;
-            border-bottom: none !important;
-        }
-        *:hover {
-            //transition: none !important;
-            animation: none !important;
-            //transform: none !important;
         }
     }
 `
