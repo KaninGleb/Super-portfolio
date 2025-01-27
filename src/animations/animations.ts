@@ -52,7 +52,6 @@ export const btnAnimation = keyframes`
     0% {
         outline-width: 5px;
         outline-color: ${theme.colors.primaryAnim};
-        white-space: nowrap;
     }
     50% {
         outline-width: 1px;
@@ -64,7 +63,6 @@ export const btnAnimation = keyframes`
     100% {
         outline-width: 5px;
         outline-color: ${theme.colors.primaryAnim};
-        white-space: nowrap;
     }
 `
 
