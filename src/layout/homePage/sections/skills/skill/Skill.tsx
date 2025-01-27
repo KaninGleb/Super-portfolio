@@ -45,6 +45,10 @@ const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
         max-width: unset;
         gap: 12px;
         flex-grow: 1;
+
+        &:hover {
+            scale: none;
+        }
     }
 `
 
