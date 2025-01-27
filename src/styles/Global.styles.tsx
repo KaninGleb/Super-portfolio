@@ -43,6 +43,11 @@ export const GlobalStyles = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
+
+    ::selection {
+        background-color: ${theme.colors.secondaryText};
+        color: ${theme.colors.primaryText};
+    }
     
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
