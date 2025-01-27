@@ -43,19 +43,7 @@ export const GlobalStyles = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
-
-    // input:-webkit-autofill,
-    // input:-webkit-autofill:hover,
-    // input:-webkit-autofill:focus,
-    // input:-webkit-autofill:active {
-    //     -webkit-box-shadow: 0 0 0 30px ${theme.colors.primaryBg} inset !important;
-    //     color: white !important;
-    // }
-    //
-    // input:-webkit-autofill:focus-within {
-    //     color: white !important;
-    // }
-
+    
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus input:-webkit-autofill,
@@ -64,18 +52,12 @@ export const GlobalStyles = createGlobalStyle`
     select:-webkit-autofill,
     select:-webkit-autofill:hover,
     select:-webkit-autofill:focus {
-        //background: linear-gradient(
-        //        top,
-        //        rgb(255 255 255 / 0%) 0%,
-        //        rgb(0 174 255 / 4%) 50%,
-        //        rgb(255 255 255 / 0%) 51%,
-        //        rgb(0 174 255 / 3%) 100%
-        //);
-        //border: 0;
         box-shadow: 0 0 0 1000px transparent inset;
         transition: background-color 5000s ease-in-out 0s;
         -webkit-text-fill-color: ${theme.colors.primaryText};
-    
+        -webkit-text-emphasis-color: yellow;
+    }
+
     @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
