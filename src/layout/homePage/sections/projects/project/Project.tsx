@@ -27,9 +27,10 @@ export const Project = (props: ProjectPropsType) => {
 
     return (
         <StyledWork maxWidth={props.maxWidth}>
-            <ImageWrapper href={'#'}
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
+            <ImageWrapper
+                href={'#'}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
             >
                 <Image src={props.src} alt=""/>
                 <ImageLink
@@ -92,7 +93,15 @@ const StyledWork = styled.div<{ maxWidth?: string }>`
         min-width: 238px;
         max-width: unset;
     }
-
+    
+    @media ${theme.media.tablet} {
+        &:hover {
+            transform: none;
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+    
     @media ${theme.media.mobile} {
         max-width: unset;
     }
@@ -119,6 +128,10 @@ const ImageLink = styled(motion.a)`
     &:hover {
         scale: 1.05;
     }
+
+    @media ${theme.media.tablet} {  
+        display: none;
+    }
 `
 
 const ImageWrapper = styled.a`
@@ -144,6 +157,20 @@ const ImageWrapper = styled.a`
 
     &:hover ${ImageLink} {
         opacity: 1;
+    }
+
+    @media ${theme.media.tablet} {
+        &:hover {
+            &::before {
+                content: none;
+                background-color: transparent;
+                backdrop-filter: none;
+            }
+
+            ${ImageLink} {
+                opacity: initial;
+            }
+        }
     }
 `
 
