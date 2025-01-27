@@ -48,6 +48,10 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${theme.colors.secondaryText};
         color: ${theme.colors.primaryText};
     }
+
+    input, textarea {
+        caret-color: ${theme.colors.secondaryText};
+    }
     
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
