@@ -8,11 +8,12 @@ export const Field: React.FC<{
     type: 'text' | 'email' | 'textarea'
     placeholder: string
     name: string
-    }> = ({labelText, type, id, placeholder, name}) => {
+    spellCheck?: boolean
+    }> = ({labelText, type, id, placeholder, name, spellCheck}) => {
 
     return (
         <StyledTextField className='text-field'>
-            <input required type={type} id={id} placeholder={placeholder} name={name}/>
+            <input required type={type} id={id} placeholder={placeholder} name={name} spellCheck={spellCheck}/>
             <label htmlFor={id}>{labelText}</label>
         </StyledTextField>
     )

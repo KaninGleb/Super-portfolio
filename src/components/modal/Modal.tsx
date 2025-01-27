@@ -8,12 +8,12 @@ import {TextAreaField} from "../TextAreaField.tsx";
 import {font} from "../../styles/CommonFont.tsx";
 import {modalFadeInUp} from "../../animations/animations.ts";
 
-type ModalProps = {
+type ModalPropsType = {
     isVisible: boolean;
     onClose: () => void;
 }
 
-export const Modal: React.FC<ModalProps> = ({isVisible, onClose}) => {
+export const Modal: React.FC<ModalPropsType> = ({isVisible, onClose}) => {
     const form = useRef<HTMLFormElement>(null);
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -69,6 +69,7 @@ export const Modal: React.FC<ModalProps> = ({isVisible, onClose}) => {
                         labelText='Email'
                         placeholder={'Email'}
                         name={'user_email'}
+                        spellCheck={false}
                     />
                 </InputsWrapper>
                 <Field
