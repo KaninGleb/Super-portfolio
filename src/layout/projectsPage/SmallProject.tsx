@@ -47,7 +47,7 @@ export const SmallProject = (props: ProjectPropsType) => {
                 </MainSizeWrapper>
             </SizeWrapper>
         </StyledWork>
-    );
+    )
 }
 
 const StyledWork = styled.div<{maxWidth?: string}>`
@@ -56,13 +56,11 @@ const StyledWork = styled.div<{maxWidth?: string}>`
     max-width: ${props => props.maxWidth || '490px'};
     width: 100%;
     height: 100%;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    transition: 0.3s;
     cursor: default;
     
     &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        background-color: rgba(40, 44, 51, 0.1);
+        scale: 1.02;
     }
 
     @media ${theme.media.width1044} {
@@ -71,6 +69,12 @@ const StyledWork = styled.div<{maxWidth?: string}>`
         flex: 1;
         min-width: 238px;
         max-width: unset;
+    }
+
+    @media ${theme.media.tablet} {
+        &:hover {
+            scale: none;
+        }
     }
     
     @media ${theme.media.mobile} {
