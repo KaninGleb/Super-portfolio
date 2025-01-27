@@ -17,9 +17,14 @@ type RouterMobileMenuPropsType = {
 
 export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
-    const onBurgerBtnClick = () => { setMenuIsOpen( !menuIsOpen ) };
+    const [isModalVisible, setModalVisible] = useState(false);
+
+    const handleToggleModal = () => {
+        setModalVisible(!isModalVisible);
+    };
+
     useEffect(() => {
-        if (menuIsOpen) {
+        if (menuIsOpen || isModalVisible) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'auto';
@@ -28,17 +33,11 @@ export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
         return () => {
             document.body.style.overflow = 'auto';
         };
-    }, [menuIsOpen]);
-
-    const [isModalVisible, setModalVisible] = useState(false);
-
-    const handleToggleModal = () => {
-        setModalVisible(!isModalVisible);
-    };
+    }, [menuIsOpen, isModalVisible]);
 
     return (
         <StyledRouterMobileMenu>
-            <BurgerButton isOpen={menuIsOpen} onClick={ onBurgerBtnClick }>
+            <BurgerButton isOpen={menuIsOpen} onClick={() => setMenuIsOpen(!menuIsOpen)}>
                 <span></span>
             </BurgerButton>
 
