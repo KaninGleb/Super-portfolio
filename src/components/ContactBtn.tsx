@@ -5,9 +5,10 @@ import {btnAnimation} from "../animations/animations.ts";
 export const ContactBtn = styled.button`
     outline: 1px solid #c778dd;
     padding: 8px 16px;
-    max-width: 148px;
+    max-width: 200px;
     width: 100%;
     color: ${theme.colors.primaryText};
+    white-space: nowrap;
     transition: .15s;
     animation: ${btnAnimation} 5s infinite;
     animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
