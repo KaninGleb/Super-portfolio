@@ -1,28 +1,31 @@
 import styled from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
 import {theme} from "../styles/Theme.tsx";
 import {pulseLinkAnimation} from "../animations/animations.ts";
 
 type LinkPropsType = {
-    to?: string
+    href?: string
     color?: string
     children: string
     outlineColor?: string
     mWidth?: string
+    target?: string
 }
 
 export const Link = (props: LinkPropsType) => {
     return (
-        <StyledLink to={props.to}
-                    color={props.color}
-                    outlineColor={props.outlineColor}
-                    mWidth={props.mWidth}>
+        <StyledLink
+            href={props.href}
+            color={props.color}
+            outlineColor={props.outlineColor}
+            mWidth={props.mWidth}
+            target={props.target || '_blank'}
+        >
             {props.children}
         </StyledLink>
     )
 }
 
-const StyledLink = styled(RouterLink)<LinkPropsType>`
+const StyledLink = styled.a<LinkPropsType>`
     display: inline-block;
     font-weight: 500;
     color: ${props => props.color || theme.colors.primaryText};
