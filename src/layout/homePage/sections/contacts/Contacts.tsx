@@ -5,7 +5,7 @@ import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
-import {Link} from "../../../../components/Link.tsx";
+import {RouterDomLink} from "../../../../components/RouterDomLink.tsx";
 import {sectionsData, textData} from "../../../../data/appData.ts";
 import {SocialList} from "../../../../components/SocialList.tsx";
 
@@ -19,7 +19,7 @@ export const Contacts = () => {
                         <LeftSection direction='column' gap='20px'>
                             <Fade direction={'up'} cascade damping={.2}>
                                 <Paragraph children={textData.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}></Paragraph>
-                                <Link to="/contacts" children={'Read more ->'} mWidth={'148px'}/>
+                                <RouterDomLink to="/contacts" children={'Read more ->'} mWidth={'148px'}/>
                             </Fade>
                         </LeftSection>
                         <Fade direction={'right'}>

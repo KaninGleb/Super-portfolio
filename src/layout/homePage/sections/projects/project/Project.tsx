@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import {theme} from "../../../../../styles/Theme.tsx";
-import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
-import {Link} from "../../../../../components/Link.tsx";
 import {motion} from "framer-motion";
 import {useState} from "react";
+import {theme} from "../../../../../styles/Theme.tsx";
+import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
+import {Link} from '../../../../../components/Link.tsx';
 
 type LinkPropsType = {
     href: string
@@ -15,6 +15,7 @@ type LinkPropsType = {
 
 type ProjectPropsType = {
     src?: string
+    imageLink: string
     software: string[]
     title: string
     text: string
@@ -28,7 +29,8 @@ export const Project = (props: ProjectPropsType) => {
     return (
         <StyledWork maxWidth={props.maxWidth}>
             <ImageWrapper
-                href={'#'}
+                target={'_blank'}
+                href={props.imageLink}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
@@ -58,6 +60,7 @@ export const Project = (props: ProjectPropsType) => {
                         {props.links.map((link, index) => (
                             <Link
                                 key={index}
+                                href={link.href}
                                 children={link.children}
                                 color={link.color}
                                 outlineColor={link.outlineColor}

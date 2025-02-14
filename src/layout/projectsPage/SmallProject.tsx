@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {Link} from "../../components/Link.tsx";
 import {theme} from "../../styles/Theme.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {Link} from '../../components/Link.tsx';
 
 type LinkPropsType = {
     href: string
@@ -37,10 +37,12 @@ export const SmallProject = (props: ProjectPropsType) => {
                         {props.links.map((link, index) => (
                             <Link
                                 key={index}
+                                href={link.href}
                                 children={link.children}
                                 color={link.color}
                                 outlineColor={link.outlineColor}
                                 mWidth={link.mWidth}
+                                target=""
                             />
                         ))}
                     </ButtonsFlexWrapper>

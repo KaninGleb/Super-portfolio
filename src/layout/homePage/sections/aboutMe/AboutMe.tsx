@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {Photo} from "../../../../components/Photo.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
-import {Link} from "../../../../components/Link.tsx";
+import {RouterDomLink} from "../../../../components/RouterDomLink.tsx";
 import {sectionsData, textData} from "../../../../data/appData.ts";
 import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
 import aboutMePhoto from "../../../../assets/images/section-images/about-me/about-me-my-photo.png"
@@ -26,7 +26,7 @@ export const AboutMe = () => {
                             {Object.values(textData.aboutMe).map((paragraph, index) => (
                                 <Paragraph key={index} children={paragraph}/>
                             ))}
-                            <Link to="/about-me" children={'Read more ->'} mWidth={'148px'}/>
+                            <RouterDomLink to="/about-me" children={'Read more ->'} mWidth={'148px'}/>
                         </Fade>
                     </LeftSection>
                     <RightSection direction={'right'}>

@@ -24,6 +24,7 @@ export const Projects = () => {
                             {Object.values(projectsData).slice(0, 3).map((project, index) => (
                                 <Project
                                     key={index}
+                                    imageLink={project.imageLink}
                                     software={project.software}
                                     title={project.title}
                                     text={project.text}
