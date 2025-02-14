@@ -31,10 +31,6 @@ const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
     transition: .3s;
     height: fit-content;
     
-    &:hover {
-        scale: 1.02;
-    }
-    
     @media ${theme.media.width1044} {
         display: block;
         flex-direction: column;
@@ -45,10 +41,6 @@ const StyledSkill = styled.div<{ order?: number; maxWidth?: string }>`
         max-width: unset;
         gap: 12px;
         flex-grow: 1;
-
-        &:hover {
-            scale: none;
-        }
     }
 `
 
