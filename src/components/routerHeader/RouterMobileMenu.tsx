@@ -11,7 +11,7 @@ import {Link} from "react-router-dom";
 import {Modal} from "../modal/Modal.tsx";
 
 type RouterMobileMenuPropsType = {
-    menuItems: Array<{ name: string, id: string }>
+    menuItems: Array<{ symbol: string, name: string, id: string }>
     isScrolled: boolean
 }
 
@@ -48,7 +48,7 @@ export const RouterMobileMenu = (props: RouterMobileMenuPropsType) => {
                         <ListItem key={index}>
                             <Fade delay={index * 100} direction={'down'} duration={600}>
                                 <HeaderLink to={`/${item.id}`}>
-                                    <span>#</span>{item.name}
+                                    <span>{item.symbol}</span>{item.name}
                                 </HeaderLink>
                             </Fade>
                         </ListItem>

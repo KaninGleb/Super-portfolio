@@ -5,7 +5,7 @@ import {theme} from "../../styles/Theme.tsx";
 import {LanguageSwitcher} from '../LanguageSwitcher.tsx';
 
 type RouterHeaderMenuPropsType = {
-    menuItems: Array<{ name: string, id: string }>
+    menuItems: Array<{ symbol: string, name: string, id: string }>
 }
 
 export const RouterHeaderMenu = (props: RouterHeaderMenuPropsType) => {
@@ -16,7 +16,7 @@ export const RouterHeaderMenu = (props: RouterHeaderMenuPropsType) => {
                     <ListItem key={index}>
                         <Fade delay={index * 100} direction={'down'}>
                             <HeaderLink to={`/${item.id}`}>
-                                <span>#</span>{item.name}
+                                <span>{item.symbol}</span>{item.name}
                             </HeaderLink>
                         </Fade>
                     </ListItem>
