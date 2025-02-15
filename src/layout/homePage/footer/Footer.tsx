@@ -6,6 +6,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Logo} from "../../../components/logo/Logo.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
 import {font} from "../../../styles/CommonFont.tsx";
+import {contentData} from '../../../data/appData.ts';
 
 export const Footer = () => {
     return (
@@ -15,26 +16,30 @@ export const Footer = () => {
                     <LeftSection>
                         <StyledFlexWrapper gap='24px'>
                             <Logo/>
-                            <SocialList iconIds={['email']} iconsTitles={['elias@elias-dev.ml']}/>
+                            <SocialList
+                                iconIds={contentData.homePage.footer.socialsLeft.iconIds}
+                                iconsTitles={contentData.homePage.footer.socialsLeft.iconsTitles}
+                            />
                         </StyledFlexWrapper>
                         <Fade direction={'up'}>
-                            <span>Web designer and front-end developer</span>
+                            <span>{contentData.homePage.footer.span}</span>
                         </Fade>
                     </LeftSection>
 
                     <RightSection direction='column' align='flex-start' gap='12px'>
                         <Fade direction={'up'}>
-                            <h3>Media</h3>
+                            <h3>{contentData.homePage.footer.mediaHeader}</h3>
                         </Fade>
-                        <SocialList displayFlex={true}
-                                    gap={'8px'}
-                                    iconIds={['git', 'figma', 'discord']}
-                                    showIcon={true}
+                        <SocialList
+                            displayFlex={true}
+                            gap={'8px'}
+                            iconIds={contentData.homePage.footer.socialsRight.iconIds}
+                            showIcon={true}
                         />
                     </RightSection>
                 </BothSections>
                 <Fade direction={'up'}>
-                    <small>© Copyright 2022. Made by Elias</small>
+                    <small>{contentData.homePage.footer.copyright}</small>
                 </Fade>
             </FooterContainer>
         </StyledFooter>

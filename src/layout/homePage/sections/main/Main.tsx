@@ -5,7 +5,7 @@ import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
-import {textData} from "../../../../data/appData.ts";
+import {contentData} from '../../../../data/appData.ts';
 import {ContactBtn} from "../../../../components/ContactBtn.tsx";
 import {CVBtn} from "../../../../components/CVBtn.tsx";
 import {MyPhoto} from "../../../../components/Photo.tsx";
@@ -29,13 +29,13 @@ export const Main = () => {
                 <StyledFlexWrapper align="center" justify="space-around" gap="30px">
                         <TextWrapper direction='column' align='flex-start'>
                             <Fade direction={'down'} cascade damping={0.2}>
-                                <MainTitle>Elias is a <span>web designer</span> and <span>front-end developer</span></MainTitle>
-                                <Paragraph children={textData.main.paragraph} fontWeight={'400'}/>
+                                <MainTitle dangerouslySetInnerHTML={{__html: contentData.homePage.main.title}}/>
+                                <Paragraph children={contentData.homePage.main.paragraph} fontWeight={'400'}/>
                             </Fade>
                             <Zoom>
                                 <FlexWrapper gap={'20px'}>
-                                    <ContactBtn type='button' onClick={handleToggleModal}>Contact me!!</ContactBtn>
-                                    <CVBtn type='submit' href={CV} download>Download CV</CVBtn>
+                                    <ContactBtn type='button' onClick={handleToggleModal}>{contentData.homePage.main.contactBtn}</ContactBtn>
+                                    <CVBtn type='submit' href={CV} download>{contentData.homePage.main.cvBtn}</CVBtn>
                                 </FlexWrapper>
                             </Zoom>
                         </TextWrapper>
@@ -44,9 +44,7 @@ export const Main = () => {
                             <MyPhoto src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
                             <PortfolioMessage>
                                 <ColorBlock/>
-                                <MessageTextWrapper>
-                                    Currently working on <span>Portfolio</span>
-                                </MessageTextWrapper>
+                                <MessageTextWrapper dangerouslySetInnerHTML={{__html: contentData.homePage.main.status}}/>
                             </PortfolioMessage>
                         </PhotoWrapper>
                     </Fade>

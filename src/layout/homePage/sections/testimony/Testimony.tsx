@@ -7,6 +7,7 @@ import {font} from "../../../../styles/CommonFont.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
 import quotationMark from "../../../../assets/images/sections-pseudo/testimony-pseudo/quotation-mark.svg"
 import pseudoBgR from "../../../../assets/images/background/home-page/home-page-bg-pseudo-right.svg"
+import {contentData} from '../../../../data/appData.ts';
 
 export const Testimony = () => {
     return (
@@ -14,8 +15,8 @@ export const Testimony = () => {
             <Container>
                 <ZoomFlexWrapper>
                     <StyledFlexWrapper direction="column" align="flex-end">
-                        <StyledQuote>With great power comes great electricity bill</StyledQuote>
-                        <StyledCite>- Dr. Who</StyledCite>
+                        <StyledQuote>{contentData.homePage.testimony.quote}</StyledQuote>
+                        <StyledCite>{contentData.homePage.testimony.cite}</StyledCite>
                     </StyledFlexWrapper>
                 </ZoomFlexWrapper>
             </Container>

@@ -4,7 +4,7 @@ import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
-import {projectsData, sectionsData} from "../../../../data/appData.ts";
+import {contentData, projectsData, sectionsData} from '../../../../data/appData.ts';
 import {Project} from "./project/Project.tsx";
 import {Link} from "react-router-dom";
 
@@ -16,7 +16,7 @@ export const Projects = () => {
                     <FlexWrapper justify='space-between' align='center' gap='16px'>
                         <SectionTitle section={sectionsData.homePage.projects}/>
                         <Fade direction={'up'} duration={800}>
-                            <ProjectsLink to="/projects">View all ~~&gt;</ProjectsLink>
+                            <ProjectsLink to="/projects">{contentData.homePage.projects.allProjectsBtn}</ProjectsLink>
                         </Fade>
                     </FlexWrapper>
                     <Fade direction={'left'} duration={1200}>

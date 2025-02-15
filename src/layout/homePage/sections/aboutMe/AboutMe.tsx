@@ -7,7 +7,7 @@ import {Photo} from "../../../../components/Photo.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {RouterDomLink} from "../../../../components/RouterDomLink.tsx";
-import {sectionsData, textData} from "../../../../data/appData.ts";
+import {contentData, sectionsData} from '../../../../data/appData.ts';
 import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
 import aboutMePhoto from "../../../../assets/images/section-images/about-me/about-me-my-photo.png"
 import bothPseudo from "../../../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg";
@@ -23,10 +23,10 @@ export const AboutMe = () => {
                 <StyledFlexWrapper gap='166px'>
                     <LeftSection>
                         <Fade direction={'up'} cascade damping={.1}>
-                            {Object.values(textData.aboutMe).map((paragraph, index) => (
+                            {Object.values(contentData.homePage.aboutMe.paragraphs).map((paragraph, index) => (
                                 <Paragraph key={index} children={paragraph}/>
                             ))}
-                            <RouterDomLink to="/about-me" children={'Read more ->'} mWidth={'148px'}/>
+                            <RouterDomLink to="/about-me" children={contentData.homePage.aboutMe.readMoreBtn} mWidth={'148px'}/>
                         </Fade>
                     </LeftSection>
                     <RightSection direction={'right'}>
