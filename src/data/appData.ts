@@ -5,8 +5,96 @@ import kahoot from "../assets/images/section-images/projects/project-3.svg";
 import kotikBot from "../assets/images/section-images/projects/project-4.svg";
 import portfolio from "../assets/images/section-images/projects/project-5.svg";
 
+export const contentData = {
+    homePage: {
+        main: {
+            title: 'Elias is a <span>web designer</span> and <span>front-end developer</span>',
+            paragraph: 'He crafts responsive websites where technologies meet creativity',
+            contactBtn: 'Contact me!!',
+            cvBtn: 'Download CV',
+            status: 'Currently working on <span>Portfolio</span>',
+        },
+        testimony: {
+            quote: 'With great power comes great electricity bill',
+            cite: '- Dr. Who'
+        },
+        projects: {
+            allProjectsBtn: 'View all ~~>'
+        },
+        aboutMe: {
+            paragraphs: {
+                1: 'Hello, I’m Elias!',
+                2: 'I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.',
+                3: 'Transforming my creativity and knowledge into websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.',
+            },
+            readMoreBtn: 'Read more ->',
+        },
+        contacts: {
+            paragraph: 'I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me',
+            readMoreBtn: 'Read more ->',
+            box: 'Message me here',
+            socials: {
+                iconIds: ['discord', 'email'],
+                iconsTitles: ['!Elias#3519', 'elias@elias.me'],
+            },
+        },
+        footer: {
+            socialsLeft: {
+                iconIds: ['email'],
+                iconsTitles: ['elias@elias-dev.ml'],
+            },
+            span: 'Web designer and front-end developer',
+            mediaHeader: 'Media',
+            socialsRight: {
+                iconIds: ['git', 'figma', 'discord'],
+            },
+            copyright: '© Copyright 2022. Made by Elias',
+        },
+    },
+
+    aboutMePage: {
+        myFunFacts: [
+            { fact: 'I like winter more than summer' },
+            { fact: 'I often bike with my friends' },
+            { fact: 'I like <span>pizza</span> and <span>pasta</span>' },
+            { fact: 'I was in <span>Egypt</span>, <span>Poland</span> and <span>Turkey</span>' },
+            { fact: 'My favorite movie is <span>The Green Mile</span>' },
+            { fact: 'I am still in school' },
+            { fact: 'I don’t have any siblings' },
+        ]
+    },
+
+    contactPage: {
+        contacts: {
+            supportMe: 'Support me here',
+            wallet: '4149500120690030',
+            message: 'Message me here',
+            socials: {
+                iconIds: ['discord', 'email'],
+                iconsTitles: ['!Elias#3519', 'elias@elias-dev.ml'],
+            }
+        },
+        allMedia: {
+            socials: {
+                iconIds: ['git', 'discord', 'figma', 'email'],
+            }
+        }
+    },
+
+    modal: {
+        header: 'Contact me',
+        name: 'Name',
+        email: 'Email',
+        title: 'Title',
+        message: 'Message',
+        sendBtn: 'Send message',
+    },
+    logo: 'Elias',
+    mediaSocials: ['git', 'discord', 'figma'],
+}
+
 const linksData = {
-    myGitHub: 'https://github.com/KaninGleb'
+    myGitHub: 'https://github.com/KaninGleb',
 }
 
 export const headerLinks = [
@@ -18,27 +106,13 @@ export const headerLinks = [
 ]
 
 export const routerLinksData = [
-    { name: 'home', id: ''},
-    { name: 'projects', id: 'projects'},
-    { name: 'about-me', id: 'about-me'},
-    { name: 'contacts', id: 'contacts'},
+    { symbol: '#', name: 'home', id: '' },
+    { symbol: '#', name: 'projects', id: 'projects' },
+    { symbol: '#', name: 'about-me', id: 'about-me' },
+    { symbol: '#', name: 'contacts', id: 'contacts' },
 ]
 
-export const textData = {
-    main: {
-        paragraph: 'He crafts responsive websites where technologies meet creativity',
-    },
-    aboutMe: {
-        paragraph1: 'Hello, I’m Elias!',
-        paragraph2: 'I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.',
-        paragraph3: 'Transforming my creativity and knowledge into websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.',
-    },
-    contacts: {
-        paragraph: 'I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me'
-    },
-}
-
-export const sectionsData = {
+export const sectionsTitlesData = {
     homePage: {
         projects: {
             id: 'projects',
@@ -168,6 +242,8 @@ export const projectsData = {
             {href: linksData.myGitHub, children: "Github <~>", mWidth: "128px"},
         ],
     },
+
+    imageBtn: 'View',
 }
 
 export const smallProjectsData = {
@@ -243,30 +319,6 @@ export const skillsData = [
     { order: 1, title: 'Tools', maxWidth: '196px', description: ['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git', 'Font Awesome'] },
     { order: 4, title: 'Other', description: ['HTML', 'CSS', 'EJS', 'SCSS', 'REST', 'Jinja'] },
     { order: 2, title: 'Frameworks', maxWidth: '196px', description: ['React', 'Vue', 'Disnake', 'Discord.js', 'Flask', 'Express.js'] },
-]
-
-export const factsData = [
-    {
-        fact: 'I like winter more than summer',
-    },
-    {
-        fact: 'I often bike with my friends',
-    },
-    {
-        fact: `I like <span>pizza</span> and <span>pasta</span>`,
-    },
-    {
-        fact: 'I was in <span>Egypt</span>, <span>Poland</span> and <span>Turkey</span>',
-    },
-    {
-        fact: 'My favorite movie is <span>The Green Mile</span>',
-    },
-    {
-        fact: 'I am still in school',
-    },
-    {
-        fact: 'I don’t have any siblings',
-    },
 ]
 
 export const socialData = [
