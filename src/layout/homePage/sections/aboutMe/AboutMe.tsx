@@ -7,7 +7,7 @@ import {Photo} from "../../../../components/Photo.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {RouterDomLink} from "../../../../components/RouterDomLink.tsx";
-import {contentData, sectionsData} from '../../../../data/appData.ts';
+import {contentData, sectionsTitlesData} from '../../../../data/appData.ts';
 import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
 import aboutMePhoto from "../../../../assets/images/section-images/about-me/about-me-my-photo.png"
 import bothPseudo from "../../../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg";
@@ -18,7 +18,7 @@ export const AboutMe = () => {
         <StyledAboutMe>
             <Container>
                 <StyledSectionTitle>
-                    <SectionTitle section={sectionsData.homePage.aboutMe}/>
+                    <SectionTitle section={sectionsTitlesData.homePage.aboutMe}/>
                 </StyledSectionTitle>
                 <StyledFlexWrapper gap='166px'>
                     <LeftSection>

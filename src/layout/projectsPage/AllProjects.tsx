@@ -4,7 +4,7 @@ import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
-import {projectsData, sectionsData} from "../../data/appData.ts";
+import {projectsData, sectionsTitlesData} from "../../data/appData.ts";
 import {Project} from "../homePage/sections/projects/project/Project.tsx";
 import {imagePulseAnimation} from "../../animations/animations.ts";
 import bgLeft from "../../assets/images/background/projects-page/projects-page-bg-pseudo-left.svg";
@@ -15,7 +15,7 @@ export const AllProjects = () => {
         <StyledAllProjects>
             <Container>
                 <MainWrapper direction='column' gap='48px'>
-                    <SectionTitle section={sectionsData.projectsPage.allProjects}/>
+                    <SectionTitle section={sectionsTitlesData.projectsPage.allProjects}/>
                     <Fade direction={'left'} duration={1200}>
                         <StyledFlexWrapper wrap='wrap' gap='16px'>
                             {Object.values(projectsData).slice(0, 5).map((project, index) => (

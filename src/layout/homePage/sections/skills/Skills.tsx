@@ -4,7 +4,7 @@ import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
-import {sectionsData, skillsData} from "../../../../data/appData.ts";
+import {sectionsTitlesData, skillsData} from "../../../../data/appData.ts";
 import {Skill} from "./skill/Skill.tsx";
 import {Photo} from "../../../../components/Photo.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
@@ -14,7 +14,7 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
-                <SectionTitle section={sectionsData.homePage.skills}/>
+                <SectionTitle section={sectionsTitlesData.homePage.skills}/>
                 <StyledFlexWrapper gap='59px'>
                     <Fade direction={'left'}>
                         <StyledPhoto src={groupOfImages} Wmin={350} Wmax={350} alt="Group of Images"/>

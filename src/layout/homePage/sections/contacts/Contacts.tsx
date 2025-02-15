@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {Paragraph} from "../../../../components/Paragraph.tsx";
 import {RouterDomLink} from "../../../../components/RouterDomLink.tsx";
-import {contentData, sectionsData} from '../../../../data/appData.ts';
+import {contentData, sectionsTitlesData} from '../../../../data/appData.ts';
 import {SocialList} from "../../../../components/SocialList.tsx";
 
 export const Contacts = () => {
@@ -14,7 +14,7 @@ export const Contacts = () => {
         <StyledContacts>
             <Container>
                 <ContentFlexWrapper direction='column' gap='45px'>
-                    <SectionTitle section={sectionsData.homePage.contacts}/>
+                    <SectionTitle section={sectionsTitlesData.homePage.contacts}/>
                     <StyledFlexWrapper justify='space-between'>
                         <LeftSection direction='column' gap='20px'>
                             <Fade direction={'up'} cascade damping={.2}>

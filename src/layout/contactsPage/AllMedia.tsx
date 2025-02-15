@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Container} from "../../components/Container.tsx";
-import {sectionsData} from "../../data/appData.ts";
+import {sectionsTitlesData} from "../../data/appData.ts";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {SocialList} from "../../components/SocialList.tsx";
 
@@ -8,7 +8,7 @@ export const AllMedia = () => {
     return (
         <StyledAllMedia>
             <Container>
-                <SectionTitle section={sectionsData.contactsPage.allMedia}/>
+                <SectionTitle section={sectionsTitlesData.contactsPage.allMedia}/>
                 <StyledSocialList displayFlex={true} wrap={'wrap'} gap='22px'
                                     iconIds={['git', 'discord', 'figma', 'email']}
                                     showIcon={true}

@@ -4,14 +4,14 @@ import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
-import {sectionsData, skillsData} from "../../data/appData.ts";
+import {sectionsTitlesData, skillsData} from "../../data/appData.ts";
 import {Skill} from "../homePage/sections/skills/skill/Skill.tsx";
 
 export const SkillsAboutMe = () => {
     return (
         <StyledSkillsAboutMe>
             <Container>
-                <SectionTitle section={sectionsData.aboutMePage.skills}/>
+                <SectionTitle section={sectionsTitlesData.aboutMePage.skills}/>
                 <SkillsWrapper gap='16px'>
                     {skillsData.map((skill, index) => (
                         <FadeWrapper key={index} delay={index * 200} direction={'up'} duration={600}>

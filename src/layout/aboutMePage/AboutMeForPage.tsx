@@ -5,7 +5,7 @@ import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {Photo} from "../../components/Photo.tsx";
 import {Paragraph} from "../../components/Paragraph.tsx";
-import {textData} from "../../data/appData.ts";
+import {contentData} from '../../data/appData.ts';
 import {imagePulseAnimation, pulseAnimation} from "../../animations/animations.ts";
 import aboutMePhoto from "../../assets/images/section-images/about-me/about-me-my-photo.png"
 import bothPseudo from "../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg";
@@ -19,7 +19,7 @@ export const AboutMeForPage = () => {
                 <StyledFlexWrapper gap='166px'>
                     <LeftSection>
                         <Fade direction={'up'} cascade damping={.1}>
-                            {Object.values(textData.aboutMe).map((paragraph, index) => (
+                            {Object.values(contentData.homePage.aboutMe.paragraphs).map((paragraph, index) => (
                                 <Paragraph key={index} children={paragraph}/>
                             ))}
                         </Fade>

@@ -2,7 +2,7 @@ import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "../homePage/media/Media.tsx";
 import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
-import {sectionsData} from "../../data/appData.ts";
+import {sectionsTitlesData} from "../../data/appData.ts";
 import {AboutMeForPage} from "./AboutMeForPage.tsx";
 import {SkillsAboutMe} from "./SkillsAboutMe.tsx";
 import {MyFunFacts} from "./MyFunFacts/MyFunFacts.tsx";
@@ -15,7 +15,7 @@ export const AboutMePage = () => {
             <ScrollFillBar/>
             <Media/>
             <RouterHeader/>
-            <TitleSection section={sectionsData.aboutMePage.aboutMe}/>
+            <TitleSection section={sectionsTitlesData.aboutMePage.aboutMe}/>
             <AboutMeForPage/>
             <SkillsAboutMe/>
             <MyFunFacts/>
