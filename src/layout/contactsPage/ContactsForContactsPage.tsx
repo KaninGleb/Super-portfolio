@@ -5,7 +5,7 @@ import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {Paragraph} from "../../components/Paragraph.tsx";
 import {SocialList} from "../../components/SocialList.tsx";
 import {theme} from "../../styles/Theme.tsx";
-import {textData} from "../../data/appData.ts";
+import {contentData} from '../../data/appData.ts';
 import {imagePulseAnimation} from "../../animations/animations.ts";
 import bgLeft from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-left-short.svg";
 import bgRight from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-right-short.svg";
@@ -19,28 +19,29 @@ export const ContactsForContactsPage = () => {
                     <StyledFlexWrapper justify='space-between'>
                         <LeftSection direction='column' gap='20px'>
                             <Fade direction={'up'}>
-                                <Paragraph children={textData.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}></Paragraph>
+                                <Paragraph children={contentData.homePage.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}/>
                             </Fade>
                         </LeftSection>
                         <RightSection gap='10px'>
                             <Fade direction={'right'} cascade damping={.1}>
                                 <SupportWrapper direction='column' gap='8px'>
                                     <Fade direction={'up'} cascade damping={.2}>
-                                        <Title>Support me here</Title>
-                                        <Description>4149500120690030</Description>
+                                        <Title>{contentData.contactPage.contacts.supportMe}</Title>
+                                        <Description>{contentData.contactPage.contacts.wallet}</Description>
                                     </Fade>
                                 </SupportWrapper>
                                 <MessageWrapper direction='column' gap='16px'>
                                     <Fade direction={'up'}>
-                                        <Title>Message me here</Title>
+                                        <Title>{contentData.contactPage.contacts.message}</Title>
                                     </Fade>
-                                    <SocialList displayFlex={true}
-                                                direction={'column'}
-                                                gap='8px'
-                                                iconIds={['discord', 'email']}
-                                                showIcon={true}
-                                                iconsTitles={['!Elias#3519', 'elias@elias-dev.ml']}
-                                                gapBetween={'5px'}
+                                    <SocialList
+                                        displayFlex={true}
+                                        direction={'column'}
+                                        gap="8px"
+                                        iconIds={contentData.contactPage.contacts.socials.iconIds}
+                                        showIcon={true}
+                                        iconsTitles={contentData.contactPage.contacts.socials.iconsTitles}
+                                        gapBetween={'5px'}
                                     />
                                 </MessageWrapper>
                             </Fade>
