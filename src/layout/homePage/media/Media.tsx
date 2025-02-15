@@ -3,6 +3,7 @@ import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../styles/Theme.tsx";
 import {DecorativeLine} from "../../../components/DecorativeLine.tsx";
 import {SocialList} from "../../../components/SocialList.tsx";
+import {contentData} from '../../../data/appData.ts';
 
 export const Media = () => {
     return (
@@ -32,7 +33,7 @@ export const Media = () => {
                     displayFlex={true}
                     direction={'column'}
                     gap={'8px'}
-                    iconIds={['git', 'discord', 'figma']}
+                    iconIds={contentData.mediaSocials}
                     showIcon={true}
                 />
             </Fade>
