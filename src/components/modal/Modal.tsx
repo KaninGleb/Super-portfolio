@@ -7,6 +7,7 @@ import {Field} from "../Field.tsx";
 import {TextAreaField} from "../TextAreaField.tsx";
 import {font} from "../../styles/CommonFont.tsx";
 import {modalFadeInUp} from "../../animations/animations.ts";
+import {contentData} from '../../data/appData.ts';
 
 type ModalPropsType = {
     isVisible: boolean;
@@ -54,20 +55,20 @@ export const Modal: React.FC<ModalPropsType> = ({isVisible, onClose}) => {
                 onClick={(e) => e.stopPropagation()}
                 ref={form} onSubmit={sendEmail}
             >
-                <ContactTitle>Contact me</ContactTitle>
+                <ContactTitle>{contentData.modal.header}</ContactTitle>
                 <InputsWrapper>
                     <Field
                         id='name'
                         type='text'
-                        labelText='Name'
-                        placeholder={'Name'}
+                        labelText={contentData.modal.name}
+                        placeholder={contentData.modal.name}
                         name={'user_name'}
                     />
                     <Field
                         id='email'
                         type='email'
-                        labelText='Email'
-                        placeholder={'Email'}
+                        labelText={contentData.modal.email}
+                        placeholder={contentData.modal.email}
                         name={'user_email'}
                         spellCheck={false}
                     />
@@ -75,17 +76,17 @@ export const Modal: React.FC<ModalPropsType> = ({isVisible, onClose}) => {
                 <Field
                     id='title'
                     type='text'
-                    labelText='Title'
-                    placeholder={'Title'}
+                    labelText={contentData.modal.title}
+                    placeholder={contentData.modal.title}
                     name={'subject'}
                 />
                 <TextAreaField
                     id='message'
-                    labelText='Message'
-                    placeholder={'Message'}
+                    labelText={contentData.modal.message}
+                    placeholder={contentData.modal.message}
                     name={'message'}
                 />
-                <SendButton type="submit">Send message</SendButton>
+                <SendButton type="submit">{contentData.modal.sendBtn}</SendButton>
             </ModalContent>
         </ModalOverlay>
     )
