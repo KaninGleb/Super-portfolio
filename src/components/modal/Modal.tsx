@@ -63,6 +63,7 @@ export const Modal: React.FC<ModalPropsType> = ({isVisible, onClose}) => {
                         labelText={contentData.modal.name}
                         placeholder={contentData.modal.name}
                         name={'user_name'}
+                        area-label='Name'
                     />
                     <Field
                         id='email'
@@ -71,6 +72,7 @@ export const Modal: React.FC<ModalPropsType> = ({isVisible, onClose}) => {
                         placeholder={contentData.modal.email}
                         name={'user_email'}
                         spellCheck={false}
+                        area-label='Email'
                     />
                 </InputsWrapper>
                 <Field
@@ -79,12 +81,14 @@ export const Modal: React.FC<ModalPropsType> = ({isVisible, onClose}) => {
                     labelText={contentData.modal.title}
                     placeholder={contentData.modal.title}
                     name={'subject'}
+                    area-label='Title'
                 />
                 <TextAreaField
                     id='message'
                     labelText={contentData.modal.message}
                     placeholder={contentData.modal.message}
                     name={'message'}
+                    area-label='Message'
                 />
                 <SendButton type="submit">{contentData.modal.sendBtn}</SendButton>
             </ModalContent>
