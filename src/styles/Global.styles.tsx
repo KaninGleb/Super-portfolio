@@ -66,6 +66,21 @@ export const GlobalStyles = createGlobalStyle`
         -webkit-text-fill-color: ${theme.colors.primaryText};
     }
 
+    ::-webkit-scrollbar {
+        width: 12px;
+        background-color: #424242;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(123, 123, 123, 0.5);
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #7b7b7b;
+    }
+    
     @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
