@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 import {Link} from "react-router-dom";
 import {theme} from "../../styles/Theme.tsx";
+import {LanguageSwitcher} from '../LanguageSwitcher.tsx';
 
 type RouterHeaderMenuPropsType = {
     menuItems: Array<{ name: string, id: string }>
@@ -22,10 +23,11 @@ export const RouterHeaderMenu = (props: RouterHeaderMenuPropsType) => {
                 ))}
                 <ListItem>
                     <Fade delay={props.menuItems.length * 100} direction={'down'}>
-                        <LanguageSelect aria-label='Language change'>
-                            <option>EN</option>
-                            <option>RU</option>
-                        </LanguageSelect>
+                        {/*<LanguageSelect aria-label='Language change'>*/}
+                        {/*    <option>EN</option>*/}
+                        {/*    <option>RU</option>*/}
+                        {/*</LanguageSelect>*/}
+                        <LanguageSwitcher/>
                     </Fade>
                 </ListItem>
             </StyledUl>
@@ -86,43 +88,6 @@ const HeaderLink = styled(Link)`
             @media ${theme.media.tablet} {
                 transform: scaleX(0);
             }
-        }
-    }
-`
-
-const LanguageSelect = styled.select`
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    
-    border: none;
-    background-color: transparent;
-    color: ${theme.colors.primaryLightText};
-    
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 10px;
-    
-    &:hover {
-        color: ${theme.colors.primaryText};
-    }
-
-    option {
-        color: ${theme.colors.primaryLightText};
-        background-color: ${theme.colors.primaryBg};
-    }
-
-    &:focus-visible {
-        outline: none;
-    }
-    
-    @media ${theme.media.tablet} {
-        color: ${theme.colors.primaryBg};
-
-        option {
-            color: ${theme.colors.primaryText};
-            background-color: ${theme.colors.primaryBg};
         }
     }
 `
