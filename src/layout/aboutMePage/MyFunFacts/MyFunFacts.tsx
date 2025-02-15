@@ -4,7 +4,7 @@ import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {factsData, sectionsTitlesData} from "../../../data/appData.ts";
+import {contentData, sectionsTitlesData} from '../../../data/appData.ts';
 import {Fact} from "./Fact/Fact.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import {imagePulseAnimation} from "../../../animations/animations.ts";
@@ -17,7 +17,7 @@ export const MyFunFacts = () => {
                 <SectionTitle section={sectionsTitlesData.aboutMePage.myFunFacts}/>
                 <SectionWrapper gap={'136px'}>
                     <FactsSection>
-                        {factsData.map((fact, index) => (
+                        {contentData.aboutMePage.myFunFacts.map((fact, index) => (
                             <FadeWrapper key={index} delay={index * 100} direction={'up'} duration={600}>
                                 <Fact key={index} fact={fact.fact}/>
                             </FadeWrapper>
