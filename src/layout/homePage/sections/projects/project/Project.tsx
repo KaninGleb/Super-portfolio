@@ -4,7 +4,7 @@ import {useState} from "react";
 import {theme} from "../../../../../styles/Theme.tsx";
 import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
 import {Link} from '../../../../../components/Link.tsx';
-import {projectsData} from '../../../../../data/appData.ts';
+import {contentData} from '../../../../../data/appData.ts';
 
 type LinkPropsType = {
     href: string
@@ -44,7 +44,7 @@ export const Project = (props: ProjectPropsType) => {
                         scale: {type: "spring", bounce: 0.5},
                     }}
                 >
-                    {projectsData.imageBtn}
+                    {contentData.homePage.projects.imageHoverBtn}
                 </ImageLink>
             </ImageWrapper>
             <SizeWrapper>

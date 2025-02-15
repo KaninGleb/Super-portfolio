@@ -19,7 +19,8 @@ export const contentData = {
             cite: '- Dr. Who'
         },
         projects: {
-            allProjectsBtn: 'View all ~~>'
+            allProjectsBtn: 'View all ~~>',
+            imageHoverBtn: 'View',
         },
         aboutMe: {
             paragraphs: {
@@ -242,8 +243,6 @@ export const projectsData = {
             {href: linksData.myGitHub, children: "Github <~>", mWidth: "128px"},
         ],
     },
-
-    imageBtn: 'View',
 }
 
 export const smallProjectsData = {
