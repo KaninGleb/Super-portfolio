@@ -1,8 +1,9 @@
 import styled, {css} from "styled-components";
-import {Fade} from "react-awesome-reveal";
-import {Icon} from "../icon/Icon.tsx";
-import {theme} from "../../styles/Theme.tsx";
 import {Link, useLocation} from "react-router-dom";
+import {Fade} from "react-awesome-reveal";
+import {theme} from "../../styles/Theme.tsx";
+import {Icon} from "../icon/Icon.tsx";
+import {contentData} from '../../data/appData.ts';
 
 type LogoPropsType = {
     isOpen?: boolean
@@ -23,7 +24,7 @@ export const Logo = ({ isOpen = false }: LogoPropsType) => {
                 <Icon iconId='defaultLogo' width='16px' height='17px'/>
             </FadeIconWrap>
             <Fade direction={'down'} duration={400}>
-                <span>Elias</span>
+                <span>{contentData.logo}</span>
             </Fade>
         </StyledLink>
     )
