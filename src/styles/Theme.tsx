@@ -21,11 +21,6 @@ export const theme = {
         secondaryLightAnim: 'rgba(171, 178, 191, 0.5)',
     },
 
-    links: {
-        primaryLink: { href: "#", children: "Live <~>", color: "#ffffff" },
-        secondaryLink: { href: "#", children: "Cached >=", color: "#abb2bf", borderColor: "#abb2bf" },
-    },
-
     media: {
         extraPageBgPseudoOff: 'screen and (max-width: 1260px)',
         bgPseudoOff: 'screen and (max-width: 1200px)',
