@@ -1,4 +1,3 @@
-import './App.css'
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import {ScrollToTop} from "./common/ScrollToTop.tsx";
 import {HomePage} from "./layout/homePage/HomePage.tsx";
