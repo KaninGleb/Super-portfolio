@@ -71,13 +71,14 @@ export const contentData = {
             wallet: '4149500120690030',
             message: 'Message me here',
             socials: {
-                iconIds: ['discord', 'email'],
-                iconsTitles: ['!Elias#3519', 'elias@elias-dev.ml'],
+                iconIds: ['discord', 'outlook'],
+                iconsTitles: ['discord.me', 'gleb@gleb-dev.ml'],
             }
         },
         allMedia: {
             socials: {
-                iconIds: ['git', 'discord', 'figma', 'email'],
+                iconIds: ['git', 'linkedIn', 'telegram', 'discord', 'outlook'],
+                iconsTitles: ['KaninGleb', 'GlebKanin', '@QuietGleb', 'myDiscord', 'gleb.kanin@outlook.com'],
             }
         }
     },

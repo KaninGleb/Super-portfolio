@@ -12,8 +12,10 @@ export const AllMedia = () => {
                 <StyledSocialList
                     displayFlex={true}
                     wrap={'wrap'}
-                    gap="22px"
+                    gap={'22px'}
+                    gapBetween={'5px'}
                     iconIds={contentData.contactPage.allMedia.socials.iconIds}
+                    iconsTitles={contentData.contactPage.allMedia.socials.iconsTitles}
                     showIcon={true}
                     iconSize={'32'}
                 />
