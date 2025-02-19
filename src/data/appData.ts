@@ -1,9 +1,9 @@
 import {theme} from "../styles/Theme.tsx";
-import chertNodes from "../assets/images/section-images/projects/project-5.svg";
-import protectX from "../assets/images/section-images/projects/project-4.svg";
-import kahoot from "../assets/images/section-images/projects/project-3.svg";
-import kotikBot from "../assets/images/section-images/projects/project-2.svg";
 import portfolio from "../assets/images/section-images/projects/project-1.svg";
+import kotikBot from "../assets/images/section-images/projects/project-2.svg";
+import kahoot from "../assets/images/section-images/projects/project-3.svg";
+import protectX from "../assets/images/section-images/projects/project-4.svg";
+import chertNodes from "../assets/images/section-images/projects/project-5.svg";
 
 export const contentData = {
     homePage: {
@@ -68,7 +68,8 @@ export const contentData = {
     contactPage: {
         contacts: {
             supportMe: 'Support me here',
-            wallet: '4149500120690030',
+            walletTitle: 'USDT (TRC20)',
+            walletToCopy: 'TPNzHvDZ9oxoR5NQWHqq4P9XjBCFJjanAg',
             message: 'Message me here',
             socials: {
                 iconIds: ['discord', 'outlook'],
