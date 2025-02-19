@@ -7,10 +7,16 @@ type IconPropsType = {
     viewBox?: string
 }
 
-export const Icon = (props: IconPropsType) => {
+export const Icon = ({ iconId, width, height, viewBox }: IconPropsType) => {
     return (
-        <svg width={props.width || "50"} height={props.height || "50"} viewBox={props.viewBox || "0 0 50 50"} fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use xlinkHref={`${sprite}#${props.iconId}`}/>
+        <svg
+            width={width || '50'}
+            height={height || '50'}
+            viewBox={viewBox || '0 0 50 50'}
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <use xlinkHref={`${sprite}#${iconId}`}/>
         </svg>
     )
 }
