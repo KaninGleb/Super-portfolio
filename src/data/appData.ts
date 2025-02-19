@@ -24,14 +24,14 @@ export const contentData = {
         },
         aboutMe: {
             paragraphs: {
-                1: 'Hello, I’m Elias!',
-                2: 'I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.',
-                3: 'Transforming my creativity and knowledge into websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.',
+                1: 'Hello, I’m Gleb!',
+                2: 'I’m a front-end developer based in Minsk, Belarus. I specialize in creating responsive websites from scratch and transforming them into modern, user-friendly web experiences.',
+                3: 'For over two years, I’ve been passionate about turning my creativity and knowledge into websites. I’ve been helping various clients establish their online presence. I always try to learn about the latest technologies and frameworks.',
             },
             readMoreBtn: 'Read more ->',
         },
         contacts: {
-            paragraph: 'I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me',
+            paragraph: 'I’m interested in working on product development opportunities. However, if you have other requests or questions, don’t hesitate to contact me.',
             readMoreBtn: 'Read more ->',
             box: 'Message me here',
             socials: {
@@ -42,14 +42,14 @@ export const contentData = {
         footer: {
             socialsLeft: {
                 iconIds: ['email'],
-                iconsTitles: ['elias@elias-dev.ml'],
+                iconsTitles: ['gleb.kanin@gmail.com'],
             },
-            span: 'Web designer and front-end developer',
+            span: 'Front-end developer',
             mediaHeader: 'Media',
             socialsRight: {
                 iconIds: ['git', 'figma', 'discord'],
             },
-            copyright: '© Copyright 2022. Made by Elias',
+            copyright: '© Copyright 2025. Made by Gleb',
         },
     },
 
@@ -90,7 +90,7 @@ export const contentData = {
         message: 'Message',
         sendBtn: 'Send message',
     },
-    logo: 'Elias',
+    logo: 'Gleb',
     mediaSocials: ['git', 'discord', 'figma'],
 }
 
