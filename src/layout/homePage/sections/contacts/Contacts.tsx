@@ -46,8 +46,7 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.section`
-    overflow: hidden
-;
+    overflow: hidden;
     padding-bottom: 2px;
 `
 
@@ -71,7 +70,6 @@ const LeftSection = styled(FlexWrapper)`
 
 const RightSection = styled(FlexWrapper)`
     outline: 1px solid ${theme.colors.primaryOutline};
-    max-width: 204px;
     width: 100%;
     padding: 16px;
 `
