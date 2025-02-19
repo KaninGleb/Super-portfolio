@@ -4,6 +4,9 @@ export const theme = {
         primaryBg: '#282c33',
         secondaryBg: '#2f353b',
 
+        // primaryBg: '#1c1f24',  // New darker primary bg color
+        // secondaryBg: '#23272a', // New darker secondary bg color
+
         primaryText: '#ffffff',
         primaryLightText: '#abb2bf',
         secondaryText: '#c778dd',
