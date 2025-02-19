@@ -9,6 +9,7 @@ import {contentData} from '../../data/appData.ts';
 import {imagePulseAnimation} from "../../animations/animations.ts";
 import bgLeft from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-left-short.svg";
 import bgRight from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-right-short.svg";
+import {CopyableText} from '../../components/CopyableText.tsx';
 
 
 export const ContactsForContactsPage = () => {
@@ -27,7 +28,12 @@ export const ContactsForContactsPage = () => {
                                 <SupportWrapper direction='column' gap='8px'>
                                     <Fade direction={'up'} cascade damping={.2}>
                                         <Title>{contentData.contactPage.contacts.supportMe}</Title>
-                                        <Description>{contentData.contactPage.contacts.wallet}</Description>
+                                        <CopyableText
+                                            text={contentData.contactPage.contacts.walletTitle}
+                                            textToCopy={contentData.contactPage.contacts.walletToCopy}
+                                            iconId={'copy'}
+                                            altIconId={'copySuccess'}
+                                        />
                                     </Fade>
                                 </SupportWrapper>
                                 <MessageWrapper direction='column' gap='16px'>
@@ -142,9 +148,4 @@ const MessageWrapper = styled(FlexWrapper)`
 const Title = styled.h3`
     font-weight: 600;
     font-size: 16px;
-`
-
-const Description = styled.span`
-    font-weight: 400;
-    color: ${theme.colors.primaryLightText};
 `
