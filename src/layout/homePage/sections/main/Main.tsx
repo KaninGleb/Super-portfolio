@@ -122,7 +122,7 @@ const PhotoWrapper = styled(FlexWrapper)`
 `
 
 const MainTitle = styled.h2`
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 30px;
 

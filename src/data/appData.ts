@@ -8,7 +8,7 @@ import portfolio from "../assets/images/section-images/projects/project-5.svg";
 export const contentData = {
     homePage: {
         main: {
-            title: 'Elias is a <span>web designer</span> and <span>front-end developer</span>',
+            title: 'Gleb is a <span>front-end developer</span>',
             paragraph: 'He crafts responsive websites where technologies meet creativity',
             contactBtn: 'Contact me!!',
             cvBtn: 'Download CV',
