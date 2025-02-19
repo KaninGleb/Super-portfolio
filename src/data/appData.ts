@@ -35,8 +35,8 @@ export const contentData = {
             readMoreBtn: 'Read more ->',
             box: 'Message me here',
             socials: {
-                iconIds: ['discord', 'email'],
-                iconsTitles: ['!Elias#3519', 'elias@elias.me'],
+                iconIds: ['discord', 'outlook'],
+                iconsTitles: ['discord.me', 'gleb@gleb.me'],
             },
         },
         footer: {
@@ -47,7 +47,7 @@ export const contentData = {
             span: 'Front-end developer',
             mediaHeader: 'Media',
             socialsRight: {
-                iconIds: ['git', 'figma', 'discord'],
+                iconIds: ['linkedIn', 'git', 'telegram'],
             },
             copyright: '© Copyright 2025. Made by Gleb',
         },
@@ -91,12 +91,28 @@ export const contentData = {
         sendBtn: 'Send message',
     },
     logo: 'Gleb',
-    mediaSocials: ['git', 'discord', 'figma'],
+    mediaSocials: ['linkedIn', 'git', 'telegram'],
 }
 
 const linksData = {
     myGitHub: 'https://github.com/KaninGleb',
+    myFigma: 'https://www.figma.com/',
+    myEmail: 'https://mail.google.com/',
+    myTelegram: 'https://t.me/QuietGleb',
+    myOutlook: 'mailto:gleb.kanin@gmail.com',
+    myDiscord: 'https://discord.com/users/351200394971578371',
+    myLinkedIn: 'https://www.linkedin.com/in/gleb-kanin-921730324/',
 }
+
+export const socialData = [
+    { id: 'git', href: linksData.myGitHub, areaLabel: 'Link to my GitHub'},
+    { id: 'figma', href: linksData.myFigma, areaLabel: 'Link to my Figma'},
+    { id: 'email', href: linksData.myEmail, areaLabel: 'Link to my Gmail'},
+    { id: 'outlook', href: linksData.myOutlook, areaLabel: 'Link to my Outlook'},
+    { id: 'telegram', href: linksData.myTelegram, areaLabel: 'Link to my Telegram'},
+    { id: 'discord', href: linksData.myDiscord, areaLabel: 'Link to my Discord'},
+    { id: 'linkedIn', href: linksData.myLinkedIn, areaLabel: 'Link to my myLinkedIn'},
+]
 
 export const headerLinks = [
     { name: 'home', id: ''},
@@ -318,11 +334,4 @@ export const skillsData = [
     { order: 1, title: 'Tools', maxWidth: '196px', description: ['VSCode', 'Neovim', 'Linux', 'Figma', 'XFCE', 'Arch', 'Git', 'Font Awesome'] },
     { order: 4, title: 'Other', description: ['HTML', 'CSS', 'EJS', 'SCSS', 'REST', 'Jinja'] },
     { order: 2, title: 'Frameworks', maxWidth: '196px', description: ['React', 'Vue', 'Disnake', 'Discord.js', 'Flask', 'Express.js'] },
-]
-
-export const socialData = [
-    { id: 'git', href: linksData.myGitHub, areaLabel: 'Link to GitHub'},
-    { id: 'figma', href: "https://www.figma.com/", areaLabel: 'Link to Figma'},
-    { id: 'discord', href: "https://discord.com/", areaLabel: 'Link to Discord'},
-    { id: 'email', href: "https://mail.google.com/", areaLabel: 'Link to Gmail'},
 ]
