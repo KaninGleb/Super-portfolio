@@ -129,6 +129,14 @@ const MainTitle = styled.h2`
     span {
         color: ${theme.colors.secondaryText};
     }
+
+    @media ${theme.media.tablet} {
+        font-size: 32px;
+    }
+
+    @media ${theme.media.mobile} {
+        font-size: 28px;
+    }
 `
 
 const ColorBlock = styled.div`
