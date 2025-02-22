@@ -18,7 +18,7 @@ export const Contacts = () => {
                     <StyledFlexWrapper justify='space-between'>
                         <LeftSection direction='column' gap='20px'>
                             <Fade direction={'up'} cascade damping={.2}>
-                                <Paragraph children={contentData.homePage.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}></Paragraph>
+                                <Paragraph children={contentData.homePage.contacts.paragraph} fontWeight='500'></Paragraph>
                                 <RouterDomLink to="/contacts" children={contentData.homePage.contacts.readMoreBtn} mWidth={'148px'}/>
                             </Fade>
                         </LeftSection>
@@ -66,6 +66,10 @@ const StyledFlexWrapper = styled(FlexWrapper)`
 const LeftSection = styled(FlexWrapper)`
     max-width: 505px;
     width: 100%;
+
+    @media ${theme.media.tablet} {
+        max-width: unset;
+    }
 `
 
 const RightSection = styled(FlexWrapper)`

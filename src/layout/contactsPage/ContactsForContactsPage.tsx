@@ -20,7 +20,7 @@ export const ContactsForContactsPage = () => {
                     <StyledFlexWrapper justify='space-between'>
                         <LeftSection direction='column' gap='20px'>
                             <Fade direction={'up'}>
-                                <Paragraph children={contentData.homePage.contacts.paragraph} fontWeight='500' lineHeight={'1.3'}/>
+                                <Paragraph children={contentData.homePage.contacts.paragraph} fontWeight='500'/>
                             </Fade>
                         </LeftSection>
                         <RightSection gap='10px'>
@@ -116,6 +116,10 @@ const StyledFlexWrapper = styled(FlexWrapper)`
 const LeftSection = styled(FlexWrapper)`
     max-width: 505px;
     width: 100%;
+
+    @media ${theme.media.tablet} {
+        max-width: unset;
+    }
 `
 
 const RightSection = styled(FlexWrapper)`
