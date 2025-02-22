@@ -1,20 +1,23 @@
 import styled from 'styled-components';
+import {useNavigate} from 'react-router-dom';
 import {theme} from '../styles/Theme.tsx';
 
-
-// Todo: finish language switching
-// const LanguageContext = createContext();
-
 export const LanguageSwitcher = () => {
-    // const {lang, setLang} = useContext(LanguageContext);
+    // Todo: finish LanguageSwitcher
+    const navigate = useNavigate();
+
+    const switchLanguage = (lang: string) => {
+        if (lang === 'ru') {
+            navigate('/ru');
+        } else {
+            navigate('/');
+        }
+    }
 
     return (
         <LanguageSelect aria-label='Language change'>
-            <option onClick={() => {}}>EN</option>
-            <option onClick={() => {}}>RU</option>
-
-            {/*<option onClick={() => setLang('en')}>EN</option>*/}
-            {/*<option onClick={() => setLang('ru')}>RU</option>*/}
+            <option onClick={ () => switchLanguage('en') }>EN</option>
+            <option onClick={ () => switchLanguage('ru') }>RU</option>
         </LanguageSelect>
     )
 }
