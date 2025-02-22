@@ -30,13 +30,13 @@ export const Project = (props: ProjectPropsType) => {
     return (
         <StyledWork maxWidth={props.maxWidth}>
             <ImageWrapper
-                target={'_blank'}
-                href={props.imageLink}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
                 <Image src={props.src} alt=""/>
                 <ImageLink
+                    target={'_blank'}
+                    href={props.imageLink}
                     initial={{opacity: 0, scale: 0}}
                     animate={isHovered ? {opacity: 1, scale: 1} : {opacity: 0, scale: 0}}
                     transition={{
@@ -138,7 +138,7 @@ const ImageLink = styled(motion.a)`
     }
 `
 
-const ImageWrapper = styled.a`
+const ImageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
