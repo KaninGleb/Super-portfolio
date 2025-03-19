@@ -5,8 +5,6 @@ import {cvBtnAnimation} from "../animations/animations.ts";
 export const CVBtn = styled.a`
     outline: 1px solid ${theme.colors.secondaryOutline};
     padding: 8px 16px;
-    max-width: 148px;
-    width: 100%;
     color: ${theme.colors.primaryBg};
     background-color: ${theme.colors.secondaryOutline};
     transition: .15s;

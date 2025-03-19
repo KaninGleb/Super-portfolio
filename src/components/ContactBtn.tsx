@@ -5,8 +5,6 @@ import {btnAnimation} from "../animations/animations.ts";
 export const ContactBtn = styled.button`
     outline: 1px solid #c778dd;
     padding: 8px 16px;
-    max-width: 200px;
-    width: 100%;
     color: ${theme.colors.primaryText};
     white-space: nowrap;
     transition: .15s;
