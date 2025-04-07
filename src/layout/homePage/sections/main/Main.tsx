@@ -165,7 +165,6 @@ const PortfolioMessage = styled.div`
     max-width: 402px;
     width: 100%;
     margin-left: 18px;
-    flex-wrap: wrap;
     
     span {
         font-weight: 600;
