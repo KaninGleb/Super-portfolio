@@ -33,6 +33,17 @@ const StyledTextField = styled.div`
         min-height: 38px;
         width: 100%;
         background-color: inherit;
+        transition: .2s;
+
+        &:hover {
+            border: 1px solid ${theme.colors.primaryText};
+        }
+
+        @media ${theme.media.tablet} {
+            &:hover {
+                border: 1px solid ${theme.colors.primaryOutline};
+            }
+        }
     }
 
     input:focus-visible {

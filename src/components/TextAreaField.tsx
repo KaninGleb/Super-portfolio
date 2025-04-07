@@ -32,6 +32,17 @@ const StyledTextAreaField = styled.div`
         width: 100%;
         background-color: inherit;
         resize: none;
+        transition: .2s;
+
+        &:hover {
+            border: 1px solid ${theme.colors.primaryText};
+        }
+        
+        @media ${theme.media.tablet} {
+            &:hover {
+                border: 1px solid ${theme.colors.primaryOutline};
+            }
+        }
     }
 
     textarea::-webkit-scrollbar-track {
