@@ -9,4 +9,11 @@ import kahoot from '@/assets/images/section-images/projects/project-3.svg'
 import protectX from '@/assets/images/section-images/projects/project-4.svg'
 import chertNodes from '@/assets/images/section-images/projects/project-5.svg'
 
-export { photo, logo, dotsForMain, CV, portfolio, kotikBot, kahoot, protectX, chertNodes }
+import aboutMePhoto from '@/assets/images/section-images/about-me/about-me-my-photo.png'
+import bothPseudo from '@/assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg'
+import bgLeft from '@/assets/images/background/about-me-page/about-me-page-bg-pseudo-left.svg'
+import bgRight from '@/assets/images/background/about-me-page/about-me-page-bg-pseudo-right.svg'
+
+export { photo, logo, dotsForMain, CV }
+export { portfolio, kotikBot, kahoot, protectX, chertNodes }
+export { aboutMePhoto, bothPseudo, bgLeft, bgRight }
