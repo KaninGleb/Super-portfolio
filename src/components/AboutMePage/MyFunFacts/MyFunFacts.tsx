@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '@/styles/Theme.tsx'
-import { Container, FlexWrapper, Photo, SectionTitle } from '@/common'
-import { contentData, sectionsTitlesData } from '@/app/appData.ts'
-import { imagePulseAnimation } from '@/styles/animations/animations.ts'
-import image from '../../../assets/images/section-images/my-fun-facts/my-fun-facts-images-group.svg'
+import { Container, SectionTitle, FlexWrapper, Photo } from '@/common'
 import { Fact } from '@/components'
+import { sectionsTitlesData, contentData } from '@/app/appData.ts'
+import { theme } from '@/styles'
+import { myFunFactsImage } from '@/assets'
+import { imagePulseAnimation } from '@/styles/animations/animations.ts'
 
 export const MyFunFacts = () => {
   return (
@@ -22,7 +22,7 @@ export const MyFunFacts = () => {
           </FactsSection>
           <PhotoSection>
             <Fade direction={'right'} duration={800}>
-              <StyledPhoto src={image} Wmin={150} Wmax={202} alt={'My fan facts image'} />
+              <StyledPhoto src={myFunFactsImage} Wmin={150} Wmax={202} alt={'My fan facts image'} />
             </Fade>
           </PhotoSection>
         </SectionWrapper>
