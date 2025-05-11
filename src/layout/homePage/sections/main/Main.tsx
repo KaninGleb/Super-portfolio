@@ -9,7 +9,7 @@ import {contentData} from '../../../../app/appData.ts';
 import {ContactBtn} from "../../../../common/ContactBtn.tsx";
 import {CVBtn} from "../../../../common/CVBtn.tsx";
 import {MyPhoto} from "../../../../components/Photo.tsx";
-import {Modal} from "../../../../common/Modal.tsx";
+import {Modal} from "../../../../common/Modal/Modal.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
 import photo from "../../../../assets/images/section-images/main/main-my-photo.png"
 import logo from "../../../../assets/images/sections-pseudo/main-pseudo/logo-outline.svg"

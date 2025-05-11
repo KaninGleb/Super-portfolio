@@ -8,7 +8,7 @@ import {ContactBtn} from "../../ContactBtn.tsx";
 import {CVBtn} from "../../CVBtn.tsx";
 import CV from "../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf";
 import {Link} from "react-router-dom";
-import {Modal} from "../../Modal.tsx";
+import {Modal} from "../../Modal/Modal.tsx";
 
 type RouterMobileMenuPropsType = {
     menuItems: Array<{ symbol: string, name: string, id: string }>
