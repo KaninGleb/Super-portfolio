@@ -1,10 +1,10 @@
 import styled, {css} from "styled-components";
 import { theme } from "../../../../styles/Theme.tsx";
-import {SocialList} from "../../../../components/SocialList.tsx";
-import {Logo} from "../../../../components/logo/Logo.tsx";
+import {SocialList} from "../../../../common/SocialList.tsx";
+import {Logo} from "../../../../common/Logo.tsx";
 import {useEffect, useState} from "react";
-import {ContactBtn} from "../../../../components/ContactBtn.tsx";
-import {CVBtn} from "../../../../components/CVBtn.tsx";
+import {ContactBtn} from "../../../../common/ContactBtn.tsx";
+import {CVBtn} from "../../../../common/CVBtn.tsx";
 import CV from "../../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf";
 
 type MenuPropsType = {

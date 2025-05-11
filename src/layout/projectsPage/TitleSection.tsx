@@ -4,7 +4,7 @@ import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
-import {Paragraph} from "../../components/Paragraph.tsx";
+import {Paragraph} from "../../common/Paragraph.tsx";
 
 type TitleSectionPropsType = {
     section: {

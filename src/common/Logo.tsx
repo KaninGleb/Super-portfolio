@@ -1,9 +1,9 @@
 import styled, {css} from "styled-components";
 import {Link, useLocation} from "react-router-dom";
 import {Fade} from "react-awesome-reveal";
-import {theme} from "../../styles/Theme.tsx";
-import {Icon} from "../icon/Icon.tsx";
-import {contentData} from '../../data/appData.ts';
+import {theme} from "../styles/Theme.tsx";
+import {Icon} from "./Icon.tsx";
+import {contentData} from '../app/appData.ts';
 
 type LogoPropsType = {
     isOpen?: boolean

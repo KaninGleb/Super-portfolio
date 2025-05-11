@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {Link} from '../../components/Link.tsx';
+import {Link} from '../../common/Link.tsx';
 
 type LinkPropsType = {
     href: string

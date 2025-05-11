@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {Icon} from './icon/Icon.tsx';
+import {Icon} from '../common/Icon.tsx';
 import styled from 'styled-components';
 import {theme} from '../styles/Theme.tsx';
 

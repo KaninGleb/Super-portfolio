@@ -4,7 +4,7 @@ import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "../homePage/media/Media.tsx";
 import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
-import {sectionsTitlesData} from "../../data/appData.ts";
+import {sectionsTitlesData} from "../../app/appData.ts";
 import {ContactsForContactsPage} from "./ContactsForContactsPage.tsx";
 import {AllMedia} from "./AllMedia.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";

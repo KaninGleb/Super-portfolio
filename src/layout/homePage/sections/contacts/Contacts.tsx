@@ -4,10 +4,10 @@ import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
-import {Paragraph} from "../../../../components/Paragraph.tsx";
-import {RouterDomLink} from "../../../../components/RouterDomLink.tsx";
-import {contentData, sectionsTitlesData} from '../../../../data/appData.ts';
-import {SocialList} from "../../../../components/SocialList.tsx";
+import {Paragraph} from "../../../../common/Paragraph.tsx";
+import {RouterDomLink} from "../../../../common/RouterDomLink.tsx";
+import {contentData, sectionsTitlesData} from '../../../../app/appData.ts';
+import {SocialList} from "../../../../common/SocialList.tsx";
 
 export const Contacts = () => {
     return (

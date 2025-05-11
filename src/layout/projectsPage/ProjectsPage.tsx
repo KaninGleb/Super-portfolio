@@ -2,11 +2,11 @@ import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "../homePage/media/Media.tsx";
 import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
 import {TitleSection} from "./TitleSection.tsx";
-import {sectionsTitlesData} from "../../data/appData.ts";
+import {sectionsTitlesData} from "../../app/appData.ts";
 import {AllProjects} from "./AllProjects.tsx";
 import {SmallProjects} from "./SmallProjects.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";
-import {GoTopBtn} from "../../components/goTopBtn/GoTopBtn.tsx";
+import {GoTopBtn} from "../../common/GoTopBtn.tsx";
 
 
 export const ProjectsPage = () => {

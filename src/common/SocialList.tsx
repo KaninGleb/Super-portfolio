@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 import {theme} from "../styles/Theme.tsx";
-import {Icon} from "./icon/Icon.tsx";
-import {socialData} from "../data/appData.ts";
+import {Icon} from "./Icon.tsx";
+import {socialData} from "../app/appData.ts";
 
 type SocialListPropsType = {
     iconIds: string[]

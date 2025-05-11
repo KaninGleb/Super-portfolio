@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {Container} from "../../components/Container.tsx";
-import {contentData, sectionsTitlesData} from '../../data/appData.ts';
+import {contentData, sectionsTitlesData} from '../../app/appData.ts';
 import {SectionTitle} from "../../components/SectionTitle.tsx";
-import {SocialList} from "../../components/SocialList.tsx";
+import {SocialList} from "../../common/SocialList.tsx";
 
 export const AllMedia = () => {
     return (

@@ -1,13 +1,13 @@
 import React, {useEffect, useRef} from "react";
 import styled from "styled-components";
 import emailJS from '@emailjs/browser';
-import {theme} from "../../styles/Theme.tsx";
-import {FlexWrapper} from "../FlexWrapper.tsx";
-import {Field} from "../Field.tsx";
-import {TextAreaField} from "../TextAreaField.tsx";
-import {font} from "../../styles/CommonFont.tsx";
-import {modalFadeInUp} from "../../animations/animations.ts";
-import {contentData} from '../../data/appData.ts';
+import {theme} from "../styles/Theme.tsx";
+import {FlexWrapper} from "../components/FlexWrapper.tsx";
+import {Field} from "../components/Field.tsx";
+import {TextAreaField} from "../components/TextAreaField.tsx";
+import {font} from "../styles/CommonFont.tsx";
+import {modalFadeInUp} from "../animations/animations.ts";
+import {contentData} from '../app/appData.ts';
 
 type ModalPropsType = {
     isVisible: boolean;

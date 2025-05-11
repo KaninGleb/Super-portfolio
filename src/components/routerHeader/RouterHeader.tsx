@@ -3,10 +3,10 @@ import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../Container.tsx";
 import {FlexWrapper} from "../FlexWrapper.tsx";
 import {useEffect, useState} from "react";
-import {Logo} from "../logo/Logo.tsx";
+import {Logo} from "../../common/Logo.tsx";
 import {RouterHeaderMenu} from "./RouterHeaderMenu.tsx";
 import {RouterMobileMenu} from "./RouterMobileMenu.tsx";
-import {routerLinksData} from "../../data/appData.ts";
+import {routerLinksData} from "../../app/appData.ts";
 
 type RouterHeaderPropsType = {
     isScrolled: boolean;

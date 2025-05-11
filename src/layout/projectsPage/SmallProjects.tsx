@@ -4,7 +4,7 @@ import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
-import {sectionsTitlesData, smallProjectsData} from "../../data/appData.ts";
+import {sectionsTitlesData, smallProjectsData} from "../../app/appData.ts";
 import {SmallProject} from "./SmallProject.tsx";
 
 export const SmallProjects = () => {

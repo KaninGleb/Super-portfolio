@@ -3,8 +3,8 @@ import {motion} from "framer-motion";
 import {useState} from "react";
 import {theme} from "../../../../../styles/Theme.tsx";
 import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
-import {Link} from '../../../../../components/Link.tsx';
-import {contentData} from '../../../../../data/appData.ts';
+import {Link} from '../../../../../common/Link.tsx';
+import {contentData} from '../../../../../app/appData.ts';
 
 type LinkPropsType = {
     href: string

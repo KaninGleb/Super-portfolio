@@ -3,10 +3,10 @@ import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Logo} from "../../../components/logo/Logo.tsx";
-import {SocialList} from "../../../components/SocialList.tsx";
+import {Logo} from "../../../common/Logo.tsx";
+import {SocialList} from "../../../common/SocialList.tsx";
 import {font} from "../../../styles/CommonFont.tsx";
-import {contentData} from '../../../data/appData.ts';
+import {contentData} from '../../../app/appData.ts';
 
 export const Footer = () => {
     return (

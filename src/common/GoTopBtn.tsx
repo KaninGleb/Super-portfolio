@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import {useEffect, useState} from 'react';
 import {animateScroll as scroll} from 'react-scroll';
-import {theme} from '../../styles/Theme.tsx';
-import {Icon} from '../icon/Icon.tsx';
-import {GoTopBtnSlideIn} from "../../animations/animations.ts";
+import {theme} from '../styles/Theme.tsx';
+import {Icon} from './Icon.tsx';
+import {GoTopBtnSlideIn} from "../animations/animations.ts";
 
 export const GoTopBtn = () => {
     const [showBtn, setShowBtn] = useState(false);

@@ -4,7 +4,7 @@ import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
-import {projectsData, sectionsTitlesData} from "../../data/appData.ts";
+import {projectsData, sectionsTitlesData} from "../../app/appData.ts";
 import {Project} from "../homePage/sections/projects/project/Project.tsx";
 import {imagePulseAnimation} from "../../animations/animations.ts";
 import bgLeft from "../../assets/images/background/projects-page/projects-page-bg-pseudo-left.svg";

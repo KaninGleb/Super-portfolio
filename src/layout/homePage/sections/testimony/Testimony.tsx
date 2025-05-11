@@ -7,7 +7,7 @@ import {font} from "../../../../styles/CommonFont.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
 import quotationMark from "../../../../assets/images/sections-pseudo/testimony-pseudo/quotation-mark.svg"
 import pseudoBgR from "../../../../assets/images/background/home-page/home-page-bg-pseudo-right.svg"
-import {contentData} from '../../../../data/appData.ts';
+import {contentData} from '../../../../app/appData.ts';
 
 export const Testimony = () => {
     return (

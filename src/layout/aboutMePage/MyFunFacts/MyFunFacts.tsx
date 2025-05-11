@@ -4,7 +4,7 @@ import {theme} from "../../../styles/Theme.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {contentData, sectionsTitlesData} from '../../../data/appData.ts';
+import {contentData, sectionsTitlesData} from '../../../app/appData.ts';
 import {Fact} from "./Fact/Fact.tsx";
 import {Photo} from "../../../components/Photo.tsx";
 import {imagePulseAnimation} from "../../../animations/animations.ts";

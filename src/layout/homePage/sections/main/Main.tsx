@@ -4,12 +4,12 @@ import {Fade, Zoom} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../components/Container.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import {Paragraph} from "../../../../components/Paragraph.tsx";
-import {contentData} from '../../../../data/appData.ts';
-import {ContactBtn} from "../../../../components/ContactBtn.tsx";
-import {CVBtn} from "../../../../components/CVBtn.tsx";
+import {Paragraph} from "../../../../common/Paragraph.tsx";
+import {contentData} from '../../../../app/appData.ts';
+import {ContactBtn} from "../../../../common/ContactBtn.tsx";
+import {CVBtn} from "../../../../common/CVBtn.tsx";
 import {MyPhoto} from "../../../../components/Photo.tsx";
-import {Modal} from "../../../../components/modal/Modal.tsx";
+import {Modal} from "../../../../common/Modal.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
 import photo from "../../../../assets/images/section-images/main/main-my-photo.png"
 import logo from "../../../../assets/images/sections-pseudo/main-pseudo/logo-outline.svg"

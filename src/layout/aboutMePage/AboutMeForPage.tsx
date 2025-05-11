@@ -4,8 +4,8 @@ import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {Photo} from "../../components/Photo.tsx";
-import {Paragraph} from "../../components/Paragraph.tsx";
-import {contentData} from '../../data/appData.ts';
+import {Paragraph} from "../../common/Paragraph.tsx";
+import {contentData} from '../../app/appData.ts';
 import {imagePulseAnimation, pulseAnimation} from "../../animations/animations.ts";
 import aboutMePhoto from "../../assets/images/section-images/about-me/about-me-my-photo.png"
 import bothPseudo from "../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg";

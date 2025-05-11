@@ -8,7 +8,7 @@ import {Skills} from "./sections/skills/Skills.tsx";
 import {AboutMe} from "./sections/aboutMe/AboutMe.tsx";
 import {Contacts} from "./sections/contacts/Contacts.tsx";
 import {Footer} from "./footer/Footer.tsx";
-import {GoTopBtn} from "../../components/goTopBtn/GoTopBtn.tsx";
+import {GoTopBtn} from "../../common/GoTopBtn.tsx";
 
 
 export const HomePage = () => {
