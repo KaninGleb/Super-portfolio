@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 import {Link} from "react-router-dom";
 import {theme} from "../../../styles/Theme.tsx";
-import {LanguageSwitcher} from '../../../components/LanguageSwitcher.tsx';
+import {LanguageSwitcher} from './LanguageSwitcher/LanguageSwitcher.tsx';
 
 type RouterHeaderMenuPropsType = {
     menuItems: Array<{ symbol: string, name: string, id: string }>

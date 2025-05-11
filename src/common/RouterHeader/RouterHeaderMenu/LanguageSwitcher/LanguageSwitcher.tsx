@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {useNavigate} from 'react-router-dom';
-import {theme} from '../styles/Theme.tsx';
+import {theme} from '../../../../styles/Theme.tsx';
 
 export const LanguageSwitcher = () => {
     // Todo: finish LanguageSwitcher
