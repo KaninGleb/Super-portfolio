@@ -39,3 +39,6 @@ export {Skills} from './HomePage/Sections/Skills/Skills'
 export {Skill} from './HomePage/Sections/Skills/Skill/Skill'
 
 export {Testimony} from './HomePage/Sections/Testimony/Testimony'
+
+// Home Page - Not Found Page
+export {NotFoundPage404} from './NotFoundPage/NotFoundPage404.tsx'
