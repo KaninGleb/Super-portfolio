@@ -1,11 +1,7 @@
 import styled from 'styled-components'
-import { FlexWrapper, RouterHeader, ScrollFillBar } from '@/common'
-import { Media } from '../HomePage/Media/Media.tsx'
-import { TitleSection } from '../ProjectsPage/TitleSection.tsx'
+import { ScrollFillBar, RouterHeader, FlexWrapper } from '@/common'
+import { Media, TitleSection, ContactsForContactsPage, AllMedia, Footer } from '@/components'
 import { sectionsTitlesData } from '@/app/appData.ts'
-import { ContactsForContactsPage } from '@/components'
-import { AllMedia } from '@/components'
-import { Footer } from '../HomePage/Footer/Footer.tsx'
 
 export const ContactsPage = () => {
   return (
