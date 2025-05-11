@@ -3,7 +3,7 @@ import {Fade} from "react-awesome-reveal";
 import {theme} from "../../styles/Theme.tsx";
 import {Container} from "../../common/Layout/Container.tsx";
 import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
-import {SectionTitle} from "../../components/SectionTitle.tsx";
+import {SectionTitle} from "../../common/Layout/SectionTitle.tsx";
 import {projectsData, sectionsTitlesData} from "../../app/appData.ts";
 import {Project} from "../HomePage/Sections/Projects/Project/Project.tsx";
 import {imagePulseAnimation} from "../../animations/animations.ts";

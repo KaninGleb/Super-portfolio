@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
-import {theme} from "../styles/Theme.tsx";
-import {imagePulseAnimation, pulseAnimation} from "../animations/animations.ts";
-import {font} from "../styles/CommonFont.tsx";
+import {theme} from "../../styles/Theme.tsx";
+import {imagePulseAnimation, pulseAnimation} from "../../animations/animations.ts";
+import {font} from "../../styles/CommonFont.tsx";
 
 type SectionTitlePropsType = {
     section: {
@@ -21,7 +21,6 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
                 <span>{props.section.symbol}</span>{props.section.name}
             </StyledSectionTitle>
         </Fade>
-
     )
 }
 

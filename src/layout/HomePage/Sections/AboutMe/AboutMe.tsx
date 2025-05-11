@@ -4,7 +4,7 @@ import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../common/Layout/Container.tsx";
 import {FlexWrapper} from "../../../../common/Layout/FlexWrapper.tsx";
 import {Photo} from "../../../../common/Photo.tsx";
-import {SectionTitle} from "../../../../components/SectionTitle.tsx";
+import {SectionTitle} from "../../../../common/Layout/SectionTitle.tsx";
 import {Paragraph} from "../../../../common/Paragraph.tsx";
 import {RouterDomLink} from "../../../../common/RouterDomLink.tsx";
 import {contentData, sectionsTitlesData} from '../../../../app/appData.ts';

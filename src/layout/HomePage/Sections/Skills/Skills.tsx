@@ -3,7 +3,7 @@ import {Fade} from "react-awesome-reveal";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../common/Layout/Container.tsx";
 import {FlexWrapper} from "../../../../common/Layout/FlexWrapper.tsx";
-import {SectionTitle} from "../../../../components/SectionTitle.tsx";
+import {SectionTitle} from "../../../../common/Layout/SectionTitle.tsx";
 import {sectionsTitlesData, skillsData} from "../../../../app/appData.ts";
 import {Skill} from "./Skill/Skill.tsx";
 import {Photo} from "../../../../common/Photo.tsx";
