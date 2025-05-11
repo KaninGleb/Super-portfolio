@@ -1,9 +1,5 @@
-import { theme } from '../styles/Theme.tsx'
-import portfolio from '../assets/images/section-images/projects/project-1.svg'
-import kotikBot from '../assets/images/section-images/projects/project-2.svg'
-import kahoot from '../assets/images/section-images/projects/project-3.svg'
-import protectX from '../assets/images/section-images/projects/project-4.svg'
-import chertNodes from '../assets/images/section-images/projects/project-5.svg'
+import { theme } from '@/styles'
+import { portfolio, kotikBot, kahoot, protectX, chertNodes } from '@/assets'
 
 export const contentData = {
   homePage: {
