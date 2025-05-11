@@ -1,6 +1,6 @@
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import {ScrollToTop} from "../common/ScrollToTop.tsx";
-import {HomePage} from "../layout/homePage/HomePage.tsx";
+import {HomePage} from "../layout/HomePage/HomePage.tsx";
 import {ProjectsPage} from "../layout/projectsPage/ProjectsPage.tsx";
 import {AboutMePage} from "../layout/aboutMePage/AboutMePage.tsx";
 import {ContactsPage} from "../layout/ContactsPage/ContactsPage.tsx";

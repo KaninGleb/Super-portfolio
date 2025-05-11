@@ -203,7 +203,7 @@ export const sectionsTitlesData = {
             description: 'Who am i?',
         },
         allMedia: {
-            name: 'all-media',
+            name: 'all-Media',
             symbol: '#',
         },
     }

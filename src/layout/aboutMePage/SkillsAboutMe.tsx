@@ -5,7 +5,7 @@ import {Container} from "../../common/Layout/Container.tsx";
 import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {sectionsTitlesData, skillsData} from "../../app/appData.ts";
-import {Skill} from "../homePage/sections/skills/skill/Skill.tsx";
+import {Skill} from "../HomePage/Sections/Skills/Skill/Skill.tsx";
 
 export const SkillsAboutMe = () => {
     return (

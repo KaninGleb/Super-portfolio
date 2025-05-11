@@ -4,8 +4,8 @@ import {Container} from "../../../common/Layout/Container.tsx";
 import {FlexWrapper} from "../../../common/Layout/FlexWrapper.tsx";
 import {useEffect, useState} from "react";
 import {Logo} from "../../../common/Logo.tsx";
-import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
-import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
+import {HeaderMenu} from "./HeaderMenu/HeaderMenu.tsx";
+import {MobileMenu} from "./MobileMenu/MobileMenu.tsx";
 import {headerLinks} from "../../../app/appData.ts";
 
 type HeaderPropsType = {

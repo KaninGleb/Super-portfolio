@@ -5,7 +5,7 @@ import {Container} from "../../common/Layout/Container.tsx";
 import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {projectsData, sectionsTitlesData} from "../../app/appData.ts";
-import {Project} from "../homePage/sections/projects/project/Project.tsx";
+import {Project} from "../HomePage/Sections/Projects/Project/Project.tsx";
 import {imagePulseAnimation} from "../../animations/animations.ts";
 import bgLeft from "../../assets/images/background/projects-page/projects-page-bg-pseudo-left.svg";
 import bgRight from "../../assets/images/background/projects-page/projects-page-bg-pseudo-right.svg";

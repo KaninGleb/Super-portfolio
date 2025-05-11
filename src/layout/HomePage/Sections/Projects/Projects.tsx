@@ -5,7 +5,7 @@ import {Container} from "../../../../common/Layout/Container.tsx";
 import {FlexWrapper} from "../../../../common/Layout/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {contentData, projectsData, sectionsTitlesData} from '../../../../app/appData.ts';
-import {Project} from "./project/Project.tsx";
+import {Project} from "./Project/Project.tsx";
 import {Link} from "react-router-dom";
 
 export const Projects = () => {

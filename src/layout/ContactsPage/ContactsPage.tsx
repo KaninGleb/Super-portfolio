@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
 import {ScrollFillBar} from "../../common/ScrollFillBar.tsx";
-import {Media} from "../homePage/media/Media.tsx";
+import {Media} from "../HomePage/Media/Media.tsx";
 import {RouterHeader} from "../../common/RouterHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
 import {sectionsTitlesData} from "../../app/appData.ts";
 import {ContactsForContactsPage} from "./ContactsForContactsPage/ContactsForContactsPage.tsx";
 import {AllMedia} from "./AllMedia/AllMedia.tsx";
-import {Footer} from "../homePage/footer/Footer.tsx";
+import {Footer} from '../HomePage/Footer/Footer.tsx';
 
 export const ContactsPage = () => {
     return (
