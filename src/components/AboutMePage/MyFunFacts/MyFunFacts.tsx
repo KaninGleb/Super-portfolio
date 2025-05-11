@@ -1,14 +1,11 @@
-import styled from "styled-components";
-import {Fade} from "react-awesome-reveal";
-import {theme} from "../../../styles/Theme.tsx";
-import {Container} from "../../../common/Layout/Container.tsx";
-import {FlexWrapper} from "../../../common/Layout/FlexWrapper.tsx";
-import {SectionTitle} from "../../../common/Layout/SectionTitle.tsx";
-import {contentData, sectionsTitlesData} from '../../../app/appData.ts';
-import {Fact} from "./Fact/Fact.tsx";
-import {Photo} from "../../../common/Photo.tsx";
-import {imagePulseAnimation} from "../../../styles/animations/animations.ts";
-import image from "../../../assets/images/section-images/my-fun-facts/my-fun-facts-images-group.svg";
+import styled from 'styled-components';
+import {Fade} from 'react-awesome-reveal';
+import {theme} from '@/styles/Theme.tsx';
+import {Container, FlexWrapper, Photo, SectionTitle} from '@/common';
+import {contentData, sectionsTitlesData} from '@/app/appData.ts';
+import {imagePulseAnimation} from '@/styles/animations/animations.ts';
+import image from '../../../assets/images/section-images/my-fun-facts/my-fun-facts-images-group.svg';
+import {Fact} from '@/components';
 
 export const MyFunFacts = () => {
     return (

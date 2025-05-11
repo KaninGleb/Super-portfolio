@@ -1,11 +1,11 @@
 import React, {useEffect, useRef} from "react";
 import styled from "styled-components";
 import emailJS from '@emailjs/browser';
-import {theme} from "../../styles/Theme.tsx";
+import {theme} from "@/styles/Theme.tsx";
 import {FlexWrapper} from "../Layout/FlexWrapper.tsx";
 import {Field} from "./Field/Field.tsx";
 import {TextAreaField} from "./TextAreaField/TextAreaField.tsx";
-import {font} from "../../styles/CommonFont.tsx";
+import {font} from '@/styles';
 import {modalFadeInUp} from "../../styles/animations/animations.ts";
 import {contentData} from '../../app/appData.ts';
 

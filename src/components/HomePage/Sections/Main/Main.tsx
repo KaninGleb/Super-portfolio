@@ -1,20 +1,16 @@
-import styled from "styled-components";
-import {useState} from "react";
-import {Fade, Zoom} from "react-awesome-reveal";
-import {theme} from "../../../../styles/Theme.tsx";
-import {Container} from "../../../../common/Layout/Container.tsx";
-import {FlexWrapper} from "../../../../common/Layout/FlexWrapper.tsx";
-import {Paragraph} from "../../../../common/Paragraph.tsx";
-import {contentData} from '../../../../app/appData.ts';
-import {ContactBtn} from "../../../../common/ContactBtn.tsx";
-import {CVBtn} from "../../../../common/CVBtn.tsx";
-import {Photo} from "../../../../common/Photo.tsx";
-import {Modal} from "../../../../common/Modal/Modal.tsx";
-import {imagePulseAnimation} from "../../../../styles/animations/animations.ts";
-import photo from "../../../../assets/images/section-images/main/main-my-photo.png"
-import logo from "../../../../assets/images/sections-pseudo/main-pseudo/logo-outline.svg"
-import dotsForMain from "../../../../assets/images/sections-pseudo/main-pseudo/dots-main-photo.svg"
-import CV from "../../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf"
+import styled from 'styled-components';
+import {useState} from 'react';
+import {Fade, Zoom} from 'react-awesome-reveal';
+import {theme} from '@/styles/Theme.tsx';
+import {FlexWrapper} from '@/common/Layout/FlexWrapper.tsx';
+import {Paragraph} from '@/common/Paragraph.tsx';
+import {contentData} from '@/app/appData.ts';
+import {CVBtn} from '@/common/CVBtn.tsx';
+import {Photo} from '@/common/Photo.tsx';
+import {Modal} from '@/common/Modal/Modal.tsx';
+import {imagePulseAnimation} from '@/styles/animations/animations.ts';
+import {ContactBtn, Container} from '@/common';
+import {photo, logo, dotsForMain, CV} from '@/assets';
 
 export const Main = () => {
     const [isModalVisible, setModalVisible] = useState(false);
