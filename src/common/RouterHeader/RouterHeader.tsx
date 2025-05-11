@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.tsx";
-import {Container} from "../Container.tsx";
-import {FlexWrapper} from "../FlexWrapper.tsx";
+import {Container} from "../../components/Container.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {useEffect, useState} from "react";
-import {Logo} from "../../common/Logo.tsx";
-import {RouterHeaderMenu} from "./RouterHeaderMenu.tsx";
-import {RouterMobileMenu} from "./RouterMobileMenu.tsx";
+import {Logo} from "../Logo.tsx";
+import {RouterHeaderMenu} from "./RouterHeaderMenu/RouterHeaderMenu.tsx";
+import {RouterMobileMenu} from "./RouterMobileMenu/RouterMobileMenu.tsx";
 import {routerLinksData} from "../../app/appData.ts";
 
 type RouterHeaderPropsType = {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "../homePage/media/Media.tsx";
-import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
+import {RouterHeader} from "../../common/RouterHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
 import {sectionsTitlesData} from "../../app/appData.ts";
 import {ContactsForContactsPage} from "./ContactsForContactsPage.tsx";

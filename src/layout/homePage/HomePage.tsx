@@ -1,6 +1,6 @@
 import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
 import {Media} from "./media/Media.tsx";
-import {RouterHeader} from "../../components/routerHeader/RouterHeader.tsx";
+import {RouterHeader} from "../../common/RouterHeader/RouterHeader.tsx";
 import {Main} from "./sections/main/Main.tsx";
 import {Testimony} from "./sections/testimony/Testimony.tsx";
 import {Projects} from "./sections/projects/Projects.tsx";

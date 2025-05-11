@@ -1,14 +1,14 @@
 import styled, {css} from "styled-components";
 import {Fade} from "react-awesome-reveal";
-import {theme} from "../../styles/Theme.tsx";
-import {SocialList} from "../../common/SocialList.tsx";
-import {Logo} from "../../common/Logo.tsx";
+import {theme} from "../../../styles/Theme.tsx";
+import {SocialList} from "../../SocialList.tsx";
+import {Logo} from "../../Logo.tsx";
 import {useEffect, useState} from "react";
-import {ContactBtn} from "../../common/ContactBtn.tsx";
-import {CVBtn} from "../../common/CVBtn.tsx";
-import CV from "../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf";
+import {ContactBtn} from "../../ContactBtn.tsx";
+import {CVBtn} from "../../CVBtn.tsx";
+import CV from "../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf";
 import {Link} from "react-router-dom";
-import {Modal} from "../../common/Modal.tsx";
+import {Modal} from "../../Modal.tsx";
 
 type RouterMobileMenuPropsType = {
     menuItems: Array<{ symbol: string, name: string, id: string }>
