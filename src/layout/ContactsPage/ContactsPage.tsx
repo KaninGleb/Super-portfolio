@@ -5,8 +5,8 @@ import {Media} from "../homePage/media/Media.tsx";
 import {RouterHeader} from "../../common/RouterHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";
 import {sectionsTitlesData} from "../../app/appData.ts";
-import {ContactsForContactsPage} from "./ContactsForContactsPage.tsx";
-import {AllMedia} from "./AllMedia.tsx";
+import {ContactsForContactsPage} from "./ContactsForContactsPage/ContactsForContactsPage.tsx";
+import {AllMedia} from "./AllMedia/AllMedia.tsx";
 import {Footer} from "../homePage/footer/Footer.tsx";
 
 export const ContactsPage = () => {

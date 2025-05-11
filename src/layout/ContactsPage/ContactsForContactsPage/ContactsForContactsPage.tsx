@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
-import {Container} from "../../common/Layout/Container.tsx";
-import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
-import {Paragraph} from "../../common/Paragraph.tsx";
-import {SocialList} from "../../common/SocialList.tsx";
-import {theme} from "../../styles/Theme.tsx";
-import {contentData} from '../../app/appData.ts';
-import {imagePulseAnimation} from "../../animations/animations.ts";
-import bgLeft from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-left-short.svg";
-import bgRight from "../../assets/images/background/contacts-page/contacts-page-bg-pseudo-right-short.svg";
-import {CopyableText} from '../../components/CopyableText.tsx';
+import {Container} from "../../../common/Layout/Container.tsx";
+import {FlexWrapper} from "../../../common/Layout/FlexWrapper.tsx";
+import {Paragraph} from "../../../common/Paragraph.tsx";
+import {SocialList} from "../../../common/SocialList.tsx";
+import {theme} from "../../../styles/Theme.tsx";
+import {contentData} from '../../../app/appData.ts';
+import {imagePulseAnimation} from "../../../animations/animations.ts";
+import bgLeft from "../../../assets/images/background/contacts-page/contacts-page-bg-pseudo-left-short.svg";
+import bgRight from "../../../assets/images/background/contacts-page/contacts-page-bg-pseudo-right-short.svg";
+import {CopyableText} from './CopyableText/CopyableText.tsx';
 
 
 export const ContactsForContactsPage = () => {

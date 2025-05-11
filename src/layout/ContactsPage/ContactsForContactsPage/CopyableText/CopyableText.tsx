@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import {Icon} from '../common/Icon.tsx';
+import {Icon} from '../../../../common/Icon.tsx';
 import styled from 'styled-components';
-import {theme} from '../styles/Theme.tsx';
+import {theme} from '../../../../styles/Theme.tsx';
 
 type CopyableTextPropsType = {
     text: string

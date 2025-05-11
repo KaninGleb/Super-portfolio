@@ -3,7 +3,7 @@ import {ScrollToTop} from "../common/ScrollToTop.tsx";
 import {HomePage} from "../layout/homePage/HomePage.tsx";
 import {ProjectsPage} from "../layout/projectsPage/ProjectsPage.tsx";
 import {AboutMePage} from "../layout/aboutMePage/AboutMePage.tsx";
-import {ContactsPage} from "../layout/contactsPage/ContactsPage.tsx";
+import {ContactsPage} from "../layout/ContactsPage/ContactsPage.tsx";
 import {NotFoundPage404} from "../layout/notFoundPage/NotFoundPage404.tsx";
 import {Analytics} from "@vercel/analytics/react";
 
