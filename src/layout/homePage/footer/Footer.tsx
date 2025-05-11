@@ -11,7 +11,7 @@ import {contentData} from '../../../app/appData.ts';
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FooterContainer>
+            <Container>
                 <BothSections justify="space-between">
                     <LeftSection>
                         <StyledFlexWrapper gap='24px'>
@@ -26,7 +26,7 @@ export const Footer = () => {
                         </Fade>
                     </LeftSection>
 
-                    <RightSection direction='column' align='flex-start' gap='12px'>
+                    <FlexWrapper direction='column' align='flex-start' gap='12px'>
                         <Fade direction={'up'}>
                             <h3>{contentData.homePage.footer.mediaHeader}</h3>
                         </Fade>
@@ -36,12 +36,12 @@ export const Footer = () => {
                             iconIds={contentData.homePage.footer.socialsRight.iconIds}
                             showIcon={true}
                         />
-                    </RightSection>
+                    </FlexWrapper>
                 </BothSections>
                 <Fade direction={'up'}>
                     <small>{contentData.homePage.footer.copyright}</small>
                 </Fade>
-            </FooterContainer>
+            </Container>
         </StyledFooter>
     )
 }
@@ -69,10 +69,6 @@ const StyledFooter = styled.footer`
     }
 `
 
-const FooterContainer = styled(Container)`
-
-`
-
 const BothSections = styled(FlexWrapper)`
     margin: 32px 0 48px;
 
@@ -89,10 +85,6 @@ const LeftSection = styled.div`
     p {
         color: ${theme.colors.primaryLightText};
     }
-`
-
-const RightSection = styled(FlexWrapper)`
-
 `
 
 const StyledFlexWrapper = styled(FlexWrapper)`
