@@ -1,9 +1,6 @@
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import { ScrollToTop } from '@/common'
-import { HomePage } from '@/components'
-import { ProjectsPage } from '../components/ProjectsPage/ProjectsPage.tsx'
-import { AboutMePage, ContactsPage } from '@/components'
-import { NotFoundPage404 } from '../components/NotFoundPage/NotFoundPage404.tsx'
+import { HomePage, ProjectsPage, AboutMePage, ContactsPage, NotFoundPage404 } from '@/components'
 import { Analytics } from '@vercel/analytics/react'
 
 function App() {
