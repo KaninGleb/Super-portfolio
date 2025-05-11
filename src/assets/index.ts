@@ -14,6 +14,9 @@ import bothPseudo from '@/assets/images/sections-pseudo/about-me-photo-pseudo/bo
 import bgLeft from '@/assets/images/background/about-me-page/about-me-page-bg-pseudo-left.svg'
 import bgRight from '@/assets/images/background/about-me-page/about-me-page-bg-pseudo-right.svg'
 
+import myFunFactsImage from '@/assets/images/section-images/my-fun-facts/my-fun-facts-images-group.svg'
+
 export { photo, logo, dotsForMain, CV }
 export { portfolio, kotikBot, kahoot, protectX, chertNodes }
 export { aboutMePhoto, bothPseudo, bgLeft, bgRight }
+export { myFunFactsImage }
