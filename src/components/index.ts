@@ -41,4 +41,11 @@ export {Skill} from './HomePage/Sections/Skills/Skill/Skill'
 export {Testimony} from './HomePage/Sections/Testimony/Testimony'
 
 // Home Page - Not Found Page
-export {NotFoundPage404} from './NotFoundPage/NotFoundPage404.tsx'
+export {NotFoundPage404} from './NotFoundPage/NotFoundPage404'
+
+// Home Page - Projects Page
+export {AllProjects} from './ProjectsPage/AllProjects'
+export {ProjectsPage} from './ProjectsPage/ProjectsPage'
+export {SmallProject} from './ProjectsPage/SmallProject'
+export {SmallProjects} from './ProjectsPage/SmallProjects'
+export {TitleSection} from './ProjectsPage/TitleSection'
