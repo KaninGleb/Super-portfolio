@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {theme} from "../styles/Theme.tsx";
+import {theme} from "../../../styles/Theme.tsx";
 
 export const TextAreaField: React.FC<{
     id: string,
