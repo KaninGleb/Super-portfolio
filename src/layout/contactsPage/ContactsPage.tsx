@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
+import {ScrollFillBar} from "../../common/ScrollFillBar/ScrollFillBar.tsx";
 import {Media} from "../homePage/media/Media.tsx";
 import {RouterHeader} from "../../common/RouterHeader/RouterHeader.tsx";
 import {TitleSection} from "../projectsPage/TitleSection.tsx";

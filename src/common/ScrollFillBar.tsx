@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { theme } from "../../styles/Theme.tsx";
+import { theme } from "../styles/Theme.tsx";
 
 type ScrollFillProps = {
     width: number

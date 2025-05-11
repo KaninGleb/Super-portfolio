@@ -1,4 +1,4 @@
-import {ScrollFillBar} from "../../components/scrollFillBar/ScrollFillBar.tsx";
+import {ScrollFillBar} from "../../common/ScrollFillBar/ScrollFillBar.tsx";
 import {Media} from "./media/Media.tsx";
 import {RouterHeader} from "../../common/RouterHeader/RouterHeader.tsx";
 import {Main} from "./sections/main/Main.tsx";
