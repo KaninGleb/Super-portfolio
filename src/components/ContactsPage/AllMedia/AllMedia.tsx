@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Container, SectionTitle, SocialList } from '@/common'
-import { contentData, sectionsTitlesData } from '@/app/appData.ts'
+import { sectionsTitlesData, contentData } from '@/app/appData.ts'
 
 export const AllMedia = () => {
   return (
