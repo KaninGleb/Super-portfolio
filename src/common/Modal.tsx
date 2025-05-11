@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from "react";
 import styled from "styled-components";
 import emailJS from '@emailjs/browser';
 import {theme} from "../styles/Theme.tsx";
-import {FlexWrapper} from "../components/FlexWrapper.tsx";
+import {FlexWrapper} from "./Layout/FlexWrapper.tsx";
 import {Field} from "../components/Field.tsx";
 import {TextAreaField} from "../components/TextAreaField.tsx";
 import {font} from "../styles/CommonFont.tsx";

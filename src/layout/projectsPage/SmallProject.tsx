@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.tsx";
-import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
 import {Link} from '../../common/Link.tsx';
 
 type LinkPropsType = {

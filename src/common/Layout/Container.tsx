@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {theme} from "../styles/Theme.tsx";
+import {theme} from "../../styles/Theme.tsx";
 
 export const Container = styled.div`
     max-width: 1024px;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme.tsx";
-import {Container} from "../../../components/Container.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Container} from "../../../common/Layout/Container.tsx";
+import {FlexWrapper} from "../../../common/Layout/FlexWrapper.tsx";
 import {useEffect, useState} from "react";
 import {Logo} from "../../../common/Logo.tsx";
 import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";

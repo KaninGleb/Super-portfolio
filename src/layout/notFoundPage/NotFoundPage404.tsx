@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {Navigate} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {theme} from "../../styles/Theme.tsx";
-import {Container} from "../../components/Container.tsx";
+import {Container} from "../../common/Layout/Container.tsx";
 import {font} from "../../styles/CommonFont.tsx";
 
 export const NotFoundPage404 = () => {

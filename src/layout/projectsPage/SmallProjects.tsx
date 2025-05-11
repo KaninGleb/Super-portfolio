@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 import {theme} from "../../styles/Theme.tsx";
-import {Container} from "../../components/Container.tsx";
-import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {Container} from "../../common/Layout/Container.tsx";
+import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
 import {SectionTitle} from "../../components/SectionTitle.tsx";
 import {sectionsTitlesData, smallProjectsData} from "../../app/appData.ts";
 import {SmallProject} from "./SmallProject.tsx";
