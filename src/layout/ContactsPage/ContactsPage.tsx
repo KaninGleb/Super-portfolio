@@ -3,7 +3,7 @@ import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
 import {ScrollFillBar} from "../../common/ScrollFillBar.tsx";
 import {Media} from "../HomePage/Media/Media.tsx";
 import {RouterHeader} from "../../common/RouterHeader/RouterHeader.tsx";
-import {TitleSection} from "../projectsPage/TitleSection.tsx";
+import {TitleSection} from "../ProjectsPage/TitleSection.tsx";
 import {sectionsTitlesData} from "../../app/appData.ts";
 import {ContactsForContactsPage} from "./ContactsForContactsPage/ContactsForContactsPage.tsx";
 import {AllMedia} from "./AllMedia/AllMedia.tsx";
