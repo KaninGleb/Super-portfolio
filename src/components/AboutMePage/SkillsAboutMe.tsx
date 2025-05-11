@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../styles/Theme.tsx'
-import { Container } from '../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../common/Layout/FlexWrapper.tsx'
-import { SectionTitle } from '../../common/Layout/SectionTitle.tsx'
-import { sectionsTitlesData, skillsData } from '../../app/appData.ts'
-import { Skill } from '../HomePage/Sections/Skills/Skill/Skill.tsx'
+import { theme } from '@/styles'
+import { Container, SectionTitle, FlexWrapper } from '@/common'
+import { sectionsTitlesData, skillsData } from '@/app/appData.ts'
+import { Skill } from '@/components'
 
 export const SkillsAboutMe = () => {
   return (
