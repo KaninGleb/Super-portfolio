@@ -8,7 +8,7 @@ import {Paragraph} from "../../../../common/Paragraph.tsx";
 import {contentData} from '../../../../app/appData.ts';
 import {ContactBtn} from "../../../../common/ContactBtn.tsx";
 import {CVBtn} from "../../../../common/CVBtn.tsx";
-import {MyPhoto} from "../../../../components/Photo.tsx";
+import {Photo} from "../../../../components/Photo.tsx";
 import {Modal} from "../../../../common/Modal/Modal.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
 import photo from "../../../../assets/images/section-images/main/main-my-photo.png"
@@ -41,7 +41,7 @@ export const Main = () => {
                         </TextWrapper>
                     <Fade direction="right">
                         <PhotoWrapper direction='column'>
-                            <MyPhoto src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
+                            <Photo src={photo} Wmax={458} Wmin={306} alt="Main photo"/>
                             <PortfolioMessage>
                                 <ColorBlock/>
                                 <MessageTextWrapper dangerouslySetInnerHTML={{__html: contentData.homePage.main.status}}/>

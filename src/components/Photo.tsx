@@ -7,16 +7,16 @@ type PhotoPropsType = {
     alt: string
 }
 
-export const MyPhoto = (props: PhotoPropsType) => {
+export const Photo = (props: PhotoPropsType) => {
     return (
         <>
             <link rel="preload" href={props.src} as="image" />
-            <Photo Wmin={props.Wmin} Wmax={props.Wmax} src={props.src} alt={props.alt} />
+            <StyledPhoto Wmin={props.Wmin} Wmax={props.Wmax} src={props.src} alt={props.alt} />
         </>
     )
 }
 
-export const Photo = styled.img<PhotoPropsType>`
+export const StyledPhoto = styled.img<PhotoPropsType>`
     display: block;
     width: clamp(${props => props.Wmin}px,
     calc((100vw - 360px) / (1024 - 360) * (${props => props.Wmax} - ${props => props.Wmin}) + ${props => props.Wmin}px),
