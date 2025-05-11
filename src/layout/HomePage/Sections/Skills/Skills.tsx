@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../../../common/Layout/FlexWrapper.tsx";
 import {SectionTitle} from "../../../../components/SectionTitle.tsx";
 import {sectionsTitlesData, skillsData} from "../../../../app/appData.ts";
 import {Skill} from "./Skill/Skill.tsx";
-import {Photo} from "../../../../components/Photo.tsx";
+import {Photo} from "../../../../common/Photo.tsx";
 import {imagePulseAnimation} from "../../../../animations/animations.ts";
 import groupOfImages from "../../../../assets/images/section-images/skills/skills-images-group.svg"
 
