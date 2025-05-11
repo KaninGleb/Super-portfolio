@@ -4,7 +4,7 @@ import {theme} from "../../../../styles/Theme.tsx";
 import {Container} from "../../../../common/Layout/Container.tsx";
 import {FlexWrapper} from "../../../../common/Layout/FlexWrapper.tsx";
 import {font} from "../../../../styles/CommonFont.tsx";
-import {imagePulseAnimation} from "../../../../animations/animations.ts";
+import {imagePulseAnimation} from "../../../../styles/animations/animations.ts";
 import quotationMark from "../../../../assets/images/sections-pseudo/testimony-pseudo/quotation-mark.svg"
 import pseudoBgR from "../../../../assets/images/background/home-page/home-page-bg-pseudo-right.svg"
 import {contentData} from '../../../../app/appData.ts';

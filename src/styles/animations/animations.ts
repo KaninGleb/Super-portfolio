@@ -1,5 +1,5 @@
 import {keyframes} from "styled-components";
-import {theme} from "../styles/Theme.tsx";
+import {theme} from "../Theme.tsx";
 
 export const gradientAnimation = keyframes`
     0% {

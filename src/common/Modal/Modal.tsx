@@ -6,7 +6,7 @@ import {FlexWrapper} from "../Layout/FlexWrapper.tsx";
 import {Field} from "./Field/Field.tsx";
 import {TextAreaField} from "./TextAreaField/TextAreaField.tsx";
 import {font} from "../../styles/CommonFont.tsx";
-import {modalFadeInUp} from "../../animations/animations.ts";
+import {modalFadeInUp} from "../../styles/animations/animations.ts";
 import {contentData} from '../../app/appData.ts';
 
 type ModalPropsType = {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
-import {pulseAnimation} from "../animations/animations.ts";
+import {pulseAnimation} from "../styles/animations/animations.ts";
 
 type DecorativeLinePropsType = {
     width: string

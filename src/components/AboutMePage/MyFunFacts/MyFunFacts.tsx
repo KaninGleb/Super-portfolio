@@ -7,7 +7,7 @@ import {SectionTitle} from "../../../common/Layout/SectionTitle.tsx";
 import {contentData, sectionsTitlesData} from '../../../app/appData.ts';
 import {Fact} from "./Fact/Fact.tsx";
 import {Photo} from "../../../common/Photo.tsx";
-import {imagePulseAnimation} from "../../../animations/animations.ts";
+import {imagePulseAnimation} from "../../../styles/animations/animations.ts";
 import image from "../../../assets/images/section-images/my-fun-facts/my-fun-facts-images-group.svg";
 
 export const MyFunFacts = () => {

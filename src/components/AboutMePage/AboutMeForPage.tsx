@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../common/Layout/FlexWrapper.tsx";
 import {Photo} from "../../common/Photo.tsx";
 import {Paragraph} from "../../common/Paragraph.tsx";
 import {contentData} from '../../app/appData.ts';
-import {imagePulseAnimation, pulseAnimation} from "../../animations/animations.ts";
+import {imagePulseAnimation, pulseAnimation} from "../../styles/animations/animations.ts";
 import aboutMePhoto from "../../assets/images/section-images/about-me/about-me-my-photo.png"
 import bothPseudo from "../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg";
 import bgLeft from "../../assets/images/background/about-me-page/about-me-page-bg-pseudo-left.svg"

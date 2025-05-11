@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
-import {cvBtnAnimation} from "../animations/animations.ts";
+import {cvBtnAnimation} from "../styles/animations/animations.ts";
 
 export const CVBtn = styled.a`
     outline: 1px solid ${theme.colors.secondaryOutline};

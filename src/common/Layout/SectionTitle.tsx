@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 import {theme} from "../../styles/Theme.tsx";
-import {imagePulseAnimation, pulseAnimation} from "../../animations/animations.ts";
+import {imagePulseAnimation, pulseAnimation} from "../../styles/animations/animations.ts";
 import {font} from "../../styles/CommonFont.tsx";
 
 type SectionTitlePropsType = {

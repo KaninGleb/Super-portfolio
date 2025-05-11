@@ -7,7 +7,7 @@ import {SectionTitle} from "../../../../common/Layout/SectionTitle.tsx";
 import {sectionsTitlesData, skillsData} from "../../../../app/appData.ts";
 import {Skill} from "./Skill/Skill.tsx";
 import {Photo} from "../../../../common/Photo.tsx";
-import {imagePulseAnimation} from "../../../../animations/animations.ts";
+import {imagePulseAnimation} from "../../../../styles/animations/animations.ts";
 import groupOfImages from "../../../../assets/images/section-images/skills/skills-images-group.svg"
 
 export const Skills = () => {

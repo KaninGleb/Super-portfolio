@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
-import {pulseLinkAnimation} from "../animations/animations.ts";
+import {pulseLinkAnimation} from "../styles/animations/animations.ts";
 
 type LinkPropsType = {
     href?: string

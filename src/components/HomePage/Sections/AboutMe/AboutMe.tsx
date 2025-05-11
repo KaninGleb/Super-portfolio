@@ -8,7 +8,7 @@ import {SectionTitle} from "../../../../common/Layout/SectionTitle.tsx";
 import {Paragraph} from "../../../../common/Paragraph.tsx";
 import {RouterDomLink} from "../../../../common/RouterDomLink.tsx";
 import {contentData, sectionsTitlesData} from '../../../../app/appData.ts';
-import {imagePulseAnimation, pulseAnimation} from "../../../../animations/animations.ts";
+import {imagePulseAnimation, pulseAnimation} from "../../../../styles/animations/animations.ts";
 import aboutMePhoto from "../../../../assets/images/section-images/about-me/about-me-my-photo.png"
 import bothPseudo from "../../../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg";
 import pseudoBgL from "../../../../assets/images/background/home-page/home-page-bg-pseudo-left.svg"

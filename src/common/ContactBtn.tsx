@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
-import {btnAnimation} from "../animations/animations.ts";
+import {btnAnimation} from "../styles/animations/animations.ts";
 
 export const ContactBtn = styled.button`
     outline: 1px solid #c778dd;
