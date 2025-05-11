@@ -1,10 +1,10 @@
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import {ScrollToTop} from "../common/ScrollToTop.tsx";
-import {HomePage} from "../layout/HomePage/HomePage.tsx";
-import {ProjectsPage} from "../layout/ProjectsPage/ProjectsPage.tsx";
-import {AboutMePage} from "../layout/aboutMePage/AboutMePage.tsx";
-import {ContactsPage} from "../layout/ContactsPage/ContactsPage.tsx";
-import {NotFoundPage404} from "../layout/NotFoundPage/NotFoundPage404.tsx";
+import {HomePage} from "../components/HomePage/HomePage.tsx";
+import {ProjectsPage} from '../components/ProjectsPage/ProjectsPage.tsx';
+import {AboutMePage} from "../components/AboutMePage/AboutMePage.tsx";
+import {ContactsPage} from "../components/ContactsPage/ContactsPage.tsx";
+import {NotFoundPage404} from "../components/NotFoundPage/NotFoundPage404.tsx";
 import {Analytics} from "@vercel/analytics/react";
 
 function App() {
