@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../../../../styles/Theme.tsx";
-import {StyledHr} from "../../../../../components/StyledHr.tsx";
+import {StyledHr} from "./StyledHr/StyledHr.tsx";
 
 type SkillPropsType = {
     order?: number
