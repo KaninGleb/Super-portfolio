@@ -1,11 +1,6 @@
-import { ScrollFillBar } from '../../common/ScrollFillBar.tsx'
-import { Media } from '../HomePage/Media/Media.tsx'
-import { RouterHeader } from '../../common/RouterHeader/RouterHeader.tsx'
-import { TitleSection } from '../ProjectsPage/TitleSection.tsx'
-import { sectionsTitlesData } from '../../app/appData.ts'
-import { AboutMeForPage, MyFunFacts, SkillsAboutMe } from '@/components'
-import { GoTopBtn } from '../../common/GoTopBtn.tsx'
-import { Footer } from '../HomePage/Footer/Footer.tsx'
+import { ScrollFillBar, RouterHeader, GoTopBtn } from '@/common'
+import { Media, TitleSection, AboutMeForPage, SkillsAboutMe, MyFunFacts, Footer } from '@/components'
+import { sectionsTitlesData } from '@/app/appData.ts'
 
 export const AboutMePage = () => {
   return (
