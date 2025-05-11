@@ -4,7 +4,7 @@ import {HomePage} from "../layout/HomePage/HomePage.tsx";
 import {ProjectsPage} from "../layout/projectsPage/ProjectsPage.tsx";
 import {AboutMePage} from "../layout/aboutMePage/AboutMePage.tsx";
 import {ContactsPage} from "../layout/ContactsPage/ContactsPage.tsx";
-import {NotFoundPage404} from "../layout/notFoundPage/NotFoundPage404.tsx";
+import {NotFoundPage404} from "../layout/NotFoundPage/NotFoundPage404.tsx";
 import {Analytics} from "@vercel/analytics/react";
 
 function App() {
