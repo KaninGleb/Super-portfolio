@@ -1,25 +1,24 @@
-import {ScrollFillBar} from '../../common/ScrollFillBar.tsx';
-import {Media} from '../HomePage/Media/Media.tsx';
-import {RouterHeader} from '../../common/RouterHeader/RouterHeader.tsx';
-import {TitleSection} from './TitleSection.tsx';
-import {sectionsTitlesData} from '../../app/appData.ts';
-import {AllProjects} from './AllProjects.tsx';
-import {SmallProjects} from './SmallProjects.tsx';
-import {Footer} from '../HomePage/Footer/Footer.tsx';
-import {GoTopBtn} from '../../common/GoTopBtn.tsx';
-
+import { ScrollFillBar } from '../../common/ScrollFillBar.tsx'
+import { Media } from '../HomePage/Media/Media.tsx'
+import { RouterHeader } from '../../common/RouterHeader/RouterHeader.tsx'
+import { TitleSection } from './TitleSection.tsx'
+import { sectionsTitlesData } from '../../app/appData.ts'
+import { AllProjects } from './AllProjects.tsx'
+import { SmallProjects } from './SmallProjects.tsx'
+import { Footer } from '../HomePage/Footer/Footer.tsx'
+import { GoTopBtn } from '../../common/GoTopBtn.tsx'
 
 export const ProjectsPage = () => {
-    return (
-        <div>
-            <ScrollFillBar/>
-            <Media/>
-            <RouterHeader/>
-            <TitleSection section={sectionsTitlesData.projectsPage.headerProjects}/>
-            <AllProjects/>
-            <SmallProjects/>
-            <Footer/>
-            <GoTopBtn/>
-        </div>
-    )
+  return (
+    <div>
+      <ScrollFillBar />
+      <Media />
+      <RouterHeader />
+      <TitleSection section={sectionsTitlesData.projectsPage.headerProjects} />
+      <AllProjects />
+      <SmallProjects />
+      <Footer />
+      <GoTopBtn />
+    </div>
+  )
 }

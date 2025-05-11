@@ -1,15 +1,15 @@
-import {theme} from "./Theme.tsx";
+import { theme } from './Theme.tsx'
 
 export type FontPropsType = {
-    family?: string
-    weight?: number
-    color?: string
-    lineHeight?: number
-    Fmin?: number
-    Fmax?: number
+  family?: string
+  weight?: number
+  color?: string
+  lineHeight?: number
+  Fmin?: number
+  Fmax?: number
 }
 
-export const font = ( {family, weight, color, lineHeight, Fmin, Fmax}: FontPropsType) => `
+export const font = ({ family, weight, color, lineHeight, Fmin, Fmax }: FontPropsType) => `
     font-family: ${family || 'Fira Code'};
     font-weight: ${weight || 400};
     color: ${color || theme.colors.primaryText};
