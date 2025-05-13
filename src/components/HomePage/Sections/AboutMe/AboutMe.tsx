@@ -1,17 +1,9 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../../../styles/Theme.tsx'
-import { Container } from '../../../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../../../common/Layout/FlexWrapper.tsx'
-import { Photo } from '../../../../common/Photo.tsx'
-import { SectionTitle } from '../../../../common/Layout/SectionTitle.tsx'
-import { Paragraph } from '../../../../common/Paragraph.tsx'
-import { RouterDomLink } from '../../../../common/RouterDomLink.tsx'
-import { contentData, sectionsTitlesData } from '../../../../app/appData.ts'
-import { imagePulseAnimation, pulseAnimation } from '../../../../styles/animations/animations.ts'
-import aboutMePhoto from '../../../../assets/images/section-images/about-me/about-me-my-photo.png'
-import bothPseudo from '../../../../assets/images/sections-pseudo/about-me-photo-pseudo/both-pseudo.svg'
-import pseudoBgL from '../../../../assets/images/background/home-page/home-page-bg-pseudo-left.svg'
+import { Container, SectionTitle, Paragraph, RouterDomLink, FlexWrapper, Photo } from '@/common'
+import { sectionsTitlesData, contentData } from '@/app/appData.ts'
+import { imagePulseAnimation, pulseAnimation, theme } from '@/styles'
+import { aboutMePhoto, pseudoBgL, bothPseudo } from '@/assets'
 
 export const AboutMe = () => {
   return (
