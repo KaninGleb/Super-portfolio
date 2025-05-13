@@ -38,7 +38,7 @@ export const MobileMenu = (props: MenuPropsType) => {
           setMenuIsOpen(false)
         }}
       >
-        <StyledLogo isOpen={menuIsOpen} />
+        <Logo isOpen={menuIsOpen} />
         <StyledUl>
           {props.menuItems.map((item, index) => (
             <ListItem key={index}>
@@ -86,8 +86,6 @@ const StyledMobileMenu = styled.nav`
     font-size: 32px;
   }
 `
-
-const StyledLogo = styled(Logo)``
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -187,10 +185,6 @@ const StyledUl = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 24px;
-
-  //li {
-  //    max-height: 64px;
-  //}
 
   @media ${theme.media.tablet} {
     align-items: center;
