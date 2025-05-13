@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../../styles/Theme.tsx'
-import { DecorativeLine } from '../../../common/DecorativeLine.tsx'
-import { SocialList } from '../../../common/SocialList.tsx'
-import { contentData } from '../../../app/appData.ts'
+import { DecorativeLine, SocialList } from '@/common'
+import { theme } from '@/styles'
+import { contentData } from '@/app/appData.ts'
 
 export const Media = () => {
   return (
