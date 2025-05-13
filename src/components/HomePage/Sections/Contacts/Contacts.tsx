@@ -1,13 +1,8 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../../../styles/Theme.tsx'
-import { Container } from '../../../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../../../common/Layout/FlexWrapper.tsx'
-import { SectionTitle } from '../../../../common/Layout/SectionTitle.tsx'
-import { Paragraph } from '../../../../common/Paragraph.tsx'
-import { RouterDomLink } from '../../../../common/RouterDomLink.tsx'
-import { contentData, sectionsTitlesData } from '../../../../app/appData.ts'
-import { SocialList } from '../../../../common/SocialList.tsx'
+import { Container, SectionTitle, Paragraph, RouterDomLink, SocialList, FlexWrapper } from '@/common'
+import { sectionsTitlesData, contentData } from '@/app/appData.ts'
+import { theme } from '@/styles'
 
 export const Contacts = () => {
   return (
