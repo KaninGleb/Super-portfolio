@@ -1,12 +1,9 @@
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme.tsx'
-import { Container } from '../../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../../common/Layout/FlexWrapper.tsx'
-import { useEffect, useState } from 'react'
-import { Logo } from '../../../common/Logo.tsx'
-import { HeaderMenu } from './HeaderMenu/HeaderMenu.tsx'
-import { MobileMenu } from './MobileMenu/MobileMenu.tsx'
-import { headerLinks } from '../../../app/appData.ts'
+import { useState, useEffect } from 'react'
+import { Container, Logo, FlexWrapper } from '@/common'
+import { HeaderMenu, MobileMenu } from '@/components'
+import { headerLinks } from '@/app/appData.ts'
+import { theme } from '@/styles'
 
 type HeaderPropsType = {
   isScrolled: boolean
