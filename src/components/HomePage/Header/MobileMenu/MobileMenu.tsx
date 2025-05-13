@@ -1,11 +1,8 @@
 import styled, { css } from 'styled-components'
-import { theme } from '../../../../styles/Theme.tsx'
-import { SocialList } from '../../../../common/SocialList.tsx'
-import { Logo } from '../../../../common/Logo.tsx'
 import { useEffect, useState } from 'react'
-import { ContactBtn } from '../../../../common/ContactBtn.tsx'
-import { CVBtn } from '../../../../common/CVBtn.tsx'
-import CV from '../../../../assets/cv/Kanin_Gleb_Front-end_developer_CV.pdf'
+import { Logo, SocialList, ContactBtn, CVBtn } from '@/common'
+import { theme } from '@/styles'
+import { CV } from '@/assets'
 
 type MenuPropsType = {
   menuItems: Array<{ name: string; id: string }>
