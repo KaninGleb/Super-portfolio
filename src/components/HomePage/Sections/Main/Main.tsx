@@ -1,16 +1,10 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import { Fade, Zoom } from 'react-awesome-reveal'
-import { theme } from '@/styles/Theme.tsx'
-import { FlexWrapper } from '@/common/Layout/FlexWrapper.tsx'
-import { Paragraph } from '@/common/Paragraph.tsx'
+import { Container, Paragraph, FlexWrapper, ContactBtn, CVBtn, Photo, Modal } from '@/common'
 import { contentData } from '@/app/appData.ts'
-import { CVBtn } from '@/common/CVBtn.tsx'
-import { Photo } from '@/common/Photo.tsx'
-import { Modal } from '@/common/Modal/Modal.tsx'
-import { imagePulseAnimation } from '@/styles/animations/animations.ts'
-import { ContactBtn, Container } from '@/common'
-import { photo, logo, dotsForMain, CV } from '@/assets'
+import { theme, imagePulseAnimation } from '@/styles'
+import { CV, photo, logo, dotsForMain } from '@/assets'
 
 export const Main = () => {
   const [isModalVisible, setModalVisible] = useState(false)
