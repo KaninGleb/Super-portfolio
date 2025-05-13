@@ -90,7 +90,8 @@ const PhotoWrapper = styled(FlexWrapper)`
 
   &::before {
     content: '';
-    background-image: url('${logo}');
+    // prettier-ignore
+    background-image: url("${logo}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -106,7 +107,8 @@ const PhotoWrapper = styled(FlexWrapper)`
 
   &::after {
     content: '';
-    background-image: url('${dotsForMain}');
+    // prettier-ignore
+    background-image: url("${dotsForMain}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;

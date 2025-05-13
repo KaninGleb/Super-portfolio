@@ -47,7 +47,8 @@ const StyledAllProjects = styled.section`
 
   &::before {
     content: '';
-    background-image: url('${bgLeft}');
+    // prettier-ignore
+    background-image: url("${bgLeft}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -60,7 +61,8 @@ const StyledAllProjects = styled.section`
 
   &::after {
     content: '';
-    background-image: url('${bgRight}');
+    // prettier-ignore
+    background-image: url("${bgRight}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;

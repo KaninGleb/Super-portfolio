@@ -32,7 +32,8 @@ const StyledTestimony = styled.section`
 
   &::after {
     content: '';
-    background-image: url('${pseudoBgR}');
+    // prettier-ignore
+    background-image: url("${pseudoBgR}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -73,7 +74,8 @@ const StyledQuote = styled.blockquote`
 
   &::before {
     content: '';
-    background-image: url('${quotationMark}');
+    // prettier-ignore
+    background-image: url("${quotationMark}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -88,7 +90,8 @@ const StyledQuote = styled.blockquote`
 
   &::after {
     content: '';
-    background-image: url('${quotationMark}');
+    // prettier-ignore
+    background-image: url("${quotationMark}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;

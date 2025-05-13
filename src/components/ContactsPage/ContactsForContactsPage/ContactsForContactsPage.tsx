@@ -65,7 +65,8 @@ const StyledContactsForContactsPage = styled.section`
 
   &::before {
     content: '';
-    background-image: url('${bgLeft}');
+    // prettier-ignore
+    background-image: url("${bgLeft}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -78,7 +79,8 @@ const StyledContactsForContactsPage = styled.section`
 
   &::after {
     content: '';
-    background-image: url('${bgRight}');
+    // prettier-ignore
+    background-image: url("${bgRight}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;

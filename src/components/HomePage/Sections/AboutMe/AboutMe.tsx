@@ -38,7 +38,8 @@ const StyledAboutMe = styled.section`
 
   &::before {
     content: '';
-    background-image: url('${pseudoBgL}');
+    // prettier-ignore
+    background-image: url("${pseudoBgL}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -111,7 +112,8 @@ const RightSection = styled(Fade)`
   &::before {
     content: '';
     position: absolute;
-    background-image: url('${bothPseudo}');
+    // prettier-ignore
+    background-image: url("${bothPseudo}");
     background-size: contain;
     background-repeat: no-repeat;
     top: 60px;

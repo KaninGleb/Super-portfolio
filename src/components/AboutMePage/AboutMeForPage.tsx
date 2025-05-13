@@ -33,7 +33,8 @@ const StyledAboutMeForPage = styled.section`
 
   &::before {
     content: '';
-    background-image: url('${bgLeft}');
+    // prettier-ignore
+    background-image: url("${bgLeft}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -46,7 +47,8 @@ const StyledAboutMeForPage = styled.section`
 
   &::after {
     content: '';
-    background-image: url('${bgRight}');
+    // prettier-ignore
+    background-image: url("${bgRight}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -110,7 +112,8 @@ const RightSection = styled(Fade)`
   &::before {
     content: '';
     position: absolute;
-    background-image: url('${bothPseudo}');
+    // prettier-ignore
+    background-image: url("${bothPseudo}");
     background-size: contain;
     background-repeat: no-repeat;
     top: 60px;
