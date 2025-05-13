@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../../../styles/Theme.tsx'
-import { Container } from '../../../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../../../common/Layout/FlexWrapper.tsx'
-import { SectionTitle } from '../../../../common/Layout/SectionTitle.tsx'
-import { contentData, projectsData, sectionsTitlesData } from '../../../../app/appData.ts'
-import { Project } from './Project/Project.tsx'
 import { Link } from 'react-router-dom'
+import { Container, FlexWrapper, SectionTitle } from '@/common'
+import { sectionsTitlesData, contentData, projectsData } from '@/app/appData.ts'
+import { Project } from '@/components'
+import { theme } from '@/styles'
 
 export const Projects = () => {
   return (
