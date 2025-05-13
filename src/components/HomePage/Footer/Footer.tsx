@@ -1,12 +1,8 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../../styles/Theme.tsx'
-import { Container } from '../../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../../common/Layout/FlexWrapper.tsx'
-import { Logo } from '../../../common/Logo.tsx'
-import { SocialList } from '../../../common/SocialList.tsx'
-import { font } from '../../../styles/CommonFont.tsx'
-import { contentData } from '../../../app/appData.ts'
+import { theme, font } from '@/styles'
+import { Container, Logo, SocialList, FlexWrapper } from '@/common'
+import { contentData } from '@/app/appData.ts'
 
 export const Footer = () => {
   return (
