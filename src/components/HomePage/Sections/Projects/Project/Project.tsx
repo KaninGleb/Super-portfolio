@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { theme } from '../../../../../styles/Theme.tsx'
-import { FlexWrapper } from '../../../../../common/Layout/FlexWrapper.tsx'
-import { Link } from '../../../../../common/Link.tsx'
-import { contentData } from '../../../../../app/appData.ts'
+import { motion } from 'framer-motion'
+import { Link, FlexWrapper } from '@/common'
+import { contentData } from '@/app/appData.ts'
+import { theme } from '@/styles'
 
 type LinkPropsType = {
   href: string
