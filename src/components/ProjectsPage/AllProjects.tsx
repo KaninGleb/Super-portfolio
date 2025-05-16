@@ -1,14 +1,10 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../styles/Theme.tsx'
-import { Container } from '../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../common/Layout/FlexWrapper.tsx'
-import { SectionTitle } from '../../common/Layout/SectionTitle.tsx'
-import { projectsData, sectionsTitlesData } from '../../app/appData.ts'
-import { Project } from '../HomePage/Sections/Projects/Project/Project.tsx'
-import { imagePulseAnimation } from '../../styles/animations/animations.ts'
-import bgLeft from '../../assets/images/background/projects-page/projects-page-bg-pseudo-left.svg'
-import bgRight from '../../assets/images/background/projects-page/projects-page-bg-pseudo-right.svg'
+import { Container, FlexWrapper, SectionTitle } from '@/common'
+import { Project } from '@/components'
+import { sectionsTitlesData, projectsData } from '@/app/appData.ts'
+import { imagePulseAnimation, theme } from '@/styles'
+import { allProjectsBgLeft, allProjectsBgRight } from '@/assets'
 
 export const AllProjects = () => {
   return (
@@ -48,7 +44,7 @@ const StyledAllProjects = styled.section`
   &::before {
     content: '';
     // prettier-ignore
-    background-image: url("${bgLeft}");
+    background-image: url("${allProjectsBgLeft}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -62,7 +58,7 @@ const StyledAllProjects = styled.section`
   &::after {
     content: '';
     // prettier-ignore
-    background-image: url("${bgRight}");
+    background-image: url("${allProjectsBgRight}");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
