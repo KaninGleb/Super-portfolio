@@ -20,8 +20,12 @@ import myFunFactsImage from '@/assets/images/section-images/my-fun-facts/my-fun-
 
 import groupOfImages from '@/assets/images/section-images/skills/skills-images-group.svg'
 
+import quotationMark from '@/assets/images/sections-pseudo/testimony-pseudo/quotation-mark.svg'
+import pseudoBgR from '@/assets/images/background/home-page/home-page-bg-pseudo-right.svg'
+
 export { photo, logo, dotsForMain, CV }
 export { portfolio, kotikBot, kahoot, protectX, chertNodes }
 export { aboutMePhoto, bothPseudo, bgLeft, bgRight, pseudoBgL }
 export { myFunFactsImage }
 export { groupOfImages }
+export { quotationMark, pseudoBgR }
