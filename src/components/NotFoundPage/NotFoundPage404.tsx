@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import { Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { theme } from '../../styles/Theme.tsx'
-import { Container } from '../../common/Layout/Container.tsx'
-import { font } from '../../styles/CommonFont.tsx'
+import { font, theme } from '@/styles'
+import { Container } from '@/common'
 
 export const NotFoundPage404 = () => {
   const [countdown, setCountdown] = useState(3)
