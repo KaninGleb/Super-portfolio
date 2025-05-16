@@ -1,14 +1,10 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../../../styles/Theme.tsx'
-import { Container } from '../../../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../../../common/Layout/FlexWrapper.tsx'
-import { SectionTitle } from '../../../../common/Layout/SectionTitle.tsx'
-import { sectionsTitlesData, skillsData } from '../../../../app/appData.ts'
-import { Skill } from './Skill/Skill.tsx'
-import { Photo } from '../../../../common/Photo.tsx'
-import { imagePulseAnimation } from '../../../../styles/animations/animations.ts'
-import groupOfImages from '../../../../assets/images/section-images/skills/skills-images-group.svg'
+import { Container, FlexWrapper, Photo, SectionTitle } from '@/common'
+import { Skill } from '@/components'
+import { imagePulseAnimation, theme } from '@/styles'
+import { sectionsTitlesData, skillsData } from '@/app/appData.ts'
+import { groupOfImages } from '@/assets'
 
 export const Skills = () => {
   return (
