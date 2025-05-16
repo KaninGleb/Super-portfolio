@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
-import { theme } from '../../styles/Theme.tsx'
-import { Container } from '../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../common/Layout/FlexWrapper.tsx'
-import { SectionTitle } from '../../common/Layout/SectionTitle.tsx'
-import { sectionsTitlesData, smallProjectsData } from '../../app/appData.ts'
-import { SmallProject } from './SmallProject.tsx'
+import { Container, FlexWrapper, SectionTitle } from '@/common'
+import { SmallProject } from '@/components'
+import { sectionsTitlesData, smallProjectsData } from '@/app/appData.ts'
+import { theme } from '@/styles'
 
 export const SmallProjects = () => {
   return (
