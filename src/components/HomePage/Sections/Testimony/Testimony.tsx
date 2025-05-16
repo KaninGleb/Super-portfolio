@@ -1,13 +1,9 @@
 import styled from 'styled-components'
 import { Zoom } from 'react-awesome-reveal'
-import { theme } from '../../../../styles/Theme.tsx'
-import { Container } from '../../../../common/Layout/Container.tsx'
-import { FlexWrapper } from '../../../../common/Layout/FlexWrapper.tsx'
-import { font } from '../../../../styles/CommonFont.tsx'
-import { imagePulseAnimation } from '../../../../styles/animations/animations.ts'
-import quotationMark from '../../../../assets/images/sections-pseudo/testimony-pseudo/quotation-mark.svg'
-import pseudoBgR from '../../../../assets/images/background/home-page/home-page-bg-pseudo-right.svg'
-import { contentData } from '../../../../app/appData.ts'
+import { Container, FlexWrapper } from '@/common'
+import { imagePulseAnimation, theme, font } from '@/styles'
+import { contentData } from '@/app/appData.ts'
+import { pseudoBgR, quotationMark } from '@/assets'
 
 export const Testimony = () => {
   return (
