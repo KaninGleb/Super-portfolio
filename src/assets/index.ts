@@ -18,7 +18,10 @@ import pseudoBgL from '@/assets/images/background/home-page/home-page-bg-pseudo-
 
 import myFunFactsImage from '@/assets/images/section-images/my-fun-facts/my-fun-facts-images-group.svg'
 
+import groupOfImages from '@/assets/images/section-images/skills/skills-images-group.svg'
+
 export { photo, logo, dotsForMain, CV }
 export { portfolio, kotikBot, kahoot, protectX, chertNodes }
 export { aboutMePhoto, bothPseudo, bgLeft, bgRight, pseudoBgL }
 export { myFunFactsImage }
+export { groupOfImages }
