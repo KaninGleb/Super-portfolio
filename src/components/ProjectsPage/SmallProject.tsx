@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import { theme } from '../../styles/Theme.tsx'
-import { FlexWrapper } from '../../common/Layout/FlexWrapper.tsx'
-import { Link } from '../../common/Link.tsx'
+import { FlexWrapper, Link } from '@/common'
+import { theme } from '@/styles'
 
 type LinkPropsType = {
   href: string
