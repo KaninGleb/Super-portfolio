@@ -12,9 +12,9 @@ export const Skills = () => {
       <Container>
         <SectionTitle section={sectionsTitlesData.homePage.skills} />
         <StyledFlexWrapper gap="59px">
-          <Fade direction={'left'}>
+          <StyledFade direction={'left'}>
             <StyledPhoto src={groupOfImages} Wmin={350} Wmax={350} alt="Group of Images" />
-          </Fade>
+          </StyledFade>
           <Fade direction={'right'}>
             <SkillsWrapper direction="column" wrap="wrap-reverse" gap="16px">
               {skillsData.map((skill) => (
@@ -80,13 +80,15 @@ const SkillsWrapper = styled(FlexWrapper)`
   }
 `
 
+const StyledFade = styled(Fade)`
+  @media ${theme.media.width1044} {
+    display: none;
+  }
+`
+
 const StyledPhoto = styled(Photo)`
   margin-top: 12px;
   margin-left: 32px;
   object-fit: contain;
   animation: ${imagePulseAnimation} 2s infinite;
-
-  @media ${theme.media.width1044} {
-    display: none;
-  }
 `
